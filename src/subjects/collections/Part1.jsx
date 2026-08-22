@@ -10,13 +10,8 @@ function Code({ children }) {
 export default function Part1() {
   return (
     <>
-      <h1 className="part-title">Part 1 — Java Collections Framework</h1>
-
       {/* 1.1 */}
-      <div className="section-header anchor" id="s1-1">
-        <div className="section-badge">1.1</div>
-        <h2>Collection Framework Overview</h2>
-      </div>
+      <div id="s1-1" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>The Java Collections Framework (JCF)</strong> is a unified architecture for representing and
@@ -137,10 +132,7 @@ Additional Interfaces:
       </div>
 
       {/* 1.2 */}
-      <div className="section-header anchor" id="s1-2">
-        <div className="section-badge">1.2</div>
-        <h2>Collection Interface</h2>
-      </div>
+      <div id="s1-2" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong><code>java.util.Collection&lt;E&gt;</code></strong> is the root interface of the collection
@@ -319,10 +311,7 @@ Additional Interfaces:
       </div>
 
       {/* 1.3 */}
-      <div className="section-header anchor" id="s1-3">
-        <div className="section-badge">1.3</div>
-        <h2>ArrayList</h2>
-      </div>
+      <div id="s1-3" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong><code>java.util.ArrayList&lt;E&gt;</code></strong> is the most commonly used <code>List</code>{' '}
@@ -926,10 +915,7 @@ List<String> safeCopy = List.copyOf(mutable1);  // throws NPE if any element is 
       </div>
 
       {/* 1.4 */}
-      <div className="section-header anchor" id="s14">
-        <div className="section-badge">1.4</div>
-        <h2>LinkedList</h2>
-      </div>
+      <div id="s14" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>LinkedList</strong> is a doubly-linked list implementation that implements <em>both</em> the{' '}
@@ -1075,10 +1061,7 @@ public class LinkedListDemo {
       </div>
 
       {/* 1.5 */}
-      <div className="section-header anchor" id="s15">
-        <div className="section-badge">1.5</div>
-        <h2>Vector</h2>
-      </div>
+      <div id="s15" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>Vector</strong> is a <em>synchronized</em> dynamic array — essentially the thread-safe predecessor
@@ -1189,10 +1172,7 @@ Note: ArrayList always grows by ~50% (capacity + capacity/2)`
       </div>
 
       {/* 1.6 */}
-      <div className="section-header anchor" id="s16">
-        <div className="section-badge">1.6</div>
-        <h2>Stack</h2>
-      </div>
+      <div id="s16" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>Stack</strong> extends <code>Vector</code> and represents a <em>Last-In-First-Out (LIFO)</em>{' '}
@@ -1285,10 +1265,7 @@ System.out.println(stack.pop());   // 20`
       </div>
 
       {/* 1.7 */}
-      <div className="section-header anchor" id="s17">
-        <div className="section-badge">1.7</div>
-        <h2>CopyOnWriteArrayList</h2>
-      </div>
+      <div id="s17" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>CopyOnWriteArrayList</strong> is a thread-safe variant of <code>ArrayList</code> from the{' '}

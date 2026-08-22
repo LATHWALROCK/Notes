@@ -10,13 +10,8 @@ function Code({ children }) {
 export default function Part2() {
   return (
     <>
-      <h1 className="part-title">Part 2 — Map Types</h1>
-
       {/* 2.1 */}
-      <div className="section-header anchor" id="partC">
-        <div className="section-badge">2.1</div>
-        <h2>Map Interface</h2>
-      </div>
+      <div id="partC" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>Map</strong> stores <strong>key-value pairs</strong> where every key is unique. It is{' '}
@@ -79,10 +74,7 @@ export default function Part2() {
       </div>
 
       {/* 2.2 */}
-      <div className="section-header anchor" id="hashmap">
-        <div className="section-badge">2.2</div>
-        <h2>HashMap</h2>
-      </div>
+      <div id="hashmap" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>HashMap&lt;K,V&gt;</strong> is the most widely used <code>Map</code> implementation. It is backed
@@ -231,10 +223,7 @@ scores.forEach((name, score) ->
       </div>
 
       {/* 2.3 */}
-      <div className="section-header anchor" id="linkedhashmap">
-        <div className="section-badge">2.3</div>
-        <h2>LinkedHashMap</h2>
-      </div>
+      <div id="linkedhashmap" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>LinkedHashMap&lt;K,V&gt;</strong> extends <code>HashMap</code> and adds a{' '}
@@ -327,10 +316,7 @@ System.out.println(cache.keySet());       // [3, 1, 4]`
       </div>
 
       {/* 2.4 */}
-      <div className="section-header anchor" id="weakhashmap">
-        <div className="section-badge">2.4</div>
-        <h2>WeakHashMap</h2>
-      </div>
+      <div id="weakhashmap" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>WeakHashMap&lt;K,V&gt;</strong> holds keys using <strong>weak references</strong>{' '}
@@ -429,10 +415,7 @@ WeakHashMap<MyObject, Metadata> meta = new WeakHashMap<>();
       </div>
 
       {/* 2.5 */}
-      <div className="section-header anchor" id="identityhashmap">
-        <div className="section-badge">2.5</div>
-        <h2>IdentityHashMap</h2>
-      </div>
+      <div id="identityhashmap" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>IdentityHashMap&lt;K,V&gt;</strong> intentionally violates the general <code>Map</code> contract
@@ -516,10 +499,7 @@ IdentityHashMap<Object, Integer> visited = new IdentityHashMap<>();
       </div>
 
       {/* 2.6 */}
-      <div className="section-header anchor" id="s26">
-        <div className="section-badge">2.6</div>
-        <h2>SortedMap &amp; TreeMap / NavigableMap</h2>
-      </div>
+      <div id="s26" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>SortedMap Interface</h3></div>
       <div className="card">
@@ -707,10 +687,7 @@ NavigableMap<Integer, String> incRange = scores.subMap(70, true, 90, true);
       </div>
 
       {/* 2.7 */}
-      <div className="section-header anchor" id="s27">
-        <div className="section-badge">2.7</div>
-        <h2>Hashtable</h2>
-      </div>
+      <div id="s27" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>Hashtable&lt;K,V&gt;</code> is a <strong>legacy synchronized map</strong> from Java 1.0. It extends{' '}
@@ -748,10 +725,7 @@ NavigableMap<Integer, String> incRange = scores.subMap(70, true, 90, true);
       </div>
 
       {/* 2.8 */}
-      <div className="section-header anchor" id="s28">
-        <div className="section-badge">2.8</div>
-        <h2>ConcurrentHashMap</h2>
-      </div>
+      <div id="s28" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>ConcurrentHashMap&lt;K,V&gt;</code> is a <strong>thread-safe, high-performance</strong> hash map in{' '}
@@ -853,10 +827,7 @@ ConcurrentHashMap                          ConcurrentHashMap
       </div>
 
       {/* 2.9 */}
-      <div className="section-header anchor" id="s29">
-        <div className="section-badge">2.9</div>
-        <h2>ConcurrentSkipListMap, EnumMap &amp; Immutable Maps</h2>
-      </div>
+      <div id="s29" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>ConcurrentSkipListMap</h3></div>
       <div className="card">
@@ -1022,10 +993,7 @@ System.out.println(snapshot.containsKey("c")); // false — independent copy`
       </div>
 
       {/* 2.10 */}
-      <div className="section-header anchor" id="s210">
-        <div className="section-badge">2.10</div>
-        <h2>Comparable vs Comparator</h2>
-      </div>
+      <div id="s210" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>Comparable — Natural Ordering</h3></div>
       <div className="card">

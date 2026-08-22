@@ -10,13 +10,8 @@ function Code({ children }) {
 export default function Part2() {
   return (
     <>
-      <h1 className="part-title">Part 2 — Object-Oriented Programming</h1>
-
       {/* 2.1 */}
-      <div className="section-header anchor" id="part2-1">
-        <div className="section-badge">2.1</div>
-        <h2>Methods &amp; Constructors</h2>
-      </div>
+      <div id="part2-1" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>Method Anatomy</h3></div>
       <Code>{
@@ -198,10 +193,7 @@ void log(String prefix, Object... args) { } // ✓ valid`
       </div>
 
       {/* 2.2 */}
-      <div className="section-header anchor" id="part2-2">
-        <div className="section-badge">2.2</div>
-        <h2>Inheritance &amp; Polymorphism</h2>
-      </div>
+      <div id="part2-2" data-topic-boundary="true" />
       <div className="card">
         <p>
           Java supports <strong>single inheritance</strong> — a class can extend only one class. This avoids the
@@ -421,10 +413,7 @@ if (a instanceof Dog) {
       }</Code>
 
       {/* 2.3 */}
-      <div className="section-header anchor" id="part2-3">
-        <div className="section-badge">2.3</div>
-        <h2>Abstract Classes &amp; Final</h2>
-      </div>
+      <div id="part2-3" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>Abstract Classes</h3></div>
       <Code>{
@@ -514,10 +503,7 @@ final class ImmutablePoint {  // cannot be extended
       }</Code>
 
       {/* 2.4 */}
-      <div className="section-header anchor" id="part2-4">
-        <div className="section-badge">2.4</div>
-        <h2>Interfaces</h2>
-      </div>
+      <div id="part2-4" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>Interface Member Types</h3></div>
       <Code>{
@@ -600,10 +586,7 @@ System.out.println(length.transform("hello")); // 5
       </div>
 
       {/* 2.5 */}
-      <div className="section-header anchor" id="part2-5">
-        <div className="section-badge">2.5</div>
-        <h2>Inner Classes</h2>
-      </div>
+      <div id="part2-5" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>Member Inner Class</h3></div>
       <Code>{

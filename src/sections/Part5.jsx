@@ -10,13 +10,8 @@ function Code({ children }) {
 export default function Part5() {
   return (
     <>
-      <h1 className="part-title">Part 5 — Generics</h1>
-
       {/* 5.1 */}
-      <div className="section-header anchor" id="s51">
-        <div className="section-badge">5.1</div>
-        <h2>Why Generics?</h2>
-      </div>
+      <div id="s51" data-topic-boundary="true" />
       <p>
         Before generics (Java 1.4 and earlier), collections stored everything as <code>Object</code>. This worked,
         but forced you to cast on every retrieval and pushed type errors to <em>runtime</em>. Generics, introduced in{' '}
@@ -84,10 +79,7 @@ for (String s : names) {
       </div>
 
       {/* 5.2 */}
-      <div className="section-header anchor" id="s52">
-        <div className="section-badge">5.2</div>
-        <h2>Generic Classes &amp; Interfaces</h2>
-      </div>
+      <div id="s52" data-topic-boundary="true" />
       <p>
         A <strong>generic class</strong> is declared with a type parameter list in angle brackets after the class
         name. The type parameter acts as a placeholder that is filled in when the class is instantiated.
@@ -203,10 +195,7 @@ public class Temperature
       </div>
 
       {/* 5.3 */}
-      <div className="section-header anchor" id="s53">
-        <div className="section-badge">5.3</div>
-        <h2>Generic Methods &amp; Constructors</h2>
-      </div>
+      <div id="s53" data-topic-boundary="true" />
       <p>
         A <strong>generic method</strong> introduces its own type parameter(s), declared in angle brackets{' '}
         <em>before the return type</em>. This is independent of whether the enclosing class is itself generic.
@@ -299,10 +288,7 @@ public static <K extends Comparable<K>, V>
       </div>
 
       {/* 5.4 */}
-      <div className="section-header anchor" id="s54">
-        <div className="section-badge">5.4</div>
-        <h2>Bounded Type Parameters</h2>
-      </div>
+      <div id="s54" data-topic-boundary="true" />
       <p>
         Bounds restrict which types can be substituted for a type parameter. An <strong>upper bound</strong> (
         <code>extends</code>) says "T must be a subtype of X". This also lets you call X's methods on values of type T.
@@ -392,10 +378,7 @@ max(List.of("pear", "apple", "mango")); // "pear" (String)`
       </div>
 
       {/* 5.5 */}
-      <div className="section-header anchor" id="s55">
-        <div className="section-badge">5.5</div>
-        <h2>Wildcards</h2>
-      </div>
+      <div id="s55" data-topic-boundary="true" />
       <p>
         A <strong>wildcard</strong> <code>?</code> represents an unknown type. Unlike type parameters (which name a
         type for reuse), wildcards are used in method signatures where you don't need to reference the specific type
@@ -538,10 +521,7 @@ List<? extends Animal> a = dogs; // ✓
       </div>
 
       {/* 5.6 */}
-      <div className="section-header anchor" id="s56">
-        <div className="section-badge">5.6</div>
-        <h2>Type Erasure</h2>
-      </div>
+      <div id="s56" data-topic-boundary="true" />
       <p>
         <strong>Type erasure</strong> is the mechanism by which the Java compiler removes all generic type
         information from the compiled bytecode. At runtime, the JVM sees only raw types. This was a deliberate
@@ -679,10 +659,7 @@ private T[] createArray(int n) {
       </div>
 
       {/* 5.7 */}
-      <div className="section-header anchor" id="s57">
-        <div className="section-badge">5.7</div>
-        <h2>Static Members &amp; Generic Exceptions</h2>
-      </div>
+      <div id="s57" data-topic-boundary="true" />
       <p>
         Two common sources of confusion: static members interacting with class-level type parameters, and how
         erasure affects generic exception handling.
@@ -781,10 +758,7 @@ interface Processor<T, E extends Exception> {
       </div>
 
       {/* 5.8 */}
-      <div className="section-header anchor" id="s58">
-        <div className="section-badge">5.8</div>
-        <h2>Raw Types &amp; Best Practices</h2>
-      </div>
+      <div id="s58" data-topic-boundary="true" />
       <p>
         A <strong>raw type</strong> is a generic class or interface used without any type arguments. They exist
         solely for backward compatibility — <strong>avoid them in new code</strong>. Using raw types opts you out of

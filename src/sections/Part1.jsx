@@ -1,13 +1,8 @@
 export default function Part1() {
   return (
     <>
-      <h1 className="part-title">Part 1 — Core Java Fundamentals</h1>
-
       {/* 1.1 */}
-      <div className="section-header anchor" id="part1-1">
-        <div className="section-badge">1.1</div>
-        <h2>Java Architecture &amp; Compilation</h2>
-      </div>
+      <div id="part1-1" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>Write Once, Run Anywhere (WORA)</strong> — Java source code is compiled to platform-neutral{' '}
@@ -167,10 +162,7 @@ Custom ClassLoader  (user-defined, used in frameworks/containers)`
       </div>
 
       {/* 1.2 */}
-      <div className="section-header anchor" id="part1-2">
-        <div className="section-badge">1.2</div>
-        <h2>Java Basics</h2>
-      </div>
+      <div id="part1-2" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>The <code>main()</code> Method — Dissected</h3></div>
       <div className="code-block">
@@ -292,10 +284,7 @@ Custom ClassLoader  (user-defined, used in frameworks/containers)`
       </div>
 
       {/* 1.3 */}
-      <div className="section-header anchor" id="part1-3">
-        <div className="section-badge">1.3</div>
-        <h2>Static Keyword</h2>
-      </div>
+      <div id="part1-3" data-topic-boundary="true" />
       <div className="card">
         <p>
           The <code>static</code> keyword means a member belongs to the <strong>class</strong>, not to any particular
@@ -409,10 +398,7 @@ Custom ClassLoader  (user-defined, used in frameworks/containers)`
       </div>
 
       {/* 1.4 */}
-      <div className="section-header anchor" id="part1-4">
-        <div className="section-badge">1.4</div>
-        <h2>Data Types &amp; Wrappers</h2>
-      </div>
+      <div id="part1-4" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>Primitive Types — Full Reference</h3></div>
       <div className="table-wrap">
@@ -425,7 +411,7 @@ Custom ClassLoader  (user-defined, used in frameworks/containers)`
             <tr><td><code>long</code></td><td>64-bit</td><td>±9.2 × 10<sup>18</sup></td><td><code>0L</code></td><td><code>Long</code></td></tr>
             <tr><td><code>float</code></td><td>32-bit IEEE 754</td><td>~±3.4 × 10<sup>38</sup>, 7 decimal digits</td><td><code>0.0f</code></td><td><code>Float</code></td></tr>
             <tr><td><code>double</code></td><td>64-bit IEEE 754</td><td>~±1.7 × 10<sup>308</sup>, 15 decimal digits</td><td><code>0.0</code></td><td><code>Double</code></td></tr>
-            <tr><td><code>char</code></td><td>16-bit Unicode</td><td>0 to 65535</td><td><code>' '</code></td><td><code>Character</code></td></tr>
+            <tr><td><code>char</code></td><td>16-bit Unicode</td><td>0 to 65535</td><td><code>'\u0000'</code></td><td><code>Character</code></td></tr>
             <tr><td><code>boolean</code></td><td>~1-bit (JVM-specific)</td><td><code>true</code>/<code>false</code></td><td><code>false</code></td><td><code>Boolean</code></td></tr>
           </tbody>
         </table>
@@ -521,10 +507,7 @@ list.<span className="fn">add</span>(<span className="nm">10</span>);           
       </div>
 
       {/* 1.5 */}
-      <div className="section-header anchor" id="part1-5">
-        <div className="section-badge">1.5</div>
-        <h2>Strings in Java</h2>
-      </div>
+      <div id="part1-5" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>String</code> is a <strong>final class</strong> in <code>java.lang</code>. Internally it's backed by

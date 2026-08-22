@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import JavaPart1 from './sections/Part1.jsx';
 import JavaPart2 from './sections/Part2.jsx';
@@ -184,9 +184,10 @@ export default function App() {
   const [activeSubjectKey, setActiveSubjectKey] = useState(SUBJECTS[0].key);
   const [activeTopicKey, setActiveTopicKey] = useState(SUBJECTS[0].topics[0].key);
   const [activeSubId, setActiveSubId] = useState(SUBJECTS[0].topics[0].subs[0].id);
-  const suppressSpy = useRef(false);
 
   const activeSubject = SUBJECTS.find((s) => s.key === activeSubjectKey) ?? SUBJECTS[0];
+  const activeTopic = activeSubject.topics.find((t) => t.key === activeTopicKey) ?? activeSubject.topics[0];
+  const activeSub = activeTopic.subs.find((s) => s.id === activeSubId) ?? activeTopic.subs[0];
   const ActiveContent = activeSubject.Content;
 
   useEffect(() => {
@@ -199,57 +200,36 @@ export default function App() {
     window.addEventListener('scroll', onScroll);
     onScroll();
     return () => window.removeEventListener('scroll', onScroll);
-  }, [activeSubjectKey]);
+  }, [activeSubjectKey, activeSubId]);
 
   useEffect(() => {
-    const flat = [];
-    activeSubject.topics.forEach((topic) => {
-      topic.subs.forEach((sub) => flat.push({ topicKey: topic.key, subId: sub.id }));
+    const mainEl = document.getElementById('main');
+    if (!mainEl) return;
+    const children = Array.from(mainEl.children);
+    const markers = [];
+    children.forEach((el, i) => {
+      if (el.dataset && el.dataset.topicBoundary) markers.push({ id: el.id, index: i });
     });
-    const entries = flat
-      .map((e) => ({ ...e, el: document.getElementById(e.subId) }))
-      .filter((e) => e.el);
-
-    const onScroll = () => {
-      if (suppressSpy.current) return;
-      const navEl = document.getElementById('topnav');
-      const offset = (navEl ? navEl.offsetHeight : 0) + 24;
-      const scrollY = window.scrollY + offset;
-      let current = entries[0];
-      for (const e of entries) {
-        if (e.el.offsetTop <= scrollY) current = e;
+    markers.forEach((m, mi) => {
+      const start = m.index;
+      const end = mi + 1 < markers.length ? markers[mi + 1].index : children.length;
+      const visible = m.id === activeSubId;
+      for (let i = start; i < end; i++) {
+        children[i].style.display = visible ? '' : 'none';
       }
-      if (current) {
-        setActiveTopicKey((prev) => (prev === current.topicKey ? prev : current.topicKey));
-        setActiveSubId((prev) => (prev === current.subId ? prev : current.subId));
-      }
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [activeSubjectKey]);
-
-  const scrollToSub = (subId) => {
-    const el = document.getElementById(subId);
-    if (!el) return;
-    suppressSpy.current = true;
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    window.setTimeout(() => { suppressSpy.current = false; }, 700);
-  };
+    });
+    window.scrollTo(0, 0);
+  }, [activeSubjectKey, activeSubId]);
 
   const handleSelectTopic = (topic) => {
     setActiveTopicKey(topic.key);
     const firstSub = topic.subs[0];
-    if (firstSub) {
-      setActiveSubId(firstSub.id);
-      scrollToSub(firstSub.id);
-    }
+    if (firstSub) setActiveSubId(firstSub.id);
   };
 
   const handleSelectSub = (sub, topic) => {
     setActiveTopicKey(topic.key);
     setActiveSubId(sub.id);
-    scrollToSub(sub.id);
   };
 
   const handleSelectSubject = (subject) => {
@@ -258,7 +238,6 @@ export default function App() {
     const firstTopic = subject.topics[0];
     setActiveTopicKey(firstTopic.key);
     setActiveSubId(firstTopic.subs[0].id);
-    window.scrollTo(0, 0);
   };
 
   return (
@@ -273,6 +252,7 @@ export default function App() {
         onSelectSub={handleSelectSub}
       />
       <div id="main">
+        <h1 className="content-heading">{activeTopic.label} — {activeSub.label}</h1>
         <ActiveContent />
       </div>
     </>

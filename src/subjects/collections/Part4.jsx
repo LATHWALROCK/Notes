@@ -10,13 +10,8 @@ function Code({ children }) {
 export default function Part4() {
   return (
     <>
-      <h1 className="part-title">Part 4 — Queue &amp; Deque Types</h1>
-
       {/* 4.1 */}
-      <div className="section-header anchor" id="part4">
-        <div className="section-badge">4.1</div>
-        <h2>Queue Interface</h2>
-      </div>
+      <div id="part4" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>Queue&lt;E&gt;</code> extends <code>Collection&lt;E&gt;</code> and models a <strong>FIFO</strong>{' '}
@@ -55,10 +50,7 @@ export default function Part4() {
       </div>
 
       {/* 4.2 */}
-      <div className="section-header anchor" id="s4-2">
-        <div className="section-badge">4.2</div>
-        <h2>PriorityQueue</h2>
-      </div>
+      <div id="s4-2" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>PriorityQueue&lt;E&gt;</code> implements <code>Queue</code> using a <strong>binary min-heap</strong>{' '}
@@ -133,10 +125,7 @@ System.out.println(maxPQ.peek()); // 9`
       </div>
 
       {/* 4.3 */}
-      <div className="section-header anchor" id="s4-3">
-        <div className="section-badge">4.3</div>
-        <h2>Deque Interface &amp; ArrayDeque</h2>
-      </div>
+      <div id="s4-3" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>Deque&lt;E&gt;</code> (double-ended queue) extends <code>Queue</code> and supports insertion and
@@ -223,10 +212,7 @@ stack.pop();`
       </div>
 
       {/* 4.4 */}
-      <div className="section-header anchor" id="s4-4">
-        <div className="section-badge">4.4</div>
-        <h2>BlockingQueue &amp; Variants</h2>
-      </div>
+      <div id="s4-4" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>BlockingQueue Interface</h3></div>
       <div className="card">
@@ -488,10 +474,7 @@ DelayedTask t = dq.take(); // blocks ~1 second`
       </div>
 
       {/* 4.5 */}
-      <div className="section-header anchor" id="s4-5">
-        <div className="section-badge">4.5</div>
-        <h2>ConcurrentLinkedQueue, ConcurrentLinkedDeque &amp; Iterable / Iterator</h2>
-      </div>
+      <div id="s4-5" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>ConcurrentLinkedQueue</h3></div>
       <div className="card">

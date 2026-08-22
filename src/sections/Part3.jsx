@@ -10,13 +10,8 @@ function Code({ children }) {
 export default function Part3() {
   return (
     <>
-      <h1 className="part-title">Part 3 — Exceptions &amp; CPU / Concurrency Basics</h1>
-
       {/* 3.1 */}
-      <div className="section-header anchor" id="s3-1">
-        <div className="section-badge">3.1</div>
-        <h2>Exception Hierarchy</h2>
-      </div>
+      <div id="s3-1" data-topic-boundary="true" />
       <p>
         Every throwable thing in Java extends <code>Throwable</code>. Two top-level branches:{' '}
         <strong>Error</strong> (JVM-level, normally unrecoverable) and <strong>Exception</strong> (application-level,
@@ -158,10 +153,7 @@ public class InvalidOrderException extends RuntimeException {
       </div>
 
       {/* 3.2 */}
-      <div className="section-header anchor" id="s3-2">
-        <div className="section-badge">3.2</div>
-        <h2>CPU &amp; Process Architecture</h2>
-      </div>
+      <div id="s3-2" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>CPU Components</h3></div>
       <div className="table-wrap">
@@ -275,10 +267,7 @@ Low address  │   Code Segment│ ← compiled bytecode / machine instructions
       </div>
 
       {/* 3.3 */}
-      <div className="section-header anchor" id="s3-3">
-        <div className="section-badge">3.3</div>
-        <h2>Multitasking vs Multithreading</h2>
-      </div>
+      <div id="s3-3" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>Core Concepts Comparison</h3></div>
       <div className="table-wrap">
@@ -382,10 +371,7 @@ p = 0.99 → max speedup: 100×   (requires truly parallel-friendly code)`
       </div>
 
       {/* 3.4 */}
-      <div className="section-header anchor" id="s3-4">
-        <div className="section-badge">3.4</div>
-        <h2>Java Threads — Creation</h2>
-      </div>
+      <div id="s3-4" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>4 Ways to Create a Thread</h3></div>
       <h4>① Extend <code>Thread</code> class</h4>
@@ -504,10 +490,7 @@ System.out.println(group.activeCount());`
       }</Code>
 
       {/* 3.5 */}
-      <div className="section-header anchor" id="s3-5">
-        <div className="section-badge">3.5</div>
-        <h2>Thread Lifecycle &amp; Methods</h2>
-      </div>
+      <div id="s3-5" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>Thread State Diagram</h3></div>
       <pre className="diagram">{

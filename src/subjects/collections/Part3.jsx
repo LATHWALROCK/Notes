@@ -10,13 +10,8 @@ function Code({ children }) {
 export default function Part3() {
   return (
     <>
-      <h1 className="part-title">Part 3 — Set Types</h1>
-
       {/* 3.1 */}
-      <div className="section-header anchor" id="part3">
-        <div className="section-badge">3.1</div>
-        <h2>Set Interface</h2>
-      </div>
+      <div id="part3" data-topic-boundary="true" />
       <div className="card">
         <p>
           A <code>Set</code> is a <code>Collection</code> that contains <strong>no duplicate elements</strong>. It
@@ -77,10 +72,7 @@ Set<String> safe = Collections.synchronizedSet(new HashSet<>());`
       </div>
 
       {/* 3.2 */}
-      <div className="section-header anchor" id="s3-2">
-        <div className="section-badge">3.2</div>
-        <h2>HashSet</h2>
-      </div>
+      <div id="s3-2" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>HashSet&lt;E&gt;</code> is backed by a <code>HashMap&lt;E, Object&gt;</code> where every entry maps
@@ -146,10 +138,7 @@ a.retainAll(b); // intersection → {y, z}`
       </div>
 
       {/* 3.3 */}
-      <div className="section-header anchor" id="s3-3">
-        <div className="section-badge">3.3</div>
-        <h2>LinkedHashSet</h2>
-      </div>
+      <div id="s3-3" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>LinkedHashSet&lt;E&gt;</code> extends <code>HashSet</code> and maintains a{' '}
@@ -219,10 +208,7 @@ s.add("c"); s.add("a"); s.add("b");
       </div>
 
       {/* 3.4 */}
-      <div className="section-header anchor" id="s3-4">
-        <div className="section-badge">3.4</div>
-        <h2>TreeSet</h2>
-      </div>
+      <div id="s3-4" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>TreeSet&lt;E&gt;</code> implements <code>NavigableSet&lt;E&gt;</code> backed by a{' '}
@@ -293,10 +279,7 @@ System.out.println(ts.pollFirst());    // 1, set is now [2, 5, 8]`
       </div>
 
       {/* 3.5 */}
-      <div className="section-header anchor" id="s3-5">
-        <div className="section-badge">3.5</div>
-        <h2>EnumSet, CopyOnWriteArraySet &amp; ConcurrentSkipListSet</h2>
-      </div>
+      <div id="s3-5" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>EnumSet</h3></div>
       <div className="card">
