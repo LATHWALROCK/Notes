@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import Part1 from './sections/Part1.jsx';
 import Part2 from './sections/Part2.jsx';
@@ -6,65 +6,104 @@ import Part3 from './sections/Part3.jsx';
 import Part4 from './sections/Part4.jsx';
 import Part5 from './sections/Part5.jsx';
 
-const NAV_LINKS = [
-  { group: 'Part 1 — Core Java', links: [
-    ['#part1-1', '1.1 Architecture & Compilation'],
-    ['#part1-2', '1.2 Java Basics'],
-    ['#part1-3', '1.3 Static Keyword'],
-    ['#part1-4', '1.4 Data Types & Wrappers'],
-    ['#part1-5', '1.5 Strings in Java'],
-  ]},
-  { group: 'Part 2 — OOP', links: [
-    ['#part2-1', '2.1 Methods & Constructors'],
-    ['#part2-2', '2.2 Inheritance & Polymorphism'],
-    ['#part2-3', '2.3 Abstract Classes & Final'],
-    ['#part2-4', '2.4 Interfaces'],
-    ['#part2-5', '2.5 Inner Classes'],
-  ]},
-  { group: 'Part 3 — Exceptions & Concurrency', links: [
-    ['#s3-1', '3.1 Exception Hierarchy'],
-    ['#s3-2', '3.2 CPU & Process Architecture'],
-    ['#s3-3', '3.3 Multitasking vs Multithreading'],
-    ['#s3-4', '3.4 Java Threads — Creation'],
-    ['#s3-5', '3.5 Thread Lifecycle & Methods'],
-  ]},
-  { group: 'Part 4 — Synchronization & Executors', links: [
-    ['#s4-1', '4.1 Synchronization'],
-    ['#s4-2', '4.2 Explicit Locks'],
-    ['#s4-3', '4.3 Thread Communication'],
-    ['#s4-4', '4.4 Deadlocks & Liveness'],
-    ['#s4-5', '4.5 Executors Framework'],
-    ['#s4-6', '4.6 Concurrency Utilities'],
-  ]},
-  { group: 'Part 5 — Generics', links: [
-    ['#s51', '5.1 Why Generics?'],
-    ['#s52', '5.2 Generic Classes & Interfaces'],
-    ['#s53', '5.3 Generic Methods'],
-    ['#s54', '5.4 Bounded Type Params'],
-    ['#s55', '5.5 Wildcards'],
-    ['#s56', '5.6 Type Erasure'],
-    ['#s57', '5.7 Static Members & Exceptions'],
-    ['#s58', '5.8 Raw Types & Best Practices'],
-  ]},
+const SUBJECTS = [
+  {
+    key: 'java',
+    label: 'Java Notes',
+    icon: '📘',
+    topics: [
+      { key: 'core-java', label: 'Core Java', subs: [
+        { id: 'part1-1', label: 'Architecture & Compilation' },
+        { id: 'part1-2', label: 'Java Basics' },
+        { id: 'part1-3', label: 'Static Keyword' },
+        { id: 'part1-4', label: 'Data Types & Wrappers' },
+        { id: 'part1-5', label: 'Strings in Java' },
+      ] },
+      { key: 'oop', label: 'OOP', subs: [
+        { id: 'part2-1', label: 'Methods & Constructors' },
+        { id: 'part2-2', label: 'Inheritance & Polymorphism' },
+        { id: 'part2-3', label: 'Abstract Classes & Final' },
+        { id: 'part2-4', label: 'Interfaces' },
+        { id: 'part2-5', label: 'Inner Classes' },
+      ] },
+      { key: 'exceptions-concurrency', label: 'Exceptions & Concurrency', subs: [
+        { id: 's3-1', label: 'Exception Hierarchy' },
+        { id: 's3-2', label: 'CPU & Process Architecture' },
+        { id: 's3-3', label: 'Multitasking vs Multithreading' },
+        { id: 's3-4', label: 'Java Threads — Creation' },
+        { id: 's3-5', label: 'Thread Lifecycle & Methods' },
+      ] },
+      { key: 'sync-executors', label: 'Synchronization & Executors', subs: [
+        { id: 's4-1', label: 'Synchronization' },
+        { id: 's4-2', label: 'Explicit Locks' },
+        { id: 's4-3', label: 'Thread Communication' },
+        { id: 's4-4', label: 'Deadlocks & Liveness' },
+        { id: 's4-5', label: 'Executors Framework' },
+        { id: 's4-6', label: 'Concurrency Utilities' },
+      ] },
+      { key: 'generics', label: 'Generics', subs: [
+        { id: 's51', label: 'Why Generics?' },
+        { id: 's52', label: 'Generic Classes & Interfaces' },
+        { id: 's53', label: 'Generic Methods' },
+        { id: 's54', label: 'Bounded Type Params' },
+        { id: 's55', label: 'Wildcards' },
+        { id: 's56', label: 'Type Erasure' },
+        { id: 's57', label: 'Static Members & Exceptions' },
+        { id: 's58', label: 'Raw Types & Best Practices' },
+      ] },
+    ],
+  },
 ];
 
-function Sidebar() {
+function TopNav({ activeSubjectKey, activeTopicKey, activeSubId, onSelectSubject, onSelectTopic, onSelectSub }) {
+  const activeSubject = SUBJECTS.find((s) => s.key === activeSubjectKey) ?? SUBJECTS[0];
+  const activeTopic = activeSubject.topics.find((t) => t.key === activeTopicKey) ?? activeSubject.topics[0];
+
   return (
-    <div id="sidebar">
-      <div className="sidebar-logo"><span>📘</span> Java Notes</div>
-      {NAV_LINKS.map((group) => (
-        <div className="nav-group" key={group.group}>
-          <div className="part-label">{group.group}</div>
-          {group.links.map(([href, label]) => (
-            <a href={href} key={href}>{label}</a>
-          ))}
-        </div>
-      ))}
+    <div id="topnav">
+      <div className="nav-row nav-row-subjects">
+        {SUBJECTS.map((s) => (
+          <button
+            key={s.key}
+            className={'nav-pill nav-pill-subject' + (s.key === activeSubject.key ? ' active' : '')}
+            onClick={() => onSelectSubject(s)}
+          >
+            <span>{s.icon}</span> {s.label}
+          </button>
+        ))}
+      </div>
+      <div className="nav-row nav-row-topics">
+        {activeSubject.topics.map((t) => (
+          <button
+            key={t.key}
+            className={'nav-pill' + (t.key === activeTopic.key ? ' active' : '')}
+            onClick={() => onSelectTopic(t)}
+          >
+            {t.label}
+          </button>
+        ))}
+      </div>
+      <div className="nav-row nav-row-subs">
+        {activeTopic.subs.map((sub) => (
+          <button
+            key={sub.id}
+            className={'nav-pill nav-pill-sub' + (sub.id === activeSubId ? ' active' : '')}
+            onClick={() => onSelectSub(sub, activeTopic)}
+          >
+            {sub.label}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
 
 export default function App() {
+  const [activeSubjectKey, setActiveSubjectKey] = useState(SUBJECTS[0].key);
+  const [activeTopicKey, setActiveTopicKey] = useState(SUBJECTS[0].topics[0].key);
+  const [activeSubId, setActiveSubId] = useState(SUBJECTS[0].topics[0].subs[0].id);
+  const suppressSpy = useRef(false);
+
   useEffect(() => {
     const bar = document.getElementById('progress-bar');
     const onScroll = () => {
@@ -78,31 +117,81 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const navLinks = Array.from(document.querySelectorAll('#sidebar a'));
-    const sections = navLinks
-      .map((a) => document.querySelector(a.getAttribute('href')))
-      .filter(Boolean);
+    const subject = SUBJECTS.find((s) => s.key === activeSubjectKey) ?? SUBJECTS[0];
+    const flat = [];
+    subject.topics.forEach((topic) => {
+      topic.subs.forEach((sub) => flat.push({ topicKey: topic.key, subId: sub.id }));
+    });
+    const entries = flat
+      .map((e) => ({ ...e, el: document.getElementById(e.subId) }))
+      .filter((e) => e.el);
 
     const onScroll = () => {
-      const scrollY = window.scrollY + 80;
-      let current = sections[0];
-      for (const sec of sections) {
-        if (sec.offsetTop <= scrollY) current = sec;
+      if (suppressSpy.current) return;
+      const navEl = document.getElementById('topnav');
+      const offset = (navEl ? navEl.offsetHeight : 0) + 24;
+      const scrollY = window.scrollY + offset;
+      let current = entries[0];
+      for (const e of entries) {
+        if (e.el.offsetTop <= scrollY) current = e;
       }
-      navLinks.forEach((a) => {
-        const id = a.getAttribute('href').replace('#', '');
-        a.classList.toggle('active', current && current.id === id);
-      });
+      if (current) {
+        setActiveTopicKey((prev) => (prev === current.topicKey ? prev : current.topicKey));
+        setActiveSubId((prev) => (prev === current.subId ? prev : current.subId));
+      }
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [activeSubjectKey]);
+
+  const scrollToSub = (subId) => {
+    const el = document.getElementById(subId);
+    if (!el) return;
+    suppressSpy.current = true;
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.setTimeout(() => { suppressSpy.current = false; }, 700);
+  };
+
+  const handleSelectTopic = (topic) => {
+    setActiveTopicKey(topic.key);
+    const firstSub = topic.subs[0];
+    if (firstSub) {
+      setActiveSubId(firstSub.id);
+      scrollToSub(firstSub.id);
+    }
+  };
+
+  const handleSelectSub = (sub, topic) => {
+    setActiveTopicKey(topic.key);
+    setActiveSubId(sub.id);
+    scrollToSub(sub.id);
+  };
+
+  const handleSelectSubject = (subject) => {
+    setActiveSubjectKey(subject.key);
+    const firstTopic = subject.topics[0];
+    if (firstTopic) {
+      setActiveTopicKey(firstTopic.key);
+      const firstSub = firstTopic.subs[0];
+      if (firstSub) {
+        setActiveSubId(firstSub.id);
+        scrollToSub(firstSub.id);
+      }
+    }
+  };
 
   return (
     <>
       <div id="progress-bar" />
-      <Sidebar />
+      <TopNav
+        activeSubjectKey={activeSubjectKey}
+        activeTopicKey={activeTopicKey}
+        activeSubId={activeSubId}
+        onSelectSubject={handleSelectSubject}
+        onSelectTopic={handleSelectTopic}
+        onSelectSub={handleSelectSub}
+      />
       <div id="main">
         <Part1 />
         <Part2 />
