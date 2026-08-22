@@ -87,6 +87,11 @@ body {
 
 .nav-pill:hover { background: #e2e6ff; }
 
+.nav-pill:focus-visible {
+  outline: 2px solid var(--primary-accent);
+  outline-offset: 2px;
+}
+
 .nav-pill.active {
   background: var(--primary-accent);
   color: #fff;
@@ -213,6 +218,21 @@ body {
 .tp { color: #94E2D5; }
 .an { color: #F9E2AF; }
 
+/* Prism.js token colors — mapped to the same palette as the .kw/.st/... classes above */
+.code-block pre code .token.keyword,
+.code-block pre code .token.boolean,
+.code-block pre code .token.operator { color: #CBA6F7; }
+.code-block pre code .token.string,
+.code-block pre code .token.char { color: #A6E3A1; }
+.code-block pre code .token.number { color: #FAB387; }
+.code-block pre code .token.function { color: #89B4FA; }
+.code-block pre code .token.comment { color: #6C7086; font-style: italic; }
+.code-block pre code .token.class-name,
+.code-block pre code .token.builtin { color: #94E2D5; }
+.code-block pre code .token.annotation,
+.code-block pre code .token.decorator { color: #F9E2AF; }
+.code-block pre code .token.punctuation { color: #CDD6F4; }
+
 code {
   background: var(--code-bg);
   border-radius: 4px;
@@ -316,5 +336,8 @@ strong { font-weight: 700; }
 
 @media (max-width: 900px) {
   #main { padding: 20px; }
-  .nav-row { padding: 8px 14px; }
+  .nav-row { padding: 8px 14px; gap: 6px; }
+  .nav-pill { padding: 5px 12px; font-size: .78rem; }
+  .nav-pill-subject { padding: 6px 14px; font-size: .85rem; }
+  .content-heading { font-size: 1.25rem; }
 }

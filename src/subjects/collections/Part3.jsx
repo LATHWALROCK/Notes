@@ -1,12 +1,4 @@
-function Code({ children }) {
-  return (
-    <div className="code-block">
-      <span className="lang-badge">JAVA</span>
-      <pre>{children}</pre>
-    </div>
-  );
-}
-
+import Code from "../../components/Code.jsx";
 export default function Part3() {
   return (
     <>

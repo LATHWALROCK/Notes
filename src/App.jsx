@@ -142,41 +142,44 @@ function TopNav({ activeSubjectKey, activeTopicKey, activeSubId, onSelectSubject
   const activeTopic = activeSubject.topics.find((t) => t.key === activeTopicKey) ?? activeSubject.topics[0];
 
   return (
-    <div id="topnav">
-      <div className="nav-row nav-row-subjects">
+    <nav id="topnav" aria-label="Notes navigation">
+      <div className="nav-row nav-row-subjects" role="group" aria-label="Subjects">
         {SUBJECTS.map((s) => (
           <button
             key={s.key}
             className={'nav-pill nav-pill-subject' + (s.key === activeSubject.key ? ' active' : '')}
+            aria-current={s.key === activeSubject.key ? 'true' : undefined}
             onClick={() => onSelectSubject(s)}
           >
             <span>{s.icon}</span> {s.label}
           </button>
         ))}
       </div>
-      <div className="nav-row nav-row-topics">
+      <div className="nav-row nav-row-topics" role="group" aria-label="Topics">
         {activeSubject.topics.map((t) => (
           <button
             key={t.key}
             className={'nav-pill' + (t.key === activeTopic.key ? ' active' : '')}
+            aria-current={t.key === activeTopic.key ? 'true' : undefined}
             onClick={() => onSelectTopic(t)}
           >
             {t.label}
           </button>
         ))}
       </div>
-      <div className="nav-row nav-row-subs">
+      <div className="nav-row nav-row-subs" role="group" aria-label="Subtopics">
         {activeTopic.subs.map((sub) => (
           <button
             key={sub.id}
             className={'nav-pill nav-pill-sub' + (sub.id === activeSubId ? ' active' : '')}
+            aria-current={sub.id === activeSubId ? 'true' : undefined}
             onClick={() => onSelectSub(sub, activeTopic)}
           >
             {sub.label}
           </button>
         ))}
       </div>
-    </div>
+    </nav>
   );
 }
 
