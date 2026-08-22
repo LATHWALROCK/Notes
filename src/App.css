@@ -113,7 +113,7 @@ body {
   border-color: var(--primary-accent);
 }
 
-#main { padding: 40px; max-width: 1000px; margin: 0 auto; }
+#main { padding: 40px 48px; width: 100%; }
 
 .section-header {
   display: flex;
