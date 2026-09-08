@@ -58,10 +58,9 @@ body {
 .nav-row {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
   padding: 8px 24px;
-  overflow-x: auto;
-  scrollbar-width: thin;
 }
 
 .nav-row-subjects { border-bottom: 1px solid var(--border); padding: 10px 24px; }
