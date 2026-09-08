@@ -334,6 +334,46 @@ strong { font-weight: 700; }
 .code-block pre code { background: none; border-radius: 0; padding: 0; font-size: inherit; color: inherit; }
 .anchor { scroll-margin-top: 150px; }
 
+/* Problem metadata — the pill row under a problem heading */
+.meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 2px; }
+
+/* Complexity boxes */
+.cx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0; }
+@media (max-width: 768px) { .cx-grid { grid-template-columns: 1fr; } }
+
+.cx-box {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--link-accent);
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+.cx-label { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--text-secondary); }
+.cx-val { font-family: 'Fira Code', 'Consolas', monospace; font-size: 1rem; font-weight: 700; color: var(--primary-accent); }
+.cx-note { font-size: .82rem; color: var(--text-secondary); }
+
+/* Numbered step lists */
+.steps { counter-reset: step; list-style: none; padding-left: 0; }
+.steps li { counter-increment: step; position: relative; padding-left: 34px; margin-bottom: 10px; }
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--pill-bg);
+  color: var(--primary-accent);
+  font-size: .72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 900px) {
   #main { padding: 20px; }
   .nav-row { padding: 8px 14px; gap: 6px; }
