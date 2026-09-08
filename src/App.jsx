@@ -10,6 +10,15 @@ import JCFPart2 from './subjects/collections/Part2.jsx';
 import JCFPart3 from './subjects/collections/Part3.jsx';
 import JCFPart4 from './subjects/collections/Part4.jsx';
 import JCFPart5 from './subjects/collections/Part5.jsx';
+import DSAPart1 from './subjects/dsa/Part1.jsx';
+import DSAPart2 from './subjects/dsa/Part2.jsx';
+import DSAPart3 from './subjects/dsa/Part3.jsx';
+import DSAPart4 from './subjects/dsa/Part4.jsx';
+import DSAPart5 from './subjects/dsa/Part5.jsx';
+import DSAPart6 from './subjects/dsa/Part6.jsx';
+import DSAPart7 from './subjects/dsa/Part7.jsx';
+import DSAPart8 from './subjects/dsa/Part8.jsx';
+import DSAPart9 from './subjects/dsa/Part9.jsx';
 
 function JavaNotesContent() {
   return (
@@ -31,6 +40,22 @@ function JavaCollectionsContent() {
       <JCFPart3 />
       <JCFPart4 />
       <JCFPart5 />
+    </>
+  );
+}
+
+function DSAContent() {
+  return (
+    <>
+      <DSAPart1 />
+      <DSAPart2 />
+      <DSAPart3 />
+      <DSAPart4 />
+      <DSAPart5 />
+      <DSAPart6 />
+      <DSAPart7 />
+      <DSAPart8 />
+      <DSAPart9 />
     </>
   );
 }
@@ -132,6 +157,83 @@ const SUBJECTS = [
         { id: 's5-5', label: 'Stream API' },
         { id: 's5-6', label: 'Collectors Utility Class' },
         { id: 's5-7', label: 'Parallel Streams & Primitive Streams' },
+      ] },
+    ],
+  },
+  {
+    key: 'dsa',
+    label: 'DSA in Java',
+    icon: '🌳',
+    Content: DSAContent,
+    topics: [
+      { key: 'tree-foundations', label: 'Tree Foundations', subs: [
+        { id: 's1-1', label: 'What Is a Binary Tree?' },
+        { id: 's1-2', label: 'Types of Binary Trees' },
+        { id: 's1-3', label: 'Representation in Java' },
+        { id: 's1-4', label: 'Traversal Overview' },
+      ] },
+      { key: 'traversals', label: 'Traversals', subs: [
+        { id: 's2-1', label: 'Recursive Traversals' },
+        { id: 's2-2', label: 'Level Order Traversal' },
+        { id: 's2-3', label: 'Inorder Iterative' },
+        { id: 's2-4', label: 'Preorder Iterative' },
+        { id: 's2-5', label: 'Postorder Iterative' },
+        { id: 's2-6', label: 'All Three in One Go' },
+      ] },
+      { key: 'height-paths', label: 'Height, Balance & Paths', subs: [
+        { id: 's3-1', label: 'Maximum Depth' },
+        { id: 's3-2', label: 'Balanced Binary Tree' },
+        { id: 's3-3', label: 'Diameter of a Tree' },
+        { id: 's3-4', label: 'Maximum Path Sum' },
+        { id: 's3-5', label: 'Identical Trees' },
+      ] },
+      { key: 'views', label: 'Patterns & Views', subs: [
+        { id: 's4-1', label: 'Zig-Zag Traversal' },
+        { id: 's4-2', label: 'Boundary Traversal' },
+        { id: 's4-3', label: 'Vertical Order Traversal' },
+        { id: 's4-4', label: 'Top View' },
+        { id: 's4-5', label: 'Bottom View' },
+        { id: 's4-6', label: 'Right / Left Side View' },
+        { id: 's4-7', label: 'Symmetric Binary Tree' },
+      ] },
+      { key: 'paths-ancestors', label: 'Paths, Ancestors & BFS Tricks', subs: [
+        { id: 's5-1', label: 'Root to Node Path' },
+        { id: 's5-2', label: 'Lowest Common Ancestor' },
+        { id: 's5-3', label: 'Maximum Width' },
+        { id: 's5-4', label: 'Children Sum Property' },
+        { id: 's5-5', label: 'Nodes at Distance K' },
+        { id: 's5-6', label: 'Burn the Binary Tree' },
+      ] },
+      { key: 'construction', label: 'Construction & O(1) Traversal', subs: [
+        { id: 's6-1', label: 'Count Complete Tree Nodes' },
+        { id: 's6-2', label: 'Build from Inorder + Preorder' },
+        { id: 's6-3', label: 'Build from Inorder + Postorder' },
+        { id: 's6-4', label: 'Serialize & Deserialize' },
+        { id: 's6-5', label: 'Morris Inorder Traversal' },
+        { id: 's6-6', label: 'Morris Preorder Traversal' },
+        { id: 's6-7', label: 'Flatten Tree to Linked List' },
+      ] },
+      { key: 'bst-foundations', label: 'BST Foundations', subs: [
+        { id: 's7-1', label: 'What Is a BST?' },
+        { id: 's7-2', label: 'Search in a BST' },
+        { id: 's7-3', label: 'Ceil in a BST' },
+        { id: 's7-4', label: 'Floor in a BST' },
+        { id: 's7-5', label: 'Insert a Node in a BST' },
+        { id: 's7-6', label: 'Delete a Node in a BST' },
+      ] },
+      { key: 'bst-order', label: 'Order, Validity & Ancestors', subs: [
+        { id: 's8-1', label: 'Kth Smallest / Largest' },
+        { id: 's8-2', label: 'Validate a BST' },
+        { id: 's8-3', label: 'LCA in a BST' },
+        { id: 's8-4', label: 'Construct BST from Preorder' },
+        { id: 's8-5', label: 'Predecessor & Successor' },
+      ] },
+      { key: 'bst-hard', label: 'Iterators & Hard Problems', subs: [
+        { id: 's9-1', label: 'BST Iterator' },
+        { id: 's9-2', label: 'Two Sum in a BST' },
+        { id: 's9-3', label: 'Recover a BST' },
+        { id: 's9-4', label: 'Largest BST in a Binary Tree' },
+        { id: 's9-5', label: 'Complexity Cheat Sheet' },
       ] },
     ],
   },
