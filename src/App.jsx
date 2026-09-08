@@ -1,5 +1,13 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import {
+  BookIcon,
+  LayersIcon,
+  TreeIcon,
+  PanelExpandIcon,
+  PanelCollapseIcon,
+  ChevronDownIcon,
+} from './components/Icons.jsx';
 import JavaPart1 from './sections/Part1.jsx';
 import JavaPart2 from './sections/Part2.jsx';
 import JavaPart3 from './sections/Part3.jsx';
@@ -71,7 +79,7 @@ const SUBJECTS = [
   {
     key: 'java',
     label: 'Java Notes',
-    icon: '📘',
+    Icon: BookIcon,
     Content: JavaNotesContent,
     children: [
       { key: 'core-java', label: 'Core Java', children: [
@@ -118,7 +126,7 @@ const SUBJECTS = [
   {
     key: 'collections',
     label: 'Java Collections Framework',
-    icon: '🗂️',
+    Icon: LayersIcon,
     Content: JavaCollectionsContent,
     children: [
       { key: 'lists', label: 'Lists', children: [
@@ -170,7 +178,7 @@ const SUBJECTS = [
   {
     key: 'dsa',
     label: 'DSA in Java',
-    icon: '🌳',
+    Icon: TreeIcon,
     Content: DSAContent,
     children: [
       { key: 'binary-trees', label: 'Binary Trees & BST', children: [
@@ -286,14 +294,6 @@ function resolvePath(subject, path) {
   return nodes;
 }
 
-function Chevron() {
-  return (
-    <svg className="side-chevron" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M8 10l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
 /*
  * One nav node, rendered recursively. Grouping levels only open and close —
  * `expandedPath` holds at most one open key per level, so opening a node closes
@@ -333,7 +333,7 @@ function SidebarNode({ node, level, expandedPath, activeKeys, activeSubId, onTog
         onClick={() => onToggle(level, node)}
       >
         <span className="side-label">{node.label}</span>
-        <Chevron />
+        <span className="side-chevron"><ChevronDownIcon /></span>
       </button>
       {isOpen && (
         <ul className="side-list">
@@ -355,58 +355,103 @@ function SidebarNode({ node, level, expandedPath, activeKeys, activeSubId, onTog
   );
 }
 
+/*
+ * The sidebar is a floating rounded card in both states. Expanded it shows the
+ * full tree; collapsed it narrows to a rail of subject icons, so navigation is
+ * always reachable and no separate floating toggle button is needed.
+ */
 function Sidebar({
   activeSubject,
   expandedPath,
   activeKeys,
   activeSubId,
   open,
-  onClose,
+  onToggleSidebar,
   onToggleGroup,
   onSelectLeaf,
   onSelectSubject,
 }) {
   return (
-    <nav id="sidebar" className={open ? 'open' : undefined} aria-label="Notes navigation">
-      <div className="side-header">
-        <span className="side-title">Menu</span>
-        <button type="button" className="side-hide" onClick={onClose} aria-label="Hide navigation">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M14 8l-4 4 4 4M18 5v14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
-      </div>
-
-      <ul className="side-list side-subjects">
-        {SUBJECTS.map((s) => (
-          <li key={s.key}>
+    <nav
+      id="sidebar"
+      className={open ? 'open' : undefined}
+      aria-label="Notes navigation"
+    >
+      {open ? (
+        <>
+          <div className="side-header">
+            <span className="side-title">Menu</span>
             <button
               type="button"
-              className={'side-item side-subject' + (s.key === activeSubject.key ? ' active' : '')}
+              className="side-icon-btn"
+              onClick={onToggleSidebar}
+              aria-label="Collapse navigation"
+              aria-expanded="true"
+            >
+              <PanelCollapseIcon />
+            </button>
+          </div>
+
+          <div className="side-scroll">
+            <ul className="side-list side-subjects">
+              {SUBJECTS.map((s) => (
+                <li key={s.key}>
+                  <button
+                    type="button"
+                    className={'side-item side-subject' + (s.key === activeSubject.key ? ' active' : '')}
+                    aria-current={s.key === activeSubject.key ? 'true' : undefined}
+                    onClick={() => onSelectSubject(s)}
+                  >
+                    <span className="side-icon"><s.Icon /></span>
+                    <span className="side-label">{s.label}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+
+            <ul className="side-list side-tree">
+              {activeSubject.children.map((node) => (
+                <SidebarNode
+                  key={nodeKey(node)}
+                  node={node}
+                  level={0}
+                  expandedPath={expandedPath}
+                  activeKeys={activeKeys}
+                  activeSubId={activeSubId}
+                  onToggle={onToggleGroup}
+                  onSelect={onSelectLeaf}
+                />
+              ))}
+            </ul>
+          </div>
+        </>
+      ) : (
+        <div className="side-rail">
+          <button
+            type="button"
+            className="side-icon-btn"
+            onClick={onToggleSidebar}
+            aria-label="Expand navigation"
+            aria-expanded="false"
+          >
+            <PanelExpandIcon />
+          </button>
+          <span className="side-rail-sep" />
+          {SUBJECTS.map((s) => (
+            <button
+              key={s.key}
+              type="button"
+              className={'side-rail-btn' + (s.key === activeSubject.key ? ' active' : '')}
+              title={s.label}
+              aria-label={s.label}
               aria-current={s.key === activeSubject.key ? 'true' : undefined}
               onClick={() => onSelectSubject(s)}
             >
-              <span className="side-icon">{s.icon}</span>
-              <span className="side-label">{s.label}</span>
+              <s.Icon />
             </button>
-          </li>
-        ))}
-      </ul>
-
-      <ul className="side-list side-tree">
-        {activeSubject.children.map((node) => (
-          <SidebarNode
-            key={nodeKey(node)}
-            node={node}
-            level={0}
-            expandedPath={expandedPath}
-            activeKeys={activeKeys}
-            activeSubId={activeSubId}
-            onToggle={onToggleGroup}
-            onSelect={onSelectLeaf}
-          />
-        ))}
-      </ul>
+          ))}
+        </div>
+      )}
     </nav>
   );
 }
@@ -482,6 +527,7 @@ export default function App() {
   };
 
   const handleSelectSubject = (subject) => {
+    setSidebarOpen(true); // a click on the collapsed rail also opens the tree
     if (subject.key === activeSubjectKey) return;
     const path = firstPath(subject);
     setActiveSubjectKey(subject.key);
@@ -493,26 +539,13 @@ export default function App() {
     <>
       <div id="progress-bar" className={shift.trim() || undefined} />
 
-      {!sidebarOpen && (
-        <button
-          type="button"
-          id="nav-toggle"
-          onClick={() => setSidebarOpen(true)}
-          aria-label="Show navigation"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-          </svg>
-        </button>
-      )}
-
       <Sidebar
         activeSubject={activeSubject}
         expandedPath={expandedPath}
         activeKeys={activeKeys}
         activeSubId={activeSubId}
         open={sidebarOpen}
-        onClose={() => setSidebarOpen(false)}
+        onToggleSidebar={() => setSidebarOpen((prev) => !prev)}
         onToggleGroup={handleToggleGroup}
         onSelectLeaf={handleSelectLeaf}
         onSelectSubject={handleSelectSubject}
