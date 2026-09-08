@@ -66,6 +66,10 @@ body {
 .nav-row-subjects { border-bottom: 1px solid var(--border); padding: 10px 24px; }
 .nav-row-topics { border-bottom: 1px solid var(--border); }
 
+/* First grouping row of a subject that nests three levels deep (DSA): a size
+   step above the row beneath it, so the hierarchy still reads top-to-bottom. */
+.nav-row-primary .nav-pill { font-size: .88rem; font-weight: 700; padding: 7px 18px; }
+
 .nav-pill {
   flex-shrink: 0;
   display: inline-flex;

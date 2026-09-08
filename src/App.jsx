@@ -60,35 +60,42 @@ function DSAContent() {
   );
 }
 
+/*
+ * Each subject holds a tree of nav nodes in `children`, and the nav renders one
+ * row per level of that tree. A node with `children` is a grouping level; a leaf
+ * carries the `id` of a `data-topic-boundary` marker in the content. Subjects may
+ * therefore be any depth — Java Notes and Collections use two levels below the
+ * subject, DSA uses three (data structure -> part -> problem).
+ */
 const SUBJECTS = [
   {
     key: 'java',
     label: 'Java Notes',
     icon: '📘',
     Content: JavaNotesContent,
-    topics: [
-      { key: 'core-java', label: 'Core Java', subs: [
+    children: [
+      { key: 'core-java', label: 'Core Java', children: [
         { id: 'part1-1', label: 'Architecture & Compilation' },
         { id: 'part1-2', label: 'Java Basics' },
         { id: 'part1-3', label: 'Static Keyword' },
         { id: 'part1-4', label: 'Data Types & Wrappers' },
         { id: 'part1-5', label: 'Strings in Java' },
       ] },
-      { key: 'oop', label: 'OOP', subs: [
+      { key: 'oop', label: 'OOP', children: [
         { id: 'part2-1', label: 'Methods & Constructors' },
         { id: 'part2-2', label: 'Inheritance & Polymorphism' },
         { id: 'part2-3', label: 'Abstract Classes & Final' },
         { id: 'part2-4', label: 'Interfaces' },
         { id: 'part2-5', label: 'Inner Classes' },
       ] },
-      { key: 'exceptions-concurrency', label: 'Exceptions & Concurrency', subs: [
+      { key: 'exceptions-concurrency', label: 'Exceptions & Concurrency', children: [
         { id: 's3-1', label: 'Exception Hierarchy' },
         { id: 's3-2', label: 'CPU & Process Architecture' },
         { id: 's3-3', label: 'Multitasking vs Multithreading' },
         { id: 's3-4', label: 'Java Threads — Creation' },
         { id: 's3-5', label: 'Thread Lifecycle & Methods' },
       ] },
-      { key: 'sync-executors', label: 'Synchronization & Executors', subs: [
+      { key: 'sync-executors', label: 'Synchronization & Executors', children: [
         { id: 's4-1', label: 'Synchronization' },
         { id: 's4-2', label: 'Explicit Locks' },
         { id: 's4-3', label: 'Thread Communication' },
@@ -96,7 +103,7 @@ const SUBJECTS = [
         { id: 's4-5', label: 'Executors Framework' },
         { id: 's4-6', label: 'Concurrency Utilities' },
       ] },
-      { key: 'generics', label: 'Generics', subs: [
+      { key: 'generics', label: 'Generics', children: [
         { id: 's51', label: 'Why Generics?' },
         { id: 's52', label: 'Generic Classes & Interfaces' },
         { id: 's53', label: 'Generic Methods' },
@@ -113,8 +120,8 @@ const SUBJECTS = [
     label: 'Java Collections Framework',
     icon: '🗂️',
     Content: JavaCollectionsContent,
-    topics: [
-      { key: 'lists', label: 'Lists', subs: [
+    children: [
+      { key: 'lists', label: 'Lists', children: [
         { id: 's1-1', label: 'Collection Framework Overview' },
         { id: 's1-2', label: 'Collection Interface' },
         { id: 's1-3', label: 'ArrayList' },
@@ -123,7 +130,7 @@ const SUBJECTS = [
         { id: 's16', label: 'Stack' },
         { id: 's17', label: 'CopyOnWriteArrayList' },
       ] },
-      { key: 'maps', label: 'Maps', subs: [
+      { key: 'maps', label: 'Maps', children: [
         { id: 'partC', label: 'Map Interface' },
         { id: 'hashmap', label: 'HashMap' },
         { id: 'linkedhashmap', label: 'LinkedHashMap' },
@@ -135,21 +142,21 @@ const SUBJECTS = [
         { id: 's29', label: 'ConcurrentSkipListMap, EnumMap & Immutable Maps' },
         { id: 's210', label: 'Comparable vs Comparator' },
       ] },
-      { key: 'sets', label: 'Sets', subs: [
+      { key: 'sets', label: 'Sets', children: [
         { id: 'part3', label: 'Set Interface' },
         { id: 's3-2', label: 'HashSet' },
         { id: 's3-3', label: 'LinkedHashSet' },
         { id: 's3-4', label: 'TreeSet' },
         { id: 's3-5', label: 'EnumSet, CopyOnWriteArraySet & ConcurrentSkipListSet' },
       ] },
-      { key: 'queues', label: 'Queues & Deques', subs: [
+      { key: 'queues', label: 'Queues & Deques', children: [
         { id: 'part4', label: 'Queue Interface' },
         { id: 's4-2', label: 'PriorityQueue' },
         { id: 's4-3', label: 'Deque Interface & ArrayDeque' },
         { id: 's4-4', label: 'BlockingQueue & Variants' },
         { id: 's4-5', label: 'ConcurrentLinkedQueue, ConcurrentLinkedDeque & Iterable/Iterator' },
       ] },
-      { key: 'java8', label: 'Java 8 Features', subs: [
+      { key: 'java8', label: 'Java 8 Features', children: [
         { id: 's5-1', label: 'Lambda Expressions' },
         { id: 's5-2', label: 'Functional Interfaces' },
         { id: 's5-3', label: 'Method References' },
@@ -165,84 +172,117 @@ const SUBJECTS = [
     label: 'DSA in Java',
     icon: '🌳',
     Content: DSAContent,
-    topics: [
-      { key: 'tree-foundations', label: 'Tree Foundations', subs: [
-        { id: 's1-1', label: 'What Is a Binary Tree?' },
-        { id: 's1-2', label: 'Types of Binary Trees' },
-        { id: 's1-3', label: 'Representation in Java' },
-        { id: 's1-4', label: 'Traversal Overview' },
-      ] },
-      { key: 'traversals', label: 'Traversals', subs: [
-        { id: 's2-1', label: 'Recursive Traversals' },
-        { id: 's2-2', label: 'Level Order Traversal' },
-        { id: 's2-3', label: 'Inorder Iterative' },
-        { id: 's2-4', label: 'Preorder Iterative' },
-        { id: 's2-5', label: 'Postorder Iterative' },
-        { id: 's2-6', label: 'All Three in One Go' },
-      ] },
-      { key: 'height-paths', label: 'Height, Balance & Paths', subs: [
-        { id: 's3-1', label: 'Maximum Depth' },
-        { id: 's3-2', label: 'Balanced Binary Tree' },
-        { id: 's3-3', label: 'Diameter of a Tree' },
-        { id: 's3-4', label: 'Maximum Path Sum' },
-        { id: 's3-5', label: 'Identical Trees' },
-      ] },
-      { key: 'views', label: 'Patterns & Views', subs: [
-        { id: 's4-1', label: 'Zig-Zag Traversal' },
-        { id: 's4-2', label: 'Boundary Traversal' },
-        { id: 's4-3', label: 'Vertical Order Traversal' },
-        { id: 's4-4', label: 'Top View' },
-        { id: 's4-5', label: 'Bottom View' },
-        { id: 's4-6', label: 'Right / Left Side View' },
-        { id: 's4-7', label: 'Symmetric Binary Tree' },
-      ] },
-      { key: 'paths-ancestors', label: 'Paths, Ancestors & BFS Tricks', subs: [
-        { id: 's5-1', label: 'Root to Node Path' },
-        { id: 's5-2', label: 'Lowest Common Ancestor' },
-        { id: 's5-3', label: 'Maximum Width' },
-        { id: 's5-4', label: 'Children Sum Property' },
-        { id: 's5-5', label: 'Nodes at Distance K' },
-        { id: 's5-6', label: 'Burn the Binary Tree' },
-      ] },
-      { key: 'construction', label: 'Construction & O(1) Traversal', subs: [
-        { id: 's6-1', label: 'Count Complete Tree Nodes' },
-        { id: 's6-2', label: 'Build from Inorder + Preorder' },
-        { id: 's6-3', label: 'Build from Inorder + Postorder' },
-        { id: 's6-4', label: 'Serialize & Deserialize' },
-        { id: 's6-5', label: 'Morris Inorder Traversal' },
-        { id: 's6-6', label: 'Morris Preorder Traversal' },
-        { id: 's6-7', label: 'Flatten Tree to Linked List' },
-      ] },
-      { key: 'bst-foundations', label: 'BST Foundations', subs: [
-        { id: 's7-1', label: 'What Is a BST?' },
-        { id: 's7-2', label: 'Search in a BST' },
-        { id: 's7-3', label: 'Ceil in a BST' },
-        { id: 's7-4', label: 'Floor in a BST' },
-        { id: 's7-5', label: 'Insert a Node in a BST' },
-        { id: 's7-6', label: 'Delete a Node in a BST' },
-      ] },
-      { key: 'bst-order', label: 'Order, Validity & Ancestors', subs: [
-        { id: 's8-1', label: 'Kth Smallest / Largest' },
-        { id: 's8-2', label: 'Validate a BST' },
-        { id: 's8-3', label: 'LCA in a BST' },
-        { id: 's8-4', label: 'Construct BST from Preorder' },
-        { id: 's8-5', label: 'Predecessor & Successor' },
-      ] },
-      { key: 'bst-hard', label: 'Iterators & Hard Problems', subs: [
-        { id: 's9-1', label: 'BST Iterator' },
-        { id: 's9-2', label: 'Two Sum in a BST' },
-        { id: 's9-3', label: 'Recover a BST' },
-        { id: 's9-4', label: 'Largest BST in a Binary Tree' },
-        { id: 's9-5', label: 'Complexity Cheat Sheet' },
+    children: [
+      { key: 'binary-trees', label: 'Binary Trees & BST', children: [
+        { key: 'tree-foundations', label: 'Tree Foundations', children: [
+          { id: 's1-1', label: 'What Is a Binary Tree?' },
+          { id: 's1-2', label: 'Types of Binary Trees' },
+          { id: 's1-3', label: 'Representation in Java' },
+          { id: 's1-4', label: 'Traversal Overview' },
+        ] },
+        { key: 'traversals', label: 'Traversals', children: [
+          { id: 's2-1', label: 'Recursive Traversals' },
+          { id: 's2-2', label: 'Level Order Traversal' },
+          { id: 's2-3', label: 'Inorder Iterative' },
+          { id: 's2-4', label: 'Preorder Iterative' },
+          { id: 's2-5', label: 'Postorder Iterative' },
+          { id: 's2-6', label: 'All Three in One Go' },
+        ] },
+        { key: 'height-paths', label: 'Height, Balance & Paths', children: [
+          { id: 's3-1', label: 'Maximum Depth' },
+          { id: 's3-2', label: 'Balanced Binary Tree' },
+          { id: 's3-3', label: 'Diameter of a Tree' },
+          { id: 's3-4', label: 'Maximum Path Sum' },
+          { id: 's3-5', label: 'Identical Trees' },
+        ] },
+        { key: 'views', label: 'Patterns & Views', children: [
+          { id: 's4-1', label: 'Zig-Zag Traversal' },
+          { id: 's4-2', label: 'Boundary Traversal' },
+          { id: 's4-3', label: 'Vertical Order Traversal' },
+          { id: 's4-4', label: 'Top View' },
+          { id: 's4-5', label: 'Bottom View' },
+          { id: 's4-6', label: 'Right / Left Side View' },
+          { id: 's4-7', label: 'Symmetric Binary Tree' },
+        ] },
+        { key: 'paths-ancestors', label: 'Paths, Ancestors & BFS Tricks', children: [
+          { id: 's5-1', label: 'Root to Node Path' },
+          { id: 's5-2', label: 'Lowest Common Ancestor' },
+          { id: 's5-3', label: 'Maximum Width' },
+          { id: 's5-4', label: 'Children Sum Property' },
+          { id: 's5-5', label: 'Nodes at Distance K' },
+          { id: 's5-6', label: 'Burn the Binary Tree' },
+        ] },
+        { key: 'construction', label: 'Construction & O(1) Traversal', children: [
+          { id: 's6-1', label: 'Count Complete Tree Nodes' },
+          { id: 's6-2', label: 'Build from Inorder + Preorder' },
+          { id: 's6-3', label: 'Build from Inorder + Postorder' },
+          { id: 's6-4', label: 'Serialize & Deserialize' },
+          { id: 's6-5', label: 'Morris Inorder Traversal' },
+          { id: 's6-6', label: 'Morris Preorder Traversal' },
+          { id: 's6-7', label: 'Flatten Tree to Linked List' },
+        ] },
+        { key: 'bst-foundations', label: 'BST Foundations', children: [
+          { id: 's7-1', label: 'What Is a BST?' },
+          { id: 's7-2', label: 'Search in a BST' },
+          { id: 's7-3', label: 'Ceil in a BST' },
+          { id: 's7-4', label: 'Floor in a BST' },
+          { id: 's7-5', label: 'Insert a Node in a BST' },
+          { id: 's7-6', label: 'Delete a Node in a BST' },
+        ] },
+        { key: 'bst-order', label: 'Order, Validity & Ancestors', children: [
+          { id: 's8-1', label: 'Kth Smallest / Largest' },
+          { id: 's8-2', label: 'Validate a BST' },
+          { id: 's8-3', label: 'LCA in a BST' },
+          { id: 's8-4', label: 'Construct BST from Preorder' },
+          { id: 's8-5', label: 'Predecessor & Successor' },
+        ] },
+        { key: 'bst-hard', label: 'Iterators & Hard Problems', children: [
+          { id: 's9-1', label: 'BST Iterator' },
+          { id: 's9-2', label: 'Two Sum in a BST' },
+          { id: 's9-3', label: 'Recover a BST' },
+          { id: 's9-4', label: 'Largest BST in a Binary Tree' },
+          { id: 's9-5', label: 'Complexity Cheat Sheet' },
+        ] },
       ] },
     ],
   },
 ];
 
-function TopNav({ activeSubjectKey, activeTopicKey, activeSubId, onSelectSubject, onSelectTopic, onSelectSub }) {
-  const activeSubject = SUBJECTS.find((s) => s.key === activeSubjectKey) ?? SUBJECTS[0];
-  const activeTopic = activeSubject.topics.find((t) => t.key === activeTopicKey) ?? activeSubject.topics[0];
+const ROW_LABELS = ['Topics', 'Sections', 'Subtopics'];
 
+function nodeKey(node) {
+  return node.key ?? node.id;
+}
+
+/* Keys of the first child at every level below `node`, i.e. the default selection. */
+function firstPath(node) {
+  const path = [];
+  let cur = node;
+  while (cur.children?.length) {
+    cur = cur.children[0];
+    path.push(nodeKey(cur));
+  }
+  return path;
+}
+
+/*
+ * One node per nav level below the subject; the last entry is always the leaf
+ * that owns a content id. Any key the subject does not have falls back to its
+ * first child, so a path left over from another subject can never break the nav.
+ */
+function resolvePath(subject, path) {
+  const nodes = [];
+  let cur = subject;
+  while (cur.children?.length) {
+    const wanted = path[nodes.length];
+    const next = cur.children.find((c) => nodeKey(c) === wanted) ?? cur.children[0];
+    nodes.push(next);
+    cur = next;
+  }
+  return nodes;
+}
+
+function TopNav({ activeSubject, activeNodes, onSelectSubject, onSelectNode }) {
   return (
     <nav id="topnav" aria-label="Notes navigation">
       <div className="nav-row nav-row-subjects" role="group" aria-label="Subjects">
@@ -257,42 +297,49 @@ function TopNav({ activeSubjectKey, activeTopicKey, activeSubId, onSelectSubject
           </button>
         ))}
       </div>
-      <div className="nav-row nav-row-topics" role="group" aria-label="Topics">
-        {activeSubject.topics.map((t) => (
-          <button
-            key={t.key}
-            className={'nav-pill' + (t.key === activeTopic.key ? ' active' : '')}
-            aria-current={t.key === activeTopic.key ? 'true' : undefined}
-            onClick={() => onSelectTopic(t)}
+      {activeNodes.map((active, level) => {
+        const siblings = level === 0 ? activeSubject.children : activeNodes[level - 1].children;
+        const isLeafRow = level === activeNodes.length - 1;
+        return (
+          <div
+            key={level}
+            className={
+              'nav-row ' +
+              (isLeafRow ? 'nav-row-subs' : 'nav-row-topics') +
+              (level === 0 && activeNodes.length > 2 ? ' nav-row-primary' : '')
+            }
+            role="group"
+            aria-label={isLeafRow ? 'Subtopics' : ROW_LABELS[level] ?? 'Sections'}
           >
-            {t.label}
-          </button>
-        ))}
-      </div>
-      <div className="nav-row nav-row-subs" role="group" aria-label="Subtopics">
-        {activeTopic.subs.map((sub) => (
-          <button
-            key={sub.id}
-            className={'nav-pill nav-pill-sub' + (sub.id === activeSubId ? ' active' : '')}
-            aria-current={sub.id === activeSubId ? 'true' : undefined}
-            onClick={() => onSelectSub(sub, activeTopic)}
-          >
-            {sub.label}
-          </button>
-        ))}
-      </div>
+            {siblings.map((node) => (
+              <button
+                key={nodeKey(node)}
+                className={
+                  'nav-pill' +
+                  (isLeafRow ? ' nav-pill-sub' : '') +
+                  (nodeKey(node) === nodeKey(active) ? ' active' : '')
+                }
+                aria-current={nodeKey(node) === nodeKey(active) ? 'true' : undefined}
+                onClick={() => onSelectNode(level, node)}
+              >
+                {node.label}
+              </button>
+            ))}
+          </div>
+        );
+      })}
     </nav>
   );
 }
 
 export default function App() {
   const [activeSubjectKey, setActiveSubjectKey] = useState(SUBJECTS[0].key);
-  const [activeTopicKey, setActiveTopicKey] = useState(SUBJECTS[0].topics[0].key);
-  const [activeSubId, setActiveSubId] = useState(SUBJECTS[0].topics[0].subs[0].id);
+  const [activePath, setActivePath] = useState(() => firstPath(SUBJECTS[0]));
 
   const activeSubject = SUBJECTS.find((s) => s.key === activeSubjectKey) ?? SUBJECTS[0];
-  const activeTopic = activeSubject.topics.find((t) => t.key === activeTopicKey) ?? activeSubject.topics[0];
-  const activeSub = activeTopic.subs.find((s) => s.id === activeSubId) ?? activeTopic.subs[0];
+  const activeNodes = resolvePath(activeSubject, activePath);
+  const activeSubId = activeNodes[activeNodes.length - 1].id;
+  const heading = activeNodes.slice(-2).map((n) => n.label).join(' — ');
   const ActiveContent = activeSubject.Content;
 
   useEffect(() => {
@@ -326,38 +373,31 @@ export default function App() {
     window.scrollTo(0, 0);
   }, [activeSubjectKey, activeSubId]);
 
-  const handleSelectTopic = (topic) => {
-    setActiveTopicKey(topic.key);
-    const firstSub = topic.subs[0];
-    if (firstSub) setActiveSubId(firstSub.id);
-  };
-
-  const handleSelectSub = (sub, topic) => {
-    setActiveTopicKey(topic.key);
-    setActiveSubId(sub.id);
+  const handleSelectNode = (level, node) => {
+    setActivePath([
+      ...activeNodes.slice(0, level).map(nodeKey),
+      nodeKey(node),
+      ...firstPath(node),
+    ]);
   };
 
   const handleSelectSubject = (subject) => {
     if (subject.key === activeSubjectKey) return;
     setActiveSubjectKey(subject.key);
-    const firstTopic = subject.topics[0];
-    setActiveTopicKey(firstTopic.key);
-    setActiveSubId(firstTopic.subs[0].id);
+    setActivePath(firstPath(subject));
   };
 
   return (
     <>
       <div id="progress-bar" />
       <TopNav
-        activeSubjectKey={activeSubjectKey}
-        activeTopicKey={activeTopicKey}
-        activeSubId={activeSubId}
+        activeSubject={activeSubject}
+        activeNodes={activeNodes}
         onSelectSubject={handleSelectSubject}
-        onSelectTopic={handleSelectTopic}
-        onSelectSub={handleSelectSub}
+        onSelectNode={handleSelectNode}
       />
       <div id="main">
-        <h1 className="content-heading">{activeTopic.label} — {activeSub.label}</h1>
+        <h1 className="content-heading">{heading}</h1>
         <ActiveContent />
       </div>
     </>
