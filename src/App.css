@@ -1,28 +1,49 @@
 :root {
-  --bg: #F7F8FA;
-  --card-bg: #FFFFFF;
-  --text-primary: #1A1D20;
-  --text-secondary: #687078;
-  --border: #EAECEF;
-  --primary-accent: #5C55E8;
-  --link-accent: #346DF1;
-  --code-bg: #F1F3F5;
-  --code-dark-bg: #1E1E2E;
-  --danger: #E13945;
-  --success: #29A662;
-  --pill-bg: #EEF2FF;
-  --pill-text: #5C55E8;
-  --warning-bg: #FFFBEB;
-  --warning-border: #F59E0B;
-  --tip-bg: #F0FDF4;
-  --tip-border: #29A662;
-  --key-bg: #EFF6FF;
-  --key-border: #346DF1;
+  /* Tells the browser to render native scrollbars and form controls dark. */
+  color-scheme: dark;
+
+  /* Surfaces: the page is near-black, cards sit slightly above it. */
+  --bg: #0B0B0C;
+  --card-bg: #16161A;
+  --card-alt: #1C1C21;
+  --border: #2A2A31;
+  --border-strong: #3A3A44;
+
+  --text-primary: #ECECEE;
+  --text-secondary: #9A9AA3;
+
+  /* Accents keep the app's indigo identity, brightened to read on dark. */
+  --primary-accent: #8B85FF;
+  --link-accent: #5B9BF8;
+  --danger: #F85149;
+  --success: #3FB950;
+  --warning-border: #D29922;
+
+  --code-bg: #24242B;
+  --code-text: #FF8A80;
+  --code-dark-bg: #121216;
+
+  --pill-bg: #211E3D;
+  --pill-text: #A9A4FF;
+
+  /* Callout washes: a dark tint of each accent rather than a pastel. */
+  --warning-bg: #2A2113;
+  --tip-bg: #10251A;
+  --tip-border: #3FB950;
+  --key-bg: #121D33;
+  --key-border: #5B9BF8;
+
   --sidebar-w: 300px;
   --rail-w: 72px;
   --sidebar-gap: 14px;
-  --nav-hover: #F1F3F9;
+  --nav-hover: #232329;
 }
+
+/* Dark scrollbars for the page and the sidebar. */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2E2E36; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border-strong); }
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -45,7 +66,7 @@ body {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #5C55E8, #346DF1);
+  background: linear-gradient(90deg, var(--primary-accent), var(--link-accent));
   transform: scaleX(0);
   transform-origin: left;
   z-index: 9999;
@@ -70,7 +91,6 @@ body {
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 18px;
-  box-shadow: 0 6px 28px rgba(26, 29, 32, .07);
   z-index: 200;
   transition: width .22s ease;
 }
@@ -227,7 +247,7 @@ body {
   position: fixed;
   inset: 0;
   z-index: 150;
-  background: rgba(26, 29, 32, .38);
+  background: rgba(0, 0, 0, .6);
 }
 
 #main {
@@ -250,7 +270,7 @@ body {
   height: 36px;
   border-radius: 50%;
   background: var(--primary-accent);
-  color: #fff;
+  color: #14121F;
   font-weight: 700;
   font-size: .85rem;
   display: flex;
@@ -277,10 +297,11 @@ body {
   border-radius: 12px;
   padding: 22px 26px;
   margin-bottom: 20px;
-  transition: transform .18s, box-shadow .18s;
+  transition: border-color .18s;
 }
 
-.card:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(92, 85, 232, .10); }
+/* Hover is a border tint only — deliberately no lift and no shadow. */
+.card:hover { border-color: var(--border-strong); }
 
 .card h3 { margin-bottom: 10px; }
 
@@ -290,7 +311,7 @@ body {
 .callout-tip .callout-title { color: var(--success); font-weight: 700; margin-bottom: 6px; }
 
 .callout-warning { background: var(--warning-bg); border-left-color: var(--warning-border); }
-.callout-warning .callout-title { color: #B45309; font-weight: 700; margin-bottom: 6px; }
+.callout-warning .callout-title { color: #E3B341; font-weight: 700; margin-bottom: 6px; }
 
 .callout-key { background: var(--key-bg); border-left-color: var(--key-border); }
 .callout-key .callout-title { color: var(--link-accent); font-weight: 700; margin-bottom: 6px; }
@@ -357,7 +378,7 @@ code {
   padding: 1px 5px;
   font-family: 'Fira Code', 'Consolas', monospace;
   font-size: .84em;
-  color: var(--danger);
+  color: var(--code-text);
 }
 
 .table-wrap {
@@ -385,7 +406,7 @@ th {
 
 td { padding: 9px 14px; font-size: .88rem; border-bottom: 1px solid var(--border); }
 
-tr:nth-child(even) td { background: #F9FAFB; }
+tr:nth-child(even) td { background: var(--card-alt); }
 tr:last-child td { border-bottom: none; }
 
 .pill {
@@ -398,13 +419,13 @@ tr:last-child td { border-bottom: none; }
   font-weight: 600;
 }
 
-.pill-success { background: #DCFCE7; color: #15803D; }
-.pill-danger { background: #FEE2E2; color: #B91C1C; }
-.pill-warn { background: #FEF9C3; color: #854D0E; }
+.pill-success { background: #12331E; color: #56D364; }
+.pill-danger { background: #3A1518; color: #FF7B72; }
+.pill-warn { background: #33280E; color: #E3B341; }
 
 .badge { display: inline-block; border-radius: 6px; padding: 2px 8px; font-size: .75rem; font-weight: 700; }
-.badge.do { background: #DCFCE7; color: #15803D; }
-.badge.dont { background: #FEE2E2; color: #B91C1C; }
+.badge.do { background: #12331E; color: #56D364; }
+.badge.dont { background: #3A1518; color: #FF7B72; }
 
 pre.diagram {
   background: var(--code-dark-bg);
@@ -496,7 +517,7 @@ strong { font-weight: 700; }
   /* The rail stays put and the expanded card overlays the content, so the
      layout never reflows on a phone. Tapping the backdrop collapses it. */
   :root { --rail-w: 56px; --sidebar-gap: 8px; }
-  #sidebar.open { box-shadow: 0 8px 40px rgba(26, 29, 32, .22); }
+  #sidebar.open { box-shadow: 0 8px 40px rgba(0, 0, 0, .55); }
   #nav-backdrop { display: block; }
   #main, #main.nav-shift { margin-left: calc(var(--rail-w) + var(--sidebar-gap) * 2); padding: 24px 20px; }
   #progress-bar, #progress-bar.nav-shift { left: calc(var(--rail-w) + var(--sidebar-gap) * 2); }
