@@ -36,7 +36,12 @@
   --sidebar-w: 300px;
   --rail-w: 72px;
   --sidebar-gap: 14px;
+
+  /* The sidebar stays monochrome — greys and white, no accent colour. The
+     accents above are for content (callouts, badges, code), not navigation. */
   --nav-hover: #232329;
+  --nav-active: #2C2C31;
+  --focus-ring: #8A8A96;
 }
 
 /* Dark scrollbars for the page and the sidebar. */
@@ -151,11 +156,11 @@ body {
 .side-rail-btn { width: 44px; height: 44px; border-radius: 13px; }
 .side-rail-btn svg { width: 21px; height: 21px; }
 
-.side-icon-btn:hover, .side-rail-btn:hover { background: var(--nav-hover); color: var(--primary-accent); }
-.side-rail-btn.active { background: var(--pill-bg); color: var(--primary-accent); }
+.side-icon-btn:hover, .side-rail-btn:hover { background: var(--nav-hover); color: var(--text-primary); }
+.side-rail-btn.active { background: var(--nav-active); color: #FFFFFF; }
 
 .side-icon-btn:focus-visible, .side-rail-btn:focus-visible {
-  outline: 2px solid var(--primary-accent);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 1px;
 }
 
@@ -163,12 +168,16 @@ body {
 .side-subjects { padding: 8px; border-bottom: 1px solid var(--border); }
 .side-tree { padding: 8px; }
 
-/* Nested levels indent as a whole, so any tree depth is handled automatically. */
+/* Subtopics sit in a wrapping row of pills — no guide line, no full-width rows. */
 .side-list .side-list {
-  margin: 2px 0 6px 15px;
-  padding-left: 8px;
-  border-left: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 6px 0 10px 10px;
+  padding: 0;
 }
+
+.side-list .side-list > li { display: flex; max-width: 100%; }
 
 .side-item {
   display: flex;
@@ -190,7 +199,7 @@ body {
 .side-item:hover { background: var(--nav-hover); }
 
 .side-item:focus-visible {
-  outline: 2px solid var(--primary-accent);
+  outline: 2px solid var(--focus-ring);
   outline-offset: -2px;
 }
 
@@ -220,26 +229,33 @@ body {
 .side-item.open .side-chevron { transform: none; }
 
 .side-subject { padding: 9px 10px; font-weight: 600; }
-.side-subject.active { background: var(--pill-bg); color: var(--primary-accent); }
-.side-subject.active .side-icon { color: var(--primary-accent); }
+.side-subject.active { background: var(--nav-active); color: #FFFFFF; }
+.side-subject.active .side-icon { color: #FFFFFF; }
 
 .side-group { padding: 9px 10px; font-weight: 600; }
-.side-group.on-path, .side-group.open { color: var(--primary-accent); }
+.side-group.open { color: #FFFFFF; }
 
+/* Subtopic pills */
 .side-leaf {
-  padding: 7px 10px;
-  font-size: .82rem;
+  width: auto;
+  max-width: 100%;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: .78rem;
   font-weight: 500;
+  line-height: 1.4;
   color: var(--text-secondary);
+  transition: background .15s, color .15s, border-color .15s;
 }
 
-.side-leaf:hover { color: var(--primary-accent); }
+.side-leaf:hover { background: var(--nav-hover); border-color: var(--border-strong); color: var(--text-primary); }
 
 .side-leaf.active {
-  background: var(--pill-bg);
-  color: var(--primary-accent);
+  background: var(--nav-active);
+  border-color: var(--border-strong);
+  color: #FFFFFF;
   font-weight: 600;
-  box-shadow: inset 3px 0 0 var(--primary-accent);
 }
 
 #nav-backdrop {

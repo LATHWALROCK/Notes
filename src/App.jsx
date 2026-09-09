@@ -293,7 +293,7 @@ function resolvePath(subject, path) {
  * its siblings and anything nested below them, and clicking the open node closes
  * it. Selection is separate: only leaves change the visible content.
  */
-function SidebarNode({ node, level, expandedPath, activeKeys, activeSubId, onToggle, onSelect }) {
+function SidebarNode({ node, level, expandedPath, activeSubId, onToggle, onSelect }) {
   const key = nodeKey(node);
 
   if (!node.children?.length) {
@@ -317,11 +317,7 @@ function SidebarNode({ node, level, expandedPath, activeKeys, activeSubId, onTog
     <li>
       <button
         type="button"
-        className={
-          'side-item side-group' +
-          (isOpen ? ' open' : '') +
-          (activeKeys.has(key) ? ' on-path' : '')
-        }
+        className={'side-item side-group' + (isOpen ? ' open' : '')}
         aria-expanded={isOpen}
         onClick={() => onToggle(level, node)}
       >
@@ -336,7 +332,6 @@ function SidebarNode({ node, level, expandedPath, activeKeys, activeSubId, onTog
               node={child}
               level={level + 1}
               expandedPath={expandedPath}
-              activeKeys={activeKeys}
               activeSubId={activeSubId}
               onToggle={onToggle}
               onSelect={onSelect}
@@ -356,7 +351,6 @@ function SidebarNode({ node, level, expandedPath, activeKeys, activeSubId, onTog
 function Sidebar({
   activeSubject,
   expandedPath,
-  activeKeys,
   activeSubId,
   open,
   onToggleSidebar,
@@ -409,7 +403,6 @@ function Sidebar({
                   node={node}
                   level={0}
                   expandedPath={expandedPath}
-                  activeKeys={activeKeys}
                   activeSubId={activeSubId}
                   onToggle={onToggleGroup}
                   onSelect={onSelectLeaf}
@@ -458,7 +451,6 @@ export default function App() {
   const activeSubject = SUBJECTS.find((s) => s.key === activeSubjectKey) ?? SUBJECTS[0];
   const activeNodes = resolvePath(activeSubject, activePath);
   const activeSubId = activeNodes[activeNodes.length - 1].id;
-  const activeKeys = new Set(activeNodes.map(nodeKey));
   const heading = activeNodes.slice(-2).map((n) => n.label).join(' — ');
   const ActiveContent = activeSubject.Content;
   const shift = sidebarOpen ? ' nav-shift' : '';
@@ -535,7 +527,6 @@ export default function App() {
       <Sidebar
         activeSubject={activeSubject}
         expandedPath={expandedPath}
-        activeKeys={activeKeys}
         activeSubId={activeSubId}
         open={sidebarOpen}
         onToggleSidebar={() => setSidebarOpen((prev) => !prev)}
