@@ -1,5 +1,5 @@
 import Code from "../../components/Code.jsx";
-export default function Part3() {
+export default function Sets() {
   return (
     <>
       {/* 3.1 */}

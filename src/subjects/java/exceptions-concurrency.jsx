@@ -1,5 +1,5 @@
-import Code from "../components/Code.jsx";
-export default function Part3() {
+import Code from "../../components/Code.jsx";
+export default function ExceptionsConcurrency() {
   return (
     <>
       {/* 3.1 */}

@@ -1,4 +1,4 @@
-export default function Part1() {
+export default function CoreJava() {
   return (
     <>
       {/* 1.1 */}

@@ -1,5 +1,5 @@
-import Code from "../components/Code.jsx";
-export default function Part4() {
+import Code from "../../components/Code.jsx";
+export default function SyncExecutors() {
   return (
     <>
       {/* 4.1 */}

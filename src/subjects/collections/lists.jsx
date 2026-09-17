@@ -1,5 +1,5 @@
 import Code from "../../components/Code.jsx";
-export default function Part1() {
+export default function Lists() {
   return (
     <>
       {/* 1.1 */}

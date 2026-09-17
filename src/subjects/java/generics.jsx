@@ -1,5 +1,5 @@
-import Code from "../components/Code.jsx";
-export default function Part5() {
+import Code from "../../components/Code.jsx";
+export default function Generics() {
   return (
     <>
       {/* 5.1 */}

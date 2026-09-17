@@ -1,5 +1,5 @@
 import Code from "../../components/Code.jsx";
-export default function Part5() {
+export default function Java8Features() {
   return (
     <>
       {/* 5.1 */}

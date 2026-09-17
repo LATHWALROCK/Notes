@@ -1,5 +1,5 @@
 import Code from "../../components/Code.jsx";
-export default function Part2() {
+export default function Maps() {
   return (
     <>
       {/* 2.1 */}

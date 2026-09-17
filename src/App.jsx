@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import './App.css';
 import {
   BookIcon,
   LayersIcon,
@@ -8,34 +7,32 @@ import {
   PanelCollapseIcon,
   ChevronDownIcon,
 } from './components/Icons.jsx';
-import JavaPart1 from './sections/Part1.jsx';
-import JavaPart2 from './sections/Part2.jsx';
-import JavaPart3 from './sections/Part3.jsx';
-import JavaPart4 from './sections/Part4.jsx';
-import JavaPart5 from './sections/Part5.jsx';
-import JCFPart1 from './subjects/collections/Part1.jsx';
-import JCFPart2 from './subjects/collections/Part2.jsx';
-import JCFPart3 from './subjects/collections/Part3.jsx';
-import JCFPart4 from './subjects/collections/Part4.jsx';
-import JCFPart5 from './subjects/collections/Part5.jsx';
-import DSAPart1 from './subjects/dsa/Part1.jsx';
-import DSAPart2 from './subjects/dsa/Part2.jsx';
-import DSAPart3 from './subjects/dsa/Part3.jsx';
-import DSAPart4 from './subjects/dsa/Part4.jsx';
-import DSAPart5 from './subjects/dsa/Part5.jsx';
-import DSAPart6 from './subjects/dsa/Part6.jsx';
-import DSAPart7 from './subjects/dsa/Part7.jsx';
-import DSAPart8 from './subjects/dsa/Part8.jsx';
-import DSAPart9 from './subjects/dsa/Part9.jsx';
+/*
+ * Content files mirror the sidebar: one folder per subject, one file per topic,
+ * named after the topic's `key` below. Each file emits the
+ * `data-topic-boundary` markers for its own subtopics.
+ */
+import CoreJava from './subjects/java/core-java.jsx';
+import Oop from './subjects/java/oop.jsx';
+import ExceptionsConcurrency from './subjects/java/exceptions-concurrency.jsx';
+import SyncExecutors from './subjects/java/sync-executors.jsx';
+import Generics from './subjects/java/generics.jsx';
+import Lists from './subjects/collections/lists.jsx';
+import Maps from './subjects/collections/maps.jsx';
+import Sets from './subjects/collections/sets.jsx';
+import Queues from './subjects/collections/queues.jsx';
+import Java8Features from './subjects/collections/java8.jsx';
+import BinaryTree from './subjects/dsa/binary-tree.jsx';
+import BinarySearchTree from './subjects/dsa/binary-search-tree.jsx';
 
 function JavaNotesContent() {
   return (
     <>
-      <JavaPart1 />
-      <JavaPart2 />
-      <JavaPart3 />
-      <JavaPart4 />
-      <JavaPart5 />
+      <CoreJava />
+      <Oop />
+      <ExceptionsConcurrency />
+      <SyncExecutors />
+      <Generics />
     </>
   );
 }
@@ -43,11 +40,11 @@ function JavaNotesContent() {
 function JavaCollectionsContent() {
   return (
     <>
-      <JCFPart1 />
-      <JCFPart2 />
-      <JCFPart3 />
-      <JCFPart4 />
-      <JCFPart5 />
+      <Lists />
+      <Maps />
+      <Sets />
+      <Queues />
+      <Java8Features />
     </>
   );
 }
@@ -55,15 +52,8 @@ function JavaCollectionsContent() {
 function DSAContent() {
   return (
     <>
-      <DSAPart1 />
-      <DSAPart2 />
-      <DSAPart3 />
-      <DSAPart4 />
-      <DSAPart5 />
-      <DSAPart6 />
-      <DSAPart7 />
-      <DSAPart8 />
-      <DSAPart9 />
+      <BinaryTree />
+      <BinarySearchTree />
     </>
   );
 }
@@ -293,20 +283,58 @@ function resolvePath(subject, path) {
  * its siblings and anything nested below them, and clicking the open node closes
  * it. Selection is separate: only leaves change the visible content.
  */
+/*
+ * Shared Tailwind class strings for the sidebar. They live here rather than
+ * inline so the markup below stays readable and the states stay consistent.
+ * `LIST` also undoes the base list styling, which the notes content needs but
+ * the nav does not.
+ */
+const LIST = 'list-none m-0 p-0 [&>li]:mb-0';
+
+const FOCUS = 'focus-visible:outline-2 focus-visible:outline-focus';
+
+const ROW =
+  'flex w-full items-start gap-2.5 rounded-lg px-2.5 py-[9px] text-left text-[.85rem] ' +
+  'leading-[1.45] font-semibold cursor-pointer transition-colors hover:bg-nav-hover ' +
+  FOCUS + ' focus-visible:outline-offset-[-2px]';
+
+const PILL =
+  'flex max-w-full items-start rounded-full border px-3 py-1.5 text-left text-[.78rem] ' +
+  'leading-[1.4] font-medium cursor-pointer transition-colors ' +
+  FOCUS + ' focus-visible:outline-offset-[-2px]';
+
+const ICON_BTN =
+  'inline-flex shrink-0 items-center justify-center size-[34px] rounded-[9px] text-ink-muted ' +
+  'cursor-pointer transition-colors hover:bg-nav-hover hover:text-ink [&_svg]:size-[18px] ' +
+  FOCUS + ' focus-visible:outline-offset-1';
+
+/* Same glyph size as the expanded sidebar, so collapsing changes the button
+   and never the icon. */
+const RAIL_BTN =
+  'inline-flex shrink-0 items-center justify-center size-11 rounded-[13px] cursor-pointer ' +
+  'transition-colors hover:bg-nav-hover hover:text-ink [&_svg]:size-[18px] ' +
+  'max-nav:size-10 max-nav:rounded-[11px] ' +
+  FOCUS + ' focus-visible:outline-offset-1';
+
 function SidebarNode({ node, level, expandedPath, activeSubId, onToggle, onSelect }) {
   const key = nodeKey(node);
 
   if (!node.children?.length) {
     const isActive = node.id === activeSubId;
     return (
-      <li>
+      <li className="flex max-w-full">
         <button
           type="button"
-          className={'side-item side-leaf' + (isActive ? ' active' : '')}
+          className={
+            PILL +
+            (isActive
+              ? ' bg-nav-active border-line-strong text-white font-semibold'
+              : ' border-line text-ink-muted hover:bg-nav-hover hover:border-line-strong hover:text-ink')
+          }
           aria-current={isActive ? 'page' : undefined}
           onClick={() => onSelect(level, node)}
         >
-          <span className="side-label">{node.label}</span>
+          {node.label}
         </button>
       </li>
     );
@@ -317,15 +345,23 @@ function SidebarNode({ node, level, expandedPath, activeSubId, onToggle, onSelec
     <li>
       <button
         type="button"
-        className={'side-item side-group' + (isOpen ? ' open' : '')}
+        className={ROW + (isOpen ? ' text-white' : ' text-ink')}
         aria-expanded={isOpen}
         onClick={() => onToggle(level, node)}
       >
-        <span className="side-label">{node.label}</span>
-        <span className="side-chevron"><ChevronDownIcon /></span>
+        <span className="flex-1 min-w-0">{node.label}</span>
+        <span
+          className={
+            'shrink-0 size-4 mt-0.5 transition-transform [&_svg]:size-full ' +
+            (isOpen ? 'rotate-0' : '-rotate-90')
+          }
+        >
+          <ChevronDownIcon />
+        </span>
       </button>
       {isOpen && (
-        <ul className="side-list">
+        /* Subtopics are a wrapping row of pills — no guide line, no full-width rows. */
+        <ul className={LIST + ' flex flex-wrap gap-1.5 mt-1.5 mb-2.5 ml-2.5'}>
           {node.children.map((child) => (
             <SidebarNode
               key={nodeKey(child)}
@@ -360,17 +396,23 @@ function Sidebar({
 }) {
   return (
     <nav
-      id="sidebar"
-      className={open ? 'open' : undefined}
       aria-label="Notes navigation"
+      className={
+        'fixed z-[200] flex flex-col overflow-hidden rounded-[18px] border border-line bg-card ' +
+        'top-gutter left-gutter h-[calc(100vh-28px)] transition-[width] duration-200 ease-out ' +
+        'max-nav:top-gutter-sm max-nav:left-gutter-sm max-nav:h-[calc(100vh-16px)] ' +
+        (open
+          ? 'w-panel max-nav:shadow-[0_8px_40px_rgba(0,0,0,0.55)]'
+          : 'w-rail max-nav:w-rail-sm')
+      }
     >
       {open ? (
         <>
-          <div className="side-header">
-            <span className="side-title">Menu</span>
+          <div className="flex shrink-0 items-center justify-between gap-2 border-b border-line py-3.5 pl-5 pr-3.5">
+            <span className="text-[.95rem] font-bold text-ink">Menu</span>
             <button
               type="button"
-              className="side-icon-btn"
+              className={ICON_BTN}
               onClick={onToggleSidebar}
               aria-label="Collapse navigation"
               aria-expanded="true"
@@ -379,24 +421,34 @@ function Sidebar({
             </button>
           </div>
 
-          <div className="side-scroll">
-            <ul className="side-list side-subjects">
-              {SUBJECTS.map((s) => (
-                <li key={s.key}>
-                  <button
-                    type="button"
-                    className={'side-item side-subject' + (s.key === activeSubject.key ? ' active' : '')}
-                    aria-current={s.key === activeSubject.key ? 'true' : undefined}
-                    onClick={() => onSelectSubject(s)}
-                  >
-                    <span className="side-icon"><s.Icon /></span>
-                    <span className="side-label">{s.label}</span>
-                  </button>
-                </li>
-              ))}
+          <div className="flex-1 overflow-y-auto overscroll-contain pb-4">
+            <ul className={LIST + ' p-2 border-b border-line'}>
+              {SUBJECTS.map((s) => {
+                const isActive = s.key === activeSubject.key;
+                return (
+                  <li key={s.key}>
+                    <button
+                      type="button"
+                      className={ROW + (isActive ? ' bg-nav-active text-white' : ' text-ink')}
+                      aria-current={isActive ? 'true' : undefined}
+                      onClick={() => onSelectSubject(s)}
+                    >
+                      <span
+                        className={
+                          'flex shrink-0 items-center justify-center size-5 mt-px [&_svg]:size-[18px] ' +
+                          (isActive ? 'text-white' : 'text-ink-muted')
+                        }
+                      >
+                        <s.Icon />
+                      </span>
+                      <span className="flex-1 min-w-0">{s.label}</span>
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
 
-            <ul className="side-list side-tree">
+            <ul className={LIST + ' p-2'}>
               {activeSubject.children.map((node) => (
                 <SidebarNode
                   key={nodeKey(node)}
@@ -412,30 +464,33 @@ function Sidebar({
           </div>
         </>
       ) : (
-        <div className="side-rail">
+        <div className="flex flex-col items-center gap-1.5 py-3.5">
           <button
             type="button"
-            className="side-icon-btn"
+            className={ICON_BTN}
             onClick={onToggleSidebar}
             aria-label="Expand navigation"
             aria-expanded="false"
           >
             <PanelExpandIcon />
           </button>
-          <span className="side-rail-sep" />
-          {SUBJECTS.map((s) => (
-            <button
-              key={s.key}
-              type="button"
-              className={'side-rail-btn' + (s.key === activeSubject.key ? ' active' : '')}
-              title={s.label}
-              aria-label={s.label}
-              aria-current={s.key === activeSubject.key ? 'true' : undefined}
-              onClick={() => onSelectSubject(s)}
-            >
-              <s.Icon />
-            </button>
-          ))}
+          <span className="mt-1 mb-2 h-px w-8 bg-line" />
+          {SUBJECTS.map((s) => {
+            const isActive = s.key === activeSubject.key;
+            return (
+              <button
+                key={s.key}
+                type="button"
+                className={RAIL_BTN + (isActive ? ' bg-nav-active text-white' : ' text-ink-muted')}
+                title={s.label}
+                aria-label={s.label}
+                aria-current={isActive ? 'true' : undefined}
+                onClick={() => onSelectSubject(s)}
+              >
+                <s.Icon />
+              </button>
+            );
+          })}
         </div>
       )}
     </nav>
@@ -453,7 +508,12 @@ export default function App() {
   const activeSubId = activeNodes[activeNodes.length - 1].id;
   const heading = activeNodes.slice(-2).map((n) => n.label).join(' — ');
   const ActiveContent = activeSubject.Content;
-  const shift = sidebarOpen ? ' nav-shift' : '';
+  /* Both the content column and the progress bar clear the sidebar: the rail
+     width when collapsed, the panel width when open. These have to be whole
+     literal class names — Tailwind scans source text, so a string built like
+     `ml-${x}-gap` would never be generated. */
+  const mainOffset = sidebarOpen ? 'ml-panel-gap' : 'ml-rail-gap';
+  const barOffset = sidebarOpen ? 'left-panel-gap' : 'left-rail-gap';
 
   useEffect(() => {
     const bar = document.getElementById('progress-bar');
@@ -522,7 +582,10 @@ export default function App() {
 
   return (
     <>
-      <div id="progress-bar" className={shift.trim() || undefined} />
+      <div
+        id="progress-bar"
+        className={`progress-bar ${barOffset} max-nav:left-rail-gap-sm`}
+      />
 
       <Sidebar
         activeSubject={activeSubject}
@@ -535,9 +598,21 @@ export default function App() {
         onSelectSubject={handleSelectSubject}
       />
 
-      {sidebarOpen && <div id="nav-backdrop" onClick={() => setSidebarOpen(false)} />}
+      {/* Only ever visible below the nav breakpoint, where the panel overlays. */}
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 z-[150] hidden bg-black/60 max-nav:block"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
 
-      <div id="main" className={shift.trim() || undefined}>
+      <div
+        id="main"
+        className={
+          `px-12 py-10 transition-[margin] duration-200 ease-out ${mainOffset} ` +
+          'max-nav:ml-rail-gap-sm max-nav:px-5 max-nav:py-6'
+        }
+      >
         <h1 className="content-heading">{heading}</h1>
         <ActiveContent />
       </div>

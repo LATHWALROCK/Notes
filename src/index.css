@@ -1,5 +1,304 @@
-html, body, #root {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Design tokens. Colours here become utilities automatically: --color-card
+   gives bg-card / text-card / border-card, --spacing-rail gives w-rail /
+   ml-rail, and --breakpoint-nav gives the nav: and max-nav: variants.
+   ────────────────────────────────────────────────────────────────────────── */
+@theme {
+  --font-sans: 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+
+  /* Surfaces — the page is near-black, cards sit slightly above it. */
+  --color-bg: #0B0B0C;
+  --color-card: #16161A;
+  --color-card-alt: #1C1C21;
+  --color-line: #2A2A31;
+  --color-line-strong: #3A3A44;
+
+  --color-ink: #ECECEE;
+  --color-ink-muted: #9A9AA3;
+
+  /* Accents keep the app's indigo identity, brightened to read on dark. */
+  --color-accent: #8B85FF;
+  --color-link: #5B9BF8;
+  --color-danger: #F85149;
+  --color-success: #3FB950;
+  --color-warn: #D29922;
+  --color-warn-text: #E3B341;
+
+  /* Callout washes — a dark tint of each accent rather than a pastel. */
+  --color-warn-bg: #2A2113;
+  --color-tip-bg: #10251A;
+  --color-key-bg: #121D33;
+
+  --color-pill: #211E3D;
+  --color-pill-text: #A9A4FF;
+  --color-ok-bg: #12331E;
+  --color-ok-text: #56D364;
+  --color-bad-bg: #3A1518;
+  --color-bad-text: #FF7B72;
+
+  /* Code */
+  --color-code-bg: #24242B;
+  --color-code-text: #FF8A80;
+  --color-code-surface: #121216;
+  --color-diagram-line: #313244;
+  --color-badge-bg: #2a2a3e;
+  --color-badge-text: #a0a8b8;
+
+  /* Syntax palette, shared by the hand-written spans and Prism's tokens. */
+  --color-syn-text: #CDD6F4;
+  --color-syn-keyword: #CBA6F7;
+  --color-syn-string: #A6E3A1;
+  --color-syn-number: #FAB387;
+  --color-syn-function: #89B4FA;
+  --color-syn-comment: #6C7086;
+  --color-syn-type: #94E2D5;
+  --color-syn-annotation: #F9E2AF;
+
+  /* The sidebar is monochrome — greys and white, never an accent colour. */
+  --color-nav-hover: #232329;
+  --color-nav-active: #2C2C31;
+  --color-focus: #8A8A96;
+
+  /* Layout. The *-gap values are the sidebar width plus a gutter on each
+     side, i.e. what #main's left margin has to clear. */
+  --spacing-gutter: 14px;
+  --spacing-rail: 72px;
+  --spacing-panel: 300px;
+  --spacing-rail-gap: 100px;
+  --spacing-panel-gap: 328px;
+  --spacing-gutter-sm: 8px;
+  --spacing-rail-sm: 56px;
+  --spacing-rail-gap-sm: 72px;
+
+  --breakpoint-nav: 900px;
 }
+
+@layer base {
+  /* Tells the browser to render native scrollbars and form controls dark. */
+  :root { color-scheme: dark; }
+
+  html { scroll-behavior: smooth; }
+  html, body, #root { margin: 0; padding: 0; min-height: 100%; }
+
+  body {
+    @apply bg-bg text-ink font-sans;
+    line-height: 1.7;
+  }
+
+  /* Preflight strips list markers and heading sizes; the notes rely on both. */
+  ul, ol { padding-left: 22px; margin: 10px 0; }
+  ul { list-style: disc; }
+  ol { list-style: decimal; }
+  li { margin-bottom: 5px; font-size: .92rem; }
+
+  p { @apply my-2.5 text-[.93rem] text-ink; }
+  strong { font-weight: 700; }
+  em { font-style: italic; }
+
+  code {
+    @apply bg-code-bg text-code-text font-mono rounded-[4px];
+    padding: 1px 5px;
+    font-size: .84em;
+  }
+
+  table { @apply w-full bg-card; border-collapse: collapse; }
+
+  th {
+    @apply bg-pill text-accent border-b-2 border-line sticky top-0 text-left font-bold uppercase;
+    font-size: .82rem;
+    letter-spacing: .05em;
+    padding: 10px 14px;
+  }
+
+  td { @apply border-b border-line text-[.88rem]; padding: 9px 14px; }
+  tr:nth-child(even) td { background: var(--color-card-alt); }
+  tr:last-child td { border-bottom: none; }
+}
+
+@layer components {
+  /* ── Scroll progress ─────────────────────────────────────────────────── */
+  /* The transform lives here, not in a scale-* utility: App.jsx drives it
+     imperatively via style.transform, which would otherwise fight a utility
+     that compiles to the `scale` property. Only `left` comes from utilities. */
+  .progress-bar {
+    @apply fixed top-0 right-0 z-[9999] h-1 bg-gradient-to-r from-accent to-link;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .1s;
+  }
+
+  /* ── Content shell ───────────────────────────────────────────────────── */
+  .content-heading {
+    @apply text-[1.6rem] font-extrabold text-ink border-b-2 border-line max-nav:text-[1.25rem];
+    margin: 8px 0 28px;
+    padding-bottom: 16px;
+  }
+
+  .part-title { @apply text-[2rem] font-extrabold text-ink mt-14 mb-1; }
+  .part-subtitle { @apply text-[.95rem] text-ink-muted mb-2; }
+
+  .section-header { @apply flex items-center gap-3.5; margin: 48px 0 24px; }
+  .section-header h2 { @apply text-[1.45rem] font-bold text-ink; }
+
+  .section-badge {
+    @apply flex items-center justify-center shrink-0 size-9 rounded-full bg-accent font-bold;
+    color: #14121F;
+    font-size: .85rem;
+  }
+
+  .subsection-header { margin: 32px 0 14px; }
+  .subsection-header h3 { @apply text-[1.1rem] font-bold text-ink pl-3 border-l-4 border-accent; }
+
+  .anchor { scroll-margin-top: 20px; }
+
+  /* ── Cards ───────────────────────────────────────────────────────────── */
+  /* Hover is a border tint only — deliberately no lift and no shadow. */
+  .card {
+    @apply bg-card border border-line rounded-xl mb-5 transition-colors hover:border-line-strong;
+    padding: 22px 26px;
+  }
+
+  .card h3 { @apply mb-2.5; }
+
+  /* ── Callouts ────────────────────────────────────────────────────────── */
+  .callout { @apply rounded-[10px] border-l-4 my-[18px]; padding: 16px 20px; }
+  .callout-title { @apply font-bold mb-1.5; }
+
+  .callout-tip { @apply bg-tip-bg border-l-success; }
+  .callout-tip .callout-title { @apply text-success; }
+
+  .callout-warning { @apply bg-warn-bg border-l-warn; }
+  .callout-warning .callout-title { @apply text-warn-text; }
+
+  .callout-key { @apply bg-key-bg border-l-link; }
+  .callout-key .callout-title { @apply text-link; }
+
+  .callout-note { @apply bg-pill border-l-accent; }
+  .callout-note .callout-title { @apply text-accent; }
+
+  /* ── Code blocks ─────────────────────────────────────────────────────── */
+  .code-block {
+    @apply relative bg-code-surface rounded-[10px] overflow-x-auto my-3.5;
+    padding: 20px 20px 16px;
+  }
+
+  .code-block .lang-badge {
+    @apply absolute top-2 right-3 bg-badge-bg text-badge-text font-bold rounded-[4px];
+    padding: 2px 8px;
+    font-size: .68rem;
+    letter-spacing: .06em;
+  }
+
+  .code-block pre {
+    @apply font-mono text-syn-text;
+    font-size: .83rem;
+    line-height: 1.65;
+    white-space: pre;
+  }
+
+  .code-block pre code {
+    @apply bg-transparent rounded-none p-0;
+    font-size: inherit;
+    color: inherit;
+  }
+
+  pre.diagram {
+    @apply bg-code-surface text-syn-string font-mono rounded-[10px] overflow-x-auto border border-diagram-line;
+    padding: 20px 24px;
+    font-size: .82rem;
+    line-height: 1.7;
+    white-space: pre;
+  }
+
+  /* ── Tables ──────────────────────────────────────────────────────────── */
+  .table-wrap { @apply overflow-x-auto rounded-[10px] border border-line my-4; }
+
+  /* ── Pills & badges ──────────────────────────────────────────────────── */
+  .pill {
+    @apply inline-block bg-pill text-pill-text rounded-[20px] font-semibold;
+    padding: 2px 10px;
+    font-size: .75rem;
+  }
+
+  .pill-success { @apply bg-ok-bg text-ok-text; }
+  .pill-danger { @apply bg-bad-bg text-bad-text; }
+  .pill-warn { @apply text-warn-text; background: #33280E; }
+
+  .badge { @apply inline-block rounded-md font-bold; padding: 2px 8px; font-size: .75rem; }
+  .badge.do { @apply bg-ok-bg text-ok-text; }
+  .badge.dont { @apply bg-bad-bg text-bad-text; }
+
+  .meta-row { @apply flex flex-wrap gap-2; margin: 12px 0 2px; }
+
+  /* ── Side-by-side layouts ────────────────────────────────────────────── */
+  .two-col, .compare { @apply grid grid-cols-1 md:grid-cols-2 gap-5 my-4; }
+
+  .compare-side { @apply bg-card border border-line rounded-xl; padding: 16px 18px; }
+  .compare-side.bad { @apply border-l-4 border-l-danger; }
+  .compare-side.good { @apply border-l-4 border-l-success; }
+
+  .compare-label { @apply font-bold text-[.88rem] text-ink mb-2.5; }
+  .compare-side.bad .compare-label { @apply text-danger; }
+  .compare-side.good .compare-label { @apply text-success; }
+
+  /* ── Complexity boxes ────────────────────────────────────────────────── */
+  .cx-grid { @apply grid grid-cols-1 md:grid-cols-2 gap-3.5 my-4; }
+
+  .cx-box {
+    @apply bg-card border border-line border-l-4 border-l-link rounded-[10px];
+    padding: 12px 16px;
+  }
+
+  .cx-label { @apply font-bold uppercase text-ink-muted; font-size: .7rem; letter-spacing: .07em; }
+  .cx-val { @apply font-mono text-base font-bold text-accent; }
+  .cx-note { @apply text-ink-muted; font-size: .82rem; }
+
+  /* ── Numbered step lists ─────────────────────────────────────────────── */
+  .steps { counter-reset: step; list-style: none; padding-left: 0; }
+  .steps li { counter-increment: step; @apply relative mb-2.5; padding-left: 34px; }
+
+  .steps li::before {
+    content: counter(step);
+    @apply absolute left-0 flex items-center justify-center size-[22px] rounded-full bg-pill text-accent font-bold;
+    top: 2px;
+    font-size: .72rem;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Plain CSS for things utilities cannot reach: Prism writes its markup via
+   dangerouslySetInnerHTML so there is no JSX to put classes on, and
+   scrollbars are pseudo-elements.
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* Hand-written syntax spans in the older Java notes. */
+.kw { color: var(--color-syn-keyword); }
+.st { color: var(--color-syn-string); }
+.nm { color: var(--color-syn-number); }
+.fn { color: var(--color-syn-function); }
+.cm { color: var(--color-syn-comment); font-style: italic; }
+.tp { color: var(--color-syn-type); }
+.an { color: var(--color-syn-annotation); }
+
+/* Prism tokens, mapped to the same palette. */
+.code-block pre code .token.keyword,
+.code-block pre code .token.boolean,
+.code-block pre code .token.operator { color: var(--color-syn-keyword); }
+.code-block pre code .token.string,
+.code-block pre code .token.char { color: var(--color-syn-string); }
+.code-block pre code .token.number { color: var(--color-syn-number); }
+.code-block pre code .token.function { color: var(--color-syn-function); }
+.code-block pre code .token.comment { color: var(--color-syn-comment); font-style: italic; }
+.code-block pre code .token.class-name,
+.code-block pre code .token.builtin { color: var(--color-syn-type); }
+.code-block pre code .token.annotation,
+.code-block pre code .token.decorator { color: var(--color-syn-annotation); }
+.code-block pre code .token.punctuation { color: var(--color-syn-text); }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2E2E36; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-line-strong); }
