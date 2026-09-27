@@ -24,6 +24,7 @@ import Queues from './subjects/collections/queues.jsx';
 import Java8Features from './subjects/collections/java8.jsx';
 import BinaryTree from './subjects/dsa/binary-tree.jsx';
 import BinarySearchTree from './subjects/dsa/binary-search-tree.jsx';
+import DynamicProgramming from './subjects/dsa/dynamic-programming.jsx';
 
 function JavaNotesContent() {
   return (
@@ -54,6 +55,7 @@ function DSAContent() {
     <>
       <BinaryTree />
       <BinarySearchTree />
+      <DynamicProgramming />
     </>
   );
 }
@@ -233,7 +235,77 @@ const SUBJECTS = [
         { id: 's9-2', label: 'Two Sum in a BST' },
         { id: 's9-3', label: 'Recover a BST' },
         { id: 's9-4', label: 'Largest BST in a Binary Tree' },
-        { id: 's9-5', label: 'Complexity Cheat Sheet' },
+      ] },
+      { key: 'dynamic-programming', label: 'Dynamic Programming', children: [
+        /* Introduction to DP */
+        { id: 'dp1-1', label: 'What Is Dynamic Programming?' },
+        { id: 'dp1-2', label: 'When Does DP Apply?' },
+        { id: 'dp1-3', label: 'The Three Approaches' },
+        { id: 'dp1-4', label: 'Recipe for Any DP Problem' },
+        /* 1D DP */
+        { id: 'dp2-1', label: 'Fibonacci Number' },
+        { id: 'dp2-2', label: 'Climbing Stairs' },
+        { id: 'dp2-3', label: 'Frog Jump' },
+        { id: 'dp2-4', label: 'Frog Jump with K Distances' },
+        { id: 'dp2-5', label: 'Maximum Sum of Non-Adjacent Elements' },
+        { id: 'dp2-6', label: 'House Robber II' },
+        /* 2D / 3D DP and DP on grids */
+        { id: 'dp3-1', label: 'Ninja’s Training' },
+        { id: 'dp3-2', label: 'Grid Unique Paths' },
+        { id: 'dp3-3', label: 'Grid Unique Paths II — Obstacles' },
+        { id: 'dp3-4', label: 'Minimum Path Sum in a Grid' },
+        { id: 'dp3-5', label: 'Minimum Path Sum in a Triangle' },
+        { id: 'dp3-6', label: 'Minimum / Maximum Falling Path Sum' },
+        { id: 'dp3-7', label: 'Cherry Pickup II — 3D DP' },
+        /* DP on subsequences — subset sums */
+        { id: 'dp4-1', label: 'Subset Sum Equal to Target' },
+        { id: 'dp4-2', label: 'Partition Equal Subset Sum' },
+        { id: 'dp4-3', label: 'Minimum Subset Sum Difference' },
+        { id: 'dp4-4', label: 'Count Subsets with Sum K' },
+        { id: 'dp4-5', label: 'Count Partitions with Given Difference' },
+        /* Knapsack variants */
+        { id: 'dp5-1', label: '0/1 Knapsack' },
+        { id: 'dp5-2', label: 'Minimum Coins' },
+        { id: 'dp5-3', label: 'Target Sum' },
+        { id: 'dp5-4', label: 'Coin Change II — Count Ways' },
+        { id: 'dp5-5', label: 'Unbounded Knapsack' },
+        { id: 'dp5-6', label: 'Rod Cutting' },
+        /* DP on strings */
+        { id: 'dp6-1', label: 'Longest Common Subsequence' },
+        { id: 'dp6-2', label: 'Print Longest Common Subsequence' },
+        { id: 'dp6-3', label: 'Longest Common Substring' },
+        { id: 'dp6-4', label: 'Longest Palindromic Subsequence' },
+        { id: 'dp6-5', label: 'Minimum Insertions for a Palindrome' },
+        { id: 'dp6-6', label: 'Minimum Operations to Convert A to B' },
+        { id: 'dp6-7', label: 'Shortest Common Supersequence' },
+        { id: 'dp6-8', label: 'Distinct Subsequences' },
+        { id: 'dp6-9', label: 'Edit Distance' },
+        { id: 'dp6-10', label: 'Wildcard Matching' },
+        /* DP on stocks */
+        { id: 'dp7-1', label: 'Best Time to Buy and Sell Stock' },
+        { id: 'dp7-2', label: 'Buy and Sell Stock II' },
+        { id: 'dp7-3', label: 'Buy and Sell Stock III' },
+        { id: 'dp7-4', label: 'Buy and Sell Stock IV' },
+        { id: 'dp7-5', label: 'Buy and Sell with Cooldown' },
+        { id: 'dp7-6', label: 'Buy and Sell with Transaction Fee' },
+        /* DP on LIS */
+        { id: 'dp8-1', label: 'Longest Increasing Subsequence' },
+        { id: 'dp8-2', label: 'Print Longest Increasing Subsequence' },
+        { id: 'dp8-3', label: 'LIS in O(n log n)' },
+        { id: 'dp8-4', label: 'Largest Divisible Subset' },
+        { id: 'dp8-5', label: 'Longest String Chain' },
+        { id: 'dp8-6', label: 'Longest Bitonic Subsequence' },
+        { id: 'dp8-7', label: 'Number of Longest Increasing Subsequences' },
+        /* Partition DP — the MCM pattern */
+        { id: 'dp9-1', label: 'Matrix Chain Multiplication' },
+        { id: 'dp9-2', label: 'Minimum Cost to Cut a Stick' },
+        { id: 'dp9-3', label: 'Burst Balloons' },
+        { id: 'dp9-4', label: 'Boolean Evaluation to True' },
+        { id: 'dp9-5', label: 'Palindrome Partitioning II' },
+        { id: 'dp9-6', label: 'Partition Array for Maximum Sum' },
+        /* DP on squares */
+        { id: 'dp10-1', label: 'Maximum Rectangle of 1s' },
+        { id: 'dp10-2', label: 'Count Square Submatrices' },
       ] },
     ],
   },

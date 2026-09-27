@@ -8,6 +8,6 @@ export function CxBox({ label, value, children }) {
   );
 }
 
-export default function Cx({ children }) {
-  return <div className="cx-grid">{children}</div>;
+export default function Cx({ children, three }) {
+  return <div className={'cx-grid' + (three ? ' three' : '')}>{children}</div>;
 }

@@ -39,6 +39,18 @@
   --color-bad-bg: #3A1518;
   --color-bad-text: #FF7B72;
 
+  /* Dynamic-programming notes: recurrence blocks, approach tags, and the
+     "different topic" / "not applicable" callouts. */
+  --color-recurrence-bg: #141221;
+  --color-tag-tab-bg: #11243D;
+  --color-tag-tab-text: #6CB6FF;
+  --color-topic: #C99BF5;
+  --color-topic-bg: #1C1330;
+  --color-topic-line: #A855F7;
+  --color-na-bg: #17171B;
+  --color-na-line: #5A5A66;
+  --color-na-text: #B0B0B8;
+
   /* Code */
   --color-code-bg: #24242B;
   --color-code-text: #FF8A80;
@@ -244,8 +256,41 @@
   .compare-side.bad .compare-label { @apply text-danger; }
   .compare-side.good .compare-label { @apply text-success; }
 
+  /* ── Recurrences ─────────────────────────────────────────────────────── */
+  /* A dashed box for the "state / base case / transition" summaries. */
+  .recurrence {
+    @apply bg-recurrence-bg border border-dashed border-accent rounded-[10px] font-mono text-ink overflow-x-auto my-3.5;
+    padding: 14px 18px;
+    font-size: .84rem;
+    line-height: 1.8;
+    white-space: pre;
+  }
+
+  /* ── Approach tags on subsection headings ────────────────────────────── */
+  .tag-memo, .tag-tab, .tag-space, .tag-na {
+    @apply inline-block align-middle rounded-md font-bold ml-2;
+    padding: 1px 8px;
+    font-size: .7rem;
+    letter-spacing: .04em;
+  }
+
+  .tag-memo { @apply bg-warn-bg text-warn-text; }
+  .tag-tab { @apply bg-tag-tab-bg text-tag-tab-text; }
+  .tag-space { @apply bg-ok-bg text-ok-text; }
+  .tag-na { @apply bg-na-bg text-na-text border border-dashed border-na-line; }
+
+  /* Marks a problem that leans on a topic outside DP. */
+  .pill-topic { @apply bg-topic-bg text-topic; }
+
+  .callout-topic { @apply bg-topic-bg border-l-topic-line; }
+  .callout-topic .callout-title { @apply text-topic; }
+
+  .callout-na { @apply bg-na-bg border-l-na-line; }
+  .callout-na .callout-title { @apply text-na-text; }
+
   /* ── Complexity boxes ────────────────────────────────────────────────── */
   .cx-grid { @apply grid grid-cols-1 md:grid-cols-2 gap-3.5 my-4; }
+  .cx-grid.three { @apply md:grid-cols-3; }
 
   .cx-box {
     @apply bg-card border border-line border-l-4 border-l-link rounded-[10px];
