@@ -3,14 +3,11 @@ import {
   BookIcon,
   LayersIcon,
   TreeIcon,
-  PanelExpandIcon,
-  PanelCollapseIcon,
-  ChevronDownIcon,
 } from './components/Icons.jsx';
 /*
- * Content files mirror the sidebar: one folder per subject, one file per topic,
- * named after the topic's `key` below. Each file emits the
- * `data-topic-boundary` markers for its own subtopics.
+ * Content files: one folder per subject, one file per topic, named after the
+ * topic's `key` below. Each file emits the `data-topic-boundary` markers for
+ * its own subtopics.
  */
 import CoreJava from './subjects/java/core-java.jsx';
 import Oop from './subjects/java/oop.jsx';
@@ -61,11 +58,10 @@ function DSAContent() {
 }
 
 /*
- * Each subject holds a tree of nav nodes in `children`, and the sidebar renders
- * that tree recursively. An internal node is `{ key, label, children }`;
- * a leaf is `{ id, label }`, where `id` matches a `data-topic-boundary` marker in
- * the content. The renderer handles any depth; all three subjects currently use
- * two levels below the subject (topic -> subtopic).
+ * Each subject holds a tree of nav nodes in `children`. An internal node is
+ * `{ key, label, children }`; a leaf is `{ id, label }`, where `id` matches a
+ * `data-topic-boundary` marker in the content. The top bar shows subjects and
+ * topics; the sub-bar shows the subtopics of the selected topic.
  */
 const SUBJECTS = [
   {
@@ -92,7 +88,7 @@ const SUBJECTS = [
         { id: 's3-1', label: 'Exception Hierarchy' },
         { id: 's3-2', label: 'CPU & Process Architecture' },
         { id: 's3-3', label: 'Multitasking vs Multithreading' },
-        { id: 's3-4', label: 'Java Threads — Creation' },
+        { id: 's3-4', label: 'Java Threads \u2014 Creation' },
         { id: 's3-5', label: 'Thread Lifecycle & Methods' },
       ] },
       { key: 'sync-executors', label: 'Synchronization & Executors', children: [
@@ -250,14 +246,14 @@ const SUBJECTS = [
         { id: 'dp2-5', label: 'Maximum Sum of Non-Adjacent Elements' },
         { id: 'dp2-6', label: 'House Robber II' },
         /* 2D / 3D DP and DP on grids */
-        { id: 'dp3-1', label: 'Ninja’s Training' },
+        { id: 'dp3-1', label: 'Ninja\u2019s Training' },
         { id: 'dp3-2', label: 'Grid Unique Paths' },
-        { id: 'dp3-3', label: 'Grid Unique Paths II — Obstacles' },
+        { id: 'dp3-3', label: 'Grid Unique Paths II \u2014 Obstacles' },
         { id: 'dp3-4', label: 'Minimum Path Sum in a Grid' },
         { id: 'dp3-5', label: 'Minimum Path Sum in a Triangle' },
         { id: 'dp3-6', label: 'Minimum / Maximum Falling Path Sum' },
-        { id: 'dp3-7', label: 'Cherry Pickup II — 3D DP' },
-        /* DP on subsequences — subset sums */
+        { id: 'dp3-7', label: 'Cherry Pickup II \u2014 3D DP' },
+        /* DP on subsequences \u2014 subset sums */
         { id: 'dp4-1', label: 'Subset Sum Equal to Target' },
         { id: 'dp4-2', label: 'Partition Equal Subset Sum' },
         { id: 'dp4-3', label: 'Minimum Subset Sum Difference' },
@@ -267,7 +263,7 @@ const SUBJECTS = [
         { id: 'dp5-1', label: '0/1 Knapsack' },
         { id: 'dp5-2', label: 'Minimum Coins' },
         { id: 'dp5-3', label: 'Target Sum' },
-        { id: 'dp5-4', label: 'Coin Change II — Count Ways' },
+        { id: 'dp5-4', label: 'Coin Change II \u2014 Count Ways' },
         { id: 'dp5-5', label: 'Unbounded Knapsack' },
         { id: 'dp5-6', label: 'Rod Cutting' },
         /* DP on strings */
@@ -296,7 +292,7 @@ const SUBJECTS = [
         { id: 'dp8-5', label: 'Longest String Chain' },
         { id: 'dp8-6', label: 'Longest Bitonic Subsequence' },
         { id: 'dp8-7', label: 'Number of Longest Increasing Subsequences' },
-        /* Partition DP — the MCM pattern */
+        /* Partition DP \u2014 the MCM pattern */
         { id: 'dp9-1', label: 'Matrix Chain Multiplication' },
         { id: 'dp9-2', label: 'Minimum Cost to Cut a Stick' },
         { id: 'dp9-3', label: 'Burst Balloons' },
@@ -310,12 +306,6 @@ const SUBJECTS = [
     ],
   },
 ];
-
-const MOBILE = '(max-width: 900px)';
-
-function isMobile() {
-  return window.matchMedia(MOBILE).matches;
-}
 
 function nodeKey(node) {
   return node.key ?? node.id;
@@ -349,256 +339,18 @@ function resolvePath(subject, path) {
   return nodes;
 }
 
-/*
- * One nav node, rendered recursively. Grouping levels only open and close —
- * `expandedPath` holds at most one open key per level, so opening a node closes
- * its siblings and anything nested below them, and clicking the open node closes
- * it. Selection is separate: only leaves change the visible content.
- */
-/*
- * Shared Tailwind class strings for the sidebar. They live here rather than
- * inline so the markup below stays readable and the states stay consistent.
- * `LIST` also undoes the base list styling, which the notes content needs but
- * the nav does not.
- */
-const LIST = 'list-none m-0 p-0 [&>li]:mb-0';
-
-const FOCUS = 'focus-visible:outline-2 focus-visible:outline-focus';
-
-const ROW =
-  'flex w-full items-start gap-2.5 rounded-lg px-2.5 py-[9px] text-left text-[.85rem] ' +
-  'leading-[1.45] font-semibold cursor-pointer transition-colors hover:bg-nav-hover ' +
-  FOCUS + ' focus-visible:outline-offset-[-2px]';
-
-const PILL =
-  'flex max-w-full items-start rounded-full border px-3 py-1.5 text-left text-[.78rem] ' +
-  'leading-[1.4] font-medium cursor-pointer transition-colors ' +
-  FOCUS + ' focus-visible:outline-offset-[-2px]';
-
-const ICON_BTN =
-  'inline-flex shrink-0 items-center justify-center size-[34px] rounded-[9px] text-ink-muted ' +
-  'cursor-pointer transition-colors hover:bg-nav-hover hover:text-ink [&_svg]:size-[18px] ' +
-  FOCUS + ' focus-visible:outline-offset-1';
-
-/* Same glyph size as the expanded sidebar, so collapsing changes the button
-   and never the icon. */
-const RAIL_BTN =
-  'inline-flex shrink-0 items-center justify-center size-11 rounded-[13px] cursor-pointer ' +
-  'transition-colors hover:bg-nav-hover hover:text-ink [&_svg]:size-[18px] ' +
-  'max-nav:size-10 max-nav:rounded-[11px] ' +
-  FOCUS + ' focus-visible:outline-offset-1';
-
-function SidebarNode({ node, level, expandedPath, activeSubId, onToggle, onSelect }) {
-  const key = nodeKey(node);
-
-  if (!node.children?.length) {
-    const isActive = node.id === activeSubId;
-    return (
-      <li className="flex max-w-full">
-        <button
-          type="button"
-          className={
-            PILL +
-            (isActive
-              ? ' bg-nav-active border-line-strong text-white font-semibold'
-              : ' border-line text-ink-muted hover:bg-nav-hover hover:border-line-strong hover:text-ink')
-          }
-          aria-current={isActive ? 'page' : undefined}
-          onClick={() => onSelect(level, node)}
-        >
-          {node.label}
-        </button>
-      </li>
-    );
-  }
-
-  const isOpen = expandedPath[level] === key;
-  return (
-    <li>
-      <button
-        type="button"
-        className={ROW + (isOpen ? ' text-white' : ' text-ink')}
-        aria-expanded={isOpen}
-        onClick={() => onToggle(level, node)}
-      >
-        <span className="flex-1 min-w-0">{node.label}</span>
-        <span
-          className={
-            'shrink-0 size-4 mt-0.5 transition-transform [&_svg]:size-full ' +
-            (isOpen ? 'rotate-0' : '-rotate-90')
-          }
-        >
-          <ChevronDownIcon />
-        </span>
-      </button>
-      {isOpen && (
-        /* Subtopics are a wrapping row of pills — no guide line, no full-width rows. */
-        <ul className={LIST + ' flex flex-wrap gap-1.5 mt-1.5 mb-2.5 ml-2.5'}>
-          {node.children.map((child) => (
-            <SidebarNode
-              key={nodeKey(child)}
-              node={child}
-              level={level + 1}
-              expandedPath={expandedPath}
-              activeSubId={activeSubId}
-              onToggle={onToggle}
-              onSelect={onSelect}
-            />
-          ))}
-        </ul>
-      )}
-    </li>
-  );
-}
-
-/*
- * The sidebar is a floating rounded card in both states. Expanded it shows the
- * full tree; collapsed it narrows to a rail of subject icons, so navigation is
- * always reachable and no separate floating toggle button is needed.
- */
-function Sidebar({
-  activeSubject,
-  expandedPath,
-  activeSubId,
-  open,
-  onToggleSidebar,
-  onToggleGroup,
-  onSelectLeaf,
-  onSelectSubject,
-}) {
-  return (
-    <nav
-      aria-label="Notes navigation"
-      className={
-        'fixed z-[200] flex flex-col overflow-hidden rounded-[18px] border border-line bg-card ' +
-        'top-gutter left-gutter h-[calc(100vh-28px)] transition-[width] duration-200 ease-out ' +
-        'max-nav:top-gutter-sm max-nav:left-gutter-sm max-nav:h-[calc(100vh-16px)] ' +
-        (open
-          ? 'w-panel max-nav:shadow-[0_8px_40px_rgba(0,0,0,0.55)]'
-          : 'w-rail max-nav:w-rail-sm')
-      }
-    >
-      {open ? (
-        <>
-          <div className="flex shrink-0 items-center justify-between gap-2 border-b border-line py-3.5 pl-5 pr-3.5">
-            <span className="text-[.95rem] font-bold text-ink">Menu</span>
-            <button
-              type="button"
-              className={ICON_BTN}
-              onClick={onToggleSidebar}
-              aria-label="Collapse navigation"
-              aria-expanded="true"
-            >
-              <PanelCollapseIcon />
-            </button>
-          </div>
-
-          <div className="flex-1 overflow-y-auto overscroll-contain pb-4">
-            <ul className={LIST + ' p-2 border-b border-line'}>
-              {SUBJECTS.map((s) => {
-                const isActive = s.key === activeSubject.key;
-                return (
-                  <li key={s.key}>
-                    <button
-                      type="button"
-                      className={ROW + (isActive ? ' bg-nav-active text-white' : ' text-ink')}
-                      aria-current={isActive ? 'true' : undefined}
-                      onClick={() => onSelectSubject(s)}
-                    >
-                      <span
-                        className={
-                          'flex shrink-0 items-center justify-center size-5 mt-px [&_svg]:size-[18px] ' +
-                          (isActive ? 'text-white' : 'text-ink-muted')
-                        }
-                      >
-                        <s.Icon />
-                      </span>
-                      <span className="flex-1 min-w-0">{s.label}</span>
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
-
-            <ul className={LIST + ' p-2'}>
-              {activeSubject.children.map((node) => (
-                <SidebarNode
-                  key={nodeKey(node)}
-                  node={node}
-                  level={0}
-                  expandedPath={expandedPath}
-                  activeSubId={activeSubId}
-                  onToggle={onToggleGroup}
-                  onSelect={onSelectLeaf}
-                />
-              ))}
-            </ul>
-          </div>
-        </>
-      ) : (
-        <div className="flex flex-col items-center gap-1.5 py-3.5">
-          <button
-            type="button"
-            className={ICON_BTN}
-            onClick={onToggleSidebar}
-            aria-label="Expand navigation"
-            aria-expanded="false"
-          >
-            <PanelExpandIcon />
-          </button>
-          <span className="mt-1 mb-2 h-px w-8 bg-line" />
-          {SUBJECTS.map((s) => {
-            const isActive = s.key === activeSubject.key;
-            return (
-              <button
-                key={s.key}
-                type="button"
-                className={RAIL_BTN + (isActive ? ' bg-nav-active text-white' : ' text-ink-muted')}
-                title={s.label}
-                aria-label={s.label}
-                aria-current={isActive ? 'true' : undefined}
-                onClick={() => onSelectSubject(s)}
-              >
-                <s.Icon />
-              </button>
-            );
-          })}
-        </div>
-      )}
-    </nav>
-  );
-}
-
 export default function App() {
   const [activeSubjectKey, setActiveSubjectKey] = useState(SUBJECTS[0].key);
   const [activePath, setActivePath] = useState(() => firstPath(SUBJECTS[0]));
-  const [expandedPath, setExpandedPath] = useState(() => firstPath(SUBJECTS[0]).slice(0, -1));
-  const [sidebarOpen, setSidebarOpen] = useState(() => !isMobile());
 
   const activeSubject = SUBJECTS.find((s) => s.key === activeSubjectKey) ?? SUBJECTS[0];
   const activeNodes = resolvePath(activeSubject, activePath);
+  const activeTopic = activeNodes[0];
   const activeSubId = activeNodes[activeNodes.length - 1].id;
-  const heading = activeNodes.slice(-2).map((n) => n.label).join(' — ');
+  const heading = activeNodes.slice(-2).map((n) => n.label).join(' \u2014 ');
   const ActiveContent = activeSubject.Content;
-  /* Both the content column and the progress bar clear the sidebar: the rail
-     width when collapsed, the panel width when open. These have to be whole
-     literal class names — Tailwind scans source text, so a string built like
-     `ml-${x}-gap` would never be generated. */
-  const mainOffset = sidebarOpen ? 'ml-panel-gap' : 'ml-rail-gap';
-  const barOffset = sidebarOpen ? 'left-panel-gap' : 'left-rail-gap';
 
-  useEffect(() => {
-    const bar = document.getElementById('progress-bar');
-    const onScroll = () => {
-      const scrolled = window.scrollY;
-      const total = document.documentElement.scrollHeight - window.innerHeight;
-      if (bar) bar.style.transform = 'scaleX(' + (total > 0 ? scrolled / total : 0) + ')';
-    };
-    window.addEventListener('scroll', onScroll);
-    onScroll();
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [activeSubjectKey, activeSubId]);
-
+  /* Show/hide content sections based on active subtopic */
   useEffect(() => {
     const mainEl = document.getElementById('main');
     if (!mainEl) return;
@@ -618,75 +370,102 @@ export default function App() {
     window.scrollTo(0, 0);
   }, [activeSubjectKey, activeSubId]);
 
-  useEffect(() => {
-    const onKeyDown = (e) => {
-      if (e.key === 'Escape' && isMobile()) setSidebarOpen(false);
-    };
-    window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
-  }, []);
-
-  /*
-   * Accordion: re-clicking the open node at this level closes it (and everything
-   * nested below), otherwise open it and drop any sibling branch that was open.
-   */
-  const handleToggleGroup = (level, node) => {
-    const key = nodeKey(node);
-    setExpandedPath((prev) =>
-      prev[level] === key ? prev.slice(0, level) : [...prev.slice(0, level), key],
-    );
-  };
-
-  /* A visible leaf's ancestors are exactly the open branch above it. */
-  const handleSelectLeaf = (level, node) => {
-    setActivePath([...expandedPath.slice(0, level), nodeKey(node)]);
-    if (isMobile()) setSidebarOpen(false);
-  };
-
   const handleSelectSubject = (subject) => {
-    setSidebarOpen(true); // a click on the collapsed rail also opens the tree
     if (subject.key === activeSubjectKey) return;
     const path = firstPath(subject);
     setActiveSubjectKey(subject.key);
     setActivePath(path);
-    setExpandedPath(path.slice(0, -1));
+  };
+
+  const handleSelectTopic = (topic) => {
+    const topicKey = nodeKey(topic);
+    if (activePath[0] === topicKey) return;
+    const firstSub = topic.children[0];
+    setActivePath([topicKey, nodeKey(firstSub)]);
+  };
+
+  const handleSelectSubtopic = (sub) => {
+    setActivePath((prev) => [prev[0], nodeKey(sub)]);
   };
 
   return (
     <>
-      <div
-        id="progress-bar"
-        className={`progress-bar ${barOffset} max-nav:left-rail-gap-sm`}
-      />
+      <div className="nav-sticky">
+        {/* Top bar: subjects + topics */}
+        <nav className="top-bar" aria-label="Subject and topic navigation">
+          <div className="top-bar-inner">
+            <div className="subject-tabs">
+              {SUBJECTS.map((s) => {
+                const isActive = s.key === activeSubjectKey;
+                return (
+                  <button
+                    key={s.key}
+                    type="button"
+                    className={'subject-tab' + (isActive ? ' active' : '')}
+                    aria-current={isActive ? 'true' : undefined}
+                    onClick={() => handleSelectSubject(s)}
+                  >
+                    <span className="subject-tab-icon"><s.Icon /></span>
+                    <span>{s.label}</span>
+                  </button>
+                );
+              })}
+            </div>
 
-      <Sidebar
-        activeSubject={activeSubject}
-        expandedPath={expandedPath}
-        activeSubId={activeSubId}
-        open={sidebarOpen}
-        onToggleSidebar={() => setSidebarOpen((prev) => !prev)}
-        onToggleGroup={handleToggleGroup}
-        onSelectLeaf={handleSelectLeaf}
-        onSelectSubject={handleSelectSubject}
-      />
+            <span className="nav-divider" />
 
-      {/* Only ever visible below the nav breakpoint, where the panel overlays. */}
-      {sidebarOpen && (
-        <div
-          className="fixed inset-0 z-[150] hidden bg-black/60 max-nav:block"
-          onClick={() => setSidebarOpen(false)}
-        />
-      )}
+            <div className="topic-tabs">
+              {activeSubject.children.map((topic) => {
+                const key = nodeKey(topic);
+                const isActive = key === activePath[0];
+                return (
+                  <button
+                    key={key}
+                    type="button"
+                    className={'topic-tab' + (isActive ? ' active' : '')}
+                    aria-current={isActive ? 'true' : undefined}
+                    onClick={() => handleSelectTopic(topic)}
+                  >
+                    {topic.label}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </nav>
+      </div>
 
-      <div
-        id="main"
-        className={
-          `px-12 py-10 transition-[margin] duration-200 ease-out ${mainOffset} ` +
-          'max-nav:ml-rail-gap-sm max-nav:px-5 max-nav:py-6'
-        }
-      >
-        <h1 className="content-heading">{heading}</h1>
-        <ActiveContent />
+      <div className="content-layout">
+        {/* Subtopic sidebar */}
+        <aside className="sub-sidebar" aria-label="Subtopic navigation">
+          <div className="sub-sidebar-header">
+            <span className="sub-sidebar-badge">Subtopics</span>
+            <span className="sub-sidebar-topic">{activeTopic.label}</span>
+          </div>
+
+          <div className="sub-sidebar-list">
+            {activeTopic.children.map((sub, idx) => {
+              const isActive = sub.id === activeSubId;
+              return (
+                <button
+                  key={sub.id}
+                  type="button"
+                  className={'sub-tab' + (isActive ? ' active' : '')}
+                  aria-current={isActive ? 'page' : undefined}
+                  onClick={() => handleSelectSubtopic(sub)}
+                >
+                  <span className="sub-tab-idx">{idx + 1}</span>
+                  <span className="sub-tab-label">{sub.label}</span>
+                </button>
+              );
+            })}
+          </div>
+        </aside>
+
+        <main id="main" className="main-content">
+          <h1 className="content-heading">{heading}</h1>
+          <ActiveContent />
+        </main>
       </div>
     </>
   );

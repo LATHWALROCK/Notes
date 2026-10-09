@@ -131,17 +131,6 @@
 }
 
 @layer components {
-  /* ── Scroll progress ─────────────────────────────────────────────────── */
-  /* The transform lives here, not in a scale-* utility: App.jsx drives it
-     imperatively via style.transform, which would otherwise fight a utility
-     that compiles to the `scale` property. Only `left` comes from utilities. */
-  .progress-bar {
-    @apply fixed top-0 right-0 z-[9999] h-1 bg-gradient-to-r from-accent to-link;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform .1s;
-  }
-
   /* ── Content shell ───────────────────────────────────────────────────── */
   .content-heading {
     @apply text-[1.6rem] font-extrabold text-ink border-b-2 border-line max-nav:text-[1.25rem];
@@ -310,6 +299,307 @@
     @apply absolute left-0 flex items-center justify-center size-[22px] rounded-full bg-pill text-accent font-bold;
     top: 2px;
     font-size: .72rem;
+  }
+
+  /* ── Horizontal navigation ─────────────────────────────────────────────── */
+  .nav-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    padding: 12px;
+    background: var(--color-bg);
+  }
+
+  .top-bar {
+    background: var(--color-card);
+    border: 1px solid var(--color-line);
+    border-radius: 12px;
+  }
+
+  .top-bar-inner {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    padding: 0 20px;
+    gap: 8px;
+  }
+
+  .subject-tabs {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .subject-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    border: none;
+    background: none;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--color-ink-muted);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+  }
+
+  .subject-tab:hover { background: var(--color-nav-hover); color: var(--color-ink); }
+  .subject-tab.active { background: var(--color-nav-active); color: #fff; }
+
+  .subject-tab-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+  }
+
+  .subject-tab-icon svg { width: 18px; height: 18px; }
+
+  .nav-divider {
+    width: 1px;
+    height: 28px;
+    background: var(--color-line-strong);
+    flex-shrink: 0;
+    margin: 0 8px;
+  }
+
+  .topic-tabs {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow-x: auto;
+    flex: 1;
+    min-width: 0;
+    scrollbar-width: none;
+  }
+
+  .topic-tabs::-webkit-scrollbar { display: none; }
+
+  .topic-tab {
+    padding: 6px 14px;
+    border: none;
+    background: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--color-ink-muted);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+  }
+
+  .topic-tab:hover { background: var(--color-nav-hover); color: var(--color-ink); }
+
+  .topic-tab.active {
+    background: var(--color-accent);
+    color: #fff;
+    font-weight: 600;
+  }
+
+  /* ── Content layout with vertical sidebar ───────────────────────────── */
+  .content-layout {
+    display: flex;
+    min-height: calc(100vh - 56px - 32px);
+    width: 100%;
+    align-items: flex-start;
+    padding: 0 12px;
+    gap: 12px;
+  }
+
+  /* ── Vertical Subtopic sidebar ─────────────────────────────────────── */
+  .sub-sidebar {
+    position: sticky;
+    top: 90px;
+    height: calc(100vh - 106px);
+    width: 290px;
+    min-width: 290px;
+    max-width: 290px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    background: var(--color-card);
+    border: 1px solid var(--color-line);
+    border-radius: 12px;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-line-strong) transparent;
+  }
+
+  .sub-sidebar::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .sub-sidebar::-webkit-scrollbar-thumb {
+    background: var(--color-line-strong);
+    border-radius: 4px;
+  }
+
+  .sub-sidebar-header {
+    padding: 4px 8px 10px;
+    border-bottom: 1px solid var(--color-line);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .sub-sidebar-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+  }
+
+  .sub-sidebar-topic {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--color-ink);
+    line-height: 1.35;
+  }
+
+  .sub-sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .sub-tab {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 8px 12px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--color-ink-muted);
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+    line-height: 1.35;
+  }
+
+  .sub-tab:hover {
+    background: var(--color-nav-hover);
+    color: var(--color-ink);
+  }
+
+  .sub-tab.active {
+    background: var(--color-nav-active);
+    color: #fff;
+    font-weight: 600;
+    border-color: rgba(139, 133, 255, 0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .sub-tab-idx {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 4px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-family: var(--font-mono);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--color-ink-muted);
+    flex-shrink: 0;
+  }
+
+  .sub-tab.active .sub-tab-idx {
+    background: var(--color-accent);
+    color: #0b0b0c;
+    font-weight: 700;
+  }
+
+  .sub-tab-label {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  /* ── Main content ─────────────────────────────────────────────────── */
+  .main-content {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .nav-sticky {
+    padding: 12px 16px;
+    top: 0;
+  }
+  .top-bar-inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 12px;
+    gap: 6px;
+  }
+  .nav-divider { display: none; }
+  .subject-tabs {
+    width: 100%;
+    overflow-x: auto;
+    border-bottom: 1px solid var(--color-line);
+    padding-bottom: 8px;
+  }
+  .topic-tabs {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .content-layout {
+    flex-direction: column;
+    padding: 0 16px;
+    gap: 12px;
+  }
+  .sub-sidebar {
+    position: static;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 240px;
+    border-right: none;
+    border: 1px solid var(--color-line);
+    border-radius: 12px;
+    padding: 12px 16px;
+  }
+  .sub-sidebar-header {
+    display: none;
+  }
+  .sub-sidebar-list {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 6px;
+  }
+  .sub-tab {
+    width: auto;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .sub-tab-label {
+    white-space: nowrap;
+  }
+  .main-content {
+    padding: 16px 0 36px;
   }
 }
 
