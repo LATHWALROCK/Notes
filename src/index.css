@@ -134,8 +134,7 @@
   /* ── Content shell ───────────────────────────────────────────────────── */
   .content-heading {
     @apply text-[1.6rem] font-extrabold text-ink border-b-2 border-line max-nav:text-[1.25rem];
-    margin: 8px 0 28px;
-    padding-bottom: 16px;
+    padding-bottom: 8px;
   }
 
   .part-title { @apply text-[2rem] font-extrabold text-ink mt-14 mb-1; }
@@ -232,7 +231,7 @@
   .badge.do { @apply bg-ok-bg text-ok-text; }
   .badge.dont { @apply bg-bad-bg text-bad-text; }
 
-  .meta-row { @apply flex flex-wrap gap-2; margin: 12px 0 2px; }
+  .meta-row { @apply flex flex-wrap gap-2; padding: 12px 0; }
 
   /* ── Side-by-side layouts ────────────────────────────────────────────── */
   .two-col, .compare { @apply grid grid-cols-1 md:grid-cols-2 gap-5 my-4; }
