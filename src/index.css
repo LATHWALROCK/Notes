@@ -133,9 +133,8 @@
 @layer components {
   /* ── Content shell ───────────────────────────────────────────────────── */
   .content-heading {
-    @apply text-[1.6rem] font-extrabold text-ink border-b-2 border-line max-nav:text-[1.25rem];
+    @apply text-[1.6rem] font-extrabold text-ink max-nav:text-[1.25rem];
     padding-bottom: 8px;
-    margin-bottom: 8px;
   }
 
   .part-title { @apply text-[2rem] font-extrabold text-ink mt-14 mb-1; }
