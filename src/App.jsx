@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useLayoutEffect, useMemo, useState } from 'react';
 import {
   BookIcon,
   LayersIcon,
@@ -24,41 +24,6 @@ import BinarySearchTree from './subjects/dsa/binary-search-tree.jsx';
 import DynamicProgramming from './subjects/dsa/dynamic-programming.jsx';
 import Graph from './subjects/dsa/graph.jsx';
 
-function JavaNotesContent() {
-  return (
-    <>
-      <CoreJava />
-      <Oop />
-      <ExceptionsConcurrency />
-      <SyncExecutors />
-      <Generics />
-    </>
-  );
-}
-
-function JavaCollectionsContent() {
-  return (
-    <>
-      <Lists />
-      <Maps />
-      <Sets />
-      <Queues />
-      <Java8Features />
-    </>
-  );
-}
-
-function DSAContent() {
-  return (
-    <>
-      <BinaryTree />
-      <BinarySearchTree />
-      <DynamicProgramming />
-      <Graph />
-    </>
-  );
-}
-
 /*
  * Each subject holds a tree of nav nodes in `children`. An internal node is
  * `{ key, label, children }`; a leaf is `{ id, label }`, where `id` matches a
@@ -70,30 +35,29 @@ const SUBJECTS = [
     key: 'java',
     label: 'Java Notes',
     Icon: BookIcon,
-    Content: JavaNotesContent,
     children: [
-      { key: 'core-java', label: 'Core Java', children: [
+      { key: 'core-java', label: 'Core Java', Content: CoreJava, children: [
         { id: 'part1-1', label: 'Architecture & Compilation' },
         { id: 'part1-2', label: 'Java Basics' },
         { id: 'part1-3', label: 'Static Keyword' },
         { id: 'part1-4', label: 'Data Types & Wrappers' },
         { id: 'part1-5', label: 'Strings in Java' },
       ] },
-      { key: 'oop', label: 'OOP', children: [
+      { key: 'oop', label: 'OOP', Content: Oop, children: [
         { id: 'part2-1', label: 'Methods & Constructors' },
         { id: 'part2-2', label: 'Inheritance & Polymorphism' },
         { id: 'part2-3', label: 'Abstract Classes & Final' },
         { id: 'part2-4', label: 'Interfaces' },
         { id: 'part2-5', label: 'Inner Classes' },
       ] },
-      { key: 'exceptions-concurrency', label: 'Exceptions & Concurrency', children: [
+      { key: 'exceptions-concurrency', label: 'Exceptions & Concurrency', Content: ExceptionsConcurrency, children: [
         { id: 's3-1', label: 'Exception Hierarchy' },
         { id: 's3-2', label: 'CPU & Process Architecture' },
         { id: 's3-3', label: 'Multitasking vs Multithreading' },
         { id: 's3-4', label: 'Java Threads \u2014 Creation' },
         { id: 's3-5', label: 'Thread Lifecycle & Methods' },
       ] },
-      { key: 'sync-executors', label: 'Synchronization & Executors', children: [
+      { key: 'sync-executors', label: 'Synchronization & Executors', Content: SyncExecutors, children: [
         { id: 's4-1', label: 'Synchronization' },
         { id: 's4-2', label: 'Explicit Locks' },
         { id: 's4-3', label: 'Thread Communication' },
@@ -101,7 +65,7 @@ const SUBJECTS = [
         { id: 's4-5', label: 'Executors Framework' },
         { id: 's4-6', label: 'Concurrency Utilities' },
       ] },
-      { key: 'generics', label: 'Generics', children: [
+      { key: 'generics', label: 'Generics', Content: Generics, children: [
         { id: 's51', label: 'Why Generics?' },
         { id: 's52', label: 'Generic Classes & Interfaces' },
         { id: 's53', label: 'Generic Methods' },
@@ -117,9 +81,8 @@ const SUBJECTS = [
     key: 'collections',
     label: 'Java Collections Framework',
     Icon: LayersIcon,
-    Content: JavaCollectionsContent,
     children: [
-      { key: 'lists', label: 'Lists', children: [
+      { key: 'lists', label: 'Lists', Content: Lists, children: [
         { id: 's1-1', label: 'Collection Framework Overview' },
         { id: 's1-2', label: 'Collection Interface' },
         { id: 's1-3', label: 'ArrayList' },
@@ -128,7 +91,7 @@ const SUBJECTS = [
         { id: 's16', label: 'Stack' },
         { id: 's17', label: 'CopyOnWriteArrayList' },
       ] },
-      { key: 'maps', label: 'Maps', children: [
+      { key: 'maps', label: 'Maps', Content: Maps, children: [
         { id: 'partC', label: 'Map Interface' },
         { id: 'hashmap', label: 'HashMap' },
         { id: 'linkedhashmap', label: 'LinkedHashMap' },
@@ -140,21 +103,21 @@ const SUBJECTS = [
         { id: 's29', label: 'ConcurrentSkipListMap, EnumMap & Immutable Maps' },
         { id: 's210', label: 'Comparable vs Comparator' },
       ] },
-      { key: 'sets', label: 'Sets', children: [
+      { key: 'sets', label: 'Sets', Content: Sets, children: [
         { id: 'part3', label: 'Set Interface' },
         { id: 's3-2', label: 'HashSet' },
         { id: 's3-3', label: 'LinkedHashSet' },
         { id: 's3-4', label: 'TreeSet' },
         { id: 's3-5', label: 'EnumSet, CopyOnWriteArraySet & ConcurrentSkipListSet' },
       ] },
-      { key: 'queues', label: 'Queues & Deques', children: [
+      { key: 'queues', label: 'Queues & Deques', Content: Queues, children: [
         { id: 'part4', label: 'Queue Interface' },
         { id: 's4-2', label: 'PriorityQueue' },
         { id: 's4-3', label: 'Deque Interface & ArrayDeque' },
         { id: 's4-4', label: 'BlockingQueue & Variants' },
         { id: 's4-5', label: 'ConcurrentLinkedQueue, ConcurrentLinkedDeque & Iterable/Iterator' },
       ] },
-      { key: 'java8', label: 'Java 8 Features', children: [
+      { key: 'java8', label: 'Java 8 Features', Content: Java8Features, children: [
         { id: 's5-1', label: 'Lambda Expressions' },
         { id: 's5-2', label: 'Functional Interfaces' },
         { id: 's5-3', label: 'Method References' },
@@ -169,9 +132,8 @@ const SUBJECTS = [
     key: 'dsa',
     label: 'DSA in Java',
     Icon: TreeIcon,
-    Content: DSAContent,
     children: [
-      { key: 'binary-tree', label: 'Binary Tree', children: [
+      { key: 'binary-tree', label: 'Binary Tree', Content: BinaryTree, children: [
         /* Foundations */
         { id: 's1-1', label: 'What Is a Binary Tree?' },
         { id: 's1-2', label: 'Types of Binary Trees' },
@@ -214,7 +176,7 @@ const SUBJECTS = [
         { id: 's6-6', label: 'Morris Preorder Traversal' },
         { id: 's6-7', label: 'Flatten Tree to Linked List' },
       ] },
-      { key: 'bst', label: 'Binary Search Tree', children: [
+      { key: 'bst', label: 'Binary Search Tree', Content: BinarySearchTree, children: [
         /* BST foundations */
         { id: 's7-1', label: 'What Is a BST?' },
         { id: 's7-2', label: 'Search in a BST' },
@@ -234,7 +196,7 @@ const SUBJECTS = [
         { id: 's9-3', label: 'Recover a BST' },
         { id: 's9-4', label: 'Largest BST in a Binary Tree' },
       ] },
-      { key: 'dynamic-programming', label: 'Dynamic Programming', children: [
+      { key: 'dynamic-programming', label: 'Dynamic Programming', Content: DynamicProgramming, children: [
         /* Introduction to DP */
         { id: 'dp1-1', label: 'What Is Dynamic Programming?' },
         { id: 'dp1-2', label: 'When Does DP Apply?' },
@@ -305,7 +267,7 @@ const SUBJECTS = [
         { id: 'dp10-1', label: 'Maximum Rectangle of 1s' },
         { id: 'dp10-2', label: 'Count Square Submatrices' },
       ] },
-      { key: 'graph', label: 'Graph', children: [
+      { key: 'graph', label: 'Graph', Content: Graph, children: [
         /* Fundamentals */
         { id: 'g1', label: 'What Is a Graph?' },
         { id: 'g2', label: 'Graph Representation' },
@@ -413,27 +375,44 @@ export default function App() {
   const activeTopic = activeNodes[0];
   const activeSubId = activeNodes[activeNodes.length - 1].id;
   const heading = activeNodes.slice(-2).map((n) => n.label).join(' \u2014 ');
-  const ActiveContent = activeSubject.Content;
+  const ActiveContent = activeTopic.Content;
 
-  /* Show/hide content sections based on active subtopic */
-  useEffect(() => {
+  /*
+   * Only the ACTIVE TOPIC is mounted, not the whole subject. Mounting every
+   * topic put 163 DSA subtopics in the DOM at once, all but one hidden.
+   *
+   * The element is memoized on the component itself so that selecting a
+   * subtopic \u2014 which changes `activePath` and therefore re-renders App \u2014 hands
+   * React the identical element and it skips re-rendering the content subtree
+   * entirely. Without this, every click re-ran every `Code` block's syntax
+   * highlighting, which is what made switching slow.
+   */
+  const content = useMemo(() => <ActiveContent />, [ActiveContent]);
+
+  /*
+   * Show/hide content sections based on the active subtopic. Runs as a layout
+   * effect so the right section is visible before the browser paints; a plain
+   * effect let the previous section paint first on every switch.
+   */
+  useLayoutEffect(() => {
     const mainEl = document.getElementById('main');
     if (!mainEl) return;
-    const children = Array.from(mainEl.children);
+    const children = mainEl.children;
     const markers = [];
-    children.forEach((el, i) => {
+    for (let i = 0; i < children.length; i++) {
+      const el = children[i];
       if (el.dataset && el.dataset.topicBoundary) markers.push({ id: el.id, index: i });
-    });
+    }
     markers.forEach((m, mi) => {
-      const start = m.index;
       const end = mi + 1 < markers.length ? markers[mi + 1].index : children.length;
-      const visible = m.id === activeSubId;
-      for (let i = start; i < end; i++) {
-        children[i].style.display = visible ? '' : 'none';
+      const want = m.id === activeSubId ? '' : 'none';
+      for (let i = m.index; i < end; i++) {
+        /* Assigning an unchanged value still invalidates style, so compare first. */
+        if (children[i].style.display !== want) children[i].style.display = want;
       }
     });
     window.scrollTo(0, 0);
-  }, [activeSubjectKey, activeSubId]);
+  }, [ActiveContent, activeSubId]);
 
   const handleSelectSubject = (subject) => {
     if (subject.key === activeSubjectKey) return;
@@ -529,7 +508,7 @@ export default function App() {
 
         <main id="main" className="main-content">
           <h1 className="content-heading">{heading}</h1>
-          <ActiveContent />
+          {content}
         </main>
       </div>
     </>

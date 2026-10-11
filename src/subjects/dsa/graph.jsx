@@ -2,10 +2,10 @@ import Code from '../../components/Code.jsx';
 import Cx, { CxBox } from '../../components/Cx.jsx';
 
 /*
- * Subtopic ids are g1 … g54. Binary Tree uses s1-1…s6-7, Binary Search Tree
- * s7-1…s9-4 and Dynamic Programming dp1-1…dp10-2, so the plain `g` numbering
- * is already unique within this subject — every topic of a subject is mounted
- * at once, so colliding ids would break the show/hide in App.jsx.
+ * Subtopic ids are g1 … g54, distinct from the other DSA topics (s1-1…s6-7,
+ * s7-1…s9-4, dp1-1…dp10-2). App.jsx mounts only the active topic, so
+ * uniqueness within this file is what the show/hide actually requires; the `g`
+ * numbering keeps ids unambiguous across the subject regardless.
  */
 export default function Graph() {
   return (

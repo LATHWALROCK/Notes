@@ -2,10 +2,10 @@ import Code from '../../components/Code.jsx';
 import Cx, { CxBox } from '../../components/Cx.jsx';
 
 /*
- * Subtopic ids are prefixed `dp` because Binary Tree and Binary Search Tree
- * already use s1-1, s2-1, … inside this same subject, and every topic of a
- * subject is mounted at once — unprefixed ids would collide and break the
- * show/hide in App.jsx.
+ * Subtopic ids are prefixed `dp` to stay distinct from the other DSA topics
+ * (Binary Tree's s1-1…, Binary Search Tree's s7-1…). App.jsx mounts only the
+ * active topic, so uniqueness within this file is what the show/hide actually
+ * requires — the prefix keeps ids unambiguous across the subject regardless.
  */
 export default function DynamicProgramming() {
   return (
