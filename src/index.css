@@ -256,12 +256,15 @@
   }
 
   /* ── Approach tags on subsection headings ────────────────────────────── */
-  .tag-memo, .tag-tab, .tag-space, .tag-na {
+  .tag-memo, .tag-tab, .tag-space, .tag-na, .tag-approach {
     @apply inline-block align-middle rounded-md font-bold ml-2;
     padding: 1px 8px;
     font-size: .7rem;
     letter-spacing: .04em;
   }
+
+  /* Names which traversal a problem is being solved with — BFS, DFS, Kahn's. */
+  .tag-approach { @apply bg-pill text-pill-text; }
 
   .tag-memo { @apply bg-warn-bg text-warn-text; }
   .tag-tab { @apply bg-tag-tab-bg text-tag-tab-text; }

@@ -22,6 +22,7 @@ import Java8Features from './subjects/collections/java8.jsx';
 import BinaryTree from './subjects/dsa/binary-tree.jsx';
 import BinarySearchTree from './subjects/dsa/binary-search-tree.jsx';
 import DynamicProgramming from './subjects/dsa/dynamic-programming.jsx';
+import Graph from './subjects/dsa/graph.jsx';
 
 function JavaNotesContent() {
   return (
@@ -53,6 +54,7 @@ function DSAContent() {
       <BinaryTree />
       <BinarySearchTree />
       <DynamicProgramming />
+      <Graph />
     </>
   );
 }
@@ -302,6 +304,69 @@ const SUBJECTS = [
         /* DP on squares */
         { id: 'dp10-1', label: 'Maximum Rectangle of 1s' },
         { id: 'dp10-2', label: 'Count Square Submatrices' },
+      ] },
+      { key: 'graph', label: 'Graph', children: [
+        /* Fundamentals */
+        { id: 'g1', label: 'What Is a Graph?' },
+        { id: 'g2', label: 'Graph Representation' },
+        { id: 'g3', label: 'Connected Components' },
+        { id: 'g4', label: 'BFS Traversal' },
+        { id: 'g5', label: 'DFS Traversal' },
+        /* Traversal patterns */
+        { id: 'g6', label: 'Number of Provinces' },
+        { id: 'g7', label: 'Number of Islands' },
+        { id: 'g8', label: 'Flood Fill Algorithm' },
+        { id: 'g9', label: 'Rotten Oranges' },
+        { id: 'g10', label: 'Cycle in Undirected — BFS' },
+        { id: 'g11', label: 'Cycle in Undirected — DFS' },
+        { id: 'g12', label: 'Distance of Nearest Cell' },
+        { id: 'g13', label: 'Surrounded Regions' },
+        { id: 'g14', label: 'Number of Enclaves' },
+        { id: 'g15', label: 'Number of Distinct Islands' },
+        { id: 'g16', label: 'Bipartite Graph — BFS' },
+        { id: 'g17', label: 'Bipartite Graph — DFS' },
+        /* Directed graphs — cycles & topological sort */
+        { id: 'g18', label: 'Cycle in Directed — DFS' },
+        { id: 'g19', label: 'Eventual Safe States — DFS' },
+        { id: 'g20', label: 'Topological Sort — DFS' },
+        { id: 'g21', label: 'Topological Sort — Kahn’s' },
+        { id: 'g22', label: 'Cycle in Directed — BFS' },
+        { id: 'g23', label: 'Course Schedule I' },
+        { id: 'g24', label: 'Course Schedule II' },
+        { id: 'g25', label: 'Eventual Safe States — BFS' },
+        { id: 'g26', label: 'Alien Dictionary' },
+        /* Shortest path algorithms */
+        { id: 'g27', label: 'Shortest Path in a DAG' },
+        { id: 'g28', label: 'Shortest Path, Unit Weights' },
+        { id: 'g29', label: 'Word Ladder I' },
+        { id: 'g30', label: 'Word Ladder II' },
+        { id: 'g31', label: 'Dijkstra’s Algorithm' },
+        { id: 'g32', label: 'Shortest Path Between Nodes' },
+        { id: 'g33', label: 'Shortest Distance in a Binary Maze' },
+        { id: 'g34', label: 'Path With Minimum Effort' },
+        /* Advanced shortest paths */
+        { id: 'g35', label: 'Cheapest Flights Within K Stops' },
+        { id: 'g36', label: 'Minimum Multiplications to Reach End' },
+        { id: 'g37', label: 'Ways to Arrive at Destination' },
+        { id: 'g38', label: 'Bellman–Ford Algorithm' },
+        { id: 'g39', label: 'Floyd–Warshall Algorithm' },
+        { id: 'g40', label: 'City With Smallest Number of Neighbours' },
+        /* Minimum spanning trees & disjoint set */
+        { id: 'g41', label: 'MST — Prim’s Algorithm' },
+        { id: 'g42', label: 'Disjoint Set — Union by Rank' },
+        { id: 'g43', label: 'Disjoint Set — Union by Size' },
+        { id: 'g44', label: 'MST — Kruskal’s Algorithm' },
+        { id: 'g45', label: 'Provinces — Disjoint Set' },
+        { id: 'g46', label: 'Connecting the Graph' },
+        { id: 'g47', label: 'Accounts Merge' },
+        { id: 'g48', label: 'Number of Islands II' },
+        { id: 'g49', label: 'Making a Large Island' },
+        { id: 'g50', label: 'Most Stones Removed' },
+        /* Strongly connected components & critical connections */
+        { id: 'g51', label: 'SCC — Kosaraju’s Algorithm' },
+        { id: 'g52', label: 'Bridges — Tarjan’s Algorithm' },
+        { id: 'g53', label: 'Articulation Point' },
+        { id: 'g54', label: 'Patterns & Cheat Sheet' },
       ] },
     ],
   },
