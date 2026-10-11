@@ -135,6 +135,7 @@
   .content-heading {
     @apply text-[1.6rem] font-extrabold text-ink border-b-2 border-line max-nav:text-[1.25rem];
     padding-bottom: 8px;
+    margin-bottom: 8px;
   }
 
   .part-title { @apply text-[2rem] font-extrabold text-ink mt-14 mb-1; }
@@ -149,7 +150,7 @@
     font-size: .85rem;
   }
 
-  .subsection-header { margin: 32px 0 14px; }
+  .subsection-header { padding: 12px 0; }
   .subsection-header h3 { @apply text-[1.1rem] font-bold text-ink pl-3 border-l-4 border-accent; }
 
   .anchor { scroll-margin-top: 20px; }
