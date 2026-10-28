@@ -23,6 +23,7 @@ import BinaryTree from './subjects/dsa/binary-tree.jsx';
 import BinarySearchTree from './subjects/dsa/binary-search-tree.jsx';
 import DynamicProgramming from './subjects/dsa/dynamic-programming.jsx';
 import Graph from './subjects/dsa/graph.jsx';
+import LinkedList from './subjects/dsa/linked-list.jsx';
 
 /*
  * Each subject holds a tree of nav nodes in `children`. An internal node is
@@ -329,6 +330,49 @@ const SUBJECTS = [
         { id: 'g52', label: 'Bridges — Tarjan’s Algorithm' },
         { id: 'g53', label: 'Articulation Point' },
         { id: 'g54', label: 'Patterns & Cheat Sheet' },
+      ] },
+      { key: 'linked-list', label: 'Linked List', Content: LinkedList, children: [
+        /* Fundamentals */
+        { id: 'l1', label: 'What Is a Linked List?' },
+        { id: 'l2', label: 'Doubly Linked List' },
+        { id: 'l3', label: 'Search an Element' },
+        { id: 'l4', label: 'Length of a Linked List' },
+        /* Core operations */
+        { id: 'l5', label: 'Insertion in a Singly LL' },
+        { id: 'l6', label: 'Deletion in a Singly LL' },
+        { id: 'l7', label: 'Insertion in a DLL' },
+        { id: 'l8', label: 'Deletion in a DLL' },
+        { id: 'l9', label: 'Reverse a DLL' },
+        /* Classic interview problems */
+        { id: 'l10', label: 'Add Two Numbers as LLs' },
+        { id: 'l11', label: 'Odd Even Linked List' },
+        { id: 'l12', label: 'Sort LL of 0s, 1s, 2s' },
+        { id: 'l13', label: 'Remove Nth Node From End' },
+        { id: 'l14', label: 'Reverse a Linked List' },
+        { id: 'l15', label: 'LL Palindrome Check' },
+        { id: 'l16', label: 'Add 1 to a Number as LL' },
+        /* Fast & slow pointers — Floyd’s technique */
+        { id: 'l17', label: 'Intersection of Y-Shaped LL' },
+        { id: 'l18', label: 'Middle of a Linked List' },
+        { id: 'l19', label: 'Detect a Loop in a LL' },
+        { id: 'l20', label: 'Length of a Loop in a LL' },
+        { id: 'l21', label: 'Delete the Middle Node' },
+        { id: 'l22', label: 'Starting Point of a Loop' },
+        /* Doubly linked list — specific problems */
+        { id: 'l23', label: 'Delete All Occurrences in DLL' },
+        { id: 'l24', label: 'Pairs With Given Sum, DLL' },
+        { id: 'l25', label: 'Remove Duplicates, Sorted DLL' },
+        /* Merging, rotating & advanced structures */
+        { id: 'l26', label: 'Reverse Nodes in Groups of K' },
+        { id: 'l27', label: 'Rotate a Linked List' },
+        { id: 'l28', label: 'Merge Two Sorted LLs' },
+        { id: 'l29', label: 'Flattening a Linked List' },
+        { id: 'l30', label: 'Merge K Sorted Lists' },
+        { id: 'l31', label: 'Sort a Linked List' },
+        { id: 'l32', label: 'Clone LL, Random Pointer' },
+        { id: 'l33', label: 'Design Browser History' },
+        /* Wrap-up */
+        { id: 'l34', label: 'Patterns & Cheat Sheet' },
       ] },
     ],
   },
