@@ -106,12 +106,15 @@ export function useDsaStorage() {
   }, []);
 
   const importMap = useCallback((incomingMap) => {
+    const validCount = Object.keys(incomingMap).filter((k) => Boolean(incomingMap[k])).length;
     setCompletedMap((prev) => {
       const next = { ...prev, ...incomingMap };
       writeStoredMap(next);
       window.dispatchEvent(new CustomEvent('dsa-storage-change', { detail: next }));
       return next;
     });
+    setSyncNotice(`Successfully imported ${validCount} completed problems!`);
+    setTimeout(() => setSyncNotice(null), 4000);
   }, []);
 
   const resetAll = useCallback(() => {
