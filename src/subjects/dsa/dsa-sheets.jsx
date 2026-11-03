@@ -1,6 +1,6 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useRef } from 'react';
 import { DSA_SHEETS } from './sheets/registry.js';
-import { useDsaStorage } from './sheets/useDsaStorage.js';
+import { useDsaStorage, encodeSyncPayload } from './sheets/useDsaStorage.js';
 import { getArticleUrl } from './sheets/article-map.js';
 
 /* ── SVG Icons ────────────────────────────────────────────────────────── */
@@ -153,10 +153,169 @@ function getProblemDifficulty(problem) {
   };
 }
 
+function SyncIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.19" />
+    </svg>
+  );
+}
+
+function SyncModal({ isOpen, onClose, completedMap, onImport }) {
+  const [copied, setCopied] = useState(false);
+  const fileInputRef = useRef(null);
+
+  if (!isOpen) return null;
+
+  const isLocal = typeof window !== 'undefined' && (
+    window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1'
+  );
+
+  const payload = encodeSyncPayload(completedMap);
+  const liveTargetUrl = `https://notes-sooty-nu-49.vercel.app/dsa/dsa-sheets/strivers-180#sync=${payload}`;
+  const localTargetUrl = `http://localhost:5173/dsa/dsa-sheets/strivers-180#sync=${payload}`;
+
+  const copyToClipboard = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Ignore
+    }
+  };
+
+  const handleExportJson = () => {
+    const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(completedMap, null, 2));
+    const dl = document.createElement('a');
+    dl.setAttribute('href', dataStr);
+    dl.setAttribute('download', `dsa-progress-${new Date().toISOString().slice(0, 10)}.json`);
+    dl.click();
+  };
+
+  const handleImportFile = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      try {
+        const json = JSON.parse(event.target.result);
+        if (typeof json === 'object' && json !== null) {
+          onImport(json);
+          onClose();
+        }
+      } catch {
+        alert('Invalid JSON file format.');
+      }
+    };
+    reader.readAsText(file);
+  };
+
+  return (
+    <div className="dsa-modal-backdrop" onClick={onClose}>
+      <div className="dsa-modal-card" onClick={(e) => e.stopPropagation()}>
+        <div className="dsa-modal-header">
+          <div className="dsa-modal-title-wrap">
+            <SyncIcon />
+            <h3 className="dsa-modal-title">Sync DSA Progress</h3>
+          </div>
+          <button type="button" className="dsa-modal-close" onClick={onClose} aria-label="Close">
+            &times;
+          </button>
+        </div>
+
+        <p className="dsa-modal-desc">
+          Because of browser security (Same-Origin Policy), <code>localStorage</code> is isolated per website domain.
+          Use the 1-click options below to sync your progress between <strong>localhost</strong> and <strong>notes-sooty-nu-49.vercel.app</strong>.
+        </p>
+
+        <div className="dsa-modal-actions">
+          {isLocal ? (
+            <div className="dsa-sync-card-block">
+              <span className="dsa-sync-block-title">Sync to Live Website</span>
+              <p className="dsa-sync-block-sub">Open the live Vercel website in a new tab with your current progress imported:</p>
+              <div className="dsa-sync-btn-row">
+                <a
+                  href={liveTargetUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="dsa-btn-primary"
+                  onClick={onClose}
+                >
+                  🚀 Open Live Website with Progress
+                </a>
+                <button
+                  type="button"
+                  className="dsa-btn-secondary"
+                  onClick={() => copyToClipboard(liveTargetUrl)}
+                >
+                  {copied ? '✓ Copied!' : 'Copy Link'}
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div className="dsa-sync-card-block">
+              <span className="dsa-sync-block-title">Sync to Localhost</span>
+              <p className="dsa-sync-block-sub">Open your local dev server in a new tab with your current live progress imported:</p>
+              <div className="dsa-sync-btn-row">
+                <a
+                  href={localTargetUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="dsa-btn-primary"
+                  onClick={onClose}
+                >
+                  💻 Open Localhost with Progress
+                </a>
+                <button
+                  type="button"
+                  className="dsa-btn-secondary"
+                  onClick={() => copyToClipboard(localTargetUrl)}
+                >
+                  {copied ? '✓ Copied!' : 'Copy Link'}
+                </button>
+              </div>
+            </div>
+          )}
+
+          <div className="dsa-sync-card-block">
+            <span className="dsa-sync-block-title">File Backup & Restore</span>
+            <div className="dsa-sync-btn-row">
+              <button
+                type="button"
+                className="dsa-btn-secondary"
+                onClick={handleExportJson}
+              >
+                ⬇ Export JSON
+              </button>
+              <button
+                type="button"
+                className="dsa-btn-secondary"
+                onClick={() => fileInputRef.current?.click()}
+              >
+                ⬆ Import JSON
+              </button>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept=".json,application/json"
+                style={{ display: 'none' }}
+                onChange={handleImportFile}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ── Main Sheet View Component ────────────────────────────────────────── */
 
 function SheetView({ sheet }) {
-  const { completedMap, toggleCompleted } = useDsaStorage();
+  const { completedMap, toggleCompleted, importMap, syncNotice } = useDsaStorage();
+  const [showSyncModal, setShowSyncModal] = useState(false);
 
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTier, setSelectedTier] = useState('ALL');
@@ -306,7 +465,22 @@ function SheetView({ sheet }) {
       <section className="dsa-overall-section" aria-label="Overall Progress">
         <div className="dsa-overall-header">
           <h2 className="dsa-overall-title">Overall Progress</h2>
+          <button
+            type="button"
+            className="dsa-share-btn"
+            onClick={() => setShowSyncModal(true)}
+            title="Sync progress between localhost and website"
+          >
+            <SyncIcon />
+            <span>Sync</span>
+          </button>
         </div>
+
+        {syncNotice && (
+          <div className="dsa-sync-banner">
+            <span>✓ {syncNotice}</span>
+          </div>
+        )}
 
         <div className="dsa-overall-card">
           <div className="dsa-overall-top">
@@ -690,6 +864,13 @@ function SheetView({ sheet }) {
           );
         })}
       </section>
+
+      <SyncModal
+        isOpen={showSyncModal}
+        onClose={() => setShowSyncModal(false)}
+        completedMap={completedMap}
+        onImport={importMap}
+      />
     </div>
   );
 }
