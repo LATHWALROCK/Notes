@@ -3,7 +3,7 @@ export default function Maps() {
   return (
     <>
       {/* 2.1 */}
-      <div id="partC" data-topic-boundary="true" />
+      <div id="map-interface" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>Map</strong> stores <strong>key-value pairs</strong> where every key is unique. It is{' '}
@@ -491,7 +491,7 @@ IdentityHashMap<Object, Integer> visited = new IdentityHashMap<>();
       </div>
 
       {/* 2.6 */}
-      <div id="s26" data-topic-boundary="true" />
+      <div id="sortedmap-and-treemap-navigablemap" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>SortedMap Interface</h3></div>
       <div className="card">
@@ -679,7 +679,7 @@ NavigableMap<Integer, String> incRange = scores.subMap(70, true, 90, true);
       </div>
 
       {/* 2.7 */}
-      <div id="s27" data-topic-boundary="true" />
+      <div id="hashtable" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>Hashtable&lt;K,V&gt;</code> is a <strong>legacy synchronized map</strong> from Java 1.0. It extends{' '}
@@ -717,7 +717,7 @@ NavigableMap<Integer, String> incRange = scores.subMap(70, true, 90, true);
       </div>
 
       {/* 2.8 */}
-      <div id="s28" data-topic-boundary="true" />
+      <div id="concurrenthashmap" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>ConcurrentHashMap&lt;K,V&gt;</code> is a <strong>thread-safe, high-performance</strong> hash map in{' '}
@@ -819,7 +819,7 @@ ConcurrentHashMap                          ConcurrentHashMap
       </div>
 
       {/* 2.9 */}
-      <div id="s29" data-topic-boundary="true" />
+      <div id="concurrentskiplistmap-enummap-and-immutable-maps" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>ConcurrentSkipListMap</h3></div>
       <div className="card">
@@ -985,7 +985,7 @@ System.out.println(snapshot.containsKey("c")); // false — independent copy`
       </div>
 
       {/* 2.10 */}
-      <div id="s210" data-topic-boundary="true" />
+      <div id="comparable-vs-comparator" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>Comparable — Natural Ordering</h3></div>
       <div className="card">

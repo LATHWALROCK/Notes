@@ -3,7 +3,7 @@ export default function Queues() {
   return (
     <>
       {/* 4.1 */}
-      <div id="part4" data-topic-boundary="true" />
+      <div id="queue-interface" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>Queue&lt;E&gt;</code> extends <code>Collection&lt;E&gt;</code> and models a <strong>FIFO</strong>{' '}
@@ -42,7 +42,7 @@ export default function Queues() {
       </div>
 
       {/* 4.2 */}
-      <div id="s4-2" data-topic-boundary="true" />
+      <div id="priorityqueue" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>PriorityQueue&lt;E&gt;</code> implements <code>Queue</code> using a <strong>binary min-heap</strong>{' '}
@@ -117,7 +117,7 @@ System.out.println(maxPQ.peek()); // 9`
       </div>
 
       {/* 4.3 */}
-      <div id="s4-3" data-topic-boundary="true" />
+      <div id="deque-interface-and-arraydeque" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>Deque&lt;E&gt;</code> (double-ended queue) extends <code>Queue</code> and supports insertion and
@@ -204,7 +204,7 @@ stack.pop();`
       </div>
 
       {/* 4.4 */}
-      <div id="s4-4" data-topic-boundary="true" />
+      <div id="blockingqueue-and-variants" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>BlockingQueue Interface</h3></div>
       <div className="card">
@@ -466,7 +466,7 @@ DelayedTask t = dq.take(); // blocks ~1 second`
       </div>
 
       {/* 4.5 */}
-      <div id="s4-5" data-topic-boundary="true" />
+      <div id="concurrentlinkedqueue-concurrentlinkeddeque-and-iterable-iterator" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>ConcurrentLinkedQueue</h3></div>
       <div className="card">

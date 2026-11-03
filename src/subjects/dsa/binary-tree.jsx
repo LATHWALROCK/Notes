@@ -5,7 +5,7 @@ export default function BinaryTree() {
   return (
     <>
       {/* 1.1 */}
-      <div id="s1-1" data-topic-boundary="true" />
+      <div id="what-is-a-binary-tree" data-topic-boundary="true" />
       <p className="part-subtitle">
         Vocabulary, shapes, memory layout and the four ways of walking a tree. Everything in Parts 2–5 is a
         variation on the ideas here.
@@ -142,7 +142,7 @@ export default function BinaryTree() {
       </div>
 
       {/* 1.2 */}
-      <div id="s1-2" data-topic-boundary="true" />
+      <div id="types-of-binary-trees" data-topic-boundary="true" />
       <div className="card">
         <p>
           These five shapes come straight from your notes. They matter because each one guarantees something about
@@ -334,7 +334,7 @@ export default function BinaryTree() {
       </div>
 
       {/* 1.3 */}
-      <div id="s1-3" data-topic-boundary="true" />
+      <div id="representation-in-java" data-topic-boundary="true" />
       <div className="subsection-header"><h3>Linked Representation — the default</h3></div>
       <div className="card">
         <p>
@@ -429,7 +429,7 @@ export default function BinaryTree() {
       </div>
 
       {/* 1.4 */}
-      <div id="s1-4" data-topic-boundary="true" />
+      <div id="traversal-overview" data-topic-boundary="true" />
       <div className="card">
         <p>
           Your notes list four traversals. Three are <strong>depth-first (DFS)</strong> and differ only in{' '}
@@ -505,7 +505,7 @@ export default function BinaryTree() {
       </div>
 
       {/* 2.1 */}
-      <div id="s2-1" data-topic-boundary="true" />
+      <div id="recursive-traversals" data-topic-boundary="true" />
       <p className="part-subtitle">
         The four traversals from your notes, first recursively, then iteratively. Master these and every later
         problem is a small edit to one of them.
@@ -633,7 +633,7 @@ export default function BinaryTree() {
       </div>
 
       {/* 2.2 */}
-      <div id="s2-2" data-topic-boundary="true" />
+      <div id="level-order-traversal" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 102</span>
         <span className="pill pill-success">Easy–Medium</span>
@@ -746,7 +746,7 @@ export default function BinaryTree() {
       </div>
 
       {/* 2.3 */}
-      <div id="s2-3" data-topic-boundary="true" />
+      <div id="inorder-iterative" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 94</span>
         <span className="pill pill-warn">Medium</span>
@@ -853,7 +853,7 @@ export default function BinaryTree() {
       </div>
 
       {/* 2.4 */}
-      <div id="s2-4" data-topic-boundary="true" />
+      <div id="preorder-iterative" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 144</span>
         <span className="pill pill-success">Easy</span>
@@ -931,7 +931,7 @@ export default function BinaryTree() {
       </div>
 
       {/* 2.5 */}
-      <div id="s2-5" data-topic-boundary="true" />
+      <div id="postorder-iterative" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 145</span>
         <span className="pill pill-warn">Medium</span>
@@ -1069,7 +1069,7 @@ export default function BinaryTree() {
       </div>
 
       {/* 2.6 */}
-      <div id="s2-6" data-topic-boundary="true" />
+      <div id="all-three-in-one-go" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill pill-warn">Medium</span>
         <span className="pill">State machine</span>
@@ -1218,7 +1218,7 @@ class Solution {
       </Cx>
 
       {/* 3.1 */}
-      <div id="s3-1" data-topic-boundary="true" />
+      <div id="maximum-depth" data-topic-boundary="true" />
       <p className="part-subtitle">
         Five problems that all share one engine: a <strong>postorder</strong> walk that returns a small value upward
         while quietly updating a global answer on the way.
@@ -1342,7 +1342,7 @@ class Solution {
       </div>
 
       {/* 3.2 */}
-      <div id="s3-2" data-topic-boundary="true" />
+      <div id="balanced-binary-tree" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 110</span>
         <span className="pill pill-success">Easy</span>
@@ -1430,7 +1430,7 @@ class Solution {
       </Cx>
 
       {/* 3.3 */}
-      <div id="s3-3" data-topic-boundary="true" />
+      <div id="diameter-of-a-tree" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 543</span>
         <span className="pill pill-success">Easy–Medium</span>
@@ -1513,7 +1513,7 @@ class Solution {
       </div>
 
       {/* 3.4 */}
-      <div id="s3-4" data-topic-boundary="true" />
+      <div id="maximum-path-sum" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 124</span>
         <span className="pill pill-danger">Hard</span>
@@ -1619,7 +1619,7 @@ int right = Math.max(0, maxPathDown(node.right, maxValue));`
       </div>
 
       {/* 3.5 */}
-      <div id="s3-5" data-topic-boundary="true" />
+      <div id="identical-trees" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 100</span>
         <span className="pill pill-success">Easy</span>
@@ -1721,7 +1721,7 @@ if (p == null || q == null) return false;`
       </div>
 
       {/* 4.1 */}
-      <div id="s4-1" data-topic-boundary="true" />
+      <div id="zig-zag-traversal" data-topic-boundary="true" />
       <p className="part-subtitle">
         Seven problems about <em>where a node sits in space</em> rather than what it contains. Nearly all of them
         are the BFS template from 2.2 with one extra coordinate carried alongside each node.
@@ -1907,7 +1907,7 @@ if (p == null || q == null) return false;`
       </div>
 
       {/* 4.2 */}
-      <div id="s4-2" data-topic-boundary="true" />
+      <div id="boundary-traversal" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">GFG Boundary Traversal</span>
         <span className="pill pill-warn">Medium</span>
@@ -2057,7 +2057,7 @@ if (p == null || q == null) return false;`
       </div>
 
       {/* 4.3 */}
-      <div id="s4-3" data-topic-boundary="true" />
+      <div id="vertical-order-traversal" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 987</span>
         <span className="pill pill-danger">Hard</span>
@@ -2213,7 +2213,7 @@ class Solution {
       </div>
 
       {/* 4.4 */}
-      <div id="s4-4" data-topic-boundary="true" />
+      <div id="top-view" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">GFG Top View</span>
         <span className="pill pill-warn">Medium</span>
@@ -2330,7 +2330,7 @@ class Solution {
       </div>
 
       {/* 4.5 */}
-      <div id="s4-5" data-topic-boundary="true" />
+      <div id="bottom-view" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">GFG Bottom View</span>
         <span className="pill pill-warn">Medium</span>
@@ -2483,7 +2483,7 @@ class Solution {
       </Cx>
 
       {/* 4.6 */}
-      <div id="s4-6" data-topic-boundary="true" />
+      <div id="right-left-side-view" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 199</span>
         <span className="pill pill-warn">Medium</span>
@@ -2585,7 +2585,7 @@ class Solution {
       </div>
 
       {/* 4.7 */}
-      <div id="s4-7" data-topic-boundary="true" />
+      <div id="symmetric-binary-tree" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 101</span>
         <span className="pill pill-success">Easy</span>
@@ -2666,7 +2666,7 @@ isSymmetricHelp(left.right, right.left)     // the two INNER children`
       </div>
 
       {/* 5.1 */}
-      <div id="s5-1" data-topic-boundary="true" />
+      <div id="root-to-node-path" data-topic-boundary="true" />
       <p className="part-subtitle">
         The last six problems, and the two hardest ideas in these notes: <strong>backtracking</strong> a path, and
         treating a tree as an <strong>undirected graph</strong> so you can walk upward.
@@ -2794,7 +2794,7 @@ isSymmetricHelp(left.right, right.left)     // the two INNER children`
       </div>
 
       {/* 5.2 */}
-      <div id="s5-2" data-topic-boundary="true" />
+      <div id="lowest-common-ancestor" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 236</span>
         <span className="pill pill-warn">Medium</span>
@@ -2929,7 +2929,7 @@ isSymmetricHelp(left.right, right.left)     // the two INNER children`
       </div>
 
       {/* 5.3 */}
-      <div id="s5-3" data-topic-boundary="true" />
+      <div id="maximum-width" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 662</span>
         <span className="pill pill-warn">Medium</span>
@@ -3046,7 +3046,7 @@ class Solution {
       </div>
 
       {/* 5.4 */}
-      <div id="s5-4" data-topic-boundary="true" />
+      <div id="children-sum-property" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">GFG / Coding Ninjas</span>
         <span className="pill pill-danger">Hard</span>
@@ -3185,7 +3185,7 @@ class Solution {
       </div>
 
       {/* 5.5 */}
-      <div id="s5-5" data-topic-boundary="true" />
+      <div id="nodes-at-distance-k" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 863</span>
         <span className="pill pill-warn">Medium</span>
@@ -3357,7 +3357,7 @@ class Solution {
       </div>
 
       {/* 5.6 */}
-      <div id="s5-6" data-topic-boundary="true" />
+      <div id="burn-the-binary-tree" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">GFG / Coding Ninjas</span>
         <span className="pill pill-danger">Hard</span>
@@ -3542,7 +3542,7 @@ class Solution {
       </div>
 
       {/* 6.1 */}
-      <div id="s6-1" data-topic-boundary="true" />
+      <div id="count-complete-tree-nodes" data-topic-boundary="true" />
       <p className="part-subtitle">
         Where Parts 1–5 <em>walked</em> an existing tree, this part <strong>builds</strong> one, exploits a
         structural guarantee to beat <code>O(n)</code>, and finally learns to traverse with no stack at all.
@@ -3726,7 +3726,7 @@ left = 2  ->  (2 << 2) - 1 = 8 - 1  = 7      // perfect tree of height 2`
       </div>
 
       {/* 6.2 */}
-      <div id="s6-2" data-topic-boundary="true" />
+      <div id="build-from-inorder-preorder" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 105</span>
         <span className="pill pill-warn">Medium</span>
@@ -3881,7 +3881,7 @@ left = 2  ->  (2 << 2) - 1 = 8 - 1  = 7      // perfect tree of height 2`
       </div>
 
       {/* 6.3 */}
-      <div id="s6-3" data-topic-boundary="true" />
+      <div id="build-from-inorder-postorder" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 106</span>
         <span className="pill pill-warn">Medium</span>
@@ -3997,7 +3997,7 @@ left = 2  ->  (2 << 2) - 1 = 8 - 1  = 7      // perfect tree of height 2`
       </div>
 
       {/* 6.4 */}
-      <div id="s6-4" data-topic-boundary="true" />
+      <div id="serialize-and-deserialize" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 297</span>
         <span className="pill pill-danger">Hard</span>
@@ -4183,7 +4183,7 @@ private TreeNode build(Queue<String> tokens) {
       </div>
 
       {/* 6.5 */}
-      <div id="s6-5" data-topic-boundary="true" />
+      <div id="morris-inorder-traversal" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 94</span>
         <span className="pill pill-warn">Medium–Hard</span>
@@ -4334,7 +4334,7 @@ private TreeNode build(Queue<String> tokens) {
       </div>
 
       {/* 6.6 */}
-      <div id="s6-6" data-topic-boundary="true" />
+      <div id="morris-preorder-traversal" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 144</span>
         <span className="pill pill-warn">Medium–Hard</span>
@@ -4446,7 +4446,7 @@ private TreeNode build(Queue<String> tokens) {
       </div>
 
       {/* 6.7 */}
-      <div id="s6-7" data-topic-boundary="true" />
+      <div id="flatten-tree-to-linked-list" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 114</span>
         <span className="pill pill-warn">Medium</span>

@@ -3,7 +3,7 @@ export default function ExceptionsConcurrency() {
   return (
     <>
       {/* 3.1 */}
-      <div id="s3-1" data-topic-boundary="true" />
+      <div id="exception-hierarchy" data-topic-boundary="true" />
       <p>
         Every throwable thing in Java extends <code>Throwable</code>. Two top-level branches:{' '}
         <strong>Error</strong> (JVM-level, normally unrecoverable) and <strong>Exception</strong> (application-level,
@@ -145,7 +145,7 @@ public class InvalidOrderException extends RuntimeException {
       </div>
 
       {/* 3.2 */}
-      <div id="s3-2" data-topic-boundary="true" />
+      <div id="cpu-and-process-architecture" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>CPU Components</h3></div>
       <div className="table-wrap">
@@ -259,7 +259,7 @@ Low address  │   Code Segment│ ← compiled bytecode / machine instructions
       </div>
 
       {/* 3.3 */}
-      <div id="s3-3" data-topic-boundary="true" />
+      <div id="multitasking-vs-multithreading" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>Core Concepts Comparison</h3></div>
       <div className="table-wrap">
@@ -363,7 +363,7 @@ p = 0.99 → max speedup: 100×   (requires truly parallel-friendly code)`
       </div>
 
       {/* 3.4 */}
-      <div id="s3-4" data-topic-boundary="true" />
+      <div id="java-threads-creation" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>4 Ways to Create a Thread</h3></div>
       <h4>① Extend <code>Thread</code> class</h4>
@@ -482,7 +482,7 @@ System.out.println(group.activeCount());`
       }</Code>
 
       {/* 3.5 */}
-      <div id="s3-5" data-topic-boundary="true" />
+      <div id="thread-lifecycle-and-methods" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>Thread State Diagram</h3></div>
       <pre className="diagram">{

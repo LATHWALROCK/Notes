@@ -3,7 +3,7 @@ export default function Java8Features() {
   return (
     <>
       {/* 5.1 */}
-      <div id="s5-1" data-topic-boundary="true" />
+      <div id="lambda-expressions" data-topic-boundary="true" />
       <div className="card">
         <p>
           A <strong>lambda expression</strong> is an anonymous function — it has parameters, a body, and a return
@@ -123,7 +123,7 @@ Comparator<String> c =
       </div>
 
       {/* 5.2 */}
-      <div id="s5-2" data-topic-boundary="true" />
+      <div id="functional-interfaces" data-topic-boundary="true" />
       <div className="callout callout-note">
         <div className="callout-title">📝 What is a Functional Interface?</div>
         <p>
@@ -306,7 +306,7 @@ repeat.accept("ha", 3); // hahaha`
       </div>
 
       {/* 5.3 */}
-      <div id="s5-3" data-topic-boundary="true" />
+      <div id="method-references" data-topic-boundary="true" />
       <div className="card">
         <p>
           A <strong>method reference</strong> is a compact, readable alternative to a lambda expression when the
@@ -355,7 +355,7 @@ List<String> upper2 = List.of("a","b").stream()
       }</Code>
 
       {/* 5.4 */}
-      <div id="s5-4" data-topic-boundary="true" />
+      <div id="optional" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>java.util.Optional&lt;T&gt;</code> is a container object that may or may not hold a non-null value.
@@ -427,7 +427,7 @@ List<String> items = List.of("a", null, "b").stream()
       }</Code>
 
       {/* 5.5 */}
-      <div id="s5-5" data-topic-boundary="true" />
+      <div id="stream-api" data-topic-boundary="true" />
       <div className="card">
         <p>
           A <strong>Stream</strong> is a sequence of elements supporting sequential and parallel aggregate
@@ -563,7 +563,7 @@ List<Integer> dropped = nums.stream().dropWhile(n -> n < 4).collect(Collectors.t
       }</Code>
 
       {/* 5.6 */}
-      <div id="s5-6" data-topic-boundary="true" />
+      <div id="collectors-utility-class" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>java.util.stream.Collectors</code> provides factory methods for common <code>Collector</code>{' '}
@@ -643,7 +643,7 @@ String teeResult = words.stream().collect(Collectors.teeing(
       }</Code>
 
       {/* 5.7 */}
-      <div id="s5-7" data-topic-boundary="true" />
+      <div id="parallel-streams-and-primitive-streams" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>Parallel Streams</h3></div>
       <div className="card">

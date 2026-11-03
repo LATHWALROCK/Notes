@@ -2,7 +2,7 @@ export default function CoreJava() {
   return (
     <>
       {/* 1.1 */}
-      <div id="part1-1" data-topic-boundary="true" />
+      <div id="architecture-and-compilation" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>Write Once, Run Anywhere (WORA)</strong> — Java source code is compiled to platform-neutral{' '}
@@ -162,7 +162,7 @@ Custom ClassLoader  (user-defined, used in frameworks/containers)`
       </div>
 
       {/* 1.2 */}
-      <div id="part1-2" data-topic-boundary="true" />
+      <div id="java-basics" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>The <code>main()</code> Method — Dissected</h3></div>
       <div className="code-block">
@@ -284,7 +284,7 @@ Custom ClassLoader  (user-defined, used in frameworks/containers)`
       </div>
 
       {/* 1.3 */}
-      <div id="part1-3" data-topic-boundary="true" />
+      <div id="static-keyword" data-topic-boundary="true" />
       <div className="card">
         <p>
           The <code>static</code> keyword means a member belongs to the <strong>class</strong>, not to any particular
@@ -398,7 +398,7 @@ Custom ClassLoader  (user-defined, used in frameworks/containers)`
       </div>
 
       {/* 1.4 */}
-      <div id="part1-4" data-topic-boundary="true" />
+      <div id="data-types-and-wrappers" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>Primitive Types — Full Reference</h3></div>
       <div className="table-wrap">
@@ -507,7 +507,7 @@ list.<span className="fn">add</span>(<span className="nm">10</span>);           
       </div>
 
       {/* 1.5 */}
-      <div id="part1-5" data-topic-boundary="true" />
+      <div id="strings-in-java" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>String</code> is a <strong>final class</strong> in <code>java.lang</code>. Internally it's backed by

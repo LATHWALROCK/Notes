@@ -3,7 +3,7 @@ export default function SyncExecutors() {
   return (
     <>
       {/* 4.1 */}
-      <div id="s4-1" data-topic-boundary="true" />
+      <div id="synchronization" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>Race Condition — The Counter++ Problem</h3></div>
       <div className="callout callout-warning">
@@ -126,7 +126,7 @@ count++;   // STILL a race! volatile ≠ atomic`
       </div>
 
       {/* 4.2 */}
-      <div id="s4-2" data-topic-boundary="true" />
+      <div id="explicit-locks" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>Lock Interface</h3></div>
       <div className="table-wrap">
@@ -264,7 +264,7 @@ double read() {
       </div>
 
       {/* 4.3 */}
-      <div id="s4-3" data-topic-boundary="true" />
+      <div id="thread-communication" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>wait() / notify() / notifyAll()</h3></div>
       <div className="callout callout-warning">
@@ -370,7 +370,7 @@ public class ConditionBuffer<T> {
       </div>
 
       {/* 4.4 */}
-      <div id="s4-4" data-topic-boundary="true" />
+      <div id="deadlocks-and-liveness" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>The 4 Necessary Conditions for Deadlock</h3></div>
       <p>ALL four must hold simultaneously. Remove any one to prevent deadlock.</p>
@@ -481,7 +481,7 @@ void transfer(Account a, Account b, double amt) {
       </div>
 
       {/* 4.5 */}
-      <div id="s4-5" data-topic-boundary="true" />
+      <div id="executors-framework" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>Why Not Manual Thread Creation?</h3></div>
       <ul>
@@ -632,7 +632,7 @@ scheduleWithFixedDelay (delay=5s, task takes 2s):
       }</pre>
 
       {/* 4.6 */}
-      <div id="s4-6" data-topic-boundary="true" />
+      <div id="concurrency-utilities" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>CountDownLatch</h3></div>
       <p>

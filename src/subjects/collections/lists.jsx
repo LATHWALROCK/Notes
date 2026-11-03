@@ -3,7 +3,7 @@ export default function Lists() {
   return (
     <>
       {/* 1.1 */}
-      <div id="s1-1" data-topic-boundary="true" />
+      <div id="collection-framework-overview" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>The Java Collections Framework (JCF)</strong> is a unified architecture for representing and
@@ -124,7 +124,7 @@ Additional Interfaces:
       </div>
 
       {/* 1.2 */}
-      <div id="s1-2" data-topic-boundary="true" />
+      <div id="collection-interface" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong><code>java.util.Collection&lt;E&gt;</code></strong> is the root interface of the collection
@@ -303,7 +303,7 @@ Additional Interfaces:
       </div>
 
       {/* 1.3 */}
-      <div id="s1-3" data-topic-boundary="true" />
+      <div id="arraylist" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong><code>java.util.ArrayList&lt;E&gt;</code></strong> is the most commonly used <code>List</code>{' '}
@@ -907,7 +907,7 @@ List<String> safeCopy = List.copyOf(mutable1);  // throws NPE if any element is 
       </div>
 
       {/* 1.4 */}
-      <div id="s14" data-topic-boundary="true" />
+      <div id="linkedlist" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>LinkedList</strong> is a doubly-linked list implementation that implements <em>both</em> the{' '}
@@ -1053,7 +1053,7 @@ public class LinkedListDemo {
       </div>
 
       {/* 1.5 */}
-      <div id="s15" data-topic-boundary="true" />
+      <div id="vector" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>Vector</strong> is a <em>synchronized</em> dynamic array — essentially the thread-safe predecessor
@@ -1164,7 +1164,7 @@ Note: ArrayList always grows by ~50% (capacity + capacity/2)`
       </div>
 
       {/* 1.6 */}
-      <div id="s16" data-topic-boundary="true" />
+      <div id="stack" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>Stack</strong> extends <code>Vector</code> and represents a <em>Last-In-First-Out (LIFO)</em>{' '}
@@ -1257,7 +1257,7 @@ System.out.println(stack.pop());   // 20`
       </div>
 
       {/* 1.7 */}
-      <div id="s17" data-topic-boundary="true" />
+      <div id="copyonwritearraylist" data-topic-boundary="true" />
       <div className="card">
         <p>
           <strong>CopyOnWriteArrayList</strong> is a thread-safe variant of <code>ArrayList</code> from the{' '}

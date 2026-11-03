@@ -11,7 +11,7 @@ export default function Graph() {
   return (
     <>
       {/* 1 */}
-      <div id="g1" data-topic-boundary="true" />
+      <div id="what-is-a-graph" data-topic-boundary="true" />
       <p className="part-subtitle">
         The vocabulary, the two flavours of edge, and why graphs are the superset that trees and linked lists both
         sit inside. Everything from BFS onward is this one idea applied with a different rule for &quot;which node
@@ -89,7 +89,7 @@ export default function Graph() {
       </div>
 
       {/* 2 */}
-      <div id="g2" data-topic-boundary="true" />
+      <div id="graph-representation" data-topic-boundary="true" />
       <p className="part-subtitle">Adjacency Matrix, Adjacency List</p>
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
@@ -197,7 +197,7 @@ export default function Graph() {
       </Cx>
 
       {/* 3 */}
-      <div id="g3" data-topic-boundary="true" />
+      <div id="connected-components" data-topic-boundary="true" />
       <p className="part-subtitle">
         The idea that every traversal-based graph problem in the next part is secretly built on.
       </p>
@@ -243,7 +243,7 @@ answer = count   (the number of connected components)`
       </div>
 
       {/* 4 */}
-      <div id="g4" data-topic-boundary="true" />
+      <div id="bfs-traversal" data-topic-boundary="true" />
       <p className="part-subtitle">
         Breadth-First Search: explore the graph level by level, using a queue to guarantee that nothing farther away
         is visited before everything closer is.
@@ -352,7 +352,7 @@ while q is not empty:
       </Cx>
 
       {/* 5 */}
-      <div id="g5" data-topic-boundary="true" />
+      <div id="dfs-traversal" data-topic-boundary="true" />
       <p className="part-subtitle">
         Depth-First Search: commit to one neighbour, follow it as far as possible, and only back up when there is
         nowhere left to go forward.
@@ -480,7 +480,7 @@ while q is not empty:
       </div>
 
       {/* 6 */}
-      <div id="g6" data-topic-boundary="true" />
+      <div id="number-of-provinces" data-topic-boundary="true" />
       <p className="part-subtitle">
         Connected Components, given as an adjacency matrix of friendships. This opens a run of twelve problems that
         are all &quot;BFS or DFS, applied to a grid or an adjacency list, with one extra rule&quot; — spot which
@@ -561,7 +561,7 @@ while q is not empty:
       </Cx>
 
       {/* 7 */}
-      <div id="g7" data-topic-boundary="true" />
+      <div id="number-of-islands" data-topic-boundary="true" />
       <p className="part-subtitle">
         Connected Components again, this time over a grid where adjacency means &quot;up, down, left or right&quot;.
       </p>
@@ -675,7 +675,7 @@ class Solution {
       </Cx>
 
       {/* 8 */}
-      <div id="g8" data-topic-boundary="true" />
+      <div id="flood-fill-algorithm" data-topic-boundary="true" />
       <p className="part-subtitle">
         The same &quot;flood an island&quot; idea as Number of Islands, but the flood repaints instead of just
         counting.
@@ -759,7 +759,7 @@ class Solution {
       </Cx>
 
       {/* 9 */}
-      <div id="g9" data-topic-boundary="true" />
+      <div id="rotten-oranges" data-topic-boundary="true" />
       <p className="part-subtitle">
         The first genuinely <strong>multi-source</strong> BFS: every rotten orange starts spreading on the same
         clock, simultaneously.
@@ -896,7 +896,7 @@ class Solution {
       </Cx>
 
       {/* 10 */}
-      <div id="g10" data-topic-boundary="true" />
+      <div id="cycle-in-undirected-bfs" data-topic-boundary="true" />
       <p className="part-subtitle">
         A BFS that also remembers, for every vertex, which vertex it came from.
       </p>
@@ -998,7 +998,7 @@ class Solution {
       </Cx>
 
       {/* 11 */}
-      <div id="g11" data-topic-boundary="true" />
+      <div id="cycle-in-undirected-dfs" data-topic-boundary="true" />
       <p className="part-subtitle">
         The same parent-tracking idea, written as a recursion instead of a queue.
       </p>
@@ -1063,7 +1063,7 @@ class Solution {
       </Cx>
 
       {/* 12 */}
-      <div id="g12" data-topic-boundary="true" />
+      <div id="distance-of-nearest-cell" data-topic-boundary="true" />
       <p className="part-subtitle">
         Another multi-source BFS, this time computing a distance for <em>every</em> cell instead of a single answer.
       </p>
@@ -1162,7 +1162,7 @@ class Solution {
       </Cx>
 
       {/* 13 */}
-      <div id="g13" data-topic-boundary="true" />
+      <div id="surrounded-regions" data-topic-boundary="true" />
       <p className="part-subtitle">
         Flip the question around: instead of finding what connects to a source, find what connects to the{' '}
         <strong>boundary</strong> — and leave everything else to be captured.
@@ -1274,7 +1274,7 @@ for every cell in the grid:
       </Cx>
 
       {/* 14 */}
-      <div id="g14" data-topic-boundary="true" />
+      <div id="number-of-enclaves" data-topic-boundary="true" />
       <p className="part-subtitle">
         Surrounded Regions&apos; sibling: count what is trapped instead of flipping it.
       </p>
@@ -1379,7 +1379,7 @@ class Solution {
       </Cx>
 
       {/* 15 */}
-      <div id="g15" data-topic-boundary="true" />
+      <div id="number-of-distinct-islands" data-topic-boundary="true" />
       <p className="part-subtitle">
         Number of Islands, but two islands with the same <strong>shape</strong> — wherever they happen to sit on the
         grid — count once.
@@ -1482,7 +1482,7 @@ class Solution {
       </Cx>
 
       {/* 16 */}
-      <div id="g16" data-topic-boundary="true" />
+      <div id="bipartite-graph-bfs" data-topic-boundary="true" />
       <p className="part-subtitle">
         Two-colour the graph with a BFS, and discover a cycle-based rule along the way: a graph is bipartite exactly
         when it has no odd-length cycle.
@@ -1583,7 +1583,7 @@ if every component 2-colours cleanly: return true`
       </Cx>
 
       {/* 17 */}
-      <div id="g17" data-topic-boundary="true" />
+      <div id="bipartite-graph-dfs" data-topic-boundary="true" />
       <p className="part-subtitle">Same 2-colouring idea, propagated by recursion instead of a queue.</p>
       <div className="meta-row">
         <span className="pill">LeetCode 785</span>
@@ -1649,7 +1649,7 @@ if every component 2-colours cleanly: return true`
       </Cx>
 
       {/* 18 */}
-      <div id="g18" data-topic-boundary="true" />
+      <div id="cycle-in-directed-dfs" data-topic-boundary="true" />
       <p className="part-subtitle">
         Two visited arrays instead of one: &quot;ever visited&quot; and &quot;visited on the current path&quot;.
         Directed edges break the parent-tracking trick from undirected cycle detection — reaching an
@@ -1773,7 +1773,7 @@ if every component 2-colours cleanly: return true`
       </Cx>
 
       {/* 19 */}
-      <div id="g19" data-topic-boundary="true" />
+      <div id="eventual-safe-states-dfs" data-topic-boundary="true" />
       <p className="part-subtitle">
         Reusing the <code>pathVis</code> trick from cycle detection, with a third array recording the verdict for
         later.
@@ -1872,7 +1872,7 @@ a node is safe  <=>  check[node] == 1`
       </Cx>
 
       {/* 20 */}
-      <div id="g20" data-topic-boundary="true" />
+      <div id="topological-sort-dfs" data-topic-boundary="true" />
       <p className="part-subtitle">
         Only valid on a DAG: an ordering of vertices such that every directed edge goes from earlier in the order to
         later.
@@ -1972,7 +1972,7 @@ answer = pop the stack until empty`
       </Cx>
 
       {/* 21 */}
-      <div id="g21" data-topic-boundary="true" />
+      <div id="topological-sort-kahns" data-topic-boundary="true" />
       <p className="part-subtitle">
         The BFS route to the same ordering: repeatedly peel off vertices that have nothing left pointing into them.
       </p>
@@ -2064,7 +2064,7 @@ while q not empty:
       </Cx>
 
       {/* 22 */}
-      <div id="g22" data-topic-boundary="true" />
+      <div id="cycle-in-directed-bfs" data-topic-boundary="true" />
       <p className="part-subtitle">
         Kahn&apos;s algorithm, read as a cycle detector: if topological sort cannot place every vertex, a cycle is
         exactly what is blocking it.
@@ -2128,7 +2128,7 @@ while q not empty:
       </Cx>
 
       {/* 23 */}
-      <div id="g23" data-topic-boundary="true" />
+      <div id="course-schedule-i" data-topic-boundary="true" />
       <p className="part-subtitle">Cycle detection in a directed graph, wearing a prerequisites costume.</p>
       <div className="meta-row">
         <span className="pill">LeetCode 207</span>
@@ -2200,7 +2200,7 @@ while q not empty:
       </Cx>
 
       {/* 24 */}
-      <div id="g24" data-topic-boundary="true" />
+      <div id="course-schedule-ii" data-topic-boundary="true" />
       <p className="part-subtitle">Course Schedule I, but return the actual order instead of just yes/no.</p>
       <div className="meta-row">
         <span className="pill">LeetCode 210</span>
@@ -2266,7 +2266,7 @@ while q not empty:
       </Cx>
 
       {/* 25 */}
-      <div id="g25" data-topic-boundary="true" />
+      <div id="eventual-safe-states-bfs" data-topic-boundary="true" />
       <p className="part-subtitle">
         The same problem as the DFS version, solved with a very different-looking but equally valid idea: reverse
         every edge, then peel from the outside in.
@@ -2372,7 +2372,7 @@ sort(safeNodes)`
       </Cx>
 
       {/* 26 */}
-      <div id="g26" data-topic-boundary="true" />
+      <div id="alien-dictionary" data-topic-boundary="true" />
       <p className="part-subtitle">
         Topological sort, where the edges of the &quot;graph&quot; are not given — they have to be inferred from
         where two adjacent dictionary words first disagree.
@@ -2519,7 +2519,7 @@ answer = topoSort(K, adj), rendered back to letters`
       </Cx>
 
       {/* 27 */}
-      <div id="g27" data-topic-boundary="true" />
+      <div id="shortest-path-in-a-dag" data-topic-boundary="true" />
       <p className="part-subtitle">
         Topological order turns relaxing every edge into something that only ever has to happen once per edge. This
         begins four distinct shortest-path mechanisms, each matched to what the edges allow: topological order when
@@ -2648,7 +2648,7 @@ class Solution {
       </Cx>
 
       {/* 28 */}
-      <div id="g28" data-topic-boundary="true" />
+      <div id="shortest-path-unit-weights" data-topic-boundary="true" />
       <p className="part-subtitle">
         When every edge costs exactly 1, plain BFS already computes shortest distances — no priority queue needed.
       </p>
@@ -2717,7 +2717,7 @@ class Solution {
       </Cx>
 
       {/* 29 */}
-      <div id="g29" data-topic-boundary="true" />
+      <div id="word-ladder-i" data-topic-boundary="true" />
       <p className="part-subtitle">
         Unit-weight shortest path again — except the graph is never built explicitly. Every word is a vertex, and an
         edge exists between two words that differ in exactly one letter.
@@ -2832,7 +2832,7 @@ class Solution {
       </Cx>
 
       {/* 30 */}
-      <div id="g30" data-topic-boundary="true" />
+      <div id="word-ladder-ii" data-topic-boundary="true" />
       <p className="part-subtitle">
         Word Ladder I, but return <strong>every</strong> shortest transformation sequence, not just the shortest
         length.
@@ -2977,7 +2977,7 @@ while q not empty:
       </Cx>
 
       {/* 31 */}
-      <div id="g31" data-topic-boundary="true" />
+      <div id="dijkstras-algorithm" data-topic-boundary="true" />
       <p className="part-subtitle">
         The algorithm this whole part has been building toward: shortest paths on a graph with{' '}
         <strong>non-negative</strong> weights that differ from edge to edge.
@@ -3091,7 +3091,7 @@ class Solution {
       </Cx>
 
       {/* 32 */}
-      <div id="g32" data-topic-boundary="true" />
+      <div id="shortest-path-between-nodes" data-topic-boundary="true" />
       <p className="part-subtitle">
         Dijkstra&apos;s algorithm, plus a <code>parent</code> array so the actual route can be rebuilt, not just its
         length.
@@ -3203,7 +3203,7 @@ class Solution {
       </Cx>
 
       {/* 33 */}
-      <div id="g33" data-topic-boundary="true" />
+      <div id="shortest-distance-in-a-binary-maze" data-topic-boundary="true" />
       <p className="part-subtitle">
         Unit-weight shortest path transplanted onto a grid — plain BFS is enough, because every move costs exactly
         one step.
@@ -3298,7 +3298,7 @@ class Solution {
       </Cx>
 
       {/* 34 */}
-      <div id="g34" data-topic-boundary="true" />
+      <div id="path-with-minimum-effort" data-topic-boundary="true" />
       <p className="part-subtitle">
         Where Dijkstra&apos;s genuinely earns its place on a grid: the &quot;weight&quot; of a path is not a sum of
         steps but the <strong>worst single step</strong> along it.
@@ -3421,7 +3421,7 @@ class Solution {
       </Cx>
 
       {/* 35 */}
-      <div id="g35" data-topic-boundary="true" />
+      <div id="cheapest-flights-within-k-stops" data-topic-boundary="true" />
       <p className="part-subtitle">
         Dijkstra&apos;s algorithm, with the state widened to include how many stops have been used. The next six
         problems relax Dijkstra&apos;s assumptions one at a time — a bounded number of stops, a need to count routes
@@ -3551,7 +3551,7 @@ class Solution {
       </Cx>
 
       {/* 36 */}
-      <div id="g36" data-topic-boundary="true" />
+      <div id="minimum-multiplications-to-reach-end" data-topic-boundary="true" />
       <p className="part-subtitle">
         Unit-weight shortest path again — the twist is that the graph&apos;s vertices are not given, they are every
         integer from <code>0</code> to <code>99999</code>, and its edges are defined by an operation rather than
@@ -3656,7 +3656,7 @@ class Solution {
       </Cx>
 
       {/* 37 */}
-      <div id="g37" data-topic-boundary="true" />
+      <div id="ways-to-arrive-at-destination" data-topic-boundary="true" />
       <p className="part-subtitle">
         Dijkstra&apos;s algorithm, carrying a second array that counts <strong>how many</strong> shortest paths reach
         each vertex, not just how long the shortest one is.
@@ -3779,7 +3779,7 @@ class Solution {
       </Cx>
 
       {/* 38 */}
-      <div id="g38" data-topic-boundary="true" />
+      <div id="bellman-ford-algorithm" data-topic-boundary="true" />
       <p className="part-subtitle">
         Shortest paths when edges can be <strong>negative</strong> — the one setting where Dijkstra&apos;s greedy
         assumption breaks, and a slower but more honest algorithm has to take over.
@@ -3896,7 +3896,7 @@ for each edge (u, v, wt):
       </Cx>
 
       {/* 39 */}
-      <div id="g39" data-topic-boundary="true" />
+      <div id="floyd-warshall-algorithm" data-topic-boundary="true" />
       <p className="part-subtitle">
         Every algorithm so far answers &quot;shortest path from <strong>one</strong> source&quot;. Floyd–Warshall
         answers shortest path between <strong>every</strong> pair at once — by trying every vertex as a potential
@@ -4004,7 +4004,7 @@ after all n rounds: matrix[i][j] = shortest distance from i to j, for every pair
       </Cx>
 
       {/* 40 */}
-      <div id="g40" data-topic-boundary="true" />
+      <div id="city-with-smallest-number-of-neighbours" data-topic-boundary="true" />
       <p className="part-subtitle">
         Floyd–Warshall as a subroutine: once every pairwise distance is known, the rest is a straightforward scan.
       </p>
@@ -4103,7 +4103,7 @@ after all n rounds: matrix[i][j] = shortest distance from i to j, for every pair
       </Cx>
 
       {/* 41 */}
-      <div id="g41" data-topic-boundary="true" />
+      <div id="mst-prims-algorithm" data-topic-boundary="true" />
       <p className="part-subtitle">
         A new question: not the cheapest way to get from A to B, but the cheapest way to connect{' '}
         <strong>everything</strong>. A spanning tree touches every vertex using exactly <code>V-1</code> edges and
@@ -4217,7 +4217,7 @@ class Solution {
       </Cx>
 
       {/* 42 */}
-      <div id="g42" data-topic-boundary="true" />
+      <div id="disjoint-set-union-by-rank" data-topic-boundary="true" />
       <p className="part-subtitle">
         A new data structure, built for one question asked over and over: &quot;are these two elements in the same
         group?&quot; — answered in close to <code>O(1)</code>, even as groups keep merging.
@@ -4329,7 +4329,7 @@ unionByRank(u, v):
       </Cx>
 
       {/* 43 */}
-      <div id="g43" data-topic-boundary="true" />
+      <div id="disjoint-set-union-by-size" data-topic-boundary="true" />
       <p className="part-subtitle">
         The same structure, with a more intuitive rule for which tree attaches under which: count of nodes instead
         of height.
@@ -4431,7 +4431,7 @@ unionByRank(u, v):
       </Cx>
 
       {/* 44 */}
-      <div id="g44" data-topic-boundary="true" />
+      <div id="mst-kruskals-algorithm" data-topic-boundary="true" />
       <p className="part-subtitle">
         A second route to the same MST as Prim&apos;s — sort every edge once, then greedily accept each one that
         does not create a cycle, using the Disjoint Set to make &quot;would this create a cycle?&quot; an{' '}
@@ -4551,7 +4551,7 @@ class Solution {
       </Cx>
 
       {/* 45 */}
-      <div id="g45" data-topic-boundary="true" />
+      <div id="provinces-disjoint-set" data-topic-boundary="true" />
       <p className="part-subtitle">
         The same problem as Number of Provinces, solved by a completely different mechanism — a good chance to see
         the Disjoint Set Union do what BFS/DFS already could.
@@ -4629,7 +4629,7 @@ class Solution {
       </Cx>
 
       {/* 46 */}
-      <div id="g46" data-topic-boundary="true" />
+      <div id="connecting-the-graph" data-topic-boundary="true" />
       <p className="part-subtitle">
         A direct, practical payoff of counting components via Disjoint Set: knowing exactly how many{' '}
         <strong>redundant</strong> edges exist tells you exactly how many operations are needed.
@@ -4715,7 +4715,7 @@ class Solution {
       </Cx>
 
       {/* 47 */}
-      <div id="g47" data-topic-boundary="true" />
+      <div id="accounts-merge" data-topic-boundary="true" />
       <p className="part-subtitle">
         Grouping is the whole problem here — two accounts belong together exactly when they share any email,
         directly or transitively. That is Disjoint Set Union wearing an email-address costume.
@@ -4828,7 +4828,7 @@ class Solution {
       </Cx>
 
       {/* 48 */}
-      <div id="g48" data-topic-boundary="true" />
+      <div id="number-of-islands-ii" data-topic-boundary="true" />
       <p className="part-subtitle">
         Number of Islands, run <strong>forward in time</strong>: land is added one cell at a time, and the island
         count is wanted after every addition.
@@ -4952,7 +4952,7 @@ class Solution {
       </Cx>
 
       {/* 49 */}
-      <div id="g49" data-topic-boundary="true" />
+      <div id="making-a-large-island" data-topic-boundary="true" />
       <p className="part-subtitle">
         Union by size pays off directly: once every existing island&apos;s true size is tracked by the Disjoint Set
         itself, answering &quot;what if I flip one water cell?&quot; needs no new flood fill at all.
@@ -5080,7 +5080,7 @@ class Solution {
       </Cx>
 
       {/* 50 */}
-      <div id="g50" data-topic-boundary="true" />
+      <div id="most-stones-removed" data-topic-boundary="true" />
       <p className="part-subtitle">
         A graph that is never built from explicit coordinates — rows and columns themselves become the vertices, and
         every stone is an edge connecting its row to its column.
@@ -5186,7 +5186,7 @@ class Solution {
       </Cx>
 
       {/* 51 */}
-      <div id="g51" data-topic-boundary="true" />
+      <div id="scc-kosarajus-algorithm" data-topic-boundary="true" />
       <p className="part-subtitle">
         A closing trio built on discovery order rather than distance. In a directed graph, a{' '}
         <strong>strongly connected component</strong> is a maximal group where every vertex can reach every other —
@@ -5342,7 +5342,7 @@ answer = scc`
       </Cx>
 
       {/* 52 */}
-      <div id="g52" data-topic-boundary="true" />
+      <div id="bridges-tarjans-algorithm" data-topic-boundary="true" />
       <p className="part-subtitle">
         An edge whose removal disconnects the graph. Finding every one of them in a single DFS, by tracking how
         early each vertex could be reached if that edge were not there.
@@ -5493,7 +5493,7 @@ answer = scc`
       </Cx>
 
       {/* 53 */}
-      <div id="g53" data-topic-boundary="true" />
+      <div id="articulation-point" data-topic-boundary="true" />
       <p className="part-subtitle">
         Bridges found critical edges; this finds critical <strong>vertices</strong> — the same <code>tin</code>/
         <code>low</code> machinery, with one condition changed and one extra counter for the root.
@@ -5663,7 +5663,7 @@ answer = every node with mark[node] == 1 ; [-1] if none`
       </Cx>
 
       {/* 54 */}
-      <div id="g54" data-topic-boundary="true" />
+      <div id="patterns-and-cheat-sheet" data-topic-boundary="true" />
       <p className="part-subtitle">
         The same question-to-pattern mapping that closed out the Dynamic Programming notes, done for graphs: what a
         problem&apos;s wording implies about the state, the traversal, and which of the fifty-three techniques above

@@ -3,7 +3,7 @@ export default function Sets() {
   return (
     <>
       {/* 3.1 */}
-      <div id="part3" data-topic-boundary="true" />
+      <div id="set-interface" data-topic-boundary="true" />
       <div className="card">
         <p>
           A <code>Set</code> is a <code>Collection</code> that contains <strong>no duplicate elements</strong>. It
@@ -64,7 +64,7 @@ Set<String> safe = Collections.synchronizedSet(new HashSet<>());`
       </div>
 
       {/* 3.2 */}
-      <div id="s3-2" data-topic-boundary="true" />
+      <div id="hashset" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>HashSet&lt;E&gt;</code> is backed by a <code>HashMap&lt;E, Object&gt;</code> where every entry maps
@@ -130,7 +130,7 @@ a.retainAll(b); // intersection → {y, z}`
       </div>
 
       {/* 3.3 */}
-      <div id="s3-3" data-topic-boundary="true" />
+      <div id="linkedhashset" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>LinkedHashSet&lt;E&gt;</code> extends <code>HashSet</code> and maintains a{' '}
@@ -200,7 +200,7 @@ s.add("c"); s.add("a"); s.add("b");
       </div>
 
       {/* 3.4 */}
-      <div id="s3-4" data-topic-boundary="true" />
+      <div id="treeset" data-topic-boundary="true" />
       <div className="card">
         <p>
           <code>TreeSet&lt;E&gt;</code> implements <code>NavigableSet&lt;E&gt;</code> backed by a{' '}
@@ -271,7 +271,7 @@ System.out.println(ts.pollFirst());    // 1, set is now [2, 5, 8]`
       </div>
 
       {/* 3.5 */}
-      <div id="s3-5" data-topic-boundary="true" />
+      <div id="enumset-copyonwritearrayset-and-concurrentskiplistset" data-topic-boundary="true" />
 
       <div className="subsection-header"><h3>EnumSet</h3></div>
       <div className="card">

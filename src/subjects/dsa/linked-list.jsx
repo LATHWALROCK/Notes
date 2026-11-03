@@ -11,7 +11,7 @@ export default function LinkedList() {
   return (
     <>
       {/* 1 */}
-      <div id="l1" data-topic-boundary="true" />
+      <div id="what-is-a-linked-list" data-topic-boundary="true" />
       <p className="part-subtitle">
         A chain of independently-allocated nodes, each one holding a value and a pointer to the next. Everything in
         this topic is a variation on following that one pointer, or on redirecting it.
@@ -89,7 +89,7 @@ export default function LinkedList() {
       </Cx>
 
       {/* 2 */}
-      <div id="l2" data-topic-boundary="true" />
+      <div id="doubly-linked-list" data-topic-boundary="true" />
       <p className="part-subtitle">
         Add one more pointer per node — back to where you came from — and the list can be walked, and rewired, in
         both directions.
@@ -149,7 +149,7 @@ export default function LinkedList() {
       </Cx>
 
       {/* 3 */}
-      <div id="l3" data-topic-boundary="true" />
+      <div id="search-an-element" data-topic-boundary="true" />
       <p className="part-subtitle">The most basic traversal: walk the chain, compare, stop.</p>
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
@@ -193,7 +193,7 @@ export default function LinkedList() {
       </Cx>
 
       {/* 4 */}
-      <div id="l4" data-topic-boundary="true" />
+      <div id="length-of-a-linked-list" data-topic-boundary="true" />
       <p className="part-subtitle">The same traversal template, counting instead of comparing.</p>
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
@@ -239,7 +239,7 @@ export default function LinkedList() {
       </Cx>
 
       {/* 5 */}
-      <div id="l5" data-topic-boundary="true" />
+      <div id="insertion-in-a-singly-ll" data-topic-boundary="true" />
       <p className="part-subtitle">
         Inserting at the head, at the tail, at a given position, and before a given value — four variants of the same
         idea: point the new node at what comes after it, then point what comes before it at the new node. This opens
@@ -381,7 +381,7 @@ export default function LinkedList() {
       </Cx>
 
       {/* 6 */}
-      <div id="l6" data-topic-boundary="true" />
+      <div id="deletion-in-a-singly-ll" data-topic-boundary="true" />
       <p className="part-subtitle">
         The mirror image of insertion: find the predecessor of the node being removed, then splice it out by skipping
         over it.
@@ -504,7 +504,7 @@ export default function LinkedList() {
       </Cx>
 
       {/* 7 */}
-      <div id="l7" data-topic-boundary="true" />
+      <div id="insertion-in-a-dll" data-topic-boundary="true" />
       <p className="part-subtitle">
         Every insertion now rewires two pointers on each side instead of one — but in exchange, the tail case stops
         needing a traversal at all once you are holding a tail reference.
@@ -614,7 +614,7 @@ export default function LinkedList() {
       </Cx>
 
       {/* 8 */}
-      <div id="l8" data-topic-boundary="true" />
+      <div id="deletion-in-a-dll" data-topic-boundary="true" />
       <p className="part-subtitle">
         The payoff of keeping a <code>prev</code> pointer, in full: deleting a known node needs no search for its
         predecessor at all.
@@ -728,7 +728,7 @@ export default function LinkedList() {
       </Cx>
 
       {/* 9 */}
-      <div id="l9" data-topic-boundary="true" />
+      <div id="reverse-a-dll" data-topic-boundary="true" />
       <p className="part-subtitle">
         Every node&apos;s <code>next</code> and <code>prev</code> trade places, and the two ends of the list trade
         roles.
@@ -830,7 +830,7 @@ return prev.prev                      -- prev now sits one step past the true ne
       </Cx>
 
       {/* 10 */}
-      <div id="l10" data-topic-boundary="true" />
+      <div id="add-two-numbers-as-lls" data-topic-boundary="true" />
       <p className="part-subtitle">
         Each list stores one number with its digits in reverse order. Add them exactly the way you add on paper — from
         the ones place, carrying forward. This begins seven problems that each lean on one new trick — a dummy node, a
@@ -938,7 +938,7 @@ return dummyHead.next`
       </Cx>
 
       {/* 11 */}
-      <div id="l11" data-topic-boundary="true" />
+      <div id="odd-even-linked-list" data-topic-boundary="true" />
       <p className="part-subtitle">
         Regroup the list by <strong>position</strong>, not by value: every node at an odd index first, every node at
         an even index after — done with no extra nodes at all.
@@ -1039,7 +1039,7 @@ return head`
       </Cx>
 
       {/* 12 */}
-      <div id="l12" data-topic-boundary="true" />
+      <div id="sort-ll-of-0s-1s-2s" data-topic-boundary="true" />
       <p className="part-subtitle">
         Only three distinct values ever appear, which turns &quot;sort&quot; into &quot;bucket&quot; — three small
         lists, built in one pass, then joined.
@@ -1143,7 +1143,7 @@ return zeroHead.next`
       </Cx>
 
       {/* 13 */}
-      <div id="l13" data-topic-boundary="true" />
+      <div id="remove-nth-node-from-end" data-topic-boundary="true" />
       <p className="part-subtitle">
         You cannot count backwards in a singly linked list — so create a fixed gap of <code>n</code> between two
         pointers and slide both forward together instead.
@@ -1248,7 +1248,7 @@ return head`
       </Cx>
 
       {/* 14 */}
-      <div id="l14" data-topic-boundary="true" />
+      <div id="reverse-a-linked-list" data-topic-boundary="true" />
       <p className="part-subtitle">
         The single most important operation on a singly linked list, in both of its standard forms: an iterative
         rewiring with three pointers, and a recursion that reverses from the tail backward.
@@ -1376,7 +1376,7 @@ return prev                  -- prev ends on the old TAIL -- the new head`
       </Cx>
 
       {/* 15 */}
-      <div id="l15" data-topic-boundary="true" />
+      <div id="ll-palindrome-check" data-topic-boundary="true" />
       <p className="part-subtitle">
         Find the middle, reverse the second half in place, compare the two halves — then, out of courtesy to the
         caller, put the list back exactly how it was.
@@ -1482,7 +1482,7 @@ return true`
       </Cx>
 
       {/* 16 */}
-      <div id="l16" data-topic-boundary="true" />
+      <div id="add-1-to-a-number-as-ll" data-topic-boundary="true" />
       <p className="part-subtitle">
         The digits are stored <strong>most</strong>-significant-first this time — the opposite order from Add Two
         Numbers (10) — so the carry has to travel from the tail backward, which only recursion does naturally on a
@@ -1592,7 +1592,7 @@ addOne(head):
       </Cx>
 
       {/* 17 */}
-      <div id="l17" data-topic-boundary="true" />
+      <div id="intersection-of-y-shaped-ll" data-topic-boundary="true" />
       <p className="part-subtitle">
         Two lists that merge into one tail. Find exactly where they merge, without ever needing to know either
         list&apos;s length up front. This opens a run of six problems built on one idea — one pointer moving twice as
@@ -1685,7 +1685,7 @@ return temp1          -- either the intersection node, or null if they never mee
       </Cx>
 
       {/* 18 */}
-      <div id="l18" data-topic-boundary="true" />
+      <div id="middle-of-a-linked-list" data-topic-boundary="true" />
       <p className="part-subtitle">
         The foundational fast/slow pattern every other problem in this part builds on: move one pointer twice as fast
         as the other, and when the fast one finishes, the slow one is exactly halfway.
@@ -1746,7 +1746,7 @@ return temp1          -- either the intersection node, or null if they never mee
       </Cx>
 
       {/* 19 */}
-      <div id="l19" data-topic-boundary="true" />
+      <div id="detect-a-loop-in-a-ll" data-topic-boundary="true" />
       <p className="part-subtitle">
         Floyd&apos;s Cycle Detection: if a fast and a slow pointer are both walking around the same closed loop, the
         faster one is guaranteed to lap the slower one eventually.
@@ -1821,7 +1821,7 @@ return false                           -- fast reached null: no cycle`
       </Cx>
 
       {/* 20 */}
-      <div id="l20" data-topic-boundary="true" />
+      <div id="length-of-a-loop-in-a-ll" data-topic-boundary="true" />
       <p className="part-subtitle">
         Once Floyd&apos;s algorithm has found the meeting point inside a cycle, measuring the cycle&apos;s length is
         one more lap, counted.
@@ -1895,7 +1895,7 @@ return false                           -- fast reached null: no cycle`
       </Cx>
 
       {/* 21 */}
-      <div id="l21" data-topic-boundary="true" />
+      <div id="delete-the-middle-node" data-topic-boundary="true" />
       <p className="part-subtitle">
         Middle-finding (18), with one twist: the pointer that deletes needs to stop one node{' '}
         <strong>before</strong> the middle, not on it.
@@ -1982,7 +1982,7 @@ return head`
       </Cx>
 
       {/* 22 */}
-      <div id="l22" data-topic-boundary="true" />
+      <div id="starting-point-of-a-loop" data-topic-boundary="true" />
       <p className="part-subtitle">
         The most celebrated consequence of Floyd&apos;s algorithm: a short proof of distances shows that a pointer
         restarted from the head meets the cycle&apos;s entry point exactly where the original two pointers collided.
@@ -2083,7 +2083,7 @@ return null                                   -- fast reached null: no cycle`
       </Cx>
 
       {/* 23 */}
-      <div id="l23" data-topic-boundary="true" />
+      <div id="delete-all-occurrences-in-dll" data-topic-boundary="true" />
       <p className="part-subtitle">
         Every deletion in this walk is <code>O(1)</code>, because a DLL node already knows both of its neighbours.
         The next three problems lean specifically on those two-way pointers — deleting without a predecessor search,
@@ -2177,7 +2177,7 @@ return head`
       </Cx>
 
       {/* 24 */}
-      <div id="l24" data-topic-boundary="true" />
+      <div id="pairs-with-given-sum-dll" data-topic-boundary="true" />
       <p className="part-subtitle">
         The classic array two-pointer technique, transplanted onto a linked list — which only works because a DLL can
         walk backward from the tail just as easily as forward from the head.
@@ -2293,7 +2293,7 @@ return the recorded pairs`
       </Cx>
 
       {/* 25 */}
-      <div id="l25" data-topic-boundary="true" />
+      <div id="remove-duplicates-sorted-dll" data-topic-boundary="true" />
       <p className="part-subtitle">
         Sortedness again does the heavy lifting: every duplicate of a value sits in one unbroken run, so a single
         forward pass catches all of them.
@@ -2375,7 +2375,7 @@ return the recorded pairs`
       </Cx>
 
       {/* 26 */}
-      <div id="l26" data-topic-boundary="true" />
+      <div id="reverse-nodes-in-groups-of-k" data-topic-boundary="true" />
       <p className="part-subtitle">
         Reverse a Linked List (14), applied repeatedly to fixed-size chunks instead of to the whole list at once —
         with a look-ahead check so a short final group is left untouched. The remaining problems combine the earlier
@@ -2501,7 +2501,7 @@ kReverse(head, k):
       </Cx>
 
       {/* 27 */}
-      <div id="l27" data-topic-boundary="true" />
+      <div id="rotate-a-linked-list" data-topic-boundary="true" />
       <p className="part-subtitle">
         Find the tail, join it back to the head to form a ring, then break the ring open at a new point —{' '}
         <code>k</code> nodes further along.
@@ -2619,7 +2619,7 @@ return head`
       </Cx>
 
       {/* 28 */}
-      <div id="l28" data-topic-boundary="true" />
+      <div id="merge-two-sorted-lls" data-topic-boundary="true" />
       <p className="part-subtitle">
         The merge step of merge sort, written directly against linked lists — which turns out to need no auxiliary
         array at all.
@@ -2681,7 +2681,7 @@ return head`
       </Cx>
 
       {/* 29 */}
-      <div id="l29" data-topic-boundary="true" />
+      <div id="flattening-a-linked-list" data-topic-boundary="true" />
       <p className="part-subtitle">
         A linked list of linked lists: every node has a normal <code>next</code> pointer across the top row, and its
         own sorted <code>child</code> list hanging beneath it. Flatten the whole thing into one sorted list.
@@ -2804,7 +2804,7 @@ class Solution {
       </Cx>
 
       {/* 30 */}
-      <div id="l30" data-topic-boundary="true" />
+      <div id="merge-k-sorted-lists" data-topic-boundary="true" />
       <p className="part-subtitle">
         Merge Two Sorted Lists (28), generalised to <code>k</code> lists at once using a min-heap to always know
         which of the <code>k</code> current fronts is smallest.
@@ -2890,7 +2890,7 @@ return dummyNode.next`
       </Cx>
 
       {/* 31 */}
-      <div id="l31" data-topic-boundary="true" />
+      <div id="sort-a-linked-list" data-topic-boundary="true" />
       <p className="part-subtitle">
         Merge sort, the algorithm whose &quot;merge&quot; step this topic has already built twice over — and whose
         &quot;split in half&quot; step is exactly the fast/slow middle-finder from Part 4.
@@ -3002,7 +3002,7 @@ return dummyNode.next`
       </Cx>
 
       {/* 32 */}
-      <div id="l32" data-topic-boundary="true" />
+      <div id="clone-ll-random-pointer" data-topic-boundary="true" />
       <p className="part-subtitle">
         A third pointer per node, pointing anywhere in the list (or nowhere), makes a direct copy awkward — the
         classic fix weaves the copies directly into the original list instead of using a lookup table.
@@ -3144,7 +3144,7 @@ class Solution {
       </Cx>
 
       {/* 33 */}
-      <div id="l33" data-topic-boundary="true" />
+      <div id="design-browser-history" data-topic-boundary="true" />
       <p className="part-subtitle">
         A doubly linked list is, quite literally, a browser&apos;s back/forward history — <code>prev</code> is
         &quot;back,&quot; <code>next</code> is &quot;forward,&quot; and visiting a new page overwrites whatever
@@ -3249,7 +3249,7 @@ class Browser {
       </Cx>
 
       {/* 34 */}
-      <div id="l34" data-topic-boundary="true" />
+      <div id="patterns-and-cheat-sheet" data-topic-boundary="true" />
       <p className="part-subtitle">
         Everything in this topic reduces to a small handful of pointer-manipulation ideas, reused over and over
         against slightly different wiring. Section numbers below match the sidebar&apos;s numbering.

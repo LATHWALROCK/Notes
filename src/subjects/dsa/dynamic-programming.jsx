@@ -11,7 +11,7 @@ export default function DynamicProgramming() {
   return (
     <>
       {/* 1.1 */}
-      <div id="dp1-1" data-topic-boundary="true" />
+      <div id="what-is-dynamic-programming" data-topic-boundary="true" />
       <p className="part-subtitle">
         What DP actually is, the two properties a problem must have, and the three forms every solution in these
         notes is written in: <strong>memoization</strong> (top-down), <strong>tabulation</strong> (bottom-up) and{' '}
@@ -100,7 +100,7 @@ export default function DynamicProgramming() {
       </div>
 
       {/* 1.2 */}
-      <div id="dp1-2" data-topic-boundary="true" />
+      <div id="when-does-dp-apply" data-topic-boundary="true" />
       <div className="card">
         <p>
           DP applies exactly when both of these hold. Miss either and you are writing something else — plain divide
@@ -157,7 +157,7 @@ export default function DynamicProgramming() {
       </div>
 
       {/* 1.3 */}
-      <div id="dp1-3" data-topic-boundary="true" />
+      <div id="the-three-approaches" data-topic-boundary="true" />
       <div className="card">
         <p>
           Every problem in these notes is solved three times. This is not busywork — it is the standard progression,
@@ -295,7 +295,7 @@ dp[i][j]  depends on  dp[i+1][j]   and  dp[i][j-1]        → no row reduction; 
       </div>
 
       {/* 1.4 */}
-      <div id="dp1-4" data-topic-boundary="true" />
+      <div id="recipe-for-any-dp-problem" data-topic-boundary="true" />
       <div className="card">
         <p>
           This is the procedure to run on every unseen DP problem. It is deliberately mechanical — the creative part
@@ -346,7 +346,7 @@ dp[i][j]  depends on  dp[i+1][j]   and  dp[i][j-1]        → no row reduction; 
       </div>
 
       {/* 2.1 */}
-      <div id="dp2-1" data-topic-boundary="true" />
+      <div id="fibonacci-number" data-topic-boundary="true" />
       <p className="part-subtitle">
         State is a single index. Each problem is solved three times — memoized, tabulated, and space optimized — so
         the progression from Part 1 can be seen end to end on real code.
@@ -508,7 +508,7 @@ time   = O(n)`
       </div>
 
       {/* 2.2 */}
-      <div id="dp2-2" data-topic-boundary="true" />
+      <div id="climbing-stairs" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 70</span>
         <span className="pill pill-success">Easy</span>
@@ -644,7 +644,7 @@ Same recurrence as Fibonacci, shifted by one:  ways(n) = fib(n+1)`
       </div>
 
       {/* 2.3 */}
-      <div id="dp2-3" data-topic-boundary="true" />
+      <div id="frog-jump" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
         <span className="pill pill-success">Easy</span>
@@ -792,7 +792,7 @@ answer = f(n-1)`
       </Cx>
 
       {/* 2.4 */}
-      <div id="dp2-4" data-topic-boundary="true" />
+      <div id="frog-jump-with-k-distances" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
         <span className="pill pill-warn">Easy–Medium</span>
@@ -928,7 +928,7 @@ answer = f(n-1)                       time O(n*k), space O(n)`
       </Cx>
 
       {/* 2.5 */}
-      <div id="dp2-5" data-topic-boundary="true" />
+      <div id="maximum-sum-of-non-adjacent-elements" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 198</span>
         <span className="pill">Coding Ninjas</span>
@@ -1071,7 +1071,7 @@ answer = f(n-1)`
       </Cx>
 
       {/* 2.6 */}
-      <div id="dp2-6" data-topic-boundary="true" />
+      <div id="house-robber-ii" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 213</span>
         <span className="pill pill-warn">Medium</span>
@@ -1218,7 +1218,7 @@ answer = f(n-1)`
       </Cx>
 
       {/* 3.1 */}
-      <div id="dp3-1" data-topic-boundary="true" />
+      <div id="ninjas-training" data-topic-boundary="true" />
       <p className="part-subtitle">
         The state grows a second index. Two sub-families live here: <strong>fixed start</strong> problems (Unique
         Paths, Maze Obstacles, Minimum Path Sum — one corner in, one corner out) and{' '}
@@ -1456,7 +1456,7 @@ states = n * 4      work = O(3) per state      time = O(12n) = O(n)`
       }</pre>
 
       {/* 3.2 */}
-      <div id="dp3-2" data-topic-boundary="true" />
+      <div id="grid-unique-paths" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 62</span>
         <span className="pill">Coding Ninjas</span>
@@ -1615,7 +1615,7 @@ answer = f(m-1, n-1)               states = m*n, work O(1), time O(m*n)`
       </Cx>
 
       {/* 3.3 */}
-      <div id="dp3-3" data-topic-boundary="true" />
+      <div id="grid-unique-paths-ii-obstacles" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
         <span className="pill">LeetCode 63</span>
@@ -1793,7 +1793,7 @@ f(i, j) = ( f(i-1, j) + f(i, j-1) ) % mod`
       </div>
 
       {/* 3.4 */}
-      <div id="dp3-4" data-topic-boundary="true" />
+      <div id="minimum-path-sum-in-a-grid" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 64</span>
         <span className="pill">Coding Ninjas</span>
@@ -1947,7 +1947,7 @@ answer = f(n-1, m-1)`
       </Cx>
 
       {/* 3.5 */}
-      <div id="dp3-5" data-topic-boundary="true" />
+      <div id="minimum-path-sum-in-a-triangle" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 120</span>
         <span className="pill">Coding Ninjas</span>
@@ -2111,7 +2111,7 @@ note: i INCREASES in the recursion, so tabulation must fill rows DOWNWARD`
       </Cx>
 
       {/* 3.6 */}
-      <div id="dp3-6" data-topic-boundary="true" />
+      <div id="minimum-maximum-falling-path-sum" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
         <span className="pill">LeetCode 931 (min variant)</span>
@@ -2313,7 +2313,7 @@ answer = max over j of f(n-1, j)               <-- the loop in the caller`
       </div>
 
       {/* 3.7 */}
-      <div id="dp3-7" data-topic-boundary="true" />
+      <div id="cherry-pickup-ii-3d-dp" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 1463</span>
         <span className="pill">Coding Ninjas</span>
@@ -2530,7 +2530,7 @@ answer = f(0, 0, c-1)`
       </Cx>
 
       {/* 4.1 */}
-      <div id="dp4-1" data-topic-boundary="true" />
+      <div id="subset-sum-equal-to-target" data-topic-boundary="true" />
       <p className="part-subtitle">
         The <strong>pick / not-pick</strong> template from 2.5, generalised. State becomes{' '}
         <code>(index, target)</code>: &quot;using items <code>0..index</code>, can I — or in how many ways can I —
@@ -2754,7 +2754,7 @@ answer = f(n-1, k)        states = n*(k+1),  work O(1),  time O(n*k)`
       </Cx>
 
       {/* 4.2 */}
-      <div id="dp4-2" data-topic-boundary="true" />
+      <div id="partition-equal-subset-sum" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 416</span>
         <span className="pill pill-warn">Medium</span>
@@ -2884,7 +2884,7 @@ time  = O(n * total/2)      space = O(total/2) after optimisation`
       </div>
 
       {/* 4.3 */}
-      <div id="dp4-3" data-topic-boundary="true" />
+      <div id="minimum-subset-sum-difference" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
         <span className="pill pill-danger">Hard</span>
@@ -3052,7 +3052,7 @@ time  = O(n * total/2)      space = O(total/2) after optimisation`
       </Cx>
 
       {/* 4.4 */}
-      <div id="dp4-4" data-topic-boundary="true" />
+      <div id="count-subsets-with-sum-k" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
         <span className="pill pill-warn">Medium</span>
@@ -3199,7 +3199,7 @@ time  = O(n * total/2)      space = O(total/2) after optimisation`
       </div>
 
       {/* 4.5 */}
-      <div id="dp4-5" data-topic-boundary="true" />
+      <div id="count-partitions-with-given-difference" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
         <span className="pill pill-danger">Hard</span>
@@ -3351,7 +3351,7 @@ so:  count partitions with difference d
       </Cx>
 
       {/* 5.1 */}
-      <div id="dp5-1" data-topic-boundary="true" />
+      <div id="0-1-knapsack" data-topic-boundary="true" />
       <p className="part-subtitle">
         Same pick / not-pick state as Part 4, now carrying a <strong>value</strong> to optimise rather than a target
         to hit. The one distinction that governs everything here is whether an item may be reused:{' '}
@@ -3580,7 +3580,7 @@ answer = f(n-1, maxWeight)     states = n*(W+1), work O(1), time O(n*W)`
       </Cx>
 
       {/* 5.2 */}
-      <div id="dp5-2" data-topic-boundary="true" />
+      <div id="minimum-coins" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 322</span>
         <span className="pill">Coding Ninjas</span>
@@ -3756,7 +3756,7 @@ answer = f(n-1, target), then map >= 1e9 back to -1`
       </Cx>
 
       {/* 5.3 */}
-      <div id="dp5-3" data-topic-boundary="true" />
+      <div id="target-sum" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 494</span>
         <span className="pill pill-warn">Medium</span>
@@ -3911,7 +3911,7 @@ guards:  totSum - target must be >= 0 and even
       </Cx>
 
       {/* 5.4 */}
-      <div id="dp5-4" data-topic-boundary="true" />
+      <div id="coin-change-ii-count-ways" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 518</span>
         <span className="pill">Coding Ninjas</span>
@@ -4047,7 +4047,7 @@ answer = f(n-1, value)`
       </div>
 
       {/* 5.5 */}
-      <div id="dp5-5" data-topic-boundary="true" />
+      <div id="unbounded-knapsack" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
         <span className="pill pill-warn">Medium</span>
@@ -4176,7 +4176,7 @@ f(ind, W) = max(take, notTake)`
       </Cx>
 
       {/* 5.6 */}
-      <div id="dp5-6" data-topic-boundary="true" />
+      <div id="rod-cutting" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
         <span className="pill pill-warn">Medium</span>
@@ -4328,7 +4328,7 @@ answer = f(n-1, n)       states = n*(n+1), time O(n^2)`
       </Cx>
 
       {/* 6.1 */}
-      <div id="dp6-1" data-topic-boundary="true" />
+      <div id="longest-common-subsequence" data-topic-boundary="true" />
       <p className="part-subtitle">
         Two strings, one index each: state is <code>(i, j)</code>. Every problem here is either LCS itself or a
         two-line reduction to it — palindromes, insertions, deletions and supersequences all fall out of the same
@@ -4532,7 +4532,7 @@ answer = f(n, m)      states = (n+1)*(m+1), work O(1), time O(n*m)`
       </Cx>
 
       {/* 6.2 */}
-      <div id="dp6-2" data-topic-boundary="true" />
+      <div id="print-longest-common-subsequence" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
         <span className="pill pill-warn">Medium</span>
@@ -4651,7 +4651,7 @@ answer = f(n, m)      states = (n+1)*(m+1), work O(1), time O(n*m)`
       </Cx>
 
       {/* 6.3 */}
-      <div id="dp6-3" data-topic-boundary="true" />
+      <div id="longest-common-substring" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
         <span className="pill pill-warn">Medium</span>
@@ -4818,7 +4818,7 @@ answer = max over all i, j of dp[i][j]`
       </Cx>
 
       {/* 6.4 */}
-      <div id="dp6-4" data-topic-boundary="true" />
+      <div id="longest-palindromic-subsequence" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 516</span>
         <span className="pill pill-warn">Medium</span>
@@ -4942,7 +4942,7 @@ time  = O(n^2)        space = O(n^2), or O(n) after row reduction`
       </div>
 
       {/* 6.5 */}
-      <div id="dp6-5" data-topic-boundary="true" />
+      <div id="minimum-insertions-for-a-palindrome" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 1312</span>
         <span className="pill pill-danger">Hard</span>
@@ -5074,7 +5074,7 @@ time  = O(n^2)        space = O(n^2), or O(n) after row reduction`
       </div>
 
       {/* 6.6 */}
-      <div id="dp6-6" data-topic-boundary="true" />
+      <div id="minimum-operations-to-convert-a-to-b" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
         <span className="pill pill-warn">Medium</span>
@@ -5192,7 +5192,7 @@ answer = (n - LCS) + (m - LCS) = n + m - 2 * LCS(a, b)`
       }</Code>
 
       {/* 6.7 */}
-      <div id="dp6-7" data-topic-boundary="true" />
+      <div id="shortest-common-supersequence" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 1092</span>
         <span className="pill">Coding Ninjas</span>
@@ -5390,7 +5390,7 @@ answer = (n - LCS) + (m - LCS) = n + m - 2 * LCS(a, b)`
       </Cx>
 
       {/* 6.8 */}
-      <div id="dp6-8" data-topic-boundary="true" />
+      <div id="distinct-subsequences" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 115</span>
         <span className="pill">Coding Ninjas</span>
@@ -5564,7 +5564,7 @@ answer = f(n, m)`
       </div>
 
       {/* 6.9 */}
-      <div id="dp6-9" data-topic-boundary="true" />
+      <div id="edit-distance" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 72</span>
         <span className="pill">Coding Ninjas</span>
@@ -5756,7 +5756,7 @@ answer = f(n, m)`
       </Cx>
 
       {/* 6.10 */}
-      <div id="dp6-10" data-topic-boundary="true" />
+      <div id="wildcard-matching" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 44</span>
         <span className="pill">Coding Ninjas</span>
@@ -5955,7 +5955,7 @@ answer = f(n, m)`
       </Cx>
 
       {/* 7.1 */}
-      <div id="dp7-1" data-topic-boundary="true" />
+      <div id="best-time-to-buy-and-sell-stock" data-topic-boundary="true" />
       <p className="part-subtitle">
         One family, six variants. The state is always &quot;which day am I on, and what am I holding?&quot; —{' '}
         <code>(ind, buy)</code> — with extra dimensions bolted on for a transaction cap, a cooldown or a fee. Learn
@@ -6173,7 +6173,7 @@ answer = f(0, 1)`
       </Cx>
 
       {/* 7.2 */}
-      <div id="dp7-2" data-topic-boundary="true" />
+      <div id="buy-and-sell-stock-ii" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 122</span>
         <span className="pill">Coding Ninjas</span>
@@ -6297,7 +6297,7 @@ answer = f(0, 1)`
       </div>
 
       {/* 7.3 */}
-      <div id="dp7-3" data-topic-boundary="true" />
+      <div id="buy-and-sell-stock-iii" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 123</span>
         <span className="pill">Coding Ninjas</span>
@@ -6428,7 +6428,7 @@ answer = f(0, 1, 2)`
       </div>
 
       {/* 7.4 */}
-      <div id="dp7-4" data-topic-boundary="true" />
+      <div id="buy-and-sell-stock-iv" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 188</span>
         <span className="pill">Coding Ninjas</span>
@@ -6561,7 +6561,7 @@ answer = f(0, 0)         states = n * 2k,  time O(n*k)`
       </div>
 
       {/* 7.5 */}
-      <div id="dp7-5" data-topic-boundary="true" />
+      <div id="buy-and-sell-with-cooldown" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 309</span>
         <span className="pill">Coding Ninjas</span>
@@ -6695,7 +6695,7 @@ answer = f(0, 1)`
       </div>
 
       {/* 7.6 */}
-      <div id="dp7-6" data-topic-boundary="true" />
+      <div id="buy-and-sell-with-transaction-fee" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 714</span>
         <span className="pill">Coding Ninjas</span>
@@ -6830,7 +6830,7 @@ answer = f(0, 1)`
       </Cx>
 
       {/* 8.1 */}
-      <div id="dp8-1" data-topic-boundary="true" />
+      <div id="longest-increasing-subsequence" data-topic-boundary="true" />
       <p className="part-subtitle">
         Seven problems built on one idea: <code>dp[i]</code> = the best chain <strong>ending at</strong>{' '}
         <code>i</code>, computed by scanning every earlier element. Swap the &quot;can follow&quot; test —{' '}
@@ -7062,7 +7062,7 @@ answer = max over i of dp[i]           time O(n^2),  space O(n)`
       </Cx>
 
       {/* 8.2 */}
-      <div id="dp8-2" data-topic-boundary="true" />
+      <div id="print-longest-increasing-subsequence" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
         <span className="pill pill-warn">Medium</span>
@@ -7168,7 +7168,7 @@ answer = max over i of dp[i]           time O(n^2),  space O(n)`
       </Cx>
 
       {/* 8.3 */}
-      <div id="dp8-3" data-topic-boundary="true" />
+      <div id="lis-in-o-n-log-n" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 300</span>
         <span className="pill pill-warn">Medium</span>
@@ -7307,7 +7307,7 @@ answer = max over i of dp[i]           time O(n^2),  space O(n)`
       </Cx>
 
       {/* 8.4 */}
-      <div id="dp8-4" data-topic-boundary="true" />
+      <div id="largest-divisible-subset" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 368</span>
         <span className="pill">Coding Ninjas</span>
@@ -7484,7 +7484,7 @@ answer = the chain ending at the index with the largest dp value`
       </Cx>
 
       {/* 8.5 */}
-      <div id="dp8-5" data-topic-boundary="true" />
+      <div id="longest-string-chain" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 1048</span>
         <span className="pill">Coding Ninjas</span>
@@ -7679,7 +7679,7 @@ time O(n * L^2) -- L is the word length, typically tiny`
       </Cx>
 
       {/* 8.6 */}
-      <div id="dp8-6" data-topic-boundary="true" />
+      <div id="longest-bitonic-subsequence" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
         <span className="pill pill-warn">Medium</span>
@@ -7847,7 +7847,7 @@ answer = max over i of ( dp1[i] + dp2[i] - 1 )
       </Cx>
 
       {/* 8.7 */}
-      <div id="dp8-7" data-topic-boundary="true" />
+      <div id="number-of-longest-increasing-subsequences" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 673</span>
         <span className="pill">Coding Ninjas</span>
@@ -8011,7 +8011,7 @@ answer = sum of cnt[i] over all i with dp[i] == max(dp)`
       </Cx>
 
       {/* 9.1 */}
-      <div id="dp9-1" data-topic-boundary="true" />
+      <div id="matrix-chain-multiplication" data-topic-boundary="true" />
       <p className="part-subtitle">
         State is an <strong>interval</strong> <code>(i, j)</code>, and the choice is <em>where to split it</em>. A
         loop over every cut <code>k</code> inside the interval turns the work per state from <code>O(1)</code> into{' '}
@@ -8239,7 +8239,7 @@ answer = f(1, N-1)      states O(N^2), work O(N) each  ->  O(N^3)`
       </Cx>
 
       {/* 9.2 */}
-      <div id="dp9-2" data-topic-boundary="true" />
+      <div id="minimum-cost-to-cut-a-stick" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 1547</span>
         <span className="pill">Coding Ninjas</span>
@@ -8409,7 +8409,7 @@ answer = f(1, c)          where c = cuts.length before padding`
       }</pre>
 
       {/* 9.3 */}
-      <div id="dp9-3" data-topic-boundary="true" />
+      <div id="burst-balloons" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 312</span>
         <span className="pill">Coding Ninjas</span>
@@ -8569,7 +8569,7 @@ answer = f(1, n)       after padding a with 1 at both ends`
       </Cx>
 
       {/* 9.4 */}
-      <div id="dp9-4" data-topic-boundary="true" />
+      <div id="boolean-evaluation-to-true" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
         <span className="pill pill-danger">Hard</span>
@@ -8787,7 +8787,7 @@ answer = f(0, n-1, true)       states O(n^2 * 2), work O(n)  ->  O(n^3)`
       </Cx>
 
       {/* 9.5 */}
-      <div id="dp9-5" data-topic-boundary="true" />
+      <div id="palindrome-partitioning-ii" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 132</span>
         <span className="pill">Coding Ninjas</span>
@@ -8971,7 +8971,7 @@ answer = f(0) - 1          <-- f counts PIECES; cuts = pieces - 1`
       </Cx>
 
       {/* 9.6 */}
-      <div id="dp9-6" data-topic-boundary="true" />
+      <div id="partition-array-for-maximum-sum" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 1043</span>
         <span className="pill">Coding Ninjas</span>
@@ -9177,7 +9177,7 @@ answer = f(0)         states O(n), work O(k)  ->  O(n*k)`
       </Cx>
 
       {/* 10.1 */}
-      <div id="dp10-1" data-topic-boundary="true" />
+      <div id="maximum-rectangle-of-1s" data-topic-boundary="true" />
       <p className="part-subtitle">
         Two problems about blocks of <code>1</code>s in a binary matrix. Both hinge on the same reframing — make the
         cell&apos;s value describe the shape <strong>ending at</strong> that cell — but they reach it by different
@@ -9346,7 +9346,7 @@ answer = f(0)         states O(n), work O(k)  ->  O(n*k)`
       </Cx>
 
       {/* 10.2 */}
-      <div id="dp10-2" data-topic-boundary="true" />
+      <div id="count-square-submatrices" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 1277</span>
         <span className="pill">Coding Ninjas</span>

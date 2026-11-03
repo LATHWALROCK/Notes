@@ -5,7 +5,7 @@ export default function BinarySearchTree() {
   return (
     <>
       {/* 7.1 */}
-      <div id="s7-1" data-topic-boundary="true" />
+      <div id="what-is-a-bst" data-topic-boundary="true" />
       <p className="part-subtitle">
         One extra rule — <em>left is smaller, right is bigger</em> — and half the work disappears. Every problem in
         Parts 7–9 is really the same question: <strong>what does the ordering let me skip?</strong>
@@ -156,7 +156,7 @@ while (cur != null) {
       </div>
 
       {/* 7.2 */}
-      <div id="s7-2" data-topic-boundary="true" />
+      <div id="search-in-a-bst" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 700</span>
         <span className="pill pill-success">Easy</span>
@@ -235,7 +235,7 @@ while (cur != null) {
       </Cx>
 
       {/* 7.3 */}
-      <div id="s7-3" data-topic-boundary="true" />
+      <div id="ceil-in-a-bst" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
         <span className="pill pill-success">Easy</span>
@@ -350,7 +350,7 @@ while (cur != null) {
       </div>
 
       {/* 7.4 */}
-      <div id="s7-4" data-topic-boundary="true" />
+      <div id="floor-in-a-bst" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">Coding Ninjas</span>
         <span className="pill pill-success">Easy</span>
@@ -476,7 +476,7 @@ while (cur != null) {
       </div>
 
       {/* 7.5 */}
-      <div id="s7-5" data-topic-boundary="true" />
+      <div id="insert-a-node-in-a-bst" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 701</span>
         <span className="pill pill-warn">Medium</span>
@@ -584,7 +584,7 @@ while (cur != null) {
       </div>
 
       {/* 7.6 */}
-      <div id="s7-6" data-topic-boundary="true" />
+      <div id="delete-a-node-in-a-bst" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 450</span>
         <span className="pill pill-warn">Medium</span>
@@ -800,7 +800,7 @@ while (cur != null) {
       </div>
 
       {/* 8.1 */}
-      <div id="s8-1" data-topic-boundary="true" />
+      <div id="kth-smallest-largest" data-topic-boundary="true" />
       <p className="part-subtitle">
         Five problems that all cash in on the same two facts from 7.1: <strong>inorder is sorted</strong>, and{' '}
         <strong>every node lives inside an implicit range</strong>. Once you see which of the two a problem wants,
@@ -987,7 +987,7 @@ int kthSmallest(TreeNode root, int k) {
       </div>
 
       {/* 8.2 */}
-      <div id="s8-2" data-topic-boundary="true" />
+      <div id="validate-a-bst" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 98</span>
         <span className="pill pill-warn">Medium</span>
@@ -1122,7 +1122,7 @@ boolean isValidBST(TreeNode root) {
       </Cx>
 
       {/* 8.3 */}
-      <div id="s8-3" data-topic-boundary="true" />
+      <div id="lca-in-a-bst" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 235</span>
         <span className="pill pill-success">Easy–Medium</span>
@@ -1235,7 +1235,7 @@ boolean isValidBST(TreeNode root) {
       </div>
 
       {/* 8.4 */}
-      <div id="s8-4" data-topic-boundary="true" />
+      <div id="construct-bst-from-preorder" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 1008</span>
         <span className="pill pill-warn">Medium</span>
@@ -1382,7 +1382,7 @@ boolean isValidBST(TreeNode root) {
       </div>
 
       {/* 8.5 */}
-      <div id="s8-5" data-topic-boundary="true" />
+      <div id="predecessor-and-successor" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 285</span>
         <span className="pill">GfG</span>
@@ -1545,7 +1545,7 @@ boolean isValidBST(TreeNode root) {
       </div>
 
       {/* 9.1 */}
-      <div id="s9-1" data-topic-boundary="true" />
+      <div id="bst-iterator" data-topic-boundary="true" />
       <p className="part-subtitle">
         The last four problems combine everything: a paused traversal turned into an object, two of those objects
         solving a two-pointer problem, an inorder walk that repairs a broken tree, and a postorder walk that reports
@@ -1688,7 +1688,7 @@ boolean isValidBST(TreeNode root) {
       </div>
 
       {/* 9.2 */}
-      <div id="s9-2" data-topic-boundary="true" />
+      <div id="two-sum-in-a-bst" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 653</span>
         <span className="pill pill-success">Easy–Medium</span>
@@ -1866,7 +1866,7 @@ class BSTIterator {
       </div>
 
       {/* 9.3 */}
-      <div id="s9-3" data-topic-boundary="true" />
+      <div id="recover-a-bst" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 99</span>
         <span className="pill pill-warn">Medium–Hard</span>
@@ -2054,7 +2054,7 @@ class BSTIterator {
       </div>
 
       {/* 9.4 */}
-      <div id="s9-4" data-topic-boundary="true" />
+      <div id="largest-bst-in-a-binary-tree" data-topic-boundary="true" />
       <div className="meta-row">
         <span className="pill">LeetCode 333</span>
         <span className="pill">GfG</span>
