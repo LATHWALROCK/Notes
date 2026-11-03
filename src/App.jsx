@@ -27,6 +27,7 @@ import BinarySearch from './subjects/dsa/binary-search.jsx';
 import DynamicProgramming from './subjects/dsa/dynamic-programming.jsx';
 import Graph from './subjects/dsa/graph.jsx';
 import LinkedList from './subjects/dsa/linked-list.jsx';
+import Mathematics from './subjects/dsa/mathematics.jsx';
 import DsaSheets from './subjects/dsa/dsa-sheets.jsx';
 
 /*
@@ -39,6 +40,7 @@ const SUBJECTS = [
   {
     key: 'java',
     label: 'Java Notes',
+    shortLabel: 'Java',
     Icon: BookIcon,
     children: [
       { key: 'core-java', label: 'Core Java', Content: CoreJava, children: [
@@ -85,6 +87,8 @@ const SUBJECTS = [
   {
     key: 'collections',
     label: 'Java Collections Framework',
+    mediumLabel: 'Collections Framework',
+    shortLabel: 'Collections',
     Icon: LayersIcon,
     children: [
       { key: 'lists', label: 'Lists', Content: Lists, children: [
@@ -136,6 +140,7 @@ const SUBJECTS = [
   {
     key: 'dsa',
     label: 'DSA in Java',
+    shortLabel: 'DSA',
     Icon: TreeIcon,
     children: [
       { key: 'binary-search', label: 'Binary Search', Content: BinarySearch, children: [
@@ -260,7 +265,7 @@ const SUBJECTS = [
         { id: 'morris-preorder-traversal', label: 'Morris Preorder Traversal' },
         { id: 'flatten-tree-to-linked-list', label: 'Flatten Tree to Linked List' },
       ] },
-      { key: 'bst', label: 'Binary Search Tree', Content: BinarySearchTree, children: [
+      { key: 'bst', label: 'Binary Search Tree', shortLabel: 'BST', Content: BinarySearchTree, children: [
         /* BST foundations */
         { id: 'what-is-a-bst', label: 'What Is a BST?' },
         { id: 'search-in-a-bst', label: 'Search in a BST' },
@@ -280,7 +285,7 @@ const SUBJECTS = [
         { id: 'recover-a-bst', label: 'Recover a BST' },
         { id: 'largest-bst-in-a-binary-tree', label: 'Largest BST in a Binary Tree' },
       ] },
-      { key: 'dynamic-programming', label: 'Dynamic Programming', Content: DynamicProgramming, children: [
+      { key: 'dynamic-programming', label: 'Dynamic Programming', shortLabel: 'DP', Content: DynamicProgramming, children: [
         /* Introduction to DP */
         { id: 'what-is-dynamic-programming', label: 'What Is Dynamic Programming?' },
         { id: 'when-does-dp-apply', label: 'When Does DP Apply?' },
@@ -413,6 +418,16 @@ const SUBJECTS = [
         { id: 'bridges-tarjans-algorithm', label: 'Bridges — Tarjan’s Algorithm' },
         { id: 'articulation-point', label: 'Articulation Point' },
       ] },
+      { key: 'mathematics', label: 'Mathematics', Content: Mathematics, children: [
+        { id: 'divisors-of-a-number', label: 'Divisors of a Number' },
+        { id: 'check-if-a-number-is-prime', label: 'Check if a Number is Prime' },
+        { id: 'prime-factors-of-a-number', label: 'Prime Factors of a Number' },
+        { id: 'power-exponentiation', label: 'Power / Exponentiation' },
+        { id: 'sieve-of-eratosthenes', label: 'Sieve of Eratosthenes' },
+        { id: 'count-primes-in-a-range', label: 'Count Primes in a Range [L, R]' },
+        { id: 'smallest-prime-factor-sieve', label: 'Smallest Prime Factor Sieve' },
+        { id: 'prime-factorization-using-spf', label: 'Prime Factorization Using SPF' },
+      ] },
       { key: 'dsa-sheets', label: 'DSA Sheets', Content: DsaSheets, children: [
         { id: 'strivers-180', label: "Striver's 180 Master DSA Patterns" },
         { id: 'strivers-a2z', label: "Striver's A2Z DSA Sheet" },
@@ -440,7 +455,7 @@ function NotesView() {
 
   // Validate topic: if provided, must match within subject; if omitted, default to first topic
   const topic = subject
-    ? (topicKey ? subject.children.find((t) => nodeKey(t) === topicKey) : subject.children[0])
+    ? (topicKey ? subject.children.find((t) => nodeKey(t) === topicKey || (topicKey === 'maths' && nodeKey(t) === 'mathematics')) : subject.children[0])
     : null;
   const isTopicInvalid = Boolean(topicKey && !topic);
 
@@ -521,7 +536,7 @@ function NotesView() {
   return (
     <>
       <div className="nav-sticky">
-        {/* Top bar: subjects + topics */}
+        {/* Top bar: single compact row with subjects and topics */}
         <nav className="top-bar" aria-label="Subject and topic navigation">
           <div className="top-bar-inner">
             <div className="subject-tabs">
@@ -538,9 +553,14 @@ function NotesView() {
                     to={to}
                     className={'subject-tab' + (isActive ? ' active' : '')}
                     aria-current={isActive ? 'true' : undefined}
+                    title={s.label}
                   >
                     <span className="subject-tab-icon"><s.Icon /></span>
-                    <span>{s.label}</span>
+                    <span className="tab-label">
+                      <span className="label-full">{s.label}</span>
+                      {s.mediumLabel && <span className="label-medium">{s.mediumLabel}</span>}
+                      {s.shortLabel && <span className="label-short">{s.shortLabel}</span>}
+                    </span>
                   </Link>
                 );
               })}
@@ -562,8 +582,12 @@ function NotesView() {
                     to={to}
                     className={'topic-tab' + (isActive ? ' active' : '')}
                     aria-current={isActive ? 'true' : undefined}
+                    title={t.label}
                   >
-                    {t.label}
+                    <span className="tab-label">
+                      <span className={t.shortLabel ? 'label-full' : ''}>{t.label}</span>
+                      {t.shortLabel && <span className="label-short">{t.shortLabel}</span>}
+                    </span>
                   </Link>
                 );
               })}

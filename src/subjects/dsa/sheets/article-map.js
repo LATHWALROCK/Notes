@@ -115,6 +115,20 @@ export const ARTICLE_MAP = {
   'wildcard-matching': '/dsa/dynamic-programming/wildcard-matching',
   'matrix-chain-multiplication': '/dsa/dynamic-programming/matrix-chain-multiplication',
   'palindrome-partitioning-ii': '/dsa/dynamic-programming/palindrome-partitioning-ii',
+
+  // ── Mathematics ──────────────────────────────────────────────────────────
+  'divisors-of-a-number': '/dsa/mathematics/divisors-of-a-number',
+  'check-for-prime-number': '/dsa/mathematics/check-if-a-number-is-prime',
+  'check-if-a-number-is-prime': '/dsa/mathematics/check-if-a-number-is-prime',
+  'prime-factors-of-a-number': '/dsa/mathematics/prime-factors-of-a-number',
+  'prime-factorisation-of-a-number': '/dsa/mathematics/prime-factors-of-a-number',
+  'power-exponentiation': '/dsa/mathematics/power-exponentiation',
+  'sieve-of-eratosthenes': '/dsa/mathematics/sieve-of-eratosthenes',
+  'print-all-primes-till-n': '/dsa/mathematics/sieve-of-eratosthenes',
+  'count-primes-in-a-range': '/dsa/mathematics/count-primes-in-a-range',
+  'count-primes-in-range-l-to-r': '/dsa/mathematics/count-primes-in-a-range',
+  'smallest-prime-factor-sieve': '/dsa/mathematics/smallest-prime-factor-sieve',
+  'prime-factorization-using-spf': '/dsa/mathematics/prime-factorization-using-spf',
 };
 
 export function getArticleUrl(problemId) {
