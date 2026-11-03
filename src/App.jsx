@@ -1,4 +1,5 @@
-import { useEffect, useLayoutEffect, useMemo, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo } from 'react';
+import { Routes, Route, Navigate, useParams, useNavigate, useLocation, Link } from 'react-router-dom';
 import {
   BookIcon,
   LayersIcon,
@@ -390,78 +391,38 @@ function getCanonicalPath(subjectKey, topicKey, subtopicId) {
   return `/${subjectKey}/${topicKey}/${subtopicId}`;
 }
 
-/*
- * Resolves a URL pathname against the SUBJECTS configuration tree into:
- * { subject, topic, subtopic, canonicalPath }
- * Falls back to first children if any segments are missing or invalid.
- */
-function resolveRoute(pathname) {
-  let segments = [];
-  try {
-    segments = (pathname || '')
-      .split('/')
-      .map((s) => decodeURIComponent(s.trim()))
-      .filter(Boolean);
-  } catch {
-    segments = (pathname || '')
-      .split('/')
-      .map((s) => s.trim())
-      .filter(Boolean);
-  }
+function NotesView() {
+  const { subjectKey, topicKey, subtopicId } = useParams();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const [wantedSubject, wantedTopic, wantedSubtopic] = segments;
+  const subject = SUBJECTS.find((s) => s.key === subjectKey) ?? SUBJECTS[0];
+  const topic = subject.children.find((t) => nodeKey(t) === topicKey) ?? subject.children[0];
+  const subtopic = topic.children.find((sub) => nodeKey(sub) === subtopicId) ?? topic.children[0];
 
-  const subject = SUBJECTS.find((s) => s.key === wantedSubject) ?? SUBJECTS[0];
-  const topic = subject.children.find((t) => nodeKey(t) === wantedTopic) ?? subject.children[0];
-  const subtopic = topic.children.find((sub) => nodeKey(sub) === wantedSubtopic) ?? topic.children[0];
+  const activeSubjectKey = subject.key;
+  const activeTopicKey = nodeKey(topic);
+  const activeSubId = nodeKey(subtopic);
 
-  const canonicalPath = getCanonicalPath(subject.key, nodeKey(topic), nodeKey(subtopic));
-
-  return {
-    subject,
-    topic,
-    subtopic,
-    canonicalPath,
-  };
-}
-
-export default function App() {
-  const [route, setRoute] = useState(() => resolveRoute(window.location.pathname));
-
-  const { subject: activeSubject, topic: activeTopic, subtopic: activeSubtopic, canonicalPath } = route;
-  const activeSubjectKey = activeSubject.key;
-  const activeTopicKey = nodeKey(activeTopic);
-  const activeSubId = nodeKey(activeSubtopic);
-
-  const heading = `${activeTopic.label} \u2014 ${activeSubtopic.label}`;
-  const ActiveContent = activeTopic.Content;
-
-  /*
-   * Only the ACTIVE TOPIC is mounted, not the whole subject. Mounting every
-   * topic put 163 DSA subtopics in the DOM at once, all but one hidden.
-   *
-   * The element is memoized on the component itself so that selecting a
-   * subtopic hands React the identical element and it skips re-rendering the
-   * content subtree entirely. Without this, every click re-ran every `Code` block's
-   * syntax highlighting, which is what made switching slow.
-   */
-  const content = useMemo(() => <ActiveContent />, [ActiveContent]);
+  const canonicalPath = getCanonicalPath(activeSubjectKey, activeTopicKey, activeSubId);
 
   // Keep browser URL canonical on load or if user lands on partial URL (e.g. /dsa or /)
   useEffect(() => {
-    if (window.location.pathname !== canonicalPath) {
-      window.history.replaceState(null, '', canonicalPath);
+    if (location.pathname !== canonicalPath) {
+      navigate(canonicalPath, { replace: true });
     }
-  }, [canonicalPath]);
+  }, [location.pathname, canonicalPath, navigate]);
 
-  // Handle browser Back / Forward buttons
-  useEffect(() => {
-    const handlePopState = () => {
-      setRoute(resolveRoute(window.location.pathname));
-    };
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
+  const heading = `${topic.label} \u2014 ${subtopic.label}`;
+  const ActiveContent = topic.Content;
+
+  /*
+   * Only the ACTIVE TOPIC is mounted, not the whole subject.
+   * The element is memoized on the component itself so that selecting a
+   * subtopic hands React the identical element and it skips re-rendering the
+   * content subtree entirely.
+   */
+  const content = useMemo(() => <ActiveContent />, [ActiveContent]);
 
   // Sync document title with current page
   useEffect(() => {
@@ -493,32 +454,6 @@ export default function App() {
     window.scrollTo(0, 0);
   }, [ActiveContent, activeSubId]);
 
-  const navigateTo = (nextSubject, nextTopic, nextSubtopic) => {
-    const targetUrl = getCanonicalPath(
-      nextSubject.key,
-      nodeKey(nextTopic),
-      nodeKey(nextSubtopic)
-    );
-    if (window.location.pathname !== targetUrl) {
-      window.history.pushState(null, '', targetUrl);
-    }
-    setRoute({
-      subject: nextSubject,
-      topic: nextTopic,
-      subtopic: nextSubtopic,
-      canonicalPath: targetUrl,
-    });
-  };
-
-  const handleLinkClick = (e, nextSubject, nextTopic, nextSubtopic, isCurrentActive) => {
-    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) {
-      return;
-    }
-    e.preventDefault();
-    if (isCurrentActive) return;
-    navigateTo(nextSubject, nextTopic, nextSubtopic);
-  };
-
   return (
     <>
       <div className="nav-sticky">
@@ -530,20 +465,19 @@ export default function App() {
                 const isActive = s.key === activeSubjectKey;
                 const defaultTopic = s.children[0];
                 const defaultSub = defaultTopic.children[0];
-                const href = isActive
+                const to = isActive
                   ? canonicalPath
                   : getCanonicalPath(s.key, nodeKey(defaultTopic), nodeKey(defaultSub));
                 return (
-                  <a
+                  <Link
                     key={s.key}
-                    href={href}
+                    to={to}
                     className={'subject-tab' + (isActive ? ' active' : '')}
                     aria-current={isActive ? 'true' : undefined}
-                    onClick={(e) => handleLinkClick(e, s, defaultTopic, defaultSub, isActive)}
                   >
                     <span className="subject-tab-icon"><s.Icon /></span>
                     <span>{s.label}</span>
-                  </a>
+                  </Link>
                 );
               })}
             </div>
@@ -551,23 +485,22 @@ export default function App() {
             <span className="nav-divider" />
 
             <div className="topic-tabs">
-              {activeSubject.children.map((topic) => {
-                const key = nodeKey(topic);
+              {subject.children.map((t) => {
+                const key = nodeKey(t);
                 const isActive = key === activeTopicKey;
-                const defaultSub = topic.children[0];
-                const href = isActive
+                const defaultSub = t.children[0];
+                const to = isActive
                   ? canonicalPath
-                  : getCanonicalPath(activeSubject.key, key, nodeKey(defaultSub));
+                  : getCanonicalPath(subject.key, key, nodeKey(defaultSub));
                 return (
-                  <a
+                  <Link
                     key={key}
-                    href={href}
+                    to={to}
                     className={'topic-tab' + (isActive ? ' active' : '')}
                     aria-current={isActive ? 'true' : undefined}
-                    onClick={(e) => handleLinkClick(e, activeSubject, topic, defaultSub, isActive)}
                   >
-                    {topic.label}
-                  </a>
+                    {t.label}
+                  </Link>
                 );
               })}
             </div>
@@ -580,25 +513,24 @@ export default function App() {
         <aside className="sub-sidebar" aria-label="Subtopic navigation">
           <div className="sub-sidebar-header">
             <span className="sub-sidebar-badge">Subtopics</span>
-            <span className="sub-sidebar-topic">{activeTopic.label}</span>
+            <span className="sub-sidebar-topic">{topic.label}</span>
           </div>
 
           <div className="sub-sidebar-list">
-            {activeTopic.children.map((sub, idx) => {
+            {topic.children.map((sub, idx) => {
               const subId = nodeKey(sub);
               const isActive = subId === activeSubId;
-              const href = getCanonicalPath(activeSubject.key, activeTopicKey, subId);
+              const to = getCanonicalPath(subject.key, activeTopicKey, subId);
               return (
-                <a
+                <Link
                   key={subId}
-                  href={href}
+                  to={to}
                   className={'sub-tab' + (isActive ? ' active' : '')}
                   aria-current={isActive ? 'page' : undefined}
-                  onClick={(e) => handleLinkClick(e, activeSubject, activeTopic, sub, isActive)}
                 >
                   <span className="sub-tab-idx">{idx + 1}</span>
                   <span className="sub-tab-label">{sub.label}</span>
-                </a>
+                </Link>
               );
             })}
           </div>
@@ -610,5 +542,17 @@ export default function App() {
         </main>
       </div>
     </>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<NotesView />} />
+      <Route path="/:subjectKey" element={<NotesView />} />
+      <Route path="/:subjectKey/:topicKey" element={<NotesView />} />
+      <Route path="/:subjectKey/:topicKey/:subtopicId" element={<NotesView />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
