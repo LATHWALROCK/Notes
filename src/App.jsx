@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useMemo } from 'react';
-import { Routes, Route, Navigate, useParams, useNavigate, useLocation, Link } from 'react-router-dom';
+import { Routes, Route, useParams, useNavigate, useLocation, Link } from 'react-router-dom';
+import NotFound from './components/NotFound.jsx';
 import {
   BookIcon,
   LayersIcon,
@@ -22,6 +23,7 @@ import Queues from './subjects/collections/queues.jsx';
 import Java8Features from './subjects/collections/java8.jsx';
 import BinaryTree from './subjects/dsa/binary-tree.jsx';
 import BinarySearchTree from './subjects/dsa/binary-search-tree.jsx';
+import BinarySearch from './subjects/dsa/binary-search.jsx';
 import DynamicProgramming from './subjects/dsa/dynamic-programming.jsx';
 import Graph from './subjects/dsa/graph.jsx';
 import LinkedList from './subjects/dsa/linked-list.jsx';
@@ -136,6 +138,85 @@ const SUBJECTS = [
     label: 'DSA in Java',
     Icon: TreeIcon,
     children: [
+      { key: 'binary-search', label: 'Binary Search', Content: BinarySearch, children: [
+        /* Fundamentals */
+        { id: 'binary-search-basics', label: 'Binary Search Basics' },
+        { id: 'lower-bound', label: 'Lower Bound' },
+        { id: 'upper-bound', label: 'Upper Bound' },
+        { id: 'search-insert-position', label: 'Search Insert Position' },
+        { id: 'floor-in-a-sorted-array', label: 'Floor in a Sorted Array' },
+        { id: 'first-and-last-occurrence-of-x', label: 'First & Last Occurrence of X' },
+        { id: 'count-occurrences-of-x', label: 'Count Occurrences of X' },
+        /* Searching rotated / modified arrays */
+        { id: 'search-rotated-sorted-array-i', label: 'Search Rotated Sorted Array I' },
+        { id: 'search-rotated-sorted-array-ii', label: 'Search Rotated Sorted Array II' },
+        { id: 'minimum-in-rotated-sorted-array', label: 'Minimum in Rotated Sorted Array' },
+        { id: 'number-of-times-array-rotated', label: 'Number of Times Array Rotated' },
+        { id: 'single-element-in-sorted-array', label: 'Single Element in Sorted Array' },
+        { id: 'find-peak-element', label: 'Find Peak Element' },
+        /* Binary search on answers */
+        { id: 'square-root-of-a-number', label: 'Square Root of a Number' },
+        { id: 'nth-root-of-a-number', label: 'Nth Root of a Number' },
+        { id: 'koko-eating-bananas', label: 'Koko Eating Bananas' },
+        { id: 'min-days-to-make-m-bouquets', label: 'Min Days to Make M Bouquets' },
+        { id: 'smallest-divisor-given-a-threshold', label: 'Smallest Divisor Given a Threshold' },
+        { id: 'ship-packages-in-d-days', label: 'Ship Packages in D Days' },
+        { id: 'kth-missing-positive-number', label: 'Kth Missing Positive Number' },
+        /* Allocation & partition */
+        { id: 'aggressive-cows', label: 'Aggressive Cows' },
+        { id: 'allocate-books', label: 'Allocate Books' },
+        { id: 'painters-partition', label: "Painter's Partition" },
+        { id: 'minimize-max-distance-gas-station', label: 'Minimize Max Distance, Gas Station' },
+        /* Two arrays & 2D matrices */
+        { id: 'median-of-two-sorted-arrays', label: 'Median of Two Sorted Arrays' },
+        { id: 'kth-element-of-two-sorted-arrays', label: 'Kth Element of Two Sorted Arrays' },
+        { id: 'row-with-maximum-1s', label: 'Row With Maximum 1s' },
+        { id: 'search-a-2d-matrix-i', label: 'Search a 2D Matrix I' },
+        { id: 'search-a-2d-matrix-ii', label: 'Search a 2D Matrix II' },
+        { id: 'find-a-peak-element-ii', label: 'Find a Peak Element II' },
+        { id: 'median-of-a-row-wise-sorted-matrix', label: 'Median of a Row-Wise Sorted Matrix' },
+      ] },
+      { key: 'linked-list', label: 'Linked List', Content: LinkedList, children: [
+        /* Fundamentals */
+        { id: 'what-is-a-linked-list', label: 'What Is a Linked List?' },
+        { id: 'doubly-linked-list', label: 'Doubly Linked List' },
+        { id: 'search-an-element', label: 'Search an Element' },
+        { id: 'length-of-a-linked-list', label: 'Length of a Linked List' },
+        /* Core operations */
+        { id: 'insertion-in-a-singly-ll', label: 'Insertion in a Singly LL' },
+        { id: 'deletion-in-a-singly-ll', label: 'Deletion in a Singly LL' },
+        { id: 'insertion-in-a-dll', label: 'Insertion in a DLL' },
+        { id: 'deletion-in-a-dll', label: 'Deletion in a DLL' },
+        { id: 'reverse-a-dll', label: 'Reverse a DLL' },
+        /* Classic interview problems */
+        { id: 'add-two-numbers-as-lls', label: 'Add Two Numbers as LLs' },
+        { id: 'odd-even-linked-list', label: 'Odd Even Linked List' },
+        { id: 'sort-ll-of-0s-1s-2s', label: 'Sort LL of 0s, 1s, 2s' },
+        { id: 'remove-nth-node-from-end', label: 'Remove Nth Node From End' },
+        { id: 'reverse-a-linked-list', label: 'Reverse a Linked List' },
+        { id: 'll-palindrome-check', label: 'LL Palindrome Check' },
+        { id: 'add-1-to-a-number-as-ll', label: 'Add 1 to a Number as LL' },
+        /* Fast & slow pointers — Floyd’s technique */
+        { id: 'intersection-of-y-shaped-ll', label: 'Intersection of Y-Shaped LL' },
+        { id: 'middle-of-a-linked-list', label: 'Middle of a Linked List' },
+        { id: 'detect-a-loop-in-a-ll', label: 'Detect a Loop in a LL' },
+        { id: 'length-of-a-loop-in-a-ll', label: 'Length of a Loop in a LL' },
+        { id: 'delete-the-middle-node', label: 'Delete the Middle Node' },
+        { id: 'starting-point-of-a-loop', label: 'Starting Point of a Loop' },
+        /* Doubly linked list — specific problems */
+        { id: 'delete-all-occurrences-in-dll', label: 'Delete All Occurrences in DLL' },
+        { id: 'pairs-with-given-sum-dll', label: 'Pairs With Given Sum, DLL' },
+        { id: 'remove-duplicates-sorted-dll', label: 'Remove Duplicates, Sorted DLL' },
+        /* Merging, rotating & advanced structures */
+        { id: 'reverse-nodes-in-groups-of-k', label: 'Reverse Nodes in Groups of K' },
+        { id: 'rotate-a-linked-list', label: 'Rotate a Linked List' },
+        { id: 'merge-two-sorted-lls', label: 'Merge Two Sorted LLs' },
+        { id: 'flattening-a-linked-list', label: 'Flattening a Linked List' },
+        { id: 'merge-k-sorted-lists', label: 'Merge K Sorted Lists' },
+        { id: 'sort-a-linked-list', label: 'Sort a Linked List' },
+        { id: 'clone-ll-random-pointer', label: 'Clone LL, Random Pointer' },
+        { id: 'design-browser-history', label: 'Design Browser History' },
+      ] },
       { key: 'binary-tree', label: 'Binary Tree', Content: BinaryTree, children: [
         /* Foundations */
         { id: 'what-is-a-binary-tree', label: 'What Is a Binary Tree?' },
@@ -331,53 +412,10 @@ const SUBJECTS = [
         { id: 'scc-kosarajus-algorithm', label: 'SCC — Kosaraju’s Algorithm' },
         { id: 'bridges-tarjans-algorithm', label: 'Bridges — Tarjan’s Algorithm' },
         { id: 'articulation-point', label: 'Articulation Point' },
-        { id: 'patterns-and-cheat-sheet', label: 'Patterns & Cheat Sheet' },
-      ] },
-      { key: 'linked-list', label: 'Linked List', Content: LinkedList, children: [
-        /* Fundamentals */
-        { id: 'what-is-a-linked-list', label: 'What Is a Linked List?' },
-        { id: 'doubly-linked-list', label: 'Doubly Linked List' },
-        { id: 'search-an-element', label: 'Search an Element' },
-        { id: 'length-of-a-linked-list', label: 'Length of a Linked List' },
-        /* Core operations */
-        { id: 'insertion-in-a-singly-ll', label: 'Insertion in a Singly LL' },
-        { id: 'deletion-in-a-singly-ll', label: 'Deletion in a Singly LL' },
-        { id: 'insertion-in-a-dll', label: 'Insertion in a DLL' },
-        { id: 'deletion-in-a-dll', label: 'Deletion in a DLL' },
-        { id: 'reverse-a-dll', label: 'Reverse a DLL' },
-        /* Classic interview problems */
-        { id: 'add-two-numbers-as-lls', label: 'Add Two Numbers as LLs' },
-        { id: 'odd-even-linked-list', label: 'Odd Even Linked List' },
-        { id: 'sort-ll-of-0s-1s-2s', label: 'Sort LL of 0s, 1s, 2s' },
-        { id: 'remove-nth-node-from-end', label: 'Remove Nth Node From End' },
-        { id: 'reverse-a-linked-list', label: 'Reverse a Linked List' },
-        { id: 'll-palindrome-check', label: 'LL Palindrome Check' },
-        { id: 'add-1-to-a-number-as-ll', label: 'Add 1 to a Number as LL' },
-        /* Fast & slow pointers — Floyd’s technique */
-        { id: 'intersection-of-y-shaped-ll', label: 'Intersection of Y-Shaped LL' },
-        { id: 'middle-of-a-linked-list', label: 'Middle of a Linked List' },
-        { id: 'detect-a-loop-in-a-ll', label: 'Detect a Loop in a LL' },
-        { id: 'length-of-a-loop-in-a-ll', label: 'Length of a Loop in a LL' },
-        { id: 'delete-the-middle-node', label: 'Delete the Middle Node' },
-        { id: 'starting-point-of-a-loop', label: 'Starting Point of a Loop' },
-        /* Doubly linked list — specific problems */
-        { id: 'delete-all-occurrences-in-dll', label: 'Delete All Occurrences in DLL' },
-        { id: 'pairs-with-given-sum-dll', label: 'Pairs With Given Sum, DLL' },
-        { id: 'remove-duplicates-sorted-dll', label: 'Remove Duplicates, Sorted DLL' },
-        /* Merging, rotating & advanced structures */
-        { id: 'reverse-nodes-in-groups-of-k', label: 'Reverse Nodes in Groups of K' },
-        { id: 'rotate-a-linked-list', label: 'Rotate a Linked List' },
-        { id: 'merge-two-sorted-lls', label: 'Merge Two Sorted LLs' },
-        { id: 'flattening-a-linked-list', label: 'Flattening a Linked List' },
-        { id: 'merge-k-sorted-lists', label: 'Merge K Sorted Lists' },
-        { id: 'sort-a-linked-list', label: 'Sort a Linked List' },
-        { id: 'clone-ll-random-pointer', label: 'Clone LL, Random Pointer' },
-        { id: 'design-browser-history', label: 'Design Browser History' },
-        /* Wrap-up */
-        { id: 'patterns-and-cheat-sheet', label: 'Patterns & Cheat Sheet' },
       ] },
       { key: 'dsa-sheets', label: 'DSA Sheets', Content: DsaSheets, children: [
         { id: 'strivers-180', label: "Striver's 180 Master DSA Patterns" },
+        { id: 'strivers-a2z', label: "Striver's A2Z DSA Sheet" },
       ] },
     ],
   },
@@ -396,25 +434,41 @@ function NotesView() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const subject = SUBJECTS.find((s) => s.key === subjectKey) ?? SUBJECTS[0];
-  const topic = subject.children.find((t) => nodeKey(t) === topicKey) ?? subject.children[0];
-  const subtopic = topic.children.find((sub) => nodeKey(sub) === subtopicId) ?? topic.children[0];
+  // Validate subject: if provided, must match; if omitted (root '/'), default to first subject
+  const subject = subjectKey ? SUBJECTS.find((s) => s.key === subjectKey) : SUBJECTS[0];
+  const isSubjectInvalid = Boolean(subjectKey && !subject);
 
-  const activeSubjectKey = subject.key;
+  // Validate topic: if provided, must match within subject; if omitted, default to first topic
+  const topic = subject
+    ? (topicKey ? subject.children.find((t) => nodeKey(t) === topicKey) : subject.children[0])
+    : null;
+  const isTopicInvalid = Boolean(topicKey && !topic);
+
+  // Validate subtopic: if provided, must match within topic; if omitted, default to first subtopic
+  const subtopic = topic
+    ? (subtopicId ? topic.children.find((sub) => nodeKey(sub) === subtopicId) : topic.children[0])
+    : null;
+  const isSubtopicInvalid = Boolean(subtopicId && !subtopic);
+
+  const isInvalid = isSubjectInvalid || isTopicInvalid || isSubtopicInvalid;
+
+  const activeSubjectKey = subject?.key;
   const activeTopicKey = nodeKey(topic);
   const activeSubId = nodeKey(subtopic);
 
-  const canonicalPath = getCanonicalPath(activeSubjectKey, activeTopicKey, activeSubId);
+  const canonicalPath = isInvalid
+    ? ''
+    : getCanonicalPath(activeSubjectKey, activeTopicKey, activeSubId);
 
   // Keep browser URL canonical on load or if user lands on partial URL (e.g. /dsa or /)
   useEffect(() => {
-    if (location.pathname !== canonicalPath) {
+    if (!isInvalid && canonicalPath && location.pathname !== canonicalPath) {
       navigate(canonicalPath, { replace: true });
     }
-  }, [location.pathname, canonicalPath, navigate]);
+  }, [isInvalid, location.pathname, canonicalPath, navigate]);
 
-  const heading = `${topic.label} \u2014 ${subtopic.label}`;
-  const ActiveContent = topic.Content;
+  const heading = topic && subtopic ? `${topic.label} \u2014 ${subtopic.label}` : '';
+  const ActiveContent = topic?.Content;
 
   /*
    * Only the ACTIVE TOPIC is mounted, not the whole subject.
@@ -422,12 +476,17 @@ function NotesView() {
    * subtopic hands React the identical element and it skips re-rendering the
    * content subtree entirely.
    */
-  const content = useMemo(() => <ActiveContent />, [ActiveContent]);
+  const content = useMemo(() => {
+    if (!ActiveContent) return null;
+    return <ActiveContent />;
+  }, [ActiveContent]);
 
   // Sync document title with current page
   useEffect(() => {
-    document.title = `${heading} | Java Notes`;
-  }, [heading]);
+    if (!isInvalid && heading) {
+      document.title = `${heading} | Java Notes`;
+    }
+  }, [isInvalid, heading]);
 
   /*
    * Show/hide content sections based on the active subtopic. Runs as a layout
@@ -435,6 +494,7 @@ function NotesView() {
    * effect let the previous section paint first on every switch.
    */
   useLayoutEffect(() => {
+    if (isInvalid) return;
     const mainEl = document.getElementById('main');
     if (!mainEl) return;
     const children = mainEl.children;
@@ -452,7 +512,11 @@ function NotesView() {
       }
     });
     window.scrollTo(0, 0);
-  }, [ActiveContent, activeSubId]);
+  }, [isInvalid, ActiveContent, activeSubId]);
+
+  if (isInvalid) {
+    return <NotFound />;
+  }
 
   return (
     <>
@@ -552,7 +616,7 @@ export default function App() {
       <Route path="/:subjectKey" element={<NotesView />} />
       <Route path="/:subjectKey/:topicKey" element={<NotesView />} />
       <Route path="/:subjectKey/:topicKey/:subtopicId" element={<NotesView />} />
-      <Route path="*" element={<Navigate to="/" replace />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

@@ -49,6 +49,21 @@ export const ARTICLE_MAP = {
   'correct-bst-with-two-nodes-swapped': '/dsa/bst/recover-a-bst',
   'largest-bst-in-binary-tree': '/dsa/bst/largest-bst-in-a-binary-tree',
 
+  // ── Binary Search ─────────────────────────────────────────────────────────
+  'find-peak-element': '/dsa/binary-search/find-peak-element',
+  'find-minimum-in-rotated-sorted-array': '/dsa/binary-search/minimum-in-rotated-sorted-array',
+  'search-in-rotated-sorted-array-2': '/dsa/binary-search/search-rotated-sorted-array-ii',
+  'single-element-in-sorted-array': '/dsa/binary-search/single-element-in-sorted-array',
+  'search-in-2d-matrix-ii': '/dsa/binary-search/search-a-2d-matrix-ii',
+  'find-peak-element-ii': '/dsa/binary-search/find-a-peak-element-ii',
+  'find-nth-root-of-a-number': '/dsa/binary-search/nth-root-of-a-number',
+  'koko-eating-bananas': '/dsa/binary-search/koko-eating-bananas',
+  'aggressive-cows': '/dsa/binary-search/aggressive-cows',
+  'book-allocation-problem': '/dsa/binary-search/allocate-books',
+  'matrix-median': '/dsa/binary-search/median-of-a-row-wise-sorted-matrix',
+  'kth-element-of-2-sorted-arrays': '/dsa/binary-search/kth-element-of-two-sorted-arrays',
+  'median-of-2-sorted-arrays': '/dsa/binary-search/median-of-two-sorted-arrays',
+
   // ── Graphs ──────────────────────────────────────────────────────────────
   'flood-fill-algorithm': '/dsa/graph/flood-fill-algorithm',
   'number-of-islands': '/dsa/graph/number-of-islands',

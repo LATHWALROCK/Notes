@@ -1521,3 +1521,197 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-line-strong);
 }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   404 Not Found Page
+   ────────────────────────────────────────────────────────────────────────── */
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+.not-found-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.not-found-card {
+  max-width: 640px;
+  width: 100%;
+  background: var(--color-card);
+  border: 1px solid var(--color-line);
+  border-radius: 16px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+.not-found-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 14px;
+  background: rgba(139, 133, 255, 0.12);
+  border: 1px solid rgba(139, 133, 255, 0.28);
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.not-found-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 0 0 12px 0;
+  letter-spacing: -0.02em;
+}
+
+.not-found-desc {
+  font-size: 0.95rem;
+  color: var(--color-ink-muted);
+  max-width: 480px;
+  line-height: 1.55;
+  margin: 0 0 24px 0;
+}
+
+.not-found-path-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-card-alt);
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  padding: 6px 14px;
+  margin-bottom: 28px;
+  font-size: 0.85rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.not-found-path-label {
+  color: var(--color-ink-muted);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.not-found-path {
+  font-family: var(--font-mono);
+  color: var(--color-code-text);
+  word-break: break-all;
+}
+
+.not-found-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-accent);
+  color: #0B0B0C;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 9px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-card-alt);
+  color: var(--color-ink);
+  font-weight: 500;
+  font-size: 0.88rem;
+  padding: 9px 18px;
+  border: 1px solid var(--color-line);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn-secondary:hover {
+  background: var(--color-line);
+  border-color: var(--color-line-strong);
+}
+
+.not-found-quicklinks {
+  width: 100%;
+  border-top: 1px solid var(--color-line);
+  padding-top: 24px;
+  text-align: left;
+}
+
+.not-found-quicklinks-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-muted);
+  margin-bottom: 14px;
+}
+
+.not-found-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.not-found-link-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 14px;
+  background: var(--color-card-alt);
+  border: 1px solid var(--color-line);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.not-found-link-card:hover {
+  border-color: var(--color-accent);
+  background: rgba(139, 133, 255, 0.06);
+}
+
+.not-found-link-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.not-found-link-title {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.not-found-link-desc {
+  font-size: 0.75rem;
+  color: var(--color-ink-muted);
+  line-height: 1.35;
+}

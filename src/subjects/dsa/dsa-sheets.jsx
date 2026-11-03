@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback, useRef } from 'react';
-import { DSA_SHEETS } from './sheets/registry.js';
+import { getSheetById } from './sheets/registry.js';
 import { useDsaStorage } from './sheets/useDsaStorage.js';
 import { getArticleUrl } from './sheets/article-map.js';
 
@@ -126,11 +126,13 @@ const DIFFICULTY_RANKS = {
 function getProblemDifficulty(problem) {
   const lcNorm = (problem.difficultyLC || '').toLowerCase().trim();
   const gfgNorm = (problem.difficultyGFG || '').toLowerCase().trim();
+  const rawDiff = (problem.difficulty || '').toLowerCase().trim();
 
   const rankLc = DIFFICULTY_RANKS[lcNorm] || 0;
   const rankGfg = DIFFICULTY_RANKS[gfgNorm] || 0;
+  const rankRaw = DIFFICULTY_RANKS[rawDiff] || 0;
 
-  const highest = Math.max(rankLc, rankGfg);
+  const highest = Math.max(rankLc, rankGfg, rankRaw);
 
   if (highest >= 4) {
     return {
@@ -779,10 +781,16 @@ function SheetView({ sheet }) {
 }
 
 export default function DsaSheets() {
+  const strivers180 = getSheetById('strivers-180');
+  const striversA2Z = getSheetById('strivers-a2z');
+
   return (
     <>
       <div id="strivers-180" data-topic-boundary="true" />
-      <SheetView sheet={DSA_SHEETS[0]} />
+      <SheetView sheet={strivers180} />
+
+      <div id="strivers-a2z" data-topic-boundary="true" />
+      <SheetView sheet={striversA2Z} />
     </>
   );
 }
