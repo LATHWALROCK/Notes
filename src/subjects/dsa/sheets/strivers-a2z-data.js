@@ -12,7 +12,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Basic Maths",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/find-numbers-with-even-number-of-digits/",
       "gfg": "https://www.geeksforgeeks.org/problems/count-total-digits-in-a-number/1"
     },
     {
@@ -22,9 +22,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Maths",
       "pattern": "Basic Maths",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/",
+      "gfg": "https://www.geeksforgeeks.org/problems/count-odd-digits/1"
     },
     {
       "id": "reverse-a-number",
@@ -33,9 +33,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Maths",
       "pattern": "Basic Maths",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/reverse-integer/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/reverse-digit0316/1"
     },
     {
       "id": "palindrome-number",
@@ -44,9 +44,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Maths",
       "pattern": "Basic Maths",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/palindrome-number/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/palindrome0746/1"
     },
     {
       "id": "return-the-largest-digit-in-a-number",
@@ -55,9 +55,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Maths",
       "pattern": "Basic Maths",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/largest-number-after-digit-swaps-by-parity/",
+      "gfg": "https://www.geeksforgeeks.org/problems/largest-element-in-array2846/1"
     },
     {
       "id": "factorial-of-a-given-number-i",
@@ -66,9 +66,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Maths",
       "pattern": "Basic Maths",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/factorial-trailing-zeroes/",
+      "gfg": "https://www.geeksforgeeks.org/problems/factorial5739/1"
     },
     {
       "id": "check-if-the-number-if-armstrong",
@@ -77,9 +77,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Maths",
       "pattern": "Basic Maths",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/armstrong-number/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/armstrong-numbers2727/1"
     },
     {
       "id": "check-for-perfect-number",
@@ -89,7 +89,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Basic Maths",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/perfect-number/",
       "gfg": "https://www.geeksforgeeks.org/problems/perfect-numbers3207/1"
     },
     {
@@ -100,7 +100,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Basic Maths",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/count-primes/",
       "gfg": "https://www.geeksforgeeks.org/problems/prime-number2314/1"
     },
     {
@@ -110,9 +110,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Maths",
       "pattern": "Basic Maths",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/count-primes/",
+      "gfg": "https://www.geeksforgeeks.org/problems/sieve-of-eratosthenes5242/1"
     },
     {
       "id": "gcd-of-two-numbers",
@@ -121,8 +121,8 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Maths",
       "pattern": "Basic Maths",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/find-greatest-common-divisor-of-array/",
       "gfg": "https://www.geeksforgeeks.org/problems/gcd-of-two-numbers3459/1"
     },
     {
@@ -133,7 +133,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Basic Maths",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/find-greatest-common-divisor-of-array/",
       "gfg": "https://www.geeksforgeeks.org/problems/lcm-of-two-numbers/1"
     },
     {
@@ -144,7 +144,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Basic Maths",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/four-divisors/",
       "gfg": "https://www.geeksforgeeks.org/problems/all-divisors-of-a-number/1"
     },
     {
@@ -154,8 +154,8 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Arrays",
       "pattern": "Basic Arrays",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/running-sum-of-1d-array/",
       "gfg": "https://www.geeksforgeeks.org/problems/sum-all-array-elements/1"
     },
     {
@@ -165,9 +165,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Arrays",
       "pattern": "Basic Arrays",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/",
+      "gfg": "https://www.geeksforgeeks.org/problems/count-odd-even/1"
     },
     {
       "id": "check-if-the-array-is-sorted-i",
@@ -177,7 +177,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Basic Arrays",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/",
       "gfg": "https://www.geeksforgeeks.org/problems/check-if-an-array-is-sorted0701/1"
     },
     {
@@ -188,7 +188,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Basic Arrays",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/reverse-string/",
       "gfg": "https://www.geeksforgeeks.org/problems/reverse-an-array/1"
     },
     {
@@ -198,9 +198,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Hashing",
       "pattern": "Basic Hashing",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/frequency-of-the-most-frequent-element/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/maximum-frequency-character/1"
     },
     {
       "id": "second-highest-occurring-element",
@@ -209,9 +209,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Hashing",
       "pattern": "Basic Hashing",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/top-k-frequent-elements/",
+      "gfg": "https://www.geeksforgeeks.org/problems/second-most-repeated-string-in-a-sequence0534/1"
     },
     {
       "id": "sum-of-highest-and-lowest-frequency",
@@ -220,9 +220,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Hashing",
       "pattern": "Basic Hashing",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/substring-with-largest-variance/",
+      "gfg": "https://www.geeksforgeeks.org/problems/maximum-frequency-character/1"
     },
     {
       "id": "reverse-a-string-ii",
@@ -231,8 +231,8 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Strings",
       "pattern": "Basic Strings",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/reverse-string-ii/",
       "gfg": "https://www.geeksforgeeks.org/problems/reverse-a-string/1"
     },
     {
@@ -242,8 +242,8 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Strings",
       "pattern": "Basic Strings",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/valid-palindrome/",
       "gfg": "https://www.geeksforgeeks.org/problems/check-palindrome--141628/1"
     },
     {
@@ -253,9 +253,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Strings",
       "pattern": "Basic Strings",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/largest-odd-number-in-string/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/largest-odd-number-in-string/1"
     },
     {
       "id": "longest-common-prefix",
@@ -264,9 +264,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Strings",
       "pattern": "Basic Strings",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/longest-common-prefix/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/longest-common-prefix-in-an-array5129/1"
     },
     {
       "id": "isomorphic-string",
@@ -275,9 +275,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Strings",
       "pattern": "Basic Strings",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/isomorphic-strings/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/isomorphic-strings-1587115620/1"
     },
     {
       "id": "rotate-string",
@@ -286,9 +286,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Strings",
       "pattern": "Basic Strings",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/rotate-string/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/check-if-string-is-rotated-by-two-places-1587115620/1"
     },
     {
       "id": "valid-anagram",
@@ -297,9 +297,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Strings",
       "pattern": "Basic Strings",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/valid-anagram/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/anagram-1587115620/1"
     },
     {
       "id": "sort-characters-by-frequency",
@@ -308,9 +308,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Strings",
       "pattern": "Basic Strings",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/sort-characters-by-frequency/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/sorting-elements-of-an-array-by-frequency/1"
     },
     {
       "id": "sum-of-first-n-numbers",
@@ -320,7 +320,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Basic Recursion",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/sum-of-all-odd-length-subarrays/",
       "gfg": "https://www.geeksforgeeks.org/problems/recursively-sum-n-numbers/1"
     },
     {
@@ -330,9 +330,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Recursion",
       "pattern": "Basic Recursion",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/factorial-trailing-zeroes/",
+      "gfg": "https://www.geeksforgeeks.org/problems/find-all-factorial-numbers-less-than-or-equal-to-n3548/1"
     },
     {
       "id": "sum-of-array-elements-ii",
@@ -341,9 +341,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Recursion",
       "pattern": "Basic Recursion",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/running-sum-of-1d-array/",
+      "gfg": "https://www.geeksforgeeks.org/problems/sum-of-array2326/1"
     },
     {
       "id": "reverse-a-string-i",
@@ -352,9 +352,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Recursion",
       "pattern": "Basic Recursion",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/reverse-string/",
+      "gfg": "https://www.geeksforgeeks.org/problems/reverse-a-string/1"
     },
     {
       "id": "check-if-string-is-palindrome-or-not-",
@@ -363,9 +363,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Recursion",
       "pattern": "Basic Recursion",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/valid-palindrome/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/palindrome-string0817/1"
     },
     {
       "id": "check-if-a-number-is-prime-or-not",
@@ -374,9 +374,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Recursion",
       "pattern": "Basic Recursion",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/count-primes/",
+      "gfg": "https://www.geeksforgeeks.org/problems/prime-number2314/1"
     },
     {
       "id": "reverse-an-array-ii",
@@ -385,9 +385,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Recursion",
       "pattern": "Basic Recursion",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/reverse-string/",
+      "gfg": "https://www.geeksforgeeks.org/problems/reverse-an-array/1"
     },
     {
       "id": "check-if-the-array-is-sorted-ii",
@@ -396,9 +396,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Recursion",
       "pattern": "Basic Recursion",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/check-if-an-array-is-sorted0701/1"
     },
     {
       "id": "sum-of-digits-in-a-given-number",
@@ -408,7 +408,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Basic Recursion",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/add-digits/",
       "gfg": "https://www.geeksforgeeks.org/problems/sum-of-digits1742/1"
     },
     {
@@ -418,9 +418,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Recursion",
       "pattern": "Basic Recursion",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/fibonacci-number/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/nth-fibonacci-number1335/1"
     },
     {
       "id": "selection-sort",
@@ -430,7 +430,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Algorithms",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/sort-an-array/",
       "gfg": "https://www.geeksforgeeks.org/problems/selection-sort/1"
     },
     {
@@ -441,7 +441,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Algorithms",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/sort-an-array/",
       "gfg": "https://www.geeksforgeeks.org/problems/bubble-sort/1"
     },
     {
@@ -452,7 +452,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Algorithms",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/insertion-sort-list/",
       "gfg": "https://www.geeksforgeeks.org/problems/insertion-sort/1"
     },
     {
@@ -463,7 +463,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Algorithms",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/sort-an-array/",
       "gfg": "https://www.geeksforgeeks.org/problems/merge-sort/1"
     },
     {
@@ -474,7 +474,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Algorithms",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/sort-an-array/",
       "gfg": "https://www.geeksforgeeks.org/problems/quick-sort/1"
     },
     {
@@ -484,8 +484,8 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Arrays",
       "pattern": "Fundamentals",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/find-target-indices-after-sorting-array/",
       "gfg": "https://www.geeksforgeeks.org/problems/who-will-win-1587115621/1"
     },
     {
@@ -495,9 +495,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Arrays",
       "pattern": "Fundamentals",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/third-maximum-number/",
+      "gfg": "https://www.geeksforgeeks.org/problems/largest-element-in-array2846/1"
     },
     {
       "id": "second-largest-element",
@@ -507,7 +507,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Fundamentals",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/third-maximum-number/",
       "gfg": "https://www.geeksforgeeks.org/problems/second-largest3735/1"
     },
     {
@@ -517,9 +517,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Arrays",
       "pattern": "Fundamentals",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/max-consecutive-ones/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/maximum-consecutive-ones/1"
     },
     {
       "id": "left-rotate-array-by-one",
@@ -528,9 +528,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Arrays",
       "pattern": "Fundamentals",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/rotate-array/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/quick-left-rotation3806/1"
     },
     {
       "id": "left-rotate-array",
@@ -539,9 +539,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Arrays",
       "pattern": "Fundamentals",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/rotate-array/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/rotate-array-by-n-elements-1587115621/1"
     },
     {
       "id": "move-zeros-to-end",
@@ -550,9 +550,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Arrays",
       "pattern": "Logic Building",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/move-zeroes/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/move-all-zeroes-to-end-of-array0751/1"
     },
     {
       "id": "remove-duplicates-from-sorted-array",
@@ -561,9 +561,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Arrays",
       "pattern": "Logic Building",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/remove-duplicate-elements-from-sorted-array/1"
     },
     {
       "id": "find-missing-number",
@@ -572,9 +572,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Arrays",
       "pattern": "Logic Building",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/missing-number/",
+      "gfg": "https://www.geeksforgeeks.org/problems/missing-number-in-array1416/1"
     },
     {
       "id": "union-of-two-sorted-arrays",
@@ -584,7 +584,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Logic Building",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/intersection-of-two-arrays/",
       "gfg": "https://www.geeksforgeeks.org/problems/union-of-two-sorted-arrays-1587115621/1"
     },
     {
@@ -595,7 +595,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Logic Building",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/intersection-of-two-arrays-ii/",
       "gfg": "https://www.geeksforgeeks.org/problems/intersection-of-two-sorted-array-1587115620/1"
     },
     {
@@ -617,7 +617,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "FAQs(Medium)",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/",
       "gfg": "https://www.geeksforgeeks.org/problems/leaders-in-an-array-1587115620/1"
     },
     {
@@ -627,9 +627,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Arrays",
       "pattern": "FAQs(Medium)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/rearrange-array-elements-by-sign/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/array-of-alternate-ve-and-ve-nos1401/1"
     },
     {
       "id": "print-the-matrix-in-spiral-manner",
@@ -638,9 +638,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Arrays",
       "pattern": "FAQs(Medium)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/spiral-matrix/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/spirally-traversing-a-matrix-1587115621/1"
     },
     {
       "id": "pascals-triangle-i",
@@ -649,9 +649,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Arrays",
       "pattern": "FAQs(Medium)",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/pascals-triangle/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/pascal-triangle0652/1"
     },
     {
       "id": "pascals-triangle-ii",
@@ -661,7 +661,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "FAQs(Medium)",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/pascals-triangle-ii/",
       "gfg": "https://www.geeksforgeeks.org/problems/pascal-triangle0652/1"
     },
     {
@@ -671,9 +671,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Arrays",
       "pattern": "FAQs(Medium)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/pascals-triangle/",
+      "gfg": "https://www.geeksforgeeks.org/problems/pascal-triangle0652/1"
     },
     {
       "id": "rotate-matrix-by-90-degrees",
@@ -682,9 +682,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Arrays",
       "pattern": "FAQs(Medium)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/rotate-image/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/rotate-by-90-degree-1587115621/1"
     },
     {
       "id": "set-matrix-zeroes",
@@ -693,9 +693,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Arrays",
       "pattern": "FAQs(Medium)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/set-matrix-zeroes/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/set-matrix-zeroes/1"
     },
     {
       "id": "two-sum",
@@ -749,7 +749,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "FAQs(Medium)",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/maximum-subarray/",
       "gfg": "https://www.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1"
     },
     {
@@ -782,7 +782,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "FAQs(Hard)",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/set-mismatch/",
       "gfg": "https://www.geeksforgeeks.org/problems/find-missing-and-repeating2512/1"
     },
     {
@@ -793,7 +793,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "FAQs(Hard)",
       "difficultyLC": "Medium",
       "difficultyGFG": "Hard",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/global-and-local-inversions/",
       "gfg": "https://www.geeksforgeeks.org/problems/inversion-of-array-1587115620/1"
     },
     {
@@ -859,7 +859,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "FAQs",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/contiguous-array/",
       "gfg": "https://www.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1"
     },
     {
@@ -881,7 +881,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "FAQs",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/subarray-sum-equals-k/",
       "gfg": "https://www.geeksforgeeks.org/problems/count-subarray-with-given-xor/1"
     },
     {
@@ -891,9 +891,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search",
       "pattern": "Fundamentals",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/binary-search/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/binary-search-1587115620/1"
     },
     {
       "id": "lower-bound-",
@@ -903,7 +903,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Fundamentals",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/search-insert-position/",
       "gfg": "https://www.geeksforgeeks.org/problems/implement-lower-bound/1"
     },
     {
@@ -914,7 +914,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Fundamentals",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/search-insert-position/",
       "gfg": "https://www.geeksforgeeks.org/problems/implement-upper-bound/1"
     },
     {
@@ -924,9 +924,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search",
       "pattern": "Logic Building",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/search-insert-position/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/search-insert-position-of-k-in-a-sorted-array/1"
     },
     {
       "id": "floor-and-ceil-in-sorted-array",
@@ -935,9 +935,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search",
       "pattern": "Logic Building",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/search-insert-position/",
+      "gfg": "https://www.geeksforgeeks.org/problems/ceil-the-floor2832/1"
     },
     {
       "id": "first-and-last-occurrence",
@@ -946,9 +946,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search",
       "pattern": "Logic Building",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/first-and-last-occurrences-of-x3116/1"
     },
     {
       "id": "search-in-rotated-sorted-array-i",
@@ -957,9 +957,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search",
       "pattern": "Logic Building",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/search-in-a-rotated-array4618/1"
     },
     {
       "id": "search-in-rotated-sorted-array-2",
@@ -990,9 +990,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search",
       "pattern": "Logic Building",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+      "gfg": "https://www.geeksforgeeks.org/problems/rotation4723/1"
     },
     {
       "id": "single-element-in-sorted-array",
@@ -1013,7 +1013,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "On answers",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/sqrtx/",
       "gfg": "https://www.geeksforgeeks.org/problems/square-root/1"
     },
     {
@@ -1024,7 +1024,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "On answers",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/sqrtx/",
       "gfg": "https://www.geeksforgeeks.org/problems/find-nth-root-of-m5843/1"
     },
     {
@@ -1034,9 +1034,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search",
       "pattern": "On answers",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/smallest-divisor/1"
     },
     {
       "id": "koko-eating-bananas",
@@ -1056,9 +1056,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search",
       "pattern": "On answers",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/minimum-days-to-make-m-bouquets/1"
     },
     {
       "id": "capacity-to-ship-packages-within-d-days",
@@ -1067,9 +1067,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search",
       "pattern": "On answers",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/capacity-to-ship-packages-within-d-days/1"
     },
     {
       "id": "kth-missing-positive-number",
@@ -1078,9 +1078,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search",
       "pattern": "On answers",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/kth-missing-positive-number/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/kth-missing-positive-number-in-a-sorted-array/1"
     },
     {
       "id": "painters-partition",
@@ -1090,7 +1090,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "On answers",
       "difficultyLC": "Hard",
       "difficultyGFG": "Hard",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/split-array-largest-sum/",
       "gfg": "https://www.geeksforgeeks.org/problems/the-painters-partition-problem1535/1"
     },
     {
@@ -1101,7 +1101,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "FAQs",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/magnetic-force-between-two-balls/",
       "gfg": "https://www.geeksforgeeks.org/problems/aggressive-cows/1"
     },
     {
@@ -1111,9 +1111,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search",
       "pattern": "FAQs",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/split-array-largest-sum/",
+      "gfg": "https://www.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1"
     },
     {
       "id": "find-peak-element",
@@ -1144,9 +1144,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search",
       "pattern": "FAQs",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+      "gfg": "https://www.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1"
     },
     {
       "id": "minimise-max-distance-to-gas-stations",
@@ -1155,9 +1155,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search",
       "pattern": "FAQs",
       "difficultyLC": "Hard",
-      "difficultyGFG": null,
+      "difficultyGFG": "Hard",
       "leetcode": "https://leetcode.com/problems/minimize-max-distance-to-gas-station/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/minimize-max-distance-to-gas-station/1"
     },
     {
       "id": "split-array---largest-sum",
@@ -1177,9 +1177,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search",
       "pattern": "2D Arrays",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/row-with-maximum-ones/",
+      "gfg": "https://www.geeksforgeeks.org/problems/row-with-max-1s0023/1"
     },
     {
       "id": "search-in-a-2d-matrix",
@@ -1188,9 +1188,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search",
       "pattern": "2D Arrays",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/search-a-2d-matrix/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/search-in-a-matrix-1587115621/1"
     },
     {
       "id": "search-in-2d-matrix-ii",
@@ -1210,9 +1210,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search",
       "pattern": "2D Arrays",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/find-a-peak-element-ii/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/find-the-peak-element-in-a-2d-matrix/1"
     },
     {
       "id": "matrix-median",
@@ -1222,7 +1222,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "2D Arrays",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
       "gfg": "https://www.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1"
     },
     {
@@ -1232,9 +1232,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Recursion",
       "pattern": "Implementation Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/powx-n/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/power-of-numbers-1587115620/1"
     },
     {
       "id": "generate-parentheses",
@@ -1254,9 +1254,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Recursion",
       "pattern": "Implementation Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/subsets/",
+      "gfg": "https://www.geeksforgeeks.org/problems/power-set4302/1"
     },
     {
       "id": "check-if-there-exists-a-subsequence-with-sum-k",
@@ -1265,9 +1265,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Recursion",
       "pattern": "Subsequence Pattern Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/subarray-sum-equals-k/",
+      "gfg": "https://www.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1"
     },
     {
       "id": "count-all-subsequences-with-sum-k",
@@ -1276,9 +1276,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Recursion",
       "pattern": "Subsequence Pattern Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/subarray-sum-equals-k/",
+      "gfg": "https://www.geeksforgeeks.org/problems/perfect-sum-problem5633/1"
     },
     {
       "id": "combination-sum",
@@ -1310,7 +1310,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "FAQs (Medium)",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/subsets/",
       "gfg": "https://www.geeksforgeeks.org/problems/subset-sums2234/1"
     },
     {
@@ -1331,9 +1331,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Recursion",
       "pattern": "FAQs (Medium)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/combination-sum-iii/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/combination-sum-iii/1"
     },
     {
       "id": "letter-combinations-of-a-phone-number",
@@ -1387,7 +1387,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "FAQs (Hard)",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/unique-paths-iii/",
       "gfg": "https://www.geeksforgeeks.org/problems/rat-in-a-maze-problem/1"
     },
     {
@@ -1398,7 +1398,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "FAQs (Hard)",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/flower-planting-with-no-adjacent/",
       "gfg": "https://www.geeksforgeeks.org/problems/m-coloring-problem-1587115620/1"
     },
     {
@@ -1419,8 +1419,8 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "Fundamentals (Single LL)",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/middle-of-the-linked-list/",
       "gfg": "https://www.geeksforgeeks.org/problems/linkedlist-traversal/1"
     },
     {
@@ -1430,9 +1430,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "Fundamentals (Single LL)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/delete-node-in-a-linked-list/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/delete-a-node-in-single-linked-list/1"
     },
     {
       "id": "deletion-of-the-tail-of-ll",
@@ -1442,7 +1442,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Fundamentals (Single LL)",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/delete-node-in-a-linked-list/",
       "gfg": "https://www.geeksforgeeks.org/problems/deletion-at-the-end-of-a-linked-list/1"
     },
     {
@@ -1452,9 +1452,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "Fundamentals (Single LL)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+      "gfg": "https://www.geeksforgeeks.org/problems/delete-a-node-in-single-linked-list/1"
     },
     {
       "id": "delete-the-element-with-value-x",
@@ -1463,9 +1463,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "Fundamentals (Single LL)",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/remove-linked-list-elements/",
+      "gfg": "https://www.geeksforgeeks.org/problems/delete-a-node-in-single-linked-list/1"
     },
     {
       "id": "insertion-at-the-head-of-ll",
@@ -1474,9 +1474,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "Fundamentals (Single LL)",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/design-linked-list/",
+      "gfg": "https://www.geeksforgeeks.org/problems/linked-list-insertion-1587115620/1"
     },
     {
       "id": "insertion-at-the-tail-of-ll",
@@ -1485,8 +1485,8 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "Fundamentals (Single LL)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/design-linked-list/",
       "gfg": "https://www.geeksforgeeks.org/problems/linked-list-insertion-1587115620/1"
     },
     {
@@ -1496,9 +1496,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "Fundamentals (Single LL)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/design-linked-list/",
+      "gfg": "https://www.geeksforgeeks.org/problems/linked-list-insertion-1587115620/1"
     },
     {
       "id": "insertion-before-the-value-x-in-ll",
@@ -1507,9 +1507,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "Fundamentals (Single LL)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/design-linked-list/",
+      "gfg": "https://www.geeksforgeeks.org/problems/linked-list-insertion-1587115620/1"
     },
     {
       "id": "convert-array-to-dll",
@@ -1519,7 +1519,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Fundamentals (Doubly LL)",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/",
       "gfg": "https://www.geeksforgeeks.org/problems/create-a-doubly-linked-list-from-a-given-array/1"
     },
     {
@@ -1529,9 +1529,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "Fundamentals (Doubly LL)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/design-linked-list/",
+      "gfg": "https://www.geeksforgeeks.org/problems/delete-node-in-doubly-linked-list/1"
     },
     {
       "id": "delete-kth-element-of-dll",
@@ -1540,9 +1540,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "Fundamentals (Doubly LL)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/design-linked-list/",
+      "gfg": "https://www.geeksforgeeks.org/problems/delete-node-in-doubly-linked-list/1"
     },
     {
       "id": "removing-given-node-in-dll",
@@ -1551,9 +1551,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "Fundamentals (Doubly LL)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/delete-node-in-a-linked-list/",
+      "gfg": "https://www.geeksforgeeks.org/problems/delete-node-in-doubly-linked-list/1"
     },
     {
       "id": "insert-node-before-head-in-dll",
@@ -1562,9 +1562,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "Fundamentals (Doubly LL)",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/design-linked-list/",
+      "gfg": "https://www.geeksforgeeks.org/problems/insert-a-node-in-doubly-linked-list/1"
     },
     {
       "id": "insert-node-before-tail-in-dll",
@@ -1573,9 +1573,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "Fundamentals (Doubly LL)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/design-linked-list/",
+      "gfg": "https://www.geeksforgeeks.org/problems/insert-a-node-in-doubly-linked-list/1"
     },
     {
       "id": "insert-node-before-kth-node-in-dll",
@@ -1584,9 +1584,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "Fundamentals (Doubly LL)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/design-linked-list/",
+      "gfg": "https://www.geeksforgeeks.org/problems/insert-a-node-in-doubly-linked-list/1"
     },
     {
       "id": "insert-before-given-node-in-dll",
@@ -1595,9 +1595,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "Fundamentals (Doubly LL)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/design-linked-list/",
+      "gfg": "https://www.geeksforgeeks.org/problems/insert-a-node-in-doubly-linked-list/1"
     },
     {
       "id": "add-two-numbers-in-ll",
@@ -1606,9 +1606,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "Logic Building",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/add-two-numbers/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/add-two-numbers-represented-by-linked-lists/1"
     },
     {
       "id": "segregate-odd-and-even-nodes-in-ll",
@@ -1617,9 +1617,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "Logic Building",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/odd-even-linked-list/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/segregate-even-and-odd-nodes-in-a-linked-list5035/1"
     },
     {
       "id": "sort-a-ll-of-0s-1s-and-2s",
@@ -1629,7 +1629,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Logic Building",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/sort-colors/",
       "gfg": "https://www.geeksforgeeks.org/problems/given-a-linked-list-of-0s-1s-and-2s-sort-it/1"
     },
     {
@@ -1661,9 +1661,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "FAQs (Medium)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/plus-one-linked-list/",
+      "gfg": "https://www.geeksforgeeks.org/problems/add-1-to-a-number-represented-as-linked-list/1"
     },
     {
       "id": "find-middle-of-linked-list",
@@ -1683,9 +1683,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "FAQs (Medium)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/delete-middle-of-linked-list/1"
     },
     {
       "id": "check-if-ll-is-palindrome-or-not",
@@ -1738,9 +1738,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "FAQs (Medium)",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/linked-list-cycle-ii/",
+      "gfg": "https://www.geeksforgeeks.org/problems/find-length-of-loop/1"
     },
     {
       "id": "reverse-ll-in-group-of-given-size-k",
@@ -1771,9 +1771,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Linked List",
       "pattern": "FAQs (Hard)",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/merge-two-sorted-lists/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/merge-two-sorted-linked-lists/1"
     },
     {
       "id": "flattening-of-ll",
@@ -1816,7 +1816,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "FAQS (DLL)",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/remove-linked-list-elements/",
       "gfg": "https://www.geeksforgeeks.org/problems/delete-all-occurrences-of-a-given-key-in-a-doubly-linked-list/1"
     },
     {
@@ -1827,7 +1827,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "FAQS (DLL)",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/remove-duplicates-from-sorted-list/",
       "gfg": "https://www.geeksforgeeks.org/problems/remove-duplicates-from-a-sorted-doubly-linked-list/1"
     },
     {
@@ -1838,7 +1838,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "FAQS (DLL)",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
       "gfg": "https://www.geeksforgeeks.org/problems/find-pairs-with-given-sum-in-doubly-linked-list/1"
     },
     {
@@ -1848,9 +1848,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Bit Manipulation",
       "pattern": "Problems",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/minimum-bit-flips-to-convert-number/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/bit-difference-1587115620/1"
     },
     {
       "id": "single-number---i",
@@ -1859,9 +1859,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Bit Manipulation",
       "pattern": "Problems",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/single-number/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/single-number1014/1"
     },
     {
       "id": "single-number---ii",
@@ -1870,9 +1870,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Bit Manipulation",
       "pattern": "Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/single-number-ii/",
+      "gfg": "https://www.geeksforgeeks.org/problems/find-element-occuring-once-when-all-other-present-thrice/1"
     },
     {
       "id": "single-number---iii",
@@ -1881,9 +1881,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Bit Manipulation",
       "pattern": "Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/single-number-iii/",
+      "gfg": "https://www.geeksforgeeks.org/problems/two-numbers-with-odd-occurrences5846/1"
     },
     {
       "id": "divide-two-numbers-without-multiplication-and-division",
@@ -1892,9 +1892,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Bit Manipulation",
       "pattern": "Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/divide-two-integers/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/division-without-using-multiplication-division-and-mod-operator/1"
     },
     {
       "id": "power-set-bit-manipulation",
@@ -1915,7 +1915,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Problems",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/xor-operation-in-an-array/",
       "gfg": "https://www.geeksforgeeks.org/problems/find-xor-of-numbers-from-l-to-r/1"
     },
     {
@@ -1925,9 +1925,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Greedy Algorithms",
       "pattern": "Easy",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/assign-cookies/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/assign-cookies/1"
     },
     {
       "id": "lemonade-change",
@@ -1936,9 +1936,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Greedy Algorithms",
       "pattern": "Easy",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/lemonade-change/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/lemonade-change/1"
     },
     {
       "id": "fractional-knapsack",
@@ -1948,7 +1948,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Easy",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/maximum-units-on-a-truck/",
       "gfg": "https://www.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1"
     },
     {
@@ -1958,9 +1958,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Greedy Algorithms",
       "pattern": "Easy",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/jump-game/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/jump-game/1"
     },
     {
       "id": "shortest-job-first",
@@ -1970,7 +1970,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Scheduling and Interval Problems",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/single-threaded-cpu/",
       "gfg": "https://www.geeksforgeeks.org/problems/shortest-job-first/1"
     },
     {
@@ -1981,7 +1981,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Scheduling and Interval Problems",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/maximum-profit-in-job-scheduling/",
       "gfg": "https://www.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1"
     },
     {
@@ -1992,7 +1992,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Scheduling and Interval Problems",
       "difficultyLC": "Medium",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/non-overlapping-intervals/",
       "gfg": "https://www.geeksforgeeks.org/problems/maximum-meetings-in-one-room/1"
     },
     {
@@ -2024,9 +2024,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Greedy Algorithms",
       "pattern": "Scheduling and Interval Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/merge-intervals/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/overlapping-intervals--170633/1"
     },
     {
       "id": "minimum-number-of-platforms-required-for-a-railway",
@@ -2035,9 +2035,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Greedy Algorithms",
       "pattern": "Scheduling and Interval Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/meeting-rooms-ii/",
+      "gfg": "https://www.geeksforgeeks.org/problems/minimum-platforms-1587115620/1"
     },
     {
       "id": "valid-paranthesis-checker",
@@ -2046,9 +2046,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Greedy Algorithms",
       "pattern": "Hard",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/valid-parenthesis-string/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/parenthesis-checker2744/1"
     },
     {
       "id": "candy",
@@ -2057,9 +2057,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Greedy Algorithms",
       "pattern": "Hard",
       "difficultyLC": "Hard",
-      "difficultyGFG": null,
+      "difficultyGFG": "Hard",
       "leetcode": "https://leetcode.com/problems/candy/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/candy/1"
     },
     {
       "id": "jump-game-ii",
@@ -2068,9 +2068,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Greedy Algorithms",
       "pattern": "Hard",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/jump-game-ii/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/minimum-number-of-jumps-1587115620/1"
     },
     {
       "id": "maximum-points-you-can-obtain-from-cards",
@@ -2079,9 +2079,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Sliding Window & Two Pointers",
       "pattern": "Constant Window",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/maximum-point-you-can-obtain-from-cards/1"
     },
     {
       "id": "longest-substring-without-repeating-characters",
@@ -2112,9 +2112,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Sliding Window & Two Pointers",
       "pattern": "Longest and Smallest Window Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/fruit-into-baskets/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/fruit-into-baskets-1663137462/1"
     },
     {
       "id": "longest-substring-with-at-most-k-distinct-characters",
@@ -2134,9 +2134,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Sliding Window & Two Pointers",
       "pattern": "Longest and Smallest Window Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/longest-repeating-character-replacement/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/longest-repeating-character-replacement/1"
     },
     {
       "id": "minimum-window-substring",
@@ -2167,9 +2167,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Sliding Window & Two Pointers",
       "pattern": "Counting Subarrays / Substrings Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/binary-subarrays-with-sum/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/binary-subarray-with-sum/1"
     },
     {
       "id": "count-number-of-nice-subarrays",
@@ -2189,9 +2189,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Sliding Window & Two Pointers",
       "pattern": "Counting Subarrays / Substrings Problems",
       "difficultyLC": "Hard",
-      "difficultyGFG": null,
+      "difficultyGFG": "Hard",
       "leetcode": "https://leetcode.com/problems/subarrays-with-k-different-integers/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/subarrays-with-k-different-integers/1"
     },
     {
       "id": "implement-stack-using-arrays",
@@ -2201,7 +2201,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Implementation",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/implement-stack-using-queues/",
       "gfg": "https://www.geeksforgeeks.org/problems/implement-stack-using-array/1"
     },
     {
@@ -2211,8 +2211,8 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Stack & Queue",
       "pattern": "Implementation",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/implement-queue-using-stacks/",
       "gfg": "https://www.geeksforgeeks.org/problems/implement-queue-using-array/1"
     },
     {
@@ -2222,9 +2222,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Stack & Queue",
       "pattern": "Implementation",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/implement-stack-using-queues/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/stack-using-two-queues/1"
     },
     {
       "id": "implement-queue-using-stack",
@@ -2233,9 +2233,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Stack & Queue",
       "pattern": "Implementation",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/implement-queue-using-stacks/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/queue-using-two-stacks/1"
     },
     {
       "id": "implement-stack-using-linkedlist",
@@ -2244,9 +2244,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Stack & Queue",
       "pattern": "Implementation",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/implement-stack-using-queues/",
+      "gfg": "https://www.geeksforgeeks.org/problems/implement-stack-using-linked-list/1"
     },
     {
       "id": "implement-queue-using-linkedlist",
@@ -2255,9 +2255,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Stack & Queue",
       "pattern": "Implementation",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/implement-queue-using-stacks/",
+      "gfg": "https://www.geeksforgeeks.org/problems/implement-queue-using-linked-list/1"
     },
     {
       "id": "balanced-paranthesis",
@@ -2266,9 +2266,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Stack & Queue",
       "pattern": "Implementation",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/valid-parentheses/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/parenthesis-checker2744/1"
     },
     {
       "id": "next-greater-element",
@@ -2288,9 +2288,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Stack & Queue",
       "pattern": "Monotonic Stack",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/next-greater-element-ii/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/next-greater-element-2/1"
     },
     {
       "id": "asteroid-collision",
@@ -2310,9 +2310,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Stack & Queue",
       "pattern": "Monotonic Stack",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/sum-of-subarray-minimums/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/sum-of-subarray-minimum/1"
     },
     {
       "id": "sum-of-subarray-ranges",
@@ -2321,9 +2321,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Stack & Queue",
       "pattern": "Monotonic Stack",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/sum-of-subarray-ranges/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/sum-of-subarray-ranges/1"
     },
     {
       "id": "remove-k-digits",
@@ -2442,9 +2442,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "Theory/Traversals",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/inorder-traversal/1"
     },
     {
       "id": "preorder-traversal",
@@ -2453,9 +2453,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "Theory/Traversals",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/binary-tree-preorder-traversal/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/preorder-traversal/1"
     },
     {
       "id": "postorder-traversal",
@@ -2464,9 +2464,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "Theory/Traversals",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/binary-tree-postorder-traversal/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/postorder-traversal/1"
     },
     {
       "id": "level-order-traversal",
@@ -2486,9 +2486,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "Theory/Traversals",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+      "gfg": "https://www.geeksforgeeks.org/problems/inorder-traversal/1"
     },
     {
       "id": "maximum-depth-in-bt",
@@ -2497,9 +2497,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "Medium Problems",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/height-of-binary-tree/1"
     },
     {
       "id": "check-if-two-trees-are-identical-or-not",
@@ -2508,9 +2508,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "Medium Problems",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/same-tree/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/determine-if-two-trees-are-identical/1"
     },
     {
       "id": "check-for-balanced-binary-tree",
@@ -2519,9 +2519,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "Medium Problems",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/balanced-binary-tree/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/check-for-balanced-tree/1"
     },
     {
       "id": "diameter-of-binary-tree",
@@ -2530,9 +2530,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "Medium Problems",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/diameter-of-binary-tree/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/diameter-of-binary-tree/1"
     },
     {
       "id": "maximum-path-sum",
@@ -2552,9 +2552,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "Medium Problems",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/symmetric-tree/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/symmetric-tree/1"
     },
     {
       "id": "children-sum-property-in-binary-tree",
@@ -2564,7 +2564,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Medium Problems",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/root-equals-sum-of-children/",
       "gfg": "https://www.geeksforgeeks.org/problems/children-sum-parent/1"
     },
     {
@@ -2574,9 +2574,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "FAQs",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/zigzag-tree-traversal/1"
     },
     {
       "id": "boundary-traversal",
@@ -2608,7 +2608,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "FAQs",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/",
       "gfg": "https://www.geeksforgeeks.org/problems/top-view-of-binary-tree/1"
     },
     {
@@ -2619,7 +2619,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "FAQs",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/",
       "gfg": "https://www.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1"
     },
     {
@@ -2641,7 +2641,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "FAQs",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/binary-tree-paths/",
       "gfg": "https://www.geeksforgeeks.org/problems/root-to-leaf-paths/1"
     },
     {
@@ -2651,9 +2651,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "FAQs",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-binary-tree/1"
     },
     {
       "id": "maximum-width-of-bt",
@@ -2684,9 +2684,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "FAQs",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Hard",
+      "leetcode": "https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/",
+      "gfg": "https://www.geeksforgeeks.org/problems/burning-tree/1"
     },
     {
       "id": "count-total-nodes-in-a-complete-bt",
@@ -2695,9 +2695,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "FAQs",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/count-complete-tree-nodes/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/count-number-of-nodes-in-a-binary-tree/1"
     },
     {
       "id": "flatten-binary-tree-to-linked-list",
@@ -2706,9 +2706,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "FAQs",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/flatten-binary-tree-to-linked-list/1"
     },
     {
       "id": "requirements-needed-to-construct-a-unique-bt",
@@ -2717,9 +2717,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "Construction Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+      "gfg": "https://www.geeksforgeeks.org/problems/unique-binary-tree-requirements/1"
     },
     {
       "id": "construct-a-bt-from-preorder-and-inorder",
@@ -2728,9 +2728,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "Construction Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/construct-tree-1/1"
     },
     {
       "id": "construct-a-bt-from-postorder-and-inorder",
@@ -2739,9 +2739,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "Construction Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/tree-from-postorder-and-inorder/1"
     },
     {
       "id": "serialize-and-de-serialize-bt",
@@ -2750,9 +2750,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "Construction Problems",
       "difficultyLC": "Hard",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/serialize-and-deserialize-a-binary-tree/1"
     },
     {
       "id": "morris-inorder-traversal-",
@@ -2761,9 +2761,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "Traversal in Constant Space",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/inorder-traversal/1"
     },
     {
       "id": "morris-preorder-traversal-",
@@ -2772,9 +2772,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Trees",
       "pattern": "Traversal in Constant Space",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/preorder-traversal/1"
     },
     {
       "id": "search-in-bst",
@@ -2783,9 +2783,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search Trees",
       "pattern": "Theory and Basics",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/search-in-a-binary-search-tree/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/search-a-node-in-bst/1"
     },
     {
       "id": "floor-and-ceil-in-a-bst",
@@ -2794,9 +2794,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search Trees",
       "pattern": "Theory and Basics",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/closest-binary-search-tree-value/",
+      "gfg": "https://www.geeksforgeeks.org/problems/floor-in-bst/1"
     },
     {
       "id": "insert-a-given-node-in-bst",
@@ -2882,9 +2882,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search Trees",
       "pattern": "FAQs",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/binary-search-tree-iterator/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/binary-search-tree-iterator/1"
     },
     {
       "id": "two-sum-in-bst",
@@ -2915,9 +2915,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Binary Search Trees",
       "pattern": "FAQs",
       "difficultyLC": "Hard",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/largest-bst/1"
     },
     {
       "id": "heapify-algorithm",
@@ -2927,7 +2927,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Theory and Implementation",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/sort-an-array/",
       "gfg": "https://www.geeksforgeeks.org/problems/heap-sort/1"
     },
     {
@@ -2938,7 +2938,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Theory and Implementation",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
       "gfg": "https://www.geeksforgeeks.org/problems/heapify-the-vector--102013/1"
     },
     {
@@ -2949,7 +2949,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Theory and Implementation",
       "difficultyLC": "Easy",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
       "gfg": "https://www.geeksforgeeks.org/problems/min-heap-implementation/1"
     },
     {
@@ -2960,7 +2960,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Theory and Implementation",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
       "gfg": "https://www.geeksforgeeks.org/problems/max-heap-implementation/1"
     },
     {
@@ -2970,9 +2970,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Heaps",
       "pattern": "Theory and Implementation",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+      "gfg": "https://www.geeksforgeeks.org/problems/does-array-represent-heap4345/1"
     },
     {
       "id": "convert-min-heap-to-max-heap",
@@ -2981,9 +2981,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Heaps",
       "pattern": "Theory and Implementation",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+      "gfg": "https://www.geeksforgeeks.org/problems/convert-min-heap-to-max-heap/1"
     },
     {
       "id": "heap-sort",
@@ -2993,7 +2993,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Theory and Implementation",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/sort-an-array/",
       "gfg": "https://www.geeksforgeeks.org/problems/heap-sort/1"
     },
     {
@@ -3003,9 +3003,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Heaps",
       "pattern": "Theory and Implementation",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/k-largest-elements3736/1"
     },
     {
       "id": "kth-largest-element-in-a-stream-of-running-integers",
@@ -3014,9 +3014,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Heaps",
       "pattern": "FAQs",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/kth-largest-element-in-a-stream2220/1"
     },
     {
       "id": "traversal-techniques",
@@ -3025,9 +3025,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Graphs",
       "pattern": "Theory and traversals",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/clone-graph/",
+      "gfg": "https://www.geeksforgeeks.org/problems/bfs-traversal-of-graph/1"
     },
     {
       "id": "connected-components",
@@ -3037,7 +3037,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Theory and traversals",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/number-of-provinces/",
       "gfg": "https://www.geeksforgeeks.org/problems/number-of-provinces/1"
     },
     {
@@ -3047,9 +3047,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Graphs",
       "pattern": "Traversal Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/number-of-provinces/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/number-of-provinces/1"
     },
     {
       "id": "number-of-islands",
@@ -3080,9 +3080,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Graphs",
       "pattern": "Traversal Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/number-of-enclaves/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/number-of-enclaves/1"
     },
     {
       "id": "rotten-oranges",
@@ -3158,7 +3158,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Cycles",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/course-schedule-ii/",
       "gfg": "https://www.geeksforgeeks.org/problems/topological-sort/1"
     },
     {
@@ -3179,9 +3179,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Graphs",
       "pattern": "Hard Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/find-eventual-safe-states/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/eventual-safe-states/1"
     },
     {
       "id": "course-schedule-i",
@@ -3212,9 +3212,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Graphs",
       "pattern": "Hard Problems",
       "difficultyLC": "Hard",
-      "difficultyGFG": null,
+      "difficultyGFG": "Hard",
       "leetcode": "https://leetcode.com/problems/alien-dictionary/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/alien-dictionary/1"
     },
     {
       "id": "shortest-path-in-dag",
@@ -3224,7 +3224,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Hard Problems",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
       "gfg": "https://www.geeksforgeeks.org/problems/shortest-path-in-directed-acyclic-graph/1"
     },
     {
@@ -3234,9 +3234,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Graphs",
       "pattern": "Hard Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/shortest-path-in-binary-matrix/",
+      "gfg": "https://www.geeksforgeeks.org/problems/shortest-path-in-undirected-graph-having-unit-distance/1"
     },
     {
       "id": "word-ladder-i",
@@ -3268,7 +3268,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Shortest Path Algorithms",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/network-delay-time/",
       "gfg": "https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1"
     },
     {
@@ -3279,7 +3279,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Shortest Path Algorithms",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/shortest-path-to-get-all-keys/",
       "gfg": "https://www.geeksforgeeks.org/problems/shortest-path-in-undirected-graph-having-unit-distance/1"
     },
     {
@@ -3289,9 +3289,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Graphs",
       "pattern": "Shortest Path Algorithms",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/shortest-path-in-binary-matrix/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/shortest-path-in-a-binary-maze-1655453161/1"
     },
     {
       "id": "path-with-minimum-effort",
@@ -3323,7 +3323,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Shortest Path Algorithms",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/minimum-genetic-mutation/",
       "gfg": "https://www.geeksforgeeks.org/problems/minimum-multiplications-to-reach-end/1"
     },
     {
@@ -3333,9 +3333,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Graphs",
       "pattern": "Shortest Path Algorithms",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/number-of-ways-to-arrive-at-destination/1"
     },
     {
       "id": "bellman-ford-algorithm",
@@ -3345,7 +3345,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Shortest Path Algorithms",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
       "gfg": "https://www.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/1"
     },
     {
@@ -3356,7 +3356,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Shortest Path Algorithms",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/",
       "gfg": "https://www.geeksforgeeks.org/problems/implementing-floyd-warshall2042/1"
     },
     {
@@ -3366,9 +3366,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Graphs",
       "pattern": "Shortest Path Algorithms",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/1"
     },
     {
       "id": "disjoint-set-",
@@ -3378,7 +3378,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Minimum Spanning Tree",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/redundant-connection/",
       "gfg": "https://www.geeksforgeeks.org/problems/disjoint-set-union-find/1"
     },
     {
@@ -3388,9 +3388,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Graphs",
       "pattern": "Minimum Spanning Tree",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/min-cost-to-connect-all-points/",
+      "gfg": "https://www.geeksforgeeks.org/problems/minimum-spanning-tree/1"
     },
     {
       "id": "number-of-operations-to-make-network-connected",
@@ -3399,9 +3399,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Graphs",
       "pattern": "Hard Problems II",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/number-of-operations-to-make-network-connected/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/connecting-the-graph/1"
     },
     {
       "id": "accounts-merge",
@@ -3410,9 +3410,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Graphs",
       "pattern": "Hard Problems II",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/accounts-merge/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/merging-details/1"
     },
     {
       "id": "number-of-islands-ii",
@@ -3443,9 +3443,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Graphs",
       "pattern": "Hard Problems II",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/most-stones-removed-with-same-row-or-column/1"
     },
     {
       "id": "kosarajus-algorithm",
@@ -3477,7 +3477,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Additional Algorithms",
       "difficultyLC": "Hard",
       "difficultyGFG": "Hard",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/critical-connections-in-a-network/",
       "gfg": "https://www.geeksforgeeks.org/problems/articulation-point2616/1"
     },
     {
@@ -3487,9 +3487,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "1D DP",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/climbing-stairs/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/count-ways-to-reach-the-nth-stair-1587115620/1"
     },
     {
       "id": "frog-jump",
@@ -3499,7 +3499,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "1D DP",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/frog-jump/",
       "gfg": "https://www.geeksforgeeks.org/problems/geek-jump/1"
     },
     {
@@ -3510,7 +3510,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "1D DP",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/jump-game-iv/",
       "gfg": "https://www.geeksforgeeks.org/problems/minimal-cost/1"
     },
     {
@@ -3543,7 +3543,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "2D DP",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/",
       "gfg": "https://www.geeksforgeeks.org/problems/geeks-training/1"
     },
     {
@@ -3553,9 +3553,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "DP on grids",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/unique-paths/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/number-of-unique-paths5339/1"
     },
     {
       "id": "unique-paths-ii",
@@ -3575,9 +3575,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "DP on grids",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/minimum-path-sum/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/minimum-falling-path-sum/1"
     },
     {
       "id": "triangle",
@@ -3586,9 +3586,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "DP on grids",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/triangle/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/triangle-path-sum/1"
     },
     {
       "id": "cherry-pickup-ii",
@@ -3598,7 +3598,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "DP on grids",
       "difficultyLC": "Hard",
       "difficultyGFG": "Hard",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/cherry-pickup-ii/",
       "gfg": "https://www.geeksforgeeks.org/problems/chocolate-pickup-ii/1"
     },
     {
@@ -3608,9 +3608,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "DP on stocks",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/buy-stock-2/1"
     },
     {
       "id": "best-time-to-buy-and-sell-stock-ii",
@@ -3619,9 +3619,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "DP on stocks",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/buy-stock-2/1"
     },
     {
       "id": "best-time-to-buy-and-sell-stock-iii",
@@ -3630,9 +3630,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "DP on stocks",
       "difficultyLC": "Hard",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/buy-and-sell-a-share-at-most-twice/1"
     },
     {
       "id": "best-time-to-buy-and-sell-stock-iv",
@@ -3652,9 +3652,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "DP on stocks",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/buy-stock-with-transaction-fee/1"
     },
     {
       "id": "subset-sum-equals-to-target",
@@ -3664,7 +3664,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "DP on subsequences",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/partition-equal-subset-sum/",
       "gfg": "https://www.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1"
     },
     {
@@ -3674,9 +3674,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "DP on subsequences",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/partition-equal-subset-sum/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/subset-sum-problem2014/1"
     },
     {
       "id": "partition-a-set-into-two-subsets-with-minimum-absolute-sum-difference",
@@ -3685,9 +3685,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "DP on subsequences",
       "difficultyLC": "Hard",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/minimum-sum-partition3317/1"
     },
     {
       "id": "count-subsets-with-sum-k",
@@ -3697,7 +3697,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "DP on subsequences",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/subarray-sum-equals-k/",
       "gfg": "https://www.geeksforgeeks.org/problems/perfect-sum-problem5633/1"
     },
     {
@@ -3708,7 +3708,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "DP on subsequences",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/target-sum/",
       "gfg": "https://www.geeksforgeeks.org/problems/partitions-with-given-difference/1"
     },
     {
@@ -3719,7 +3719,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "DP on subsequences",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/ones-and-zeroes/",
       "gfg": "https://www.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1"
     },
     {
@@ -3729,9 +3729,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "DP on subsequences",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/coin-change/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/number-of-coins1824/1"
     },
     {
       "id": "target-sum",
@@ -3762,9 +3762,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "DP on subsequences",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/coin-change/",
+      "gfg": "https://www.geeksforgeeks.org/problems/knapsack-with-duplicate-items4201/1"
     },
     {
       "id": "rod-cutting-problem",
@@ -3774,7 +3774,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "DP on subsequences",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/integer-break/",
       "gfg": "https://www.geeksforgeeks.org/problems/rod-cutting0840/1"
     },
     {
@@ -3795,9 +3795,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "LIS",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/longest-increasing-subsequence/",
+      "gfg": "https://www.geeksforgeeks.org/problems/printing-longest-increasing-subsequence/1"
     },
     {
       "id": "largest-divisible-subset",
@@ -3806,9 +3806,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "LIS",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/largest-divisible-subset/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/largest-divisible-subset/1"
     },
     {
       "id": "longest-string-chain",
@@ -3817,9 +3817,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "LIS",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/longest-string-chain/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/longest-string-chain/1"
     },
     {
       "id": "longest-bitonic-subsequence",
@@ -3829,7 +3829,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "LIS",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array/",
       "gfg": "https://www.geeksforgeeks.org/problems/longest-bitonic-subsequence0824/1"
     },
     {
@@ -3862,7 +3862,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "DP on strings",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/maximum-length-of-repeated-subarray/",
       "gfg": "https://www.geeksforgeeks.org/problems/longest-common-substring1452/1"
     },
     {
@@ -3883,9 +3883,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "DP on strings",
       "difficultyLC": "Hard",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/form-a-palindrome1455/1"
     },
     {
       "id": "minimum-insertions-or-deletions-to-convert-string-a-to-b",
@@ -3894,9 +3894,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "DP on strings",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/delete-operation-for-two-strings/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/minimum-number-of-deletions-and-insertions0209/1"
     },
     {
       "id": "shortest-common-supersequence",
@@ -3905,9 +3905,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "DP on strings",
       "difficultyLC": "Hard",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/shortest-common-supersequence/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/shortest-common-supersequence0322/1"
     },
     {
       "id": "distinct-subsequences",
@@ -3916,9 +3916,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "DP on strings",
       "difficultyLC": "Hard",
-      "difficultyGFG": null,
+      "difficultyGFG": "Hard",
       "leetcode": "https://leetcode.com/problems/distinct-subsequences/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/distinct-occurrences/1"
     },
     {
       "id": "edit-distance",
@@ -3950,7 +3950,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "MCM DP",
       "difficultyLC": "Hard",
       "difficultyGFG": "Hard",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/burst-balloons/",
       "gfg": "https://www.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1"
     },
     {
@@ -3960,9 +3960,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "MCM DP",
       "difficultyLC": "Hard",
-      "difficultyGFG": null,
+      "difficultyGFG": "Hard",
       "leetcode": "https://leetcode.com/problems/burst-balloons/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/burst-balloons/1"
     },
     {
       "id": "palindrome-partitioning-ii",
@@ -3982,9 +3982,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "MCM DP",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/partition-array-for-maximum-sum/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/partition-array-for-maximum-sum/1"
     },
     {
       "id": "different-ways-to-evaluate-a-boolean-expression",
@@ -3993,9 +3993,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Dynamic Programming",
       "pattern": "MCM DP",
       "difficultyLC": "Hard",
-      "difficultyGFG": null,
+      "difficultyGFG": "Hard",
       "leetcode": "https://leetcode.com/problems/parsing-a-boolean-expression/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/boolean-parenthesization5611/1"
     },
     {
       "id": "trie-implementation-and-operations",
@@ -4004,9 +4004,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Tries",
       "pattern": "Theory",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/implement-trie-prefix-tree/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/trie-insert-and-search0651/1"
     },
     {
       "id": "trie-implementation-and-advanced-operations",
@@ -4015,9 +4015,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Tries",
       "pattern": "Theory",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/implement-trie-ii-prefix-tree/",
+      "gfg": "https://www.geeksforgeeks.org/problems/trie-delete/1"
     },
     {
       "id": "longest-word-with-all-prefixes",
@@ -4027,7 +4027,7 @@ export const STRIVERS_A2Z_SHEET = {
       "pattern": "Problems",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": null,
+      "leetcode": "https://leetcode.com/problems/longest-word-with-all-prefixes/",
       "gfg": "https://www.geeksforgeeks.org/problems/longest-valid-word-with-all-prefixes/1"
     },
     {
@@ -4059,9 +4059,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Tries",
       "pattern": "Problems",
       "difficultyLC": "Hard",
-      "difficultyGFG": null,
+      "difficultyGFG": "Hard",
       "leetcode": "https://leetcode.com/problems/maximum-xor-with-an-element-from-array/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/maximum-xor-with-an-element-from-array/1"
     },
     {
       "id": "reverse-every-word-in-a-string",
@@ -4070,9 +4070,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Strings",
       "pattern": "Medium Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/reverse-words-in-a-string/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/reverse-words-in-a-given-string5459/1"
     },
     {
       "id": "minimum-number-of-bracket-reversals-to-make-an-expression-balanced",
@@ -4081,9 +4081,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Strings",
       "pattern": "Medium Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/count-the-reversals0401/1"
     },
     {
       "id": "count-and-say",
@@ -4092,9 +4092,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Strings",
       "pattern": "Medium Problems",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/count-and-say/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/decode-the-pattern1138/1"
     },
     {
       "id": "rabin-karp-algorithm",
@@ -4114,9 +4114,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Strings",
       "pattern": "Advanced Problems (Less asked)",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+      "gfg": "https://www.geeksforgeeks.org/problems/z-algorithm/1"
     },
     {
       "id": "kmp-algorithm-or-lps-array",
@@ -4125,9 +4125,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Strings",
       "pattern": "Advanced Problems (Less asked)",
       "difficultyLC": "Easy",
-      "difficultyGFG": null,
+      "difficultyGFG": "Hard",
       "leetcode": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/longest-prefix-suffix2527/1"
     },
     {
       "id": "shortest-palindrome",
@@ -4147,9 +4147,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Strings",
       "pattern": "Advanced Problems (Less asked)",
       "difficultyLC": "Hard",
-      "difficultyGFG": null,
+      "difficultyGFG": "Hard",
       "leetcode": "https://leetcode.com/problems/longest-happy-prefix/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/longest-prefix-suffix2527/1"
     },
     {
       "id": "print-all-primes-till-n",
@@ -4158,9 +4158,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Maths",
       "pattern": "Sieve of Eratosthenes",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Easy",
+      "leetcode": "https://leetcode.com/problems/count-primes/",
+      "gfg": "https://www.geeksforgeeks.org/problems/sieve-of-eratosthenes5242/1"
     },
     {
       "id": "prime-factorisation-of-a-number",
@@ -4169,9 +4169,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Maths",
       "pattern": "Sieve of Eratosthenes",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
-      "leetcode": null,
-      "gfg": null
+      "difficultyGFG": "Medium",
+      "leetcode": "https://leetcode.com/problems/distinct-prime-factors-of-product-of-array/",
+      "gfg": "https://www.geeksforgeeks.org/problems/prime-factorization-and-geeks0445/1"
     },
     {
       "id": "count-primes-in-range-l-to-r",
@@ -4180,9 +4180,9 @@ export const STRIVERS_A2Z_SHEET = {
       "topic": "Maths",
       "pattern": "Sieve of Eratosthenes",
       "difficultyLC": "Medium",
-      "difficultyGFG": null,
+      "difficultyGFG": "Medium",
       "leetcode": "https://leetcode.com/problems/count-primes/",
-      "gfg": null
+      "gfg": "https://www.geeksforgeeks.org/problems/count-primes-in-range1604/1"
     }
   ]
 };
