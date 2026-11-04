@@ -122,7 +122,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Divide and Conquer",
       "difficultyLC": "Medium",
       "difficultyGFG": "Hard",
-      "leetcode": "https://leetcode.com/problems/global-and-local-inversions/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/inversion-of-array-1587115620/1"
     },
     {
@@ -188,7 +188,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Hashing & Prefix Sums",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/subarray-sum-equals-k/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/count-subarrays-with-given-xor/1"
     },
     {
@@ -265,7 +265,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Search on Answer",
       "difficultyLC": "Easy",
       "difficultyGFG": "Easy",
-      "leetcode": "https://leetcode.com/problems/sqrtx/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/find-nth-root-of-m5843/1"
     },
     {
@@ -287,7 +287,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Search on Answer",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/magnetic-force-between-two-balls/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/aggressive-cows/1"
     },
     {
@@ -320,7 +320,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Partition Search",
       "difficultyLC": "Hard",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1"
     },
     {
@@ -617,7 +617,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Fast & Slow Pointers",
       "difficultyLC": "Medium",
       "difficultyGFG": "Easy",
-      "leetcode": "https://leetcode.com/problems/linked-list-cycle-ii/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/find-length-of-loop/1"
     },
     {
@@ -650,7 +650,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Reversal & Rewiring",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/sort-colors/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/given-a-linked-list-of-0s-1s-and-2s-sort-it/1"
     },
     {
@@ -893,7 +893,7 @@ export const STRIVERS_180_SHEET = {
       "difficultyLC": "Medium",
       "difficultyGFG": "Easy",
       "leetcode": "https://leetcode.com/problems/valid-parenthesis-string/",
-      "gfg": "https://www.geeksforgeeks.org/problems/parenthesis-checker2744/1"
+      "gfg": ""
     },
     {
       "id": "candy",
@@ -914,7 +914,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Intervals & Scheduling",
       "difficultyLC": "Medium",
       "difficultyGFG": "Easy",
-      "leetcode": "https://leetcode.com/problems/non-overlapping-intervals/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1"
     },
     {
@@ -958,7 +958,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Intervals & Scheduling",
       "difficultyLC": "Hard",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/maximum-profit-in-job-scheduling/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1"
     },
     {
@@ -969,7 +969,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Heap / Priority Queue",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/sort-an-array/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/heap-sort/1"
     },
     {
@@ -980,7 +980,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Heap / Priority Queue",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/binary-heap-operations/1"
     },
     {
@@ -991,7 +991,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Heap / Priority Queue",
       "difficultyLC": "Easy",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/operations-on-binary-min-heap/1"
     },
     {
@@ -1057,7 +1057,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "BFS",
       "difficultyLC": "Hard",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/top-view-of-binary-tree/1"
     },
     {
@@ -1398,7 +1398,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Ordering & Connectivity",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/course-schedule-ii/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/topological-sort/1"
     },
     {
@@ -1453,7 +1453,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Ordering & Connectivity",
       "difficultyLC": "Hard",
       "difficultyGFG": "Hard",
-      "leetcode": "https://leetcode.com/problems/critical-connections-in-a-network/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/articulation-point-1/1"
     },
     {
@@ -1464,7 +1464,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Shortest Path",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/shortest-path-in-binary-matrix/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/shortest-path-in-undirected-graph-having-unit-distance/1"
     },
     {
@@ -1475,7 +1475,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Shortest Path",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/shortest-path-in-undirected-graph/1"
     },
     {
@@ -1486,7 +1486,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Shortest Path",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/network-delay-time/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1"
     },
     {
@@ -1519,7 +1519,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Shortest Path",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/1"
     },
     {
@@ -1530,7 +1530,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Shortest Path",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/implementing-floyd-warshall2042/1"
     },
     {
@@ -1563,7 +1563,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "DSU / MST",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/redundant-connection/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/disjoint-set-union-find/1"
     },
     {
@@ -1618,7 +1618,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "State Transition DP",
       "difficultyLC": "Hard",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/jump-game-iv/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/minimal-cost/1"
     },
     {
@@ -1640,7 +1640,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "State Transition DP",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/geeks-training/1"
     },
     {
@@ -1684,7 +1684,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Knapsack DP",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/ones-and-zeroes/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1"
     },
     {
@@ -1739,7 +1739,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Sequence DP",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/maximum-length-of-repeated-subarray/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/longest-common-substring1449/1"
     },
     {
@@ -1805,7 +1805,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Partition DP",
       "difficultyLC": "Hard",
       "difficultyGFG": "Hard",
-      "leetcode": "https://leetcode.com/problems/burst-balloons/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1"
     },
     {
@@ -1827,7 +1827,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Trie",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/implement-trie-ii-prefix-tree/",
+      "leetcode": "https://leetcode.com/problems/implement-trie-prefix-tree/",
       "gfg": "https://www.geeksforgeeks.org/problems/trie-insert-and-search0651/1"
     },
     {
@@ -1882,7 +1882,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "String Matching",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/repeated-string-match/discuss/416144/Rabin-Karp-algorithm-C%2B%2B-implementation",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/rabin-karp-algorithm-for-pattern-searching/1"
     },
     {
@@ -1893,7 +1893,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "String Matching",
       "difficultyLC": "Easy",
       "difficultyGFG": "Hard",
-      "leetcode": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/z-algorithm/1"
     },
     {
@@ -1904,7 +1904,7 @@ export const STRIVERS_180_SHEET = {
       "pattern": "String Matching",
       "difficultyLC": "Easy",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/implement-strstr/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/search-pattern0205/1"
     },
     {
@@ -1970,10 +1970,8 @@ export const STRIVERS_180_SHEET = {
       "pattern": "Number Theory",
       "difficultyLC": "Medium",
       "difficultyGFG": "Medium",
-      "leetcode": "https://leetcode.com/problems/count-primes/",
+      "leetcode": "",
       "gfg": "https://www.geeksforgeeks.org/problems/sieve-of-eratosthenes5242/1"
     }
   ]
 };
-
-export default STRIVERS_180_SHEET;
