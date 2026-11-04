@@ -651,7 +651,7 @@ export const STRIVERS_180_SHEET = {
       "difficultyLC": "",
       "difficultyGFG": "",
       "leetcode": "",
-      "gfg": ""
+      "gfg": "https://www.geeksforgeeks.org/problems/given-a-linked-list-of-0s-1s-and-2s-sort-it/1"
     },
     {
       "id": "add-two-numbers-in-ll",
