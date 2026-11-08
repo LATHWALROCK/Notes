@@ -129,6 +129,19 @@ export const ARTICLE_MAP = {
   'count-primes-in-range-l-to-r': '/dsa/mathematics/count-primes-in-a-range',
   'smallest-prime-factor-sieve': '/dsa/mathematics/smallest-prime-factor-sieve',
   'prime-factorization-using-spf': '/dsa/mathematics/prime-factorization-using-spf',
+
+  // ── Sliding Window & 2 Pointers ───────────────────────────────────────────
+  'maximum-points-you-can-obtain-from-cards': '/dsa/sliding-window/max-points-from-cards',
+  'longest-substring-without-repeating-characters': '/dsa/sliding-window/longest-substring-without-repeating',
+  'max-consecutive-ones-iii': '/dsa/sliding-window/max-consecutive-ones-iii',
+  'fruit-into-baskets': '/dsa/sliding-window/fruit-into-baskets',
+  'longest-substring-with-at-most-k-distinct-characters': '/dsa/sliding-window/longest-substring-at-most-k-distinct',
+  'number-of-substrings-containing-all-three-characters': '/dsa/sliding-window/number-of-substrings-three-characters',
+  'longest-repeating-character-replacement': '/dsa/sliding-window/longest-repeating-character-replacement',
+  'binary-subarrays-with-sum': '/dsa/sliding-window/binary-subarrays-with-sum',
+  'count-number-of-nice-subarrays': '/dsa/sliding-window/count-number-of-nice-subarrays',
+  'subarrays-with-k-different-integers': '/dsa/sliding-window/subarrays-with-k-different-integers',
+  'minimum-window-substring': '/dsa/sliding-window/minimum-window-substring',
 };
 
 export function getArticleUrl(problemId) {

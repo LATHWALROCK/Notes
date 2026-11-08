@@ -28,6 +28,7 @@ import DynamicProgramming from './subjects/dsa/dynamic-programming.jsx';
 import Graph from './subjects/dsa/graph.jsx';
 import LinkedList from './subjects/dsa/linked-list.jsx';
 import Mathematics from './subjects/dsa/mathematics.jsx';
+import SlidingWindow from './subjects/dsa/sliding-window.jsx';
 import DsaSheets from './subjects/dsa/dsa-sheets.jsx';
 
 /*
@@ -40,6 +41,7 @@ const SUBJECTS = [
   {
     key: 'java',
     label: 'Java Notes',
+    mediumLabel: 'Java Notes',
     shortLabel: 'Java',
     Icon: BookIcon,
     children: [
@@ -57,14 +59,14 @@ const SUBJECTS = [
         { id: 'interfaces', label: 'Interfaces' },
         { id: 'inner-classes', label: 'Inner Classes' },
       ] },
-      { key: 'exceptions-concurrency', label: 'Exceptions & Concurrency', Content: ExceptionsConcurrency, children: [
+      { key: 'exceptions-concurrency', label: 'Exceptions & Concurrency', mediumLabel: 'Exceptions & Threads', shortLabel: 'Exceptions', Content: ExceptionsConcurrency, children: [
         { id: 'exception-hierarchy', label: 'Exception Hierarchy' },
         { id: 'cpu-and-process-architecture', label: 'CPU & Process Architecture' },
         { id: 'multitasking-vs-multithreading', label: 'Multitasking vs Multithreading' },
         { id: 'java-threads-creation', label: 'Java Threads \u2014 Creation' },
         { id: 'thread-lifecycle-and-methods', label: 'Thread Lifecycle & Methods' },
       ] },
-      { key: 'sync-executors', label: 'Synchronization & Executors', Content: SyncExecutors, children: [
+      { key: 'sync-executors', label: 'Synchronization & Executors', mediumLabel: 'Sync & Executors', shortLabel: 'Concurrency', Content: SyncExecutors, children: [
         { id: 'synchronization', label: 'Synchronization' },
         { id: 'explicit-locks', label: 'Explicit Locks' },
         { id: 'thread-communication', label: 'Thread Communication' },
@@ -87,7 +89,7 @@ const SUBJECTS = [
   {
     key: 'collections',
     label: 'Java Collections Framework',
-    mediumLabel: 'Collections Framework',
+    mediumLabel: 'Collections',
     shortLabel: 'Collections',
     Icon: LayersIcon,
     children: [
@@ -119,14 +121,14 @@ const SUBJECTS = [
         { id: 'treeset', label: 'TreeSet' },
         { id: 'enumset-copyonwritearrayset-and-concurrentskiplistset', label: 'EnumSet, CopyOnWriteArraySet & ConcurrentSkipListSet' },
       ] },
-      { key: 'queues', label: 'Queues & Deques', Content: Queues, children: [
+      { key: 'queues', label: 'Queues & Deques', mediumLabel: 'Queues & Deques', shortLabel: 'Queues', Content: Queues, children: [
         { id: 'queue-interface', label: 'Queue Interface' },
         { id: 'priorityqueue', label: 'PriorityQueue' },
         { id: 'deque-interface-and-arraydeque', label: 'Deque Interface & ArrayDeque' },
         { id: 'blockingqueue-and-variants', label: 'BlockingQueue & Variants' },
         { id: 'concurrentlinkedqueue-concurrentlinkeddeque-and-iterable-iterator', label: 'ConcurrentLinkedQueue, ConcurrentLinkedDeque & Iterable/Iterator' },
       ] },
-      { key: 'java8', label: 'Java 8 Features', Content: Java8Features, children: [
+      { key: 'java8', label: 'Java 8 Features', mediumLabel: 'Java 8', shortLabel: 'Java 8', Content: Java8Features, children: [
         { id: 'lambda-expressions', label: 'Lambda Expressions' },
         { id: 'functional-interfaces', label: 'Functional Interfaces' },
         { id: 'method-references', label: 'Method References' },
@@ -140,6 +142,7 @@ const SUBJECTS = [
   {
     key: 'dsa',
     label: 'DSA in Java',
+    mediumLabel: 'DSA in Java',
     shortLabel: 'DSA',
     Icon: TreeIcon,
     children: [
@@ -222,6 +225,20 @@ const SUBJECTS = [
         { id: 'clone-ll-random-pointer', label: 'Clone LL, Random Pointer' },
         { id: 'design-browser-history', label: 'Design Browser History' },
       ] },
+      { key: 'sliding-window', label: 'Sliding Window & 2 Pointers', mediumLabel: 'Sliding Window', shortLabel: 'Sliding Window', Content: SlidingWindow, children: [
+        { id: 'sliding-window-basics', label: 'Sliding Window & 2 Pointers Fundamentals' },
+        { id: 'max-points-from-cards', label: 'Maximum Points from Cards' },
+        { id: 'longest-substring-without-repeating', label: 'Longest Substring Without Repeating Characters' },
+        { id: 'max-consecutive-ones-iii', label: 'Max Consecutive Ones III' },
+        { id: 'fruit-into-baskets', label: 'Fruit Into Baskets' },
+        { id: 'longest-substring-at-most-k-distinct', label: 'Longest Substring with At Most K Distinct' },
+        { id: 'number-of-substrings-three-characters', label: 'Substrings with All Three Characters' },
+        { id: 'longest-repeating-character-replacement', label: 'Longest Repeating Character Replacement' },
+        { id: 'binary-subarrays-with-sum', label: 'Binary Subarrays With Sum' },
+        { id: 'count-number-of-nice-subarrays', label: 'Count Number of Nice Subarrays' },
+        { id: 'subarrays-with-k-different-integers', label: 'Subarrays with K Different Integers' },
+        { id: 'minimum-window-substring', label: 'Minimum Window Substring' },
+      ] },
       { key: 'binary-tree', label: 'Binary Tree', Content: BinaryTree, children: [
         /* Foundations */
         { id: 'what-is-a-binary-tree', label: 'What Is a Binary Tree?' },
@@ -265,7 +282,7 @@ const SUBJECTS = [
         { id: 'morris-preorder-traversal', label: 'Morris Preorder Traversal' },
         { id: 'flatten-tree-to-linked-list', label: 'Flatten Tree to Linked List' },
       ] },
-      { key: 'bst', label: 'Binary Search Tree', shortLabel: 'BST', Content: BinarySearchTree, children: [
+      { key: 'bst', label: 'Binary Search Tree', mediumLabel: 'BST', shortLabel: 'BST', Content: BinarySearchTree, children: [
         /* BST foundations */
         { id: 'what-is-a-bst', label: 'What Is a BST?' },
         { id: 'search-in-a-bst', label: 'Search in a BST' },
@@ -285,7 +302,7 @@ const SUBJECTS = [
         { id: 'recover-a-bst', label: 'Recover a BST' },
         { id: 'largest-bst-in-a-binary-tree', label: 'Largest BST in a Binary Tree' },
       ] },
-      { key: 'dynamic-programming', label: 'Dynamic Programming', shortLabel: 'DP', Content: DynamicProgramming, children: [
+      { key: 'dynamic-programming', label: 'Dynamic Programming', mediumLabel: 'DP', shortLabel: 'DP', Content: DynamicProgramming, children: [
         /* Introduction to DP */
         { id: 'what-is-dynamic-programming', label: 'What Is Dynamic Programming?' },
         { id: 'when-does-dp-apply', label: 'When Does DP Apply?' },
@@ -418,7 +435,7 @@ const SUBJECTS = [
         { id: 'bridges-tarjans-algorithm', label: 'Bridges — Tarjan’s Algorithm' },
         { id: 'articulation-point', label: 'Articulation Point' },
       ] },
-      { key: 'mathematics', label: 'Mathematics', Content: Mathematics, children: [
+      { key: 'mathematics', label: 'Mathematics', mediumLabel: 'Maths', shortLabel: 'Maths', Content: Mathematics, children: [
         { id: 'divisors-of-a-number', label: 'Divisors of a Number' },
         { id: 'check-if-a-number-is-prime', label: 'Check if a Number is Prime' },
         { id: 'prime-factors-of-a-number', label: 'Prime Factors of a Number' },
@@ -428,7 +445,7 @@ const SUBJECTS = [
         { id: 'smallest-prime-factor-sieve', label: 'Smallest Prime Factor Sieve' },
         { id: 'prime-factorization-using-spf', label: 'Prime Factorization Using SPF' },
       ] },
-      { key: 'dsa-sheets', label: 'DSA Sheets', Content: DsaSheets, children: [
+      { key: 'dsa-sheets', label: 'DSA Sheets', mediumLabel: 'DSA Sheets', shortLabel: 'Sheets', Content: DsaSheets, children: [
         { id: 'strivers-180', label: "Striver's 180 Master DSA Patterns" },
         { id: 'strivers-a2z', label: "Striver's A2Z DSA Sheet" },
       ] },
@@ -455,7 +472,15 @@ function NotesView() {
 
   // Validate topic: if provided, must match within subject; if omitted, default to first topic
   const topic = subject
-    ? (topicKey ? subject.children.find((t) => nodeKey(t) === topicKey || (topicKey === 'maths' && nodeKey(t) === 'mathematics')) : subject.children[0])
+    ? (topicKey
+        ? subject.children.find(
+            (t) =>
+              nodeKey(t) === topicKey ||
+              (topicKey === 'maths' && nodeKey(t) === 'mathematics') ||
+              (topicKey === 'sliding-window-and-2-pointers' && nodeKey(t) === 'sliding-window') ||
+              (topicKey === 'sliding-window-2-pointers' && nodeKey(t) === 'sliding-window')
+          )
+        : subject.children[0])
     : null;
   const isTopicInvalid = Boolean(topicKey && !topic);
 
@@ -557,9 +582,15 @@ function NotesView() {
                   >
                     <span className="subject-tab-icon"><s.Icon /></span>
                     <span className="tab-label">
-                      <span className="label-full">{s.label}</span>
-                      {s.mediumLabel && <span className="label-medium">{s.mediumLabel}</span>}
-                      {s.shortLabel && <span className="label-short">{s.shortLabel}</span>}
+                      {s.mediumLabel || s.shortLabel ? (
+                        <>
+                          <span className="label-full">{s.label}</span>
+                          {s.mediumLabel && <span className="label-medium">{s.mediumLabel}</span>}
+                          {s.shortLabel && <span className="label-short">{s.shortLabel}</span>}
+                        </>
+                      ) : (
+                        <span>{s.label}</span>
+                      )}
                     </span>
                   </Link>
                 );
@@ -585,8 +616,15 @@ function NotesView() {
                     title={t.label}
                   >
                     <span className="tab-label">
-                      <span className={t.shortLabel ? 'label-full' : ''}>{t.label}</span>
-                      {t.shortLabel && <span className="label-short">{t.shortLabel}</span>}
+                      {t.mediumLabel || t.shortLabel ? (
+                        <>
+                          <span className="label-full">{t.label}</span>
+                          {t.mediumLabel && <span className="label-medium">{t.mediumLabel}</span>}
+                          {t.shortLabel && <span className="label-short">{t.shortLabel}</span>}
+                        </>
+                      ) : (
+                        <span>{t.label}</span>
+                      )}
                     </span>
                   </Link>
                 );
