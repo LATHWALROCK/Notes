@@ -630,7 +630,7 @@
     display: none;
   }
 
-  @media (max-width: 1600px) {
+  @media (max-width: 1820px) {
     .label-full {
       display: none;
     }
@@ -650,7 +650,7 @@
     }
   }
 
-  @media (max-width: 1260px) {
+  @media (max-width: 1340px) {
     .label-full,
     .label-medium {
       display: none;
@@ -824,7 +824,7 @@
 }
 
 /* Responsive adjustments for mobile and small tablets */
-@media (max-width: 880px) {
+@media (max-width: 970px) {
   .nav-sticky {
     padding: 8px 10px;
     top: 0;

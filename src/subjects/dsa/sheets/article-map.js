@@ -186,6 +186,26 @@ export const ARTICLE_MAP = {
   'prefix-to-postfix': '/dsa/stacks-queues/prefix-to-postfix',
   'postfix-to-infix': '/dsa/stacks-queues/postfix-to-infix',
   'postfix-to-prefix': '/dsa/stacks-queues/postfix-to-prefix',
+
+  // ── Greedy Algorithms ─────────────────────────────────────────────────────
+  'assign-cookies': '/dsa/greedy/assign-cookies',
+  'shortest-job-first': '/dsa/greedy/shortest-job-first',
+  'lemonade-change': '/dsa/greedy/lemonade-change',
+  'jump-game---i': '/dsa/greedy/jump-game-i',
+  'jump-game-i': '/dsa/greedy/jump-game-i',
+  'jump-game': '/dsa/greedy/jump-game-i',
+  'jump-game-ii': '/dsa/greedy/jump-game-ii',
+  'jump-game---ii': '/dsa/greedy/jump-game-ii',
+  'job-sequencing-problem': '/dsa/greedy/job-sequencing-problem',
+  'n-meetings-in-one-room': '/dsa/greedy/n-meetings-in-one-room',
+  'non-overlapping-intervals': '/dsa/greedy/non-overlapping-intervals',
+  'insert-interval': '/dsa/greedy/insert-interval',
+  'minimum-number-of-platforms-required-for-a-railway': '/dsa/greedy/minimum-platforms',
+  'minimum-platforms': '/dsa/greedy/minimum-platforms',
+  'valid-paranthesis-checker': '/dsa/greedy/valid-parenthesis-string',
+  'valid-parenthesis-string': '/dsa/greedy/valid-parenthesis-string',
+  'fractional-knapsack': '/dsa/greedy/fractional-knapsack',
+  'candy': '/dsa/greedy/candy',
 };
 
 export function getArticleUrl(problemId) {

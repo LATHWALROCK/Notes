@@ -30,6 +30,7 @@ import LinkedList from './subjects/dsa/linked-list.jsx';
 import Mathematics from './subjects/dsa/mathematics.jsx';
 import SlidingWindow from './subjects/dsa/sliding-window.jsx';
 import StacksQueues from './subjects/dsa/stacks-queues.jsx';
+import Greedy from './subjects/dsa/greedy.jsx';
 import DsaSheets from './subjects/dsa/dsa-sheets.jsx';
 
 /*
@@ -275,6 +276,27 @@ const SUBJECTS = [
         { id: 'subarrays-with-k-different-integers', label: 'Subarrays with K Different Integers' },
         { id: 'minimum-window-substring', label: 'Minimum Window Substring' },
       ] },
+      { key: 'greedy', label: 'Greedy Algorithm', mediumLabel: 'Greedy', shortLabel: 'Greedy', Content: Greedy, children: [
+        /* Foundations */
+        { id: 'greedy-fundamentals', label: 'Greedy Algorithm Fundamentals' },
+        /* Allocation & Scheduling Basics */
+        { id: 'assign-cookies', label: 'Assign Cookies' },
+        { id: 'shortest-job-first', label: 'Shortest Job First' },
+        { id: 'lemonade-change', label: 'Lemonade Change' },
+        /* Jumps & Reachability */
+        { id: 'jump-game-i', label: 'Jump Game – 1' },
+        { id: 'jump-game-ii', label: 'Jump Game – 2' },
+        /* Intervals & Scheduling */
+        { id: 'job-sequencing-problem', label: 'Job Sequencing Problem' },
+        { id: 'n-meetings-in-one-room', label: 'N Meetings in One Room' },
+        { id: 'non-overlapping-intervals', label: 'Non-overlapping Intervals' },
+        { id: 'insert-interval', label: 'Insert Interval' },
+        { id: 'minimum-platforms', label: 'Minimum Platforms Required' },
+        /* Hard & Advanced Greedy */
+        { id: 'valid-parenthesis-string', label: 'Valid Parenthesis String' },
+        { id: 'fractional-knapsack', label: 'Fractional Knapsack' },
+        { id: 'candy', label: 'Candy' },
+      ] },
       { key: 'binary-tree', label: 'Binary Tree', Content: BinaryTree, children: [
         /* Foundations */
         { id: 'what-is-a-binary-tree', label: 'What Is a Binary Tree?' },
@@ -519,7 +541,9 @@ function NotesView() {
               (topicKey === 'stack-and-queues' && nodeKey(t) === 'stacks-queues') ||
               (topicKey === 'stack-and-queue' && nodeKey(t) === 'stacks-queues') ||
               (topicKey === 'stacks-and-queues' && nodeKey(t) === 'stacks-queues') ||
-              (topicKey === 'stack-queue' && nodeKey(t) === 'stacks-queues')
+              (topicKey === 'stack-queue' && nodeKey(t) === 'stacks-queues') ||
+              (topicKey === 'greedy-algorithm' && nodeKey(t) === 'greedy') ||
+              (topicKey === 'greedy-algorithms' && nodeKey(t) === 'greedy')
           )
         : subject.children[0])
     : null;
