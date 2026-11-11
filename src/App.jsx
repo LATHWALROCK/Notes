@@ -29,6 +29,7 @@ import Graph from './subjects/dsa/graph.jsx';
 import LinkedList from './subjects/dsa/linked-list.jsx';
 import Mathematics from './subjects/dsa/mathematics.jsx';
 import SlidingWindow from './subjects/dsa/sliding-window.jsx';
+import StacksQueues from './subjects/dsa/stacks-queues.jsx';
 import DsaSheets from './subjects/dsa/dsa-sheets.jsx';
 
 /*
@@ -224,6 +225,41 @@ const SUBJECTS = [
         { id: 'sort-a-linked-list', label: 'Sort a Linked List' },
         { id: 'clone-ll-random-pointer', label: 'Clone LL, Random Pointer' },
         { id: 'design-browser-history', label: 'Design Browser History' },
+      ] },
+      { key: 'stacks-queues', label: 'Stacks & Queues', mediumLabel: 'Stacks & Queues', shortLabel: 'Stacks', Content: StacksQueues, children: [
+        /* Fundamentals & Design */
+        { id: 'implement-stack-using-arrays', label: 'Implement Stack using Arrays' },
+        { id: 'implement-queue-using-arrays', label: 'Implement Queue using Arrays' },
+        { id: 'implement-stack-using-queue', label: 'Implement Stack using Queue' },
+        { id: 'implement-queue-using-stack', label: 'Implement Queue using Stack' },
+        { id: 'implement-stack-using-linked-list', label: 'Implement Stack using Linked List' },
+        { id: 'implement-queue-using-linked-list', label: 'Implement Queue using Linked List' },
+        { id: 'check-for-balanced-parenthesis', label: 'Check for Balanced Parenthesis' },
+        { id: 'implement-min-stack', label: 'Implement Min Stack' },
+        /* Prefix, Infix & Postfix Conversions */
+        { id: 'infix-to-postfix', label: 'Infix to Postfix Conversion' },
+        { id: 'infix-to-prefix', label: 'Infix to Prefix Conversion' },
+        { id: 'prefix-to-infix', label: 'Prefix to Infix Conversion' },
+        { id: 'prefix-to-postfix', label: 'Prefix to Postfix Conversion' },
+        { id: 'postfix-to-infix', label: 'Postfix to Infix Conversion' },
+        { id: 'postfix-to-prefix', label: 'Postfix to Prefix Conversion' },
+        /* Monotonic Stack & Queue Problems */
+        { id: 'next-greater-element', label: 'Next Greater Element' },
+        { id: 'next-greater-element-ii', label: 'Next Greater Element – 2' },
+        { id: 'nearest-smaller-element', label: 'Nearest Smaller Element' },
+        { id: 'trapping-rainwater', label: 'Trapping Rainwater' },
+        { id: 'sum-of-subarray-minimums', label: 'Sum of Subarray Minimums' },
+        { id: 'sum-of-subarray-ranges', label: 'Sum of Subarray Ranges' },
+        { id: 'asteroid-collision', label: 'Asteroid Collision' },
+        { id: 'largest-rectangle-in-histogram', label: 'Largest Rectangle in Histogram' },
+        { id: 'maximal-rectangle', label: 'Maximal Rectangle' },
+        { id: 'remove-k-digits', label: 'Remove K Digits' },
+        { id: 'stock-span-problem', label: 'Stock Span Problem' },
+        { id: 'sliding-window-maximum', label: 'Sliding Window Maximum' },
+        /* Hard / Design & Real-world */
+        { id: 'the-celebrity-problem', label: 'The Celebrity Problem' },
+        { id: 'lru-cache', label: 'LRU Cache' },
+        { id: 'lfu-cache', label: 'LFU Cache' },
       ] },
       { key: 'sliding-window', label: 'Sliding Window & 2 Pointers', mediumLabel: 'Sliding Window', shortLabel: 'Sliding Window', Content: SlidingWindow, children: [
         { id: 'sliding-window-basics', label: 'Sliding Window & 2 Pointers Fundamentals' },
@@ -478,7 +514,12 @@ function NotesView() {
               nodeKey(t) === topicKey ||
               (topicKey === 'maths' && nodeKey(t) === 'mathematics') ||
               (topicKey === 'sliding-window-and-2-pointers' && nodeKey(t) === 'sliding-window') ||
-              (topicKey === 'sliding-window-2-pointers' && nodeKey(t) === 'sliding-window')
+              (topicKey === 'sliding-window-2-pointers' && nodeKey(t) === 'sliding-window') ||
+              (topicKey === 'stacks-queues' && nodeKey(t) === 'stacks-queues') ||
+              (topicKey === 'stack-and-queues' && nodeKey(t) === 'stacks-queues') ||
+              (topicKey === 'stack-and-queue' && nodeKey(t) === 'stacks-queues') ||
+              (topicKey === 'stacks-and-queues' && nodeKey(t) === 'stacks-queues') ||
+              (topicKey === 'stack-queue' && nodeKey(t) === 'stacks-queues')
           )
         : subject.children[0])
     : null;

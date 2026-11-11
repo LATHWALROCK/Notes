@@ -1899,8 +1899,6 @@ aggressiveCows(stalls, k):
             <h3>Code Implementation</h3>
         </div>
         <Code>{`
-import java.util.Arrays;
-
 class Solution {
     private boolean canWePlace(int[] stalls, int dist, int cows) {
         int cntCows = 1;
@@ -2188,8 +2186,6 @@ class Solution {
             <h3>Code Implementation — Greedy With a Max-Heap</h3>
         </div>
         <Code>{`
-import java.util.PriorityQueue;
-
 class Solution {
     public double minimiseMaxDistance(int[] arr, int k) {
         int n = arr.length;
