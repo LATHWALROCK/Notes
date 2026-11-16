@@ -136,22 +136,22 @@ function getProblemDifficulty(problem) {
 
   if (highest >= 4) {
     return {
-      tier: 'Pro',
-      className: 'diff-pro',
-      tooltip: `Pro (Hard) — LC: ${problem.difficultyLC || '—'}, GFG: ${problem.difficultyGFG || '—'}`,
+      tier: 'Hard',
+      className: 'diff-hard',
+      tooltip: `Hard — LC: ${problem.difficultyLC || '—'}, GFG: ${problem.difficultyGFG || '—'}`,
     };
   }
   if (highest === 3) {
     return {
-      tier: 'Core',
-      className: 'diff-core',
-      tooltip: `Core (Medium) — LC: ${problem.difficultyLC || '—'}, GFG: ${problem.difficultyGFG || '—'}`,
+      tier: 'Medium',
+      className: 'diff-medium',
+      tooltip: `Medium — LC: ${problem.difficultyLC || '—'}, GFG: ${problem.difficultyGFG || '—'}`,
     };
   }
   return {
-    tier: 'Basic',
-    className: 'diff-basic',
-    tooltip: `Basic (Easy) — LC: ${problem.difficultyLC || '—'}, GFG: ${problem.difficultyGFG || '—'}`,
+    tier: 'Easy',
+    className: 'diff-easy',
+    tooltip: `Easy — LC: ${problem.difficultyLC || '—'}, GFG: ${problem.difficultyGFG || '—'}`,
   };
 }
 
@@ -259,27 +259,27 @@ function SheetView({ sheet }) {
   // Overall statistics & breakdown by tier
   const stats = useMemo(() => {
     let solvedCount = 0;
-    let totalBasic = 0;
-    let solvedBasic = 0;
-    let totalCore = 0;
-    let solvedCore = 0;
-    let totalPro = 0;
-    let solvedPro = 0;
+    let totalEasy = 0;
+    let solvedEasy = 0;
+    let totalMedium = 0;
+    let solvedMedium = 0;
+    let totalHard = 0;
+    let solvedHard = 0;
 
     sheet.questions.forEach((q) => {
       const done = Boolean(completedMap[q.id]);
       if (done) solvedCount++;
 
       const diff = getProblemDifficulty(q);
-      if (diff.tier === 'Basic') {
-        totalBasic++;
-        if (done) solvedBasic++;
-      } else if (diff.tier === 'Core') {
-        totalCore++;
-        if (done) solvedCore++;
-      } else if (diff.tier === 'Pro') {
-        totalPro++;
-        if (done) solvedPro++;
+      if (diff.tier === 'Easy') {
+        totalEasy++;
+        if (done) solvedEasy++;
+      } else if (diff.tier === 'Medium') {
+        totalMedium++;
+        if (done) solvedMedium++;
+      } else if (diff.tier === 'Hard') {
+        totalHard++;
+        if (done) solvedHard++;
       }
     });
 
@@ -290,12 +290,18 @@ function SheetView({ sheet }) {
       totalCount,
       solvedCount,
       percent,
-      totalBasic,
-      solvedBasic,
-      totalCore,
-      solvedCore,
-      totalPro,
-      solvedPro,
+      totalEasy,
+      solvedEasy,
+      totalMedium,
+      solvedMedium,
+      totalHard,
+      solvedHard,
+      totalBasic: totalEasy,
+      solvedBasic: solvedEasy,
+      totalCore: totalMedium,
+      solvedCore: solvedMedium,
+      totalPro: totalHard,
+      solvedPro: solvedHard,
     };
   }, [sheet.questions, completedMap]);
 
@@ -418,49 +424,49 @@ function SheetView({ sheet }) {
           </div>
 
           <div className="dsa-tiers-grid">
-            {/* Basic */}
+            {/* Easy */}
             <div className="dsa-tier-col">
-              <span className="dsa-tier-name">Basic</span>
+              <span className="dsa-tier-name">Easy</span>
               <span className="dsa-tier-count">
-                {stats.solvedBasic} / {stats.totalBasic}
+                {stats.solvedEasy} / {stats.totalEasy}
               </span>
               <div className="dsa-tier-bar">
                 <div
-                  className="dsa-tier-bar-fill basic"
+                  className="dsa-tier-bar-fill easy"
                   style={{
-                    width: stats.totalBasic > 0 ? `${(stats.solvedBasic / stats.totalBasic) * 100}%` : '0%',
+                    width: stats.totalEasy > 0 ? `${(stats.solvedEasy / stats.totalEasy) * 100}%` : '0%',
                   }}
                 />
               </div>
             </div>
 
-            {/* Core */}
+            {/* Medium */}
             <div className="dsa-tier-col">
-              <span className="dsa-tier-name">Core</span>
+              <span className="dsa-tier-name">Medium</span>
               <span className="dsa-tier-count">
-                {stats.solvedCore} / {stats.totalCore}
+                {stats.solvedMedium} / {stats.totalMedium}
               </span>
               <div className="dsa-tier-bar">
                 <div
-                  className="dsa-tier-bar-fill core"
+                  className="dsa-tier-bar-fill medium"
                   style={{
-                    width: stats.totalCore > 0 ? `${(stats.solvedCore / stats.totalCore) * 100}%` : '0%',
+                    width: stats.totalMedium > 0 ? `${(stats.solvedMedium / stats.totalMedium) * 100}%` : '0%',
                   }}
                 />
               </div>
             </div>
 
-            {/* Pro */}
+            {/* Hard */}
             <div className="dsa-tier-col">
-              <span className="dsa-tier-name">Pro</span>
+              <span className="dsa-tier-name">Hard</span>
               <span className="dsa-tier-count">
-                {stats.solvedPro} / {stats.totalPro}
+                {stats.solvedHard} / {stats.totalHard}
               </span>
               <div className="dsa-tier-bar">
                 <div
-                  className="dsa-tier-bar-fill pro"
+                  className="dsa-tier-bar-fill hard"
                   style={{
-                    width: stats.totalPro > 0 ? `${(stats.solvedPro / stats.totalPro) * 100}%` : '0%',
+                    width: stats.totalHard > 0 ? `${(stats.solvedHard / stats.totalHard) * 100}%` : '0%',
                   }}
                 />
               </div>
@@ -497,24 +503,24 @@ function SheetView({ sheet }) {
           </button>
           <button
             type="button"
-            className={'dsa-chip' + (selectedTier === 'Basic' ? ' active' : '')}
-            onClick={() => setSelectedTier(selectedTier === 'Basic' ? 'ALL' : 'Basic')}
+            className={'dsa-chip' + (selectedTier === 'Easy' ? ' active' : '')}
+            onClick={() => setSelectedTier(selectedTier === 'Easy' ? 'ALL' : 'Easy')}
           >
-            Basic
+            Easy
           </button>
           <button
             type="button"
-            className={'dsa-chip' + (selectedTier === 'Core' ? ' active' : '')}
-            onClick={() => setSelectedTier(selectedTier === 'Core' ? 'ALL' : 'Core')}
+            className={'dsa-chip' + (selectedTier === 'Medium' ? ' active' : '')}
+            onClick={() => setSelectedTier(selectedTier === 'Medium' ? 'ALL' : 'Medium')}
           >
-            Core
+            Medium
           </button>
           <button
             type="button"
-            className={'dsa-chip' + (selectedTier === 'Pro' ? ' active' : '')}
-            onClick={() => setSelectedTier(selectedTier === 'Pro' ? 'ALL' : 'Pro')}
+            className={'dsa-chip' + (selectedTier === 'Hard' ? ' active' : '')}
+            onClick={() => setSelectedTier(selectedTier === 'Hard' ? 'ALL' : 'Hard')}
           >
-            Pro
+            Hard
           </button>
           <button
             type="button"

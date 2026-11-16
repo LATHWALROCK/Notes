@@ -1111,14 +1111,17 @@
   transition: width 0.35s ease;
 }
 
+.dsa-tier-bar-fill.easy,
 .dsa-tier-bar-fill.basic {
-  background: #3b82f6;
+  background: #22c55e;
 }
 
+.dsa-tier-bar-fill.medium,
 .dsa-tier-bar-fill.core {
   background: #f59e0b;
 }
 
+.dsa-tier-bar-fill.hard,
 .dsa-tier-bar-fill.pro {
   background: #ef4444;
 }
@@ -1459,22 +1462,25 @@
   flex-shrink: 0;
 }
 
+.dsa-diff-badge.diff-medium,
 .dsa-diff-badge.diff-core {
   background: rgba(245, 158, 11, 0.14);
   color: #fbbf24;
   border: 1px solid rgba(245, 158, 11, 0.25);
 }
 
+.dsa-diff-badge.diff-hard,
 .dsa-diff-badge.diff-pro {
   background: rgba(239, 68, 68, 0.14);
   color: #f87171;
   border: 1px solid rgba(239, 68, 68, 0.25);
 }
 
+.dsa-diff-badge.diff-easy,
 .dsa-diff-badge.diff-basic {
-  background: rgba(56, 189, 248, 0.14);
-  color: #38bdf8;
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  background: rgba(34, 197, 94, 0.14);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.25);
 }
 
 /* Action Icons */
