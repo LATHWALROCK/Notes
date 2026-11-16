@@ -31,6 +31,7 @@ import Mathematics from './subjects/dsa/mathematics.jsx';
 import SlidingWindow from './subjects/dsa/sliding-window.jsx';
 import StacksQueues from './subjects/dsa/stacks-queues.jsx';
 import Greedy from './subjects/dsa/greedy.jsx';
+import BitManipulation from './subjects/dsa/bit-manipulation.jsx';
 import DsaSheets from './subjects/dsa/dsa-sheets.jsx';
 
 /*
@@ -502,6 +503,29 @@ const SUBJECTS = [
         { id: 'count-primes-in-a-range', label: 'Count Primes in a Range [L, R]' },
         { id: 'smallest-prime-factor-sieve', label: 'Smallest Prime Factor Sieve' },
         { id: 'prime-factorization-using-spf', label: 'Prime Factorization Using SPF' },
+      ] },
+      { key: 'bit-manipulation', label: 'Bit Manipulation', mediumLabel: 'Bits', shortLabel: 'Bits', Content: BitManipulation, children: [
+        /* Fundamentals & Bit Hacks */
+        { id: 'binary-number-conversion', label: 'Binary Number Conversion & Bitwise Operators' },
+        { id: 'ones-and-twos-complement', label: "1's & 2's Complement Representation" },
+        { id: 'swap-two-numbers', label: 'Swap Two Numbers using XOR' },
+        { id: 'check-ith-bit-set', label: 'Check if i-th Bit is Set' },
+        { id: 'extract-ith-bit', label: 'Extract the i-th Bit' },
+        { id: 'set-ith-bit', label: 'Set the i-th Bit' },
+        { id: 'clear-ith-bit', label: 'Clear the i-th Bit' },
+        { id: 'toggle-ith-bit', label: 'Toggle the i-th Bit' },
+        { id: 'remove-last-set-bit', label: 'Remove the Last Set Bit (n & n-1)' },
+        { id: 'count-set-bits', label: 'Count Set Bits (Brian Kernighan)' },
+        { id: 'power-of-two', label: 'Check if Number is Power of Two' },
+        { id: 'min-bit-flips-to-convert', label: 'Minimum Bit Flips to Convert Number' },
+        /* Advanced Patterns & Problems */
+        { id: 'power-set-bit-manipulation', label: 'Power Set using Bit Manipulation' },
+        { id: 'single-number-i', label: 'Single Number I (Unique Element in Pairs)' },
+        { id: 'single-number-ii', label: 'Single Number II (Element Occurring Once, Others 3 Times)' },
+        { id: 'single-number-iii', label: 'Single Number III (Two Unique Elements)' },
+        { id: 'xor-range-l-to-r', label: 'XOR of Numbers in Range [L, R]' },
+        { id: 'divide-two-integers', label: 'Divide Two Integers Without / * %' },
+        { id: 'find-repeating-and-missing-number', label: 'Find Repeating and Missing Number (XOR)' },
       ] },
       { key: 'dsa-sheets', label: 'DSA Sheets', mediumLabel: 'DSA Sheets', shortLabel: 'Sheets', Content: DsaSheets, children: [
         { id: 'strivers-180', label: "Striver's 180 Master DSA Patterns" },

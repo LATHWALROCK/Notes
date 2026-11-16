@@ -206,6 +206,22 @@ export const ARTICLE_MAP = {
   'valid-parenthesis-string': '/dsa/greedy/valid-parenthesis-string',
   'fractional-knapsack': '/dsa/greedy/fractional-knapsack',
   'candy': '/dsa/greedy/candy',
+
+  // ── Bit Manipulation ──────────────────────────────────────────────────────
+  'minimum-bit-flips-to-convert-number': '/dsa/bit-manipulation/min-bit-flips-to-convert',
+  'single-number---i': '/dsa/bit-manipulation/single-number-i',
+  'single-number-i': '/dsa/bit-manipulation/single-number-i',
+  'single-number---ii': '/dsa/bit-manipulation/single-number-ii',
+  'single-number-ii': '/dsa/bit-manipulation/single-number-ii',
+  'single-number---iii': '/dsa/bit-manipulation/single-number-iii',
+  'single-number-iii': '/dsa/bit-manipulation/single-number-iii',
+  'divide-two-numbers-without-multiplication-and-division': '/dsa/bit-manipulation/divide-two-integers',
+  'divide-two-integers': '/dsa/bit-manipulation/divide-two-integers',
+  'power-set-bit-manipulation': '/dsa/bit-manipulation/power-set-bit-manipulation',
+  'power-set': '/dsa/bit-manipulation/power-set-bit-manipulation',
+  'xor-of-numbers-in-a-given-range': '/dsa/bit-manipulation/xor-range-l-to-r',
+  'find-the-repeating-and-missing-number': '/dsa/bit-manipulation/find-repeating-and-missing-number',
+  'repeating-and-missing-number': '/dsa/bit-manipulation/find-repeating-and-missing-number',
 };
 
 export function getArticleUrl(problemId) {
